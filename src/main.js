@@ -2,14 +2,25 @@ import "./style.css";
 import { supabase } from "./supabaseClient.js";
 
 // DreamCatcher
-// Dreams → localStorage (this browser, this device)
+// Dreams (signed in) → Supabase `dreams` table (RLS)
+// Dreams (legacy)    → localStorage kept on device; not auto-imported yet
 // Sheepy → tiny mascot · Moon → orb destination
 // Night sky → ambient stars + dream-stars you earn by saving
-//
-// Cost: local only. No paid APIs for these animations.
 
 const STORAGE_KEY = "dreamcatcher.dreams";
+const EMPTY_JOURNAL_COPY =
+  "Nothing here yet. Your first dream becomes the start of the archive.";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/** @type {{ id: string, title: string, body: string, createdAt: string }[]} */
+let cloudDreams = [];
+/** @type {string | null} */
+let currentUserId = null;
+let dreamsLoadSeq = 0;
+let saveInFlight = false;
+let cloudDreamsReady = false;
+/** @type {Promise<void> | null} */
+let cloudDreamsLoading = null;
 
 const LIMA = {
   latitude: -12.0464,
@@ -34,7 +45,9 @@ const pixelCaret = document.getElementById("pixel-caret");
 const starCanvas = document.getElementById("starfield");
 const starCtx = starCanvas.getContext("2d", { alpha: true });
 
-function loadDreams() {
+// Legacy local journal (pre-cloud). Preserved on device; not used while signed in.
+// Migration of these entries into Supabase is still pending.
+function loadLocalDreams() {
   const raw = localStorage.getItem(STORAGE_KEY);
   if (!raw) return [];
   try {
@@ -45,8 +58,68 @@ function loadDreams() {
   }
 }
 
-function saveDreams(dreams) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(dreams));
+function mapRowToDream(row) {
+  return {
+    id: row.id,
+    title: row.title ?? "",
+    body: row.body ?? "",
+    createdAt: row.created_at,
+  };
+}
+
+function setJournalLoading(loading) {
+  if (loading) {
+    dreamList.innerHTML = "";
+    emptyState.hidden = false;
+    emptyState.textContent = "Loading dreams…";
+    dreamCount.textContent = "…";
+    return;
+  }
+  emptyState.textContent = EMPTY_JOURNAL_COPY;
+}
+
+function friendlyDreamError(error) {
+  const raw = (error?.message || String(error || "Something went wrong")).trim();
+  const lower = raw.toLowerCase();
+  if (lower.includes("network") || lower.includes("fetch") || lower.includes("failed to fetch")) {
+    return "Couldn’t reach the dream archive. Check your connection and try again.";
+  }
+  if (lower.includes("jwt") || lower.includes("not authenticated") || lower.includes("session")) {
+    return "Your session expired. Log in again to use the journal.";
+  }
+  return raw || "Something went wrong with the dream archive.";
+}
+
+async function fetchCloudDreams(userId) {
+  const { data, error } = await supabase
+    .from("dreams")
+    .select("id, title, body, created_at")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+  return (data || []).map(mapRowToDream);
+}
+
+async function loadCloudDreamsForUser(userId) {
+  const seq = ++dreamsLoadSeq;
+  setJournalLoading(true);
+
+  try {
+    const dreams = await fetchCloudDreams(userId);
+    if (seq !== dreamsLoadSeq) return;
+    cloudDreams = dreams;
+    cloudDreamsReady = true;
+    setJournalLoading(false);
+    renderDreams();
+  } catch (error) {
+    if (seq !== dreamsLoadSeq) return;
+    cloudDreams = [];
+    cloudDreamsReady = false;
+    setJournalLoading(false);
+    renderDreams();
+    setStatus(friendlyDreamError(error));
+  }
 }
 
 function countWords(text) {
@@ -77,11 +150,14 @@ function setStatus(message) {
 }
 
 function renderDreams() {
-  const dreams = loadDreams();
+  const dreams = cloudDreams;
   dreamList.innerHTML = "";
 
   dreamCount.textContent = dreams.length === 1 ? "1 saved" : `${dreams.length} saved`;
   emptyState.hidden = dreams.length > 0;
+  if (dreams.length === 0) {
+    emptyState.textContent = EMPTY_JOURNAL_COPY;
+  }
 
   for (const dream of dreams) {
     const item = document.createElement("li");
@@ -151,17 +227,42 @@ function renderDreams() {
     deleteBtn.className = "ghost-btn is-danger";
     deleteBtn.textContent = "Delete";
     deleteBtn.addEventListener("click", () => {
-      const ok = window.confirm("Delete this dream? This can’t be undone.");
-      if (!ok) return;
-      const next = loadDreams().filter((d) => d.id !== dream.id);
-      saveDreams(next);
-      setStatus("Dream deleted.");
-      renderDreams();
+      void deleteCloudDream(dream.id);
     });
     actions.appendChild(deleteBtn);
 
     dreamList.appendChild(item);
   }
+}
+
+async function deleteCloudDream(dreamId) {
+  const ok = window.confirm("Delete this dream? This can’t be undone.");
+  if (!ok) return;
+  if (!supabase || !currentUserId) {
+    setStatus("You’re not signed in.");
+    return;
+  }
+
+  deleteBtnBusy(dreamId, true);
+
+  const { error } = await supabase.from("dreams").delete().eq("id", dreamId).eq("user_id", currentUserId);
+
+  deleteBtnBusy(dreamId, false);
+
+  if (error) {
+    setStatus(friendlyDreamError(error));
+    return;
+  }
+
+  cloudDreams = cloudDreams.filter((d) => d.id !== dreamId);
+  setStatus("Dream deleted.");
+  renderDreams();
+}
+
+function deleteBtnBusy(dreamId, busy) {
+  const item = dreamList.querySelector(`[data-id="${dreamId}"]`);
+  const btn = item?.querySelector(".ghost-btn.is-danger");
+  if (btn) btn.disabled = busy;
 }
 
 /* =========================
@@ -288,8 +389,8 @@ function addDreamStar(x, y, { born = true } = {}) {
 }
 
 function seedDreamStarsFromJournal() {
-  // Quiet stars for dreams already saved (no orb animation on load)
-  const count = loadDreams().length;
+  // Quiet stars for dreams already in the cloud journal (no orb animation on load)
+  const count = cloudDreams.length;
   const w = window.innerWidth;
   const h = window.innerHeight;
   for (let i = 0; i < count; i++) {
@@ -361,7 +462,7 @@ function playSaveRitual() {
   });
 }
 
-function saveCurrentDream() {
+async function saveCurrentDream() {
   const title = titleInput.value.trim();
   const body = bodyInput.value.trim();
 
@@ -371,14 +472,38 @@ function saveCurrentDream() {
     return;
   }
 
-  const dreams = loadDreams();
-  dreams.unshift({
-    id: crypto.randomUUID(),
-    title,
-    body,
-    createdAt: new Date().toISOString(),
-  });
-  saveDreams(dreams);
+  if (!supabase || !currentUserId) {
+    setStatus("You’re not signed in.");
+    return;
+  }
+
+  if (saveInFlight) return;
+  saveInFlight = true;
+  saveButton.disabled = true;
+  setStatus("Catching dream…");
+
+  const { data, error } = await supabase
+    .from("dreams")
+    .insert({
+      user_id: currentUserId,
+      title,
+      body,
+    })
+    .select("id, title, body, created_at")
+    .single();
+
+  saveInFlight = false;
+  saveButton.disabled = false;
+
+  if (error) {
+    // Keep typed text so nothing is lost on failure.
+    setStatus(friendlyDreamError(error));
+    return;
+  }
+
+  cloudDreams.unshift(mapRowToDream(data));
+  // New cloud dreams are NOT written to localStorage (Supabase is source of truth).
+  // Old localStorage dreams remain on this device until a future migration.
 
   titleInput.value = "";
   bodyInput.value = "";
@@ -662,7 +787,9 @@ function scheduleSheepyAction() {
    WIRE UP
    ========================= */
 
-saveButton.addEventListener("click", saveCurrentDream);
+saveButton.addEventListener("click", () => {
+  void saveCurrentDream();
+});
 
 bodyInput.addEventListener("input", () => {
   updateWordCount();
@@ -679,17 +806,244 @@ bodyInput.addEventListener("select", updatePixelCaret);
 bodyInput.addEventListener("keydown", (event) => {
   if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
     event.preventDefault();
-    saveCurrentDream();
+    void saveCurrentDream();
   }
 });
 
 window.addEventListener("resize", updatePixelCaret);
 
+/* =========================
+   AUTH GATE (Supabase email)
+   Logged out → welcome screen
+   Logged in  → original DreamCatcher app + cloud journal
+   Legacy localStorage dreams stay on device (migration pending).
+   ========================= */
+
+const authScreen = document.getElementById("auth-screen");
+const appShell = document.getElementById("app-shell");
+const authEmail = document.getElementById("auth-email");
+const authPassword = document.getElementById("auth-password");
+const authLoginBtn = document.getElementById("auth-login");
+const authSignupBtn = document.getElementById("auth-signup");
+const authLogoutBtn = document.getElementById("auth-logout");
+const authUserEl = document.getElementById("auth-user");
+const authStatusEl = document.getElementById("auth-status");
+
+function setAuthBusy(busy) {
+  [authLoginBtn, authSignupBtn, authLogoutBtn].forEach((btn) => {
+    if (btn) btn.disabled = busy;
+  });
+}
+
+function setAuthStatus(message) {
+  if (authStatusEl) authStatusEl.textContent = message || "";
+}
+
+function friendlyAuthError(error) {
+  const raw = (error?.message || String(error || "Something went wrong")).trim();
+  const lower = raw.toLowerCase();
+
+  if (lower.includes("invalid login credentials")) {
+    return "Email or password is incorrect.";
+  }
+  if (lower.includes("user already registered") || lower.includes("already been registered")) {
+    return "That email is already registered. Try logging in.";
+  }
+  if (lower.includes("email not confirmed")) {
+    return "Confirm your email first — check your inbox for the link.";
+  }
+  if (lower.includes("password") && lower.includes("at least")) {
+    return "Password must be at least 6 characters.";
+  }
+  if (lower.includes("rate limit") || lower.includes("too many")) {
+    return "Too many attempts. Wait a moment and try again.";
+  }
+  if (lower.includes("network") || lower.includes("fetch")) {
+    return "Couldn't reach Supabase. Check your connection and try again.";
+  }
+  return raw;
+}
+
+function hideDreamsFromView() {
+  // Clears in-memory / on-screen journal only. Does not delete Supabase rows
+  // or legacy localStorage entries.
+  dreamsLoadSeq += 1;
+  cloudDreams = [];
+  currentUserId = null;
+  cloudDreamsReady = false;
+  cloudDreamsLoading = null;
+  dreamList.innerHTML = "";
+  dreamCount.textContent = "0 saved";
+  emptyState.hidden = false;
+  emptyState.textContent = EMPTY_JOURNAL_COPY;
+}
+
+function showLoggedOut(message = "") {
+  appShell.hidden = true;
+  authScreen.hidden = false;
+  authUserEl.textContent = "";
+  hideDreamsFromView();
+  if (message) setAuthStatus(message);
+}
+
+async function showLoggedIn(user) {
+  authScreen.hidden = true;
+  appShell.hidden = false;
+  authUserEl.textContent = user?.email || "Signed in";
+  setAuthStatus("");
+  updateWordCount();
+  updatePixelCaret();
+
+  if (currentUserId === user.id && cloudDreamsReady) {
+    renderDreams();
+    return;
+  }
+
+  if (currentUserId === user.id && cloudDreamsLoading) {
+    await cloudDreamsLoading;
+    return;
+  }
+
+  currentUserId = user.id;
+  cloudDreamsReady = false;
+  cloudDreamsLoading = loadCloudDreamsForUser(user.id).finally(() => {
+    cloudDreamsLoading = null;
+  });
+  await cloudDreamsLoading;
+}
+
+function renderAuthSession(session) {
+  const user = session?.user ?? null;
+  if (user) {
+    void showLoggedIn(user);
+  } else {
+    showLoggedOut();
+  }
+}
+
+async function handleSignup() {
+  if (!supabase) {
+    setAuthStatus("Account features aren't available right now.");
+    return;
+  }
+
+  const email = authEmail.value.trim();
+  const password = authPassword.value;
+
+  if (!email || !password) {
+    setAuthStatus("Enter an email and password to sign up.");
+    return;
+  }
+  if (password.length < 6) {
+    setAuthStatus("Password must be at least 6 characters.");
+    return;
+  }
+
+  setAuthBusy(true);
+  setAuthStatus("Creating your account…");
+
+  const { data, error } = await supabase.auth.signUp({ email, password });
+
+  setAuthBusy(false);
+
+  if (error) {
+    setAuthStatus(friendlyAuthError(error));
+    return;
+  }
+
+  authPassword.value = "";
+
+  if (data.session) {
+    setAuthStatus("");
+    return;
+  }
+
+  setAuthStatus("Check your email to confirm your account, then log in.");
+}
+
+async function handleLogin() {
+  if (!supabase) {
+    setAuthStatus("Account features aren't available right now.");
+    return;
+  }
+
+  const email = authEmail.value.trim();
+  const password = authPassword.value;
+
+  if (!email || !password) {
+    setAuthStatus("Enter your email and password to log in.");
+    return;
+  }
+
+  setAuthBusy(true);
+  setAuthStatus("Signing in…");
+
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+  setAuthBusy(false);
+
+  if (error) {
+    setAuthStatus(friendlyAuthError(error));
+    return;
+  }
+
+  authPassword.value = "";
+  setAuthStatus("");
+}
+
+async function handleLogout() {
+  if (!supabase) return;
+
+  setAuthBusy(true);
+
+  const { error } = await supabase.auth.signOut();
+
+  setAuthBusy(false);
+
+  if (error) {
+    setAuthStatus(friendlyAuthError(error));
+    return;
+  }
+
+  // Legacy localStorage dreams are intentionally NOT deleted.
+  // Cloud rows are intentionally NOT deleted.
+  showLoggedOut("Signed out.");
+}
+
+async function initAuth() {
+  if (!supabase) {
+    showLoggedOut("Account features aren't available right now.");
+    return;
+  }
+
+  const { data, error } = await supabase.auth.getSession();
+  if (error) {
+    showLoggedOut(friendlyAuthError(error));
+  } else {
+    renderAuthSession(data?.session ?? null);
+  }
+
+  supabase.auth.onAuthStateChange((_event, session) => {
+    renderAuthSession(session);
+  });
+}
+
+authLoginBtn.addEventListener("click", handleLogin);
+authSignupBtn.addEventListener("click", handleSignup);
+authLogoutBtn.addEventListener("click", handleLogout);
+
+authPassword.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    handleLogin();
+  }
+});
+
 updateWordCount();
-renderDreams();
 fallbackCaption();
 syncLimaSky();
 window.setInterval(syncLimaSky, 10 * 60 * 1000);
 
 startStarfield();
 scheduleSheepyAction();
+initAuth();

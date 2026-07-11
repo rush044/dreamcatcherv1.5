@@ -31,77 +31,120 @@
       <div class="sky__horizon"></div>
     </div>
 
-    <!-- Soft moon (orb destination) + Sheepy mascot -->
-    <div class="moon" id="moon" aria-hidden="true"></div>
-    <div class="sheepy" id="sheepy" aria-hidden="true">
-      <div class="sheepy__bob">
-        <img
-          class="sheepy__sprite"
-          src="/assets/sheepy.png"
-          width="32"
-          height="32"
-          alt=""
-          draggable="false"
-        />
-        <span class="sheepy__lids"></span>
-        <span class="sheepy__mouth"></span>
-      </div>
-    </div>
+    <!-- Logged-out: welcome + authentication -->
+    <section id="auth-screen" class="auth-screen" aria-label="Welcome">
+      <div class="auth-panel">
+        <p class="brand-mark auth-panel__mark">DreamCatcher</p>
+        <p class="auth-vision">Catch today. Understand tomorrow. Replay forever.</p>
 
-    <main class="app">
-      <header class="brand">
-        <p class="brand-mark">DreamCatcher</p>
-        <p class="lede">Dreams disappear faster than you think. Catch them before they fade.</p>
-        <p id="sky-caption" class="sky-caption">Lima night sky…</p>
-      </header>
-
-      <section class="composer" aria-label="Write a dream">
         <div class="field">
-          <label for="dream-title">Title</label>
+          <label for="auth-email">Email</label>
           <input
-            id="dream-title"
-            type="text"
-            placeholder="Optional — e.g. The floating library"
-            autocomplete="off"
-            maxlength="80"
+            id="auth-email"
+            type="email"
+            autocomplete="email"
+            placeholder="you@example.com"
           />
         </div>
-
         <div class="field">
-          <div class="field-head">
-            <label for="dream-body">The dream</label>
-            <span id="word-count" class="meta">0 words</span>
-          </div>
-          <div class="dream-stage" id="dream-stage">
-            <textarea
-              id="dream-body"
-              class="dream-body"
-              rows="9"
-              placeholder=""
-              spellcheck="true"
-            ></textarea>
-            <span class="pixel-caret" id="pixel-caret" aria-hidden="true"></span>
-          </div>
+          <label for="auth-password">Password</label>
+          <input
+            id="auth-password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="At least 6 characters"
+            minlength="6"
+          />
+        </div>
+        <div class="composer-actions auth-panel__actions">
+          <button id="auth-login" type="button">Log in</button>
+          <button id="auth-signup" type="button" class="ghost-btn">Sign up</button>
+        </div>
+        <p id="auth-status" class="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- Logged-in: original DreamCatcher app -->
+    <div id="app-shell" hidden>
+      <!-- Soft moon (orb destination) + Sheepy mascot -->
+      <div class="moon" id="moon" aria-hidden="true"></div>
+      <div class="sheepy" id="sheepy" aria-hidden="true">
+        <div class="sheepy__bob">
+          <img
+            class="sheepy__sprite"
+            src="/assets/sheepy.png"
+            width="32"
+            height="32"
+            alt=""
+            draggable="false"
+          />
+          <span class="sheepy__lids"></span>
+          <span class="sheepy__mouth"></span>
+        </div>
+      </div>
+
+      <main class="app">
+        <div class="session-bar" aria-label="Account">
+          <p id="auth-user" class="session-bar__user"></p>
+          <button id="auth-logout" type="button" class="ghost-btn session-bar__logout">
+            Log out
+          </button>
         </div>
 
-        <div class="composer-actions">
-          <button id="save-dream" type="button">Catch Dream</button>
-          <p class="hint">Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to catch</p>
-        </div>
-        <p id="status" class="status" aria-live="polite"></p>
-      </section>
+        <header class="brand">
+          <p class="brand-mark">DreamCatcher</p>
+          <p class="lede">Dreams disappear faster than you think. Catch them before they fade.</p>
+          <p id="sky-caption" class="sky-caption">Lima night sky…</p>
+        </header>
 
-      <section class="journal" aria-label="Saved dreams">
-        <div class="journal-head">
-          <h2>Journal</h2>
-          <p id="dream-count" class="meta">0 saved</p>
-        </div>
-        <p id="empty-state" class="empty">
-          Nothing here yet. Your first dream becomes the start of the archive.
-        </p>
-        <ul id="dream-list"></ul>
-      </section>
-    </main>
+        <section class="composer" aria-label="Write a dream">
+          <div class="field">
+            <label for="dream-title">Title</label>
+            <input
+              id="dream-title"
+              type="text"
+              placeholder="Optional — e.g. The floating library"
+              autocomplete="off"
+              maxlength="80"
+            />
+          </div>
+
+          <div class="field">
+            <div class="field-head">
+              <label for="dream-body">The dream</label>
+              <span id="word-count" class="meta">0 words</span>
+            </div>
+            <div class="dream-stage" id="dream-stage">
+              <textarea
+                id="dream-body"
+                class="dream-body"
+                rows="9"
+                placeholder=""
+                spellcheck="true"
+              ></textarea>
+              <span class="pixel-caret" id="pixel-caret" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="composer-actions">
+            <button id="save-dream" type="button">Catch Dream</button>
+            <p class="hint">Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to catch</p>
+          </div>
+          <p id="status" class="status" aria-live="polite"></p>
+        </section>
+
+        <section class="journal" aria-label="Saved dreams">
+          <div class="journal-head">
+            <h2>Journal</h2>
+            <p id="dream-count" class="meta">0 saved</p>
+          </div>
+          <p id="empty-state" class="empty">
+            Nothing here yet. Your first dream becomes the start of the archive.
+          </p>
+          <ul id="dream-list"></ul>
+        </section>
+      </main>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

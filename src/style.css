@@ -283,6 +283,115 @@ body[data-clouds="heavy"] .sky__starfield {
   animation: rise 700ms ease 120ms both;
 }
 
+/* ---- Logged-out welcome / auth ---- */
+
+.auth-screen {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.auth-screen[hidden] {
+  display: none !important;
+}
+
+.auth-panel {
+  width: min(420px, 100%);
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem 1.5rem 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--moonlight) 12%, var(--line));
+  border-radius: var(--radius);
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px) saturate(0.82);
+  -webkit-backdrop-filter: blur(22px) saturate(0.82);
+  animation: rise 700ms ease both;
+}
+
+.auth-panel__mark {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2.2rem, 8vw, 3.2rem);
+}
+
+.auth-vision {
+  margin: -0.15rem 0 0.35rem;
+  text-align: center;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 3.2vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.auth-panel__actions {
+  margin-top: 0.15rem;
+}
+
+#auth-login {
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+#auth-login:hover {
+  background: var(--accent-deep);
+}
+
+#auth-login:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+#auth-login:disabled,
+#auth-signup:disabled,
+#auth-logout:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+/* ---- Logged-in app shell ---- */
+
+#app-shell[hidden] {
+  display: none !important;
+}
+
+.session-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.55rem 0.85rem;
+  margin: 0 0 1.1rem;
+  padding-right: 0.1rem;
+  animation: rise 700ms ease both;
+}
+
+.session-bar__user {
+  margin: 0;
+  color: var(--caption);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  max-width: min(100%, 18rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.session-bar__logout {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  opacity: 0.82;
+}
+
 .composer {
   display: grid;
   gap: 1rem;
@@ -717,8 +826,23 @@ kbd {
     align-items: stretch;
   }
 
-  #save-dream {
+  #save-dream,
+  #auth-login {
     width: 100%;
+  }
+
+  #auth-signup {
+    width: 100%;
+    text-align: center;
+  }
+
+  .auth-panel {
+    padding: 1.45rem 1.2rem 1.25rem;
+  }
+
+  .session-bar {
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
   }
 
   .hint {
