@@ -816,21 +816,68 @@ window.addEventListener("resize", updatePixelCaret);
    AUTH GATE (Supabase email)
    Logged out → welcome screen
    Logged in  → original DreamCatcher app + cloud journal
+   Recovery   → set new password, then sign in normally
    Legacy localStorage dreams stay on device (migration pending).
    ========================= */
 
 const authScreen = document.getElementById("auth-screen");
 const appShell = document.getElementById("app-shell");
+const authSignin = document.getElementById("auth-signin");
+const authResetRequest = document.getElementById("auth-reset-request");
+const authResetUpdate = document.getElementById("auth-reset-update");
 const authEmail = document.getElementById("auth-email");
 const authPassword = document.getElementById("auth-password");
+const authResetEmail = document.getElementById("auth-reset-email");
+const authNewPassword = document.getElementById("auth-new-password");
+const authConfirmPassword = document.getElementById("auth-confirm-password");
 const authLoginBtn = document.getElementById("auth-login");
 const authSignupBtn = document.getElementById("auth-signup");
+const authForgotBtn = document.getElementById("auth-forgot");
+const authSendResetBtn = document.getElementById("auth-send-reset");
+const authBackSigninBtn = document.getElementById("auth-back-signin");
+const authUpdatePasswordBtn = document.getElementById("auth-update-password");
 const authLogoutBtn = document.getElementById("auth-logout");
 const authUserEl = document.getElementById("auth-user");
 const authStatusEl = document.getElementById("auth-status");
 
+/** @type {"signin" | "request-reset" | "set-password"} */
+let authMode = "signin";
+let passwordRecoveryPending = false;
+/** @type {string | null} */
+let pendingSignedOutMessage = null;
+
+/**
+ * Recovery email return URL.
+ * Uses Vite BASE_URL so a future subpath deploy (e.g. /dreamcatcher/) is preserved.
+ * Root deploy / local Vite → origin + "/".
+ */
+function getPasswordRecoveryRedirectUrl() {
+  const base = import.meta.env.BASE_URL || "/";
+  return new URL(base, window.location.origin).href;
+}
+
+function urlIndicatesPasswordRecovery() {
+  const hash = window.location.hash.startsWith("#")
+    ? window.location.hash.slice(1)
+    : window.location.hash;
+  const search = window.location.search.startsWith("?")
+    ? window.location.search.slice(1)
+    : window.location.search;
+  const fromHash = new URLSearchParams(hash).get("type");
+  const fromSearch = new URLSearchParams(search).get("type");
+  return fromHash === "recovery" || fromSearch === "recovery";
+}
+
 function setAuthBusy(busy) {
-  [authLoginBtn, authSignupBtn, authLogoutBtn].forEach((btn) => {
+  [
+    authLoginBtn,
+    authSignupBtn,
+    authLogoutBtn,
+    authForgotBtn,
+    authSendResetBtn,
+    authBackSigninBtn,
+    authUpdatePasswordBtn,
+  ].forEach((btn) => {
     if (btn) btn.disabled = busy;
   });
 }
@@ -855,6 +902,22 @@ function friendlyAuthError(error) {
   if (lower.includes("password") && lower.includes("at least")) {
     return "Password must be at least 6 characters.";
   }
+  if (
+    lower.includes("same password") ||
+    lower.includes("should be different") ||
+    lower.includes("different from the old password")
+  ) {
+    return "Choose a password that is different from your current one.";
+  }
+  if (
+    lower.includes("expired") ||
+    lower.includes("invalid token") ||
+    lower.includes("token has expired") ||
+    lower.includes("otp_expired") ||
+    lower.includes("flow_state")
+  ) {
+    return "This recovery link is invalid or has expired. Request a new one.";
+  }
   if (lower.includes("rate limit") || lower.includes("too many")) {
     return "Too many attempts. Wait a moment and try again.";
   }
@@ -862,6 +925,43 @@ function friendlyAuthError(error) {
     return "Couldn't reach Supabase. Check your connection and try again.";
   }
   return raw;
+}
+
+function clearPasswordFields() {
+  if (authPassword) authPassword.value = "";
+  if (authNewPassword) authNewPassword.value = "";
+  if (authConfirmPassword) authConfirmPassword.value = "";
+}
+
+function setAuthMode(mode, { preserveStatus = false } = {}) {
+  authMode = mode;
+  if (authSignin) authSignin.hidden = mode !== "signin";
+  if (authResetRequest) authResetRequest.hidden = mode !== "request-reset";
+  if (authResetUpdate) authResetUpdate.hidden = mode !== "set-password";
+
+  if (!preserveStatus) setAuthStatus("");
+
+  if (mode === "request-reset" && authResetEmail && authEmail) {
+    if (!authResetEmail.value.trim() && authEmail.value.trim()) {
+      authResetEmail.value = authEmail.value.trim();
+    }
+  }
+
+  if (mode !== "set-password") {
+    if (authNewPassword) authNewPassword.value = "";
+    if (authConfirmPassword) authConfirmPassword.value = "";
+  }
+}
+
+function showPasswordRecovery() {
+  passwordRecoveryPending = true;
+  appShell.hidden = true;
+  authScreen.hidden = false;
+  authUserEl.textContent = "";
+  hideDreamsFromView();
+  setAuthMode("set-password");
+  setAuthStatus("Choose a new password to finish recovering your account.");
+  authNewPassword?.focus();
 }
 
 function hideDreamsFromView() {
@@ -879,14 +979,20 @@ function hideDreamsFromView() {
 }
 
 function showLoggedOut(message = "") {
+  passwordRecoveryPending = false;
   appShell.hidden = true;
   authScreen.hidden = false;
   authUserEl.textContent = "";
   hideDreamsFromView();
-  if (message) setAuthStatus(message);
+  const status = message || pendingSignedOutMessage || "";
+  pendingSignedOutMessage = null;
+  setAuthMode("signin", { preserveStatus: Boolean(status) });
+  if (status) setAuthStatus(status);
 }
 
 async function showLoggedIn(user) {
+  passwordRecoveryPending = false;
+  setAuthMode("signin");
   authScreen.hidden = true;
   appShell.hidden = false;
   authUserEl.textContent = user?.email || "Signed in";
@@ -912,7 +1018,22 @@ async function showLoggedIn(user) {
   await cloudDreamsLoading;
 }
 
-function renderAuthSession(session) {
+function renderAuthSession(session, event = null) {
+  if (event === "PASSWORD_RECOVERY" || passwordRecoveryPending) {
+    if (session?.user) {
+      showPasswordRecovery();
+      return;
+    }
+    // Recovery link may set the URL before the session is ready.
+    if (passwordRecoveryPending && event !== "SIGNED_OUT") {
+      appShell.hidden = true;
+      authScreen.hidden = false;
+      setAuthMode("set-password", { preserveStatus: true });
+      return;
+    }
+    passwordRecoveryPending = false;
+  }
+
   const user = session?.user ?? null;
   if (user) {
     void showLoggedIn(user);
@@ -991,6 +1112,89 @@ async function handleLogin() {
   setAuthStatus("");
 }
 
+async function handleRequestPasswordReset() {
+  if (!supabase) {
+    setAuthStatus("Account features aren't available right now.");
+    return;
+  }
+
+  const email = authResetEmail.value.trim();
+  if (!email) {
+    setAuthStatus("Enter the email for your account.");
+    authResetEmail.focus();
+    return;
+  }
+
+  setAuthBusy(true);
+  setAuthStatus("Sending recovery email…");
+
+  const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: getPasswordRecoveryRedirectUrl(),
+  });
+
+  setAuthBusy(false);
+
+  if (error) {
+    setAuthStatus(friendlyAuthError(error));
+    return;
+  }
+
+  setAuthStatus("If an account exists for that email, a recovery link is on the way. Check your inbox.");
+}
+
+async function handleUpdatePassword() {
+  if (!supabase) {
+    setAuthStatus("Account features aren't available right now.");
+    return;
+  }
+
+  const password = authNewPassword.value;
+  const confirm = authConfirmPassword.value;
+
+  if (!password || !confirm) {
+    setAuthStatus("Enter and confirm your new password.");
+    return;
+  }
+  if (password.length < 6) {
+    setAuthStatus("Password must be at least 6 characters.");
+    return;
+  }
+  if (password !== confirm) {
+    setAuthStatus("Those passwords don’t match.");
+    return;
+  }
+
+  setAuthBusy(true);
+  setAuthStatus("Saving your new password…");
+
+  const { error } = await supabase.auth.updateUser({ password });
+
+  if (error) {
+    setAuthBusy(false);
+    setAuthStatus(friendlyAuthError(error));
+    return;
+  }
+
+  clearPasswordFields();
+  passwordRecoveryPending = false;
+  pendingSignedOutMessage = "Password updated. Log in with your new password.";
+
+  const { error: signOutError } = await supabase.auth.signOut();
+
+  setAuthBusy(false);
+
+  if (signOutError) {
+    pendingSignedOutMessage = null;
+    setAuthMode("signin");
+    setAuthStatus(
+      "Password updated, but we couldn’t sign you out automatically. Log in with your new password."
+    );
+    return;
+  }
+
+  showLoggedOut();
+}
+
 async function handleLogout() {
   if (!supabase) return;
 
@@ -1016,6 +1220,10 @@ async function initAuth() {
     return;
   }
 
+  if (urlIndicatesPasswordRecovery()) {
+    passwordRecoveryPending = true;
+  }
+
   const { data, error } = await supabase.auth.getSession();
   if (error) {
     showLoggedOut(friendlyAuthError(error));
@@ -1023,19 +1231,54 @@ async function initAuth() {
     renderAuthSession(data?.session ?? null);
   }
 
-  supabase.auth.onAuthStateChange((_event, session) => {
-    renderAuthSession(session);
+  supabase.auth.onAuthStateChange((event, session) => {
+    renderAuthSession(session, event);
   });
 }
 
 authLoginBtn.addEventListener("click", handleLogin);
 authSignupBtn.addEventListener("click", handleSignup);
 authLogoutBtn.addEventListener("click", handleLogout);
+authForgotBtn.addEventListener("click", () => {
+  setAuthMode("request-reset");
+  authResetEmail?.focus();
+});
+authBackSigninBtn.addEventListener("click", () => {
+  setAuthMode("signin");
+  authEmail?.focus();
+});
+authSendResetBtn.addEventListener("click", () => {
+  void handleRequestPasswordReset();
+});
+authUpdatePasswordBtn.addEventListener("click", () => {
+  void handleUpdatePassword();
+});
 
 authPassword.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     handleLogin();
+  }
+});
+
+authResetEmail.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    void handleRequestPasswordReset();
+  }
+});
+
+authConfirmPassword.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    void handleUpdatePassword();
+  }
+});
+
+authNewPassword.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    authConfirmPassword?.focus();
   }
 });
 

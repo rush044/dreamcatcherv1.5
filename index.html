@@ -37,29 +37,80 @@
         <p class="brand-mark auth-panel__mark">DreamCatcher</p>
         <p class="auth-vision">Catch today. Understand tomorrow. Replay forever.</p>
 
-        <div class="field">
-          <label for="auth-email">Email</label>
-          <input
-            id="auth-email"
-            type="email"
-            autocomplete="email"
-            placeholder="you@example.com"
-          />
+        <!-- Default: log in / sign up -->
+        <div id="auth-signin" class="auth-mode">
+          <div class="field">
+            <label for="auth-email">Email</label>
+            <input
+              id="auth-email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="field">
+            <label for="auth-password">Password</label>
+            <input
+              id="auth-password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="At least 6 characters"
+              minlength="6"
+            />
+          </div>
+          <div class="composer-actions auth-panel__actions">
+            <button id="auth-login" type="button">Log in</button>
+            <button id="auth-signup" type="button" class="ghost-btn">Sign up</button>
+          </div>
+          <button id="auth-forgot" type="button" class="auth-forgot">Forgot password?</button>
         </div>
-        <div class="field">
-          <label for="auth-password">Password</label>
-          <input
-            id="auth-password"
-            type="password"
-            autocomplete="current-password"
-            placeholder="At least 6 characters"
-            minlength="6"
-          />
+
+        <!-- Request a recovery email -->
+        <div id="auth-reset-request" class="auth-mode" hidden>
+          <p class="auth-mode__lede">Enter your email and we’ll send a recovery link.</p>
+          <div class="field">
+            <label for="auth-reset-email">Email</label>
+            <input
+              id="auth-reset-email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="composer-actions auth-panel__actions">
+            <button id="auth-send-reset" type="button">Send recovery email</button>
+            <button id="auth-back-signin" type="button" class="ghost-btn">Back to log in</button>
+          </div>
         </div>
-        <div class="composer-actions auth-panel__actions">
-          <button id="auth-login" type="button">Log in</button>
-          <button id="auth-signup" type="button" class="ghost-btn">Sign up</button>
+
+        <!-- Choose a new password after opening the recovery link -->
+        <div id="auth-reset-update" class="auth-mode" hidden>
+          <p class="auth-mode__lede">Choose a new password for your account.</p>
+          <div class="field">
+            <label for="auth-new-password">New password</label>
+            <input
+              id="auth-new-password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="At least 6 characters"
+              minlength="6"
+            />
+          </div>
+          <div class="field">
+            <label for="auth-confirm-password">Confirm password</label>
+            <input
+              id="auth-confirm-password"
+              type="password"
+              autocomplete="new-password"
+              placeholder="Repeat your new password"
+              minlength="6"
+            />
+          </div>
+          <div class="composer-actions auth-panel__actions">
+            <button id="auth-update-password" type="button">Save new password</button>
+          </div>
         </div>
+
         <p id="auth-status" class="status" aria-live="polite"></p>
       </div>
     </section>
