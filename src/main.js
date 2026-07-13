@@ -12,7 +12,7 @@ const EMPTY_JOURNAL_COPY =
   "Nothing here yet. Your first dream becomes the start of the archive.";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/** @type {{ id: string, title: string, body: string, createdAt: string }[]} */
+/** @type {{ id: string, title: string, body: string, createdAt: string, insight?: object | null, insightCreatedAt?: string | null }[]} */
 let cloudDreams = [];
 /** @type {string | null} */
 let currentUserId = null;
@@ -21,6 +21,10 @@ let saveInFlight = false;
 let cloudDreamsReady = false;
 /** @type {Promise<void> | null} */
 let cloudDreamsLoading = null;
+/** @type {Set<string>} */
+const insightInFlight = new Set();
+/** @type {Set<string>} Dream ids whose journal body is expanded (Show less). */
+const expandedDreamIds = new Set();
 
 const LIMA = {
   latitude: -12.0464,
@@ -64,7 +68,189 @@ function mapRowToDream(row) {
     title: row.title ?? "",
     body: row.body ?? "",
     createdAt: row.created_at,
+    insight: null,
+    insightCreatedAt: null,
   };
+}
+
+function friendlyInsightError(error, fallback = "Couldn’t generate this insight. Try again.") {
+  const raw = (error?.message || String(error || "")).trim();
+  const lower = raw.toLowerCase();
+  if (!raw) return fallback;
+  if (lower.includes("network") || lower.includes("fetch") || lower.includes("failed to fetch")) {
+    return "Couldn’t reach Dream Insights. Check your connection and try again.";
+  }
+  if (lower.includes("session") || lower.includes("sign in") || lower.includes("log in")) {
+    return "Your session expired. Log in again to use Dream Insights.";
+  }
+  return raw || fallback;
+}
+
+function createInsightPanel() {
+  const panel = document.createElement("div");
+  panel.className = "dream-insight";
+  panel.hidden = true;
+  return panel;
+}
+
+function renderInsightContent(panel, insight) {
+  panel.hidden = false;
+  panel.classList.remove("is-error", "is-loading");
+  panel.replaceChildren();
+
+  const title = document.createElement("p");
+  title.className = "dream-insight__label";
+  title.textContent = "Dream Insight";
+  panel.appendChild(title);
+
+  const summary = document.createElement("p");
+  summary.className = "dream-insight__summary";
+  summary.textContent = insight.summary;
+  panel.appendChild(summary);
+
+  const appendListSection = (heading, items) => {
+    if (!items?.length) return;
+    const section = document.createElement("div");
+    section.className = "dream-insight__section";
+    const h = document.createElement("h4");
+    h.textContent = heading;
+    section.appendChild(h);
+    const ul = document.createElement("ul");
+    for (const item of items) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
+    }
+    section.appendChild(ul);
+    panel.appendChild(section);
+  };
+
+  appendListSection("Emotions", insight.emotions);
+  appendListSection(
+    "People",
+    (insight.people || []).map((p) => `${p.name_or_role} — ${p.possible_dynamic}`)
+  );
+  appendListSection(
+    "Places",
+    (insight.places || []).map((p) => `${p.place} — ${p.possible_significance}`)
+  );
+  appendListSection(
+    "Symbols",
+    (insight.symbols || []).map((s) => `${s.symbol} — ${s.possible_meaning}`)
+  );
+  appendListSection("Themes", insight.themes);
+  appendListSection("Reflection questions", insight.reflection_questions);
+
+  if (insight.uncertainty_note) {
+    const note = document.createElement("p");
+    note.className = "dream-insight__note";
+    note.textContent = insight.uncertainty_note;
+    panel.appendChild(note);
+  }
+
+  if (insight.return_message) {
+    const ret = document.createElement("p");
+    ret.className = "dream-insight__return";
+    ret.textContent = insight.return_message;
+    panel.appendChild(ret);
+  }
+}
+
+function showInsightLoading(panel) {
+  panel.hidden = false;
+  panel.classList.add("is-loading");
+  panel.classList.remove("is-error");
+  panel.replaceChildren();
+  const p = document.createElement("p");
+  p.className = "dream-insight__status";
+  p.textContent = "Listening closely to this dream…";
+  panel.appendChild(p);
+}
+
+function showInsightError(panel, message, onRetry) {
+  panel.hidden = false;
+  panel.classList.add("is-error");
+  panel.classList.remove("is-loading");
+  panel.replaceChildren();
+
+  const p = document.createElement("p");
+  p.className = "dream-insight__status";
+  p.textContent = message;
+  panel.appendChild(p);
+
+  const retry = document.createElement("button");
+  retry.type = "button";
+  retry.className = "ghost-btn";
+  retry.textContent = "Try again";
+  retry.addEventListener("click", onRetry);
+  panel.appendChild(retry);
+}
+
+async function fetchInsightsForDreams(dreamIds) {
+  if (!supabase || !dreamIds.length) return new Map();
+
+  const { data, error } = await supabase
+    .from("dream_insights")
+    .select("dream_id, content, created_at")
+    .in("dream_id", dreamIds);
+
+  if (error) {
+    // Migration may not be applied yet — journal still works without insights.
+    console.warn("Could not load dream insights:", error.message || error);
+    return new Map();
+  }
+
+  const map = new Map();
+  for (const row of data || []) {
+    map.set(row.dream_id, {
+      insight: row.content,
+      insightCreatedAt: row.created_at,
+    });
+  }
+  return map;
+}
+
+async function requestDreamInsight(dreamId) {
+  if (!supabase) {
+    throw new Error("Account features aren't available right now.");
+  }
+
+  const {
+    data: { session },
+    error: sessionError,
+  } = await supabase.auth.getSession();
+
+  if (sessionError) throw sessionError;
+  const accessToken = session?.access_token;
+  if (!accessToken) {
+    throw new Error("Sign in to generate a Dream Insight.");
+  }
+
+  const response = await fetch("/api/dream-insights", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({ dreamId }),
+  });
+
+  let payload = null;
+  try {
+    payload = await response.json();
+  } catch {
+    payload = null;
+  }
+
+  if (!response.ok) {
+    throw new Error(payload?.error || "Couldn’t generate this insight. Try again.");
+  }
+
+  if (!payload?.insight) {
+    throw new Error("Couldn’t generate this insight. Try again.");
+  }
+
+  return payload;
 }
 
 function setJournalLoading(loading) {
@@ -98,7 +284,16 @@ async function fetchCloudDreams(userId) {
     .order("created_at", { ascending: false });
 
   if (error) throw error;
-  return (data || []).map(mapRowToDream);
+  const dreams = (data || []).map(mapRowToDream);
+  const insightMap = await fetchInsightsForDreams(dreams.map((d) => d.id));
+  for (const dream of dreams) {
+    const saved = insightMap.get(dream.id);
+    if (saved) {
+      dream.insight = saved.insight;
+      dream.insightCreatedAt = saved.insightCreatedAt;
+    }
+  }
+  return dreams;
 }
 
 async function loadCloudDreamsForUser(userId) {
@@ -184,7 +379,10 @@ function renderDreams() {
 
     const bodyEl = item.querySelector(".dream-entry__body");
     bodyEl.textContent = dream.body;
-    if (long) bodyEl.classList.add("is-clamped");
+    const isExpanded = expandedDreamIds.has(dream.id);
+    if (long && !isExpanded) {
+      bodyEl.classList.add("is-clamped");
+    }
 
     const actions = item.querySelector(".dream-entry__actions");
 
@@ -192,23 +390,47 @@ function renderDreams() {
       const toggleBtn = document.createElement("button");
       toggleBtn.type = "button";
       toggleBtn.className = "ghost-btn";
-      toggleBtn.textContent = "Read more";
+      toggleBtn.textContent = isExpanded ? "Show less" : "Read more";
       toggleBtn.addEventListener("click", () => {
-        const open = bodyEl.classList.toggle("is-clamped");
-        toggleBtn.textContent = open ? "Read more" : "Show less";
+        const nowClamped = bodyEl.classList.toggle("is-clamped");
+        if (nowClamped) {
+          expandedDreamIds.delete(dream.id);
+          toggleBtn.textContent = "Read more";
+        } else {
+          expandedDreamIds.add(dream.id);
+          toggleBtn.textContent = "Show less";
+        }
       });
       actions.appendChild(toggleBtn);
     }
 
     const insightsBtn = document.createElement("button");
     insightsBtn.type = "button";
-    insightsBtn.className = "ghost-btn is-soon";
-    insightsBtn.textContent = "✨ Dream Insights · Coming Soon";
-    insightsBtn.addEventListener("click", () => {
-      setStatus(
-        "Coming soon. Discover recurring themes, emotions and symbols across your dreams."
-      );
-    });
+    insightsBtn.className = "ghost-btn";
+    insightsBtn.dataset.role = "insights";
+
+    const insightPanel = createInsightPanel();
+
+    const runInsight = () => {
+      void generateInsightForDream(dream.id);
+    };
+
+    if (dream.insight) {
+      insightsBtn.textContent = "✨ Dream Insights";
+      insightsBtn.disabled = true;
+      insightsBtn.title = "Insight saved for this dream";
+      renderInsightContent(insightPanel, dream.insight);
+    } else {
+      insightsBtn.textContent = "✨ Dream Insights";
+      insightsBtn.addEventListener("click", runInsight);
+    }
+
+    if (insightInFlight.has(dream.id)) {
+      insightsBtn.disabled = true;
+      insightsBtn.textContent = "✨ Listening…";
+      showInsightLoading(insightPanel);
+    }
+
     actions.appendChild(insightsBtn);
 
     const replayBtn = document.createElement("button");
@@ -231,7 +453,65 @@ function renderDreams() {
     });
     actions.appendChild(deleteBtn);
 
+    item.appendChild(insightPanel);
     dreamList.appendChild(item);
+  }
+}
+
+async function generateInsightForDream(dreamId) {
+  if (!currentUserId || !supabase) {
+    setStatus("You’re not signed in.");
+    return;
+  }
+
+  if (insightInFlight.has(dreamId)) return;
+
+  const dream = cloudDreams.find((d) => d.id === dreamId);
+  if (!dream) return;
+
+  if (dream.insight) {
+    renderDreams();
+    return;
+  }
+
+  if (!String(dream.body || "").trim()) {
+    setStatus("This dream has no text to reflect on.");
+    return;
+  }
+
+  insightInFlight.add(dreamId);
+  renderDreams();
+
+  let failed = false;
+  try {
+    const payload = await requestDreamInsight(dreamId);
+    const target = cloudDreams.find((d) => d.id === dreamId);
+    if (target) {
+      target.insight = payload.insight;
+      target.insightCreatedAt = payload.createdAt || new Date().toISOString();
+    }
+    setStatus("Insight ready.");
+  } catch (error) {
+    failed = true;
+    const item = dreamList.querySelector(`[data-id="${dreamId}"]`);
+    const panel = item?.querySelector(".dream-insight");
+    const btn = item?.querySelector('[data-role="insights"]');
+    const message = friendlyInsightError(error);
+    if (panel) {
+      showInsightError(panel, message, () => {
+        void generateInsightForDream(dreamId);
+      });
+    }
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = "✨ Dream Insights";
+    }
+    setStatus(message);
+  } finally {
+    insightInFlight.delete(dreamId);
+    if (!failed) {
+      renderDreams();
+    }
   }
 }
 
@@ -255,6 +535,8 @@ async function deleteCloudDream(dreamId) {
   }
 
   cloudDreams = cloudDreams.filter((d) => d.id !== dreamId);
+  insightInFlight.delete(dreamId);
+  expandedDreamIds.delete(dreamId);
   setStatus("Dream deleted.");
   renderDreams();
 }
@@ -972,6 +1254,8 @@ function hideDreamsFromView() {
   currentUserId = null;
   cloudDreamsReady = false;
   cloudDreamsLoading = null;
+  insightInFlight.clear();
+  expandedDreamIds.clear();
   dreamList.innerHTML = "";
   dreamCount.textContent = "0 saved";
   emptyState.hidden = false;

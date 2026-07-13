@@ -695,6 +695,7 @@ kbd {
 .dream-entry__body {
   margin: 0.85rem 0 0;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -744,6 +745,82 @@ kbd {
   border-color: rgba(208, 137, 120, 0.4);
   color: var(--warn);
   background: rgba(208, 137, 120, 0.08);
+}
+
+.ghost-btn:disabled {
+  opacity: 0.62;
+  cursor: default;
+}
+
+.dream-insight {
+  margin-top: 0.95rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.dream-insight__label {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.dream-insight__summary,
+.dream-insight__note,
+.dream-insight__return,
+.dream-insight__status {
+  margin: 0.35rem 0 0;
+}
+
+.dream-insight__section {
+  margin-top: 0.75rem;
+}
+
+.dream-insight__section h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.dream-insight__section ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.dream-insight__section li + li {
+  margin-top: 0.25rem;
+}
+
+.dream-insight__note {
+  color: var(--soft);
+  font-size: 0.86rem;
+}
+
+.dream-insight__return {
+  margin-top: 0.75rem;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.dream-insight.is-error .dream-insight__status {
+  color: var(--warn);
+}
+
+.dream-insight.is-error .ghost-btn {
+  margin-top: 0.65rem;
+}
+
+.dream-insight.is-loading .dream-insight__status {
+  color: var(--soft);
 }
 
 @keyframes rise {
