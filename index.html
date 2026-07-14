@@ -207,8 +207,15 @@
         <!-- Dream capture -->
         <section id="screen-capture" class="app-screen" data-screen="capture" aria-label="Catch a dream" hidden>
           <header id="capture-compose-head" class="screen-head screen-head--capture">
-            <button type="button" class="btn-back" data-nav="home" aria-label="Back">←</button>
-            <p class="capture-prompt">Catch a Dream</p>
+            <button
+              type="button"
+              id="capture-compose-back"
+              class="capture-return-home capture-return-home--compose"
+              data-nav="home"
+            >
+              <span class="capture-return-home__arrow" aria-hidden="true">←</span>
+              <span class="capture-return-home__label">Back to Home</span>
+            </button>
           </header>
           <button
             type="button"

@@ -69,6 +69,7 @@ const captureConfirm = document.getElementById("capture-confirm");
 const captureForm = document.getElementById("capture-form");
 const captureScreen = document.getElementById("screen-capture");
 const captureComposeHead = document.getElementById("capture-compose-head");
+const captureComposeBack = document.getElementById("capture-compose-back");
 const captureReturnHome = document.getElementById("capture-return-home");
 const appMain = document.getElementById("app-main");
 const journalEmpty = document.getElementById("journal-empty");
@@ -1833,6 +1834,11 @@ document.querySelectorAll(".btn-back[data-nav]").forEach((btn) => {
 });
 
 captureReturnHome?.addEventListener("click", () => {
+  activeDreamId = null;
+  setAppScreen("home");
+});
+
+captureComposeBack?.addEventListener("click", () => {
   activeDreamId = null;
   setAppScreen("home");
 });
