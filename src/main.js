@@ -67,6 +67,10 @@ const saveButton = document.getElementById("save-dream");
 const statusEl = document.getElementById("status");
 const captureConfirm = document.getElementById("capture-confirm");
 const captureForm = document.getElementById("capture-form");
+const captureScreen = document.getElementById("screen-capture");
+const captureComposeHead = document.getElementById("capture-compose-head");
+const captureReturnHome = document.getElementById("capture-return-home");
+const appMain = document.getElementById("app-main");
 const journalEmpty = document.getElementById("journal-empty");
 const emptyState = document.getElementById("empty-state");
 const emptyStateSub = document.getElementById("empty-state-sub");
@@ -293,12 +297,24 @@ function showCaptureConfirm() {
   captureConfirmVisible = true;
   if (captureConfirm) captureConfirm.hidden = false;
   if (captureForm) captureForm.hidden = true;
+  if (captureComposeHead) captureComposeHead.hidden = true;
+  if (captureReturnHome) captureReturnHome.hidden = false;
+  captureScreen?.classList.add("is-post-save");
+
+  // Keep the return control in view (form scroll can leave the header above the fold).
+  if (appMain) appMain.scrollTop = 0;
+  if (captureScreen) captureScreen.scrollTop = 0;
+  window.scrollTo({ top: 0, left: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+  captureReturnHome?.focus({ preventScroll: true });
 }
 
 function hideCaptureConfirm() {
   captureConfirmVisible = false;
   if (captureConfirm) captureConfirm.hidden = true;
   if (captureForm) captureForm.hidden = false;
+  if (captureComposeHead) captureComposeHead.hidden = false;
+  if (captureReturnHome) captureReturnHome.hidden = true;
+  captureScreen?.classList.remove("is-post-save");
 }
 
 function setJournalEmptyVisible(visible) {
@@ -1814,6 +1830,11 @@ document.querySelectorAll(".btn-back[data-nav]").forEach((btn) => {
       setAppScreen(screen);
     }
   });
+});
+
+captureReturnHome?.addEventListener("click", () => {
+  activeDreamId = null;
+  setAppScreen("home");
 });
 
 onboardingNext?.addEventListener("click", () => {

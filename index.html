@@ -206,10 +206,19 @@
 
         <!-- Dream capture -->
         <section id="screen-capture" class="app-screen" data-screen="capture" aria-label="Catch a dream" hidden>
-          <header class="screen-head screen-head--capture">
+          <header id="capture-compose-head" class="screen-head screen-head--capture">
             <button type="button" class="btn-back" data-nav="home" aria-label="Back">←</button>
             <p class="capture-prompt">Catch a Dream</p>
           </header>
+          <button
+            type="button"
+            id="capture-return-home"
+            class="capture-return-home"
+            data-nav="home"
+            hidden
+          >
+            ← Back to Home
+          </button>
           <div class="capture-body">
             <div
               id="capture-confirm"

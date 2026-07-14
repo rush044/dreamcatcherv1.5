@@ -821,6 +821,52 @@ button {
   color: var(--muted);
 }
 
+/* Post-save return only — does not restyle shared .btn-back elsewhere */
+.capture-return-home {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.2rem;
+  margin: 0 0 1rem;
+  max-width: calc(100% - 4.5rem);
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--moonlight) 48%, var(--line));
+  background: color-mix(in srgb, var(--moonlight) 16%, rgba(18, 17, 16, 0.72));
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+.capture-return-home[hidden] {
+  display: none;
+}
+
+.capture-return-home:hover,
+.capture-return-home:focus-visible {
+  border-color: color-mix(in srgb, var(--moonlight) 65%, var(--line));
+  background: color-mix(in srgb, var(--moonlight) 22%, rgba(18, 17, 16, 0.78));
+  outline: none;
+}
+
+#screen-capture.is-post-save .capture-body {
+  justify-content: flex-start;
+  padding-top: 0.35rem;
+}
+
+#screen-capture.is-post-save .capture-confirm {
+  margin-top: 0.25rem;
+}
+
 /* Home */
 .home-stage {
   flex: 1;
@@ -924,10 +970,6 @@ button {
 
 .capture-form[hidden] {
   display: none;
-}
-
-.capture-body:has(.capture-confirm:not([hidden])) {
-  justify-content: center;
 }
 
 .capture-confirm__headline {
