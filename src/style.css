@@ -167,6 +167,10 @@ button {
   opacity: 0.85;
 }
 
+.app-shell[data-active="capture"] .moon {
+  top: 2.75vh;
+}
+
 /*
   Sheepy is in-flow inside each scene (home / saved / sky).
   Never use position: fixed/sticky — he must scroll with his section,
@@ -916,6 +920,14 @@ button {
 
 .capture-confirm[hidden] {
   display: none;
+}
+
+.capture-form[hidden] {
+  display: none;
+}
+
+.capture-body:has(.capture-confirm:not([hidden])) {
+  justify-content: center;
 }
 
 .capture-confirm__headline {

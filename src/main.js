@@ -72,6 +72,7 @@ const bodyInput = document.getElementById("dream-body");
 const saveButton = document.getElementById("save-dream");
 const statusEl = document.getElementById("status");
 const captureConfirm = document.getElementById("capture-confirm");
+const captureForm = document.getElementById("capture-form");
 const journalEmpty = document.getElementById("journal-empty");
 const emptyState = document.getElementById("empty-state");
 const emptyStateSub = document.getElementById("empty-state-sub");
@@ -303,14 +304,23 @@ function getInsightStateLabel(dream) {
   return INSIGHT_LABEL.ask;
 }
 
+const CAPTURE_CONFIRM_MS = 4500;
+
 function showCaptureConfirm() {
   captureConfirmVisible = true;
   if (captureConfirm) captureConfirm.hidden = false;
+  if (captureForm) captureForm.hidden = true;
+  window.clearTimeout(showCaptureConfirm._timer);
+  showCaptureConfirm._timer = window.setTimeout(() => {
+    hideCaptureConfirm();
+  }, CAPTURE_CONFIRM_MS);
 }
 
 function hideCaptureConfirm() {
   captureConfirmVisible = false;
+  window.clearTimeout(showCaptureConfirm._timer);
   if (captureConfirm) captureConfirm.hidden = true;
+  if (captureForm) captureForm.hidden = false;
 }
 
 function setJournalEmptyVisible(visible) {
