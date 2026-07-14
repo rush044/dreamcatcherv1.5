@@ -46,13 +46,7 @@ const LIMA = {
   label: "Lima",
 };
 
-const HOME_MESSAGES = [
-  "The sky is quiet tonight.",
-  "Did any dreams find you?",
-  "It has been a while.",
-  "I’m still here if something lingered.",
-  "Even a fragment of a dream is light enough.",
-];
+const HOME_MESSAGE = "Even a fragment of a dream is light enough.";
 
 const onboardingScreen = document.getElementById("onboarding-screen");
 const authScreen = document.getElementById("auth-screen");
@@ -175,16 +169,7 @@ function goHome() {
 
 function updateHomeMessage() {
   if (!homeMessageEl) return;
-  const count = cloudDreams.length;
-  if (count === 0) {
-    homeMessageEl.textContent = "Did any dreams find you?";
-    return;
-  }
-  if (count >= 5) {
-    homeMessageEl.textContent = "The sky remembers what you caught.";
-    return;
-  }
-  homeMessageEl.textContent = HOME_MESSAGES[count % HOME_MESSAGES.length];
+  homeMessageEl.textContent = HOME_MESSAGE;
 }
 
 function renderSkyPrototype() {
@@ -304,21 +289,14 @@ function getInsightStateLabel(dream) {
   return INSIGHT_LABEL.ask;
 }
 
-const CAPTURE_CONFIRM_MS = 4500;
-
 function showCaptureConfirm() {
   captureConfirmVisible = true;
   if (captureConfirm) captureConfirm.hidden = false;
   if (captureForm) captureForm.hidden = true;
-  window.clearTimeout(showCaptureConfirm._timer);
-  showCaptureConfirm._timer = window.setTimeout(() => {
-    hideCaptureConfirm();
-  }, CAPTURE_CONFIRM_MS);
 }
 
 function hideCaptureConfirm() {
   captureConfirmVisible = false;
-  window.clearTimeout(showCaptureConfirm._timer);
   if (captureConfirm) captureConfirm.hidden = true;
   if (captureForm) captureForm.hidden = false;
 }
@@ -1774,17 +1752,8 @@ saveButton?.addEventListener("click", () => {
 });
 
 bodyInput?.addEventListener("input", () => {
-  if (captureConfirmVisible) hideCaptureConfirm();
   updateWordCount();
   updatePixelCaret();
-});
-
-titleInput?.addEventListener("input", () => {
-  if (captureConfirmVisible) hideCaptureConfirm();
-});
-
-bodyInput?.addEventListener("focus", () => {
-  if (captureConfirmVisible) hideCaptureConfirm();
 });
 
 bodyInput?.addEventListener("focus", updatePixelCaret);
