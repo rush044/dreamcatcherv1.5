@@ -14,7 +14,7 @@ Its core flow is:
 6. Dreams and insights persist across refreshes and login sessions.
 7. Deleting a dream also removes its related insight.
 
-**Dream Replay** is a future feature and must not be implemented unless explicitly requested. The UI may show a “Coming Soon” control; leave it non-functional.
+**Dream Replay** is a possible future selling point. It must not receive a full production implementation unless explicitly requested. Test interest through user feedback or a disposable prototype first. The UI may show a “Coming Soon” control; leave it non-functional for now.
 
 ## 2. Current product direction
 
@@ -38,7 +38,21 @@ Desktop remains supported but is secondary.
 
 Do not redesign blindly. Visual changes should follow supplied screenshots, references, and explicit requirements.
 
-## 3. Protected working systems
+## 3. Product validation status
+
+DreamCatcher is not yet validated as a business.
+
+The immediate objective is to finish a credible mobile-first beta, ship it to real users, and evaluate:
+
+- dream capture
+- insight generation
+- repeat usage
+- sharing interest
+- demand for Dream Replay
+
+Use that feedback before investing in deeper features or full Replay production work.
+
+## 4. Protected working systems
 
 Future agents must preserve the existing working:
 
@@ -60,13 +74,17 @@ Future agents must preserve the existing working:
 
 Do not change the database schema, API contract, authentication flow, environment-variable names, or persistence logic unless the task explicitly requires it.
 
-## 4. Current branch and workflow
+## 5. Current branch and workflow
 
 The stable Dream Insights work was developed on:
 
 `dream-insights-v2`
 
-Future substantial frontend redesign work should happen on a separate branch.
+The current frontend redesign branch is:
+
+`dream-ai-redesign`
+
+Future substantial frontend redesign work should continue on this redesign branch (or another dedicated branch), not by rewriting the stable Insights history.
 
 Before editing:
 
@@ -89,7 +107,7 @@ unless the user explicitly requests and understands the consequences.
 
 Never commit or push without the user’s explicit instruction.
 
-## 5. Environment variables and secrets
+## 6. Environment variables and secrets
 
 Secrets must never be printed, exposed, added to prompts, or committed.
 
@@ -116,7 +134,7 @@ Known temporary PowerShell approach: load the variables into the current termina
 
 Do not include secret values in this file or in chat.
 
-## 6. Development commands
+## 7. Development commands
 
 From `package.json`:
 
@@ -138,17 +156,17 @@ Notes:
 - The localhost port may change when another port is occupied.
 - A different localhost port is not a code regression.
 
-## 7. Known project history and traps
+## 8. Known project history and traps
 
 - A previous catch-all SPA rewrite in `vercel.json` caused JavaScript module requests to receive `index.html`. Do not restore such a rewrite without understanding the routing consequences. (There is currently no `vercel.json` in the repo root.)
 - `.env.local` previously appeared populated in the editor while its saved disk contents differed. Confirm files are saved before debugging environment problems.
 - Missing server-side Supabase or OpenAI variables caused Dream Insights API failures.
-- The insight currently needs a stronger visual relationship to its corresponding dream.
+- The Dream Insight problem is visual presentation, not data: the insight is correctly stored and linked to its dream, but frontend styling makes it resemble another journal entry. Redesign work must fix visual hierarchy without changing the dream–insight data relationship.
 - The current interface began as a desktop learning project and is not the final mobile product direction.
 - Long AI output should not be presented as one unstructured wall of text.
 - Dream Insight should not look like another saved dream.
 
-## 8. Current confirmed behavior
+## 9. Current confirmed behavior
 
 The following currently work:
 
@@ -162,11 +180,13 @@ The following currently work:
 - keeping each insight associated with its correct dream
 - deleting the associated insight when its dream is deleted (DB cascade on `dream_insights.dream_id`)
 
+The insight data relationship is correct. Remaining work is presentation: styling currently makes an insight resemble another journal entry.
+
 Minor polish issue (not a blocker):
 
 After **Catch Dream** is pressed and the dream is added to the journal, the page may shift upward slightly.
 
-## 9. Frontend redesign rules
+## 10. Frontend redesign rules
 
 For redesign tasks:
 
@@ -178,17 +198,17 @@ For redesign tasks:
 - Use accessible touch targets.
 - Keep long dreams readable.
 - Use progressive disclosure for long insights.
-- Make the insight visually attached to its dream.
+- Make the insight visually attached to its dream; fix visual hierarchy without changing the data relationship.
 - Preserve a night-sky identity, but do not preserve the existing desktop layout merely because it exists.
 - Sheepy may remain as a subtle brand element.
 - Avoid generic SaaS dashboards.
 - Avoid excessive glassmorphism, gradients, tiny text, and random AI sparkle icons.
 - Consumer-friendly motion and visual energy are allowed when they support comprehension and engagement.
-- Do not add onboarding, subscriptions, Replay, streaks, social features, or unrelated functionality unless explicitly requested.
+- Do not add onboarding, subscriptions, full Dream Replay production, streaks, social features, or unrelated functionality unless explicitly requested.
 
 Stack note: the app is vanilla JS (`src/main.js`, `src/style.css`, `index.html`) on Vite — not React. Keep that stack unless the user explicitly approves a change.
 
-## 10. AI-output guidelines
+## 11. AI-output guidelines
 
 The current generated insight is functional but can feel like a small university essay.
 
@@ -208,7 +228,7 @@ Future AI-output work should aim for:
 
 Do not change the model or prompt without inspecting `api/dream-insights.js` and discussing the tradeoffs. The live implementation uses structured JSON (`summary`, `emotions`, `people`, `places`, `symbols`, `themes`, `reflection_questions`, `uncertainty_note`, `return_message`) and currently asks for exactly three reflection questions.
 
-## 11. Working style for this user
+## 12. Working style for this user
 
 Future agents should:
 
@@ -224,7 +244,7 @@ Future agents should:
 - never ask the user to paste environment-file contents
 - remind the user to review prompts and commands carefully before running them
 
-## 12. Definition of done
+## 13. Definition of done
 
 For every coding task, report:
 
