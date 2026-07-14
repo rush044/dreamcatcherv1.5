@@ -169,6 +169,8 @@ Do not delay real-user testing for:
 - a new product name
 - unrelated major features
 
+
+
 ## 5. Protected working systems
 
 Future agents must preserve the existing working:
@@ -230,12 +232,14 @@ Secrets must never be printed, exposed, added to prompts, or committed.
 
 Expected environment-variable names (confirm in code / `.env.example` before changing anything):
 
-| Area | Names |
-|------|--------|
-| Frontend (Vite) | `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` |
-| Server preferred | `SUPABASE_URL`, `SUPABASE_ANON_KEY` |
-| Server fallbacks | `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_PUBLISHABLE_KEY` |
-| OpenAI (server only) | `OPENAI_API_KEY` |
+
+| Area                 | Names                                                                            |
+| -------------------- | -------------------------------------------------------------------------------- |
+| Frontend (Vite)      | `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`                             |
+| Server preferred     | `SUPABASE_URL`, `SUPABASE_ANON_KEY`                                              |
+| Server fallbacks     | `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_PUBLISHABLE_KEY` |
+| OpenAI (server only) | `OPENAI_API_KEY`                                                                 |
+
 
 Do not use a Supabase service-role key. Ownership is enforced with the caller’s JWT and RLS.
 
@@ -255,16 +259,18 @@ Do not include secret values in this file or in chat.
 
 From `package.json`:
 
-| Command | Purpose |
-|---------|---------|
-| `npm install` | Install dependencies |
-| `npm run dev` | Start the Vite frontend |
-| `npm run dev:vercel` | Start via `vercel dev` (script alias) |
-| `npx vercel dev` | Local frontend + Vercel serverless API routes |
-| `npm run build` | Production Vite build |
-| `npm run preview` | Preview the production build |
-| `git status` | Check working tree |
-| `git branch --show-current` | Confirm active branch |
+
+| Command                     | Purpose                                       |
+| --------------------------- | --------------------------------------------- |
+| `npm install`               | Install dependencies                          |
+| `npm run dev`               | Start the Vite frontend                       |
+| `npm run dev:vercel`        | Start via `vercel dev` (script alias)         |
+| `npx vercel dev`            | Local frontend + Vercel serverless API routes |
+| `npm run build`             | Production Vite build                         |
+| `npm run preview`           | Preview the production build                  |
+| `git status`                | Check working tree                            |
+| `git branch --show-current` | Confirm active branch                         |
+
 
 Notes:
 
@@ -272,6 +278,8 @@ Notes:
 - Use `npx vercel dev` (or `npm run dev:vercel`) when testing `/api/dream-insights` locally.
 - The localhost port may change when another port is occupied.
 - A different localhost port is not a code regression.
+
+
 
 ## 9. Known project history and traps
 
@@ -282,6 +290,8 @@ Notes:
 - The current interface began as a desktop learning project; the mobile-first Sheepy companion direction is the product path forward.
 - Long AI output should not be presented as one unstructured wall of text.
 - Dream Insight should not look like another saved dream.
+
+
 
 ## 10. Current confirmed behavior
 
@@ -330,6 +340,8 @@ For frontend tasks:
 - Avoid excessive glassmorphism, gradients, tiny text, and random AI sparkle icons.
 - Consumer-friendly motion and visual energy are allowed when they support comprehension and engagement.
 - Do not add onboarding persistence, subscriptions, full Dream Replay production, streaks, social features, or unrelated functionality unless explicitly requested.
+
+
 
 ### Journal and Library direction
 
@@ -406,6 +418,8 @@ Future agents should:
 - never ask the user to paste environment-file contents
 - remind the user to review prompts and commands carefully before running them
 
+
+
 ## 14. Current product priority protection
 
 Unless the user explicitly changes priorities, future agents should follow this order:
@@ -438,3 +452,60 @@ For every coding task, report:
 - remaining risks or follow-up work
 
 Do not claim a task is complete without testing the relevant behavior.
+
+
+
+## Product experience principles
+
+DreamCatcher must be evaluated as a consumer product, not only as functioning software.
+
+Future agents should distinguish between:
+
+- technical bugs
+- usability problems
+- unclear copy
+- hidden actions
+- weak emotional feedback
+- weak AI output
+- future product opportunities
+
+Do not silently implement a guessed solution when the issue requires a product decision. Report the problem and proposed options first.
+
+### Copy direction
+
+Copy should sound natural, emotional, clear, and alive—not passive or mechanical.
+
+Reference example:
+
+Unnatural:
+
+> “When a dream is remembered a new star appears.”
+
+Preferred:
+
+> “Each dream you save brings a new star to Sheepy’s sky.”
+
+### Insight standard
+
+Dream Insight is one of the product’s most important features.
+
+Core rule:
+
+> Sheepy should notice something, not merely repeat something.
+
+Insights should prioritize emotional tension, meaningful patterns, contextual symbols, cautious waking-life connections, and specific reflection questions.
+
+Avoid generic summaries, dream-dictionary claims, diagnoses, and essay-like output.
+
+### UX review standard
+
+When reviewing the product, agents should test it as first-time users and report:
+
+- whether the next action is clear
+- whether important functionality is hidden
+- whether labels accurately describe the current state
+- whether emotional feedback matches the action
+- whether Sheepy adds meaning
+- whether the Insight adds genuinely new value
+- where a reasonable user could become confused
+
