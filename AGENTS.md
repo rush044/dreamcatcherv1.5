@@ -2,57 +2,174 @@
 
 ## 1. Product overview
 
-DreamCatcher is a Vite web application evolving from a simple dream journal into a mobile-first AI-assisted emotional self-reflection product.
+DreamCatcher is a mobile-first dream-recording product evolving from an AI-assisted dream journal into an emotionally persistent world centered on Sheepy, dreams, stars, and the night sky.
 
-Its core flow is:
+The product’s functional foundation remains:
 
-1. User authenticates through Supabase.
-2. User records and saves a dream.
-3. Authenticated dreams are stored in Supabase.
-4. User can request one Dream Insight for a saved dream.
-5. A Vercel serverless function authenticates the user, verifies dream ownership, calls the OpenAI API, and stores the result in the `dream_insights` table.
-6. Dreams and insights persist across refreshes and login sessions.
-7. Deleting a dream also removes its related insight.
+- The user authenticates through Supabase.
+- The user records and saves a dream.
+- Authenticated dreams are stored in Supabase.
+- The user can request one Dream Insight for a saved dream.
+- A Vercel serverless function authenticates the user, verifies dream ownership, calls the OpenAI API, and stores the result in the `dream_insights` table.
+- Dreams and insights persist across refreshes and login sessions.
+- Deleting a dream also removes its related insight.
 
-**Dream Replay** is a possible future selling point. It must not receive a full production implementation unless explicitly requested. Test interest through user feedback or a disposable prototype first. The UI may show a “Coming Soon” control; leave it non-functional for now.
+The emotional product loop is:
+
+1. The user records a dream.
+2. The dream becomes part of the night sky, represented as a star.
+3. The sky grows as more dreams are recorded.
+4. Sheepy tends this place and acknowledges the user’s return.
+5. The user gradually feels that their dreams help keep the world alive.
+6. That attachment gives the user a reason to return beyond utility or AI analysis.
+
+The central emotional proposition is:
+
+> “My dreams help keep this place alive.”
+
+Dream Replay remains a possible future selling point. It must not receive a full production implementation unless explicitly requested. Test interest through user feedback or a disposable prototype first. The UI may show a “Coming Soon” control; leave it non-functional for now.
 
 ## 2. Current product direction
 
-The next major phase is a **mobile-first frontend redesign**.
+DreamCatcher is no longer being treated as only an idea or technical prototype.
 
-The primary usage moment is immediately after waking, when a user wants to record a fading dream quickly from a phone.
+The current strategic framing is:
 
-The product should eventually feel:
+> “You are no longer testing an idea. You are testing a product.”
+
+The mobile-first implementation is deployed and functioning. Authentication, cloud sync, onboarding, dream saving, Dream Insights, Journal, Sky, Profile, and navigation are operational.
+
+The current phase is not another broad redesign or a major feature-expansion cycle.
+
+The immediate priorities are:
+
+1. Fix user-visible bugs.
+2. Improve mobile stability and polish.
+3. Strengthen emotional attachment.
+4. Make existing interactions feel more alive.
+5. Test the product with real users.
+6. Use observed user behavior before investing in major new features.
+
+The primary usage moment remains immediately after waking, when a user wants to record a fading dream quickly from a phone.
+
+The product should feel:
 
 - fast
 - emotionally vivid
 - private
+- calm during dream capture
 - modern
 - mobile-native
-- visually engaging
-- suitable for social-media-driven consumer acquisition
-
-It should remain readable and calm during dream capture and reflection.
+- alive and reactive
+- distinctive rather than generically AI-generated
+- capable of creating affection and a sense of return
 
 Desktop remains supported but is secondary.
 
-Do not redesign blindly. Visual changes should follow supplied screenshots, references, and explicit requirements.
+Do not redesign blindly. Visual changes must follow supplied screenshots, references, explicit requirements, and the established emotional direction.
 
-## 3. Product validation status
+## 3. Sheepy and the emotional world
 
-DreamCatcher is not yet validated as a business.
+Sheepy is not merely a decorative mascot or subtle brand element.
 
-The immediate objective is to finish a credible mobile-first beta, ship it to real users, and evaluate:
+Sheepy is becoming the product’s central emotional companion and may become its strongest long-term differentiator.
 
-- dream capture
-- insight generation
-- repeat usage
-- sharing interest
-- demand for Dream Replay
+The world model is:
 
-Use that feedback before investing in deeper features or full Replay production work.
+- Sheepy tends the night sky.
+- Dreams become stars.
+- The sky grows as dreams are recorded.
+- Dream Insights may later be represented as constellations.
+- The environment should increasingly react when a dream is saved.
+- The user should gradually feel responsible for, attached to, and welcomed back into this world.
 
-## 4. Protected working systems
+The product should eventually create three emotional effects:
+
+### Attachment
+
+The user recognizes Sheepy as a character rather than an image.
+
+This can gradually develop through:
+
+- small dialogue lines
+- moods
+- reactions
+- multiple poses
+- subtle animation
+- recognition of returning users
+- changes in the environment
+
+Do not require a complex character system before initial product testing. Small, carefully timed dialogue and environmental reactions may be introduced incrementally.
+
+### Persistence
+
+The world should feel as though it continues to exist between visits.
+
+The user’s accumulated dreams should visibly affect the sky and the atmosphere of the product.
+
+### Absence and return
+
+A returning user should feel that Sheepy or the night sky noticed their absence.
+
+Protected high-value product lines include:
+
+- “This is Sheepy. He tends the place where forgotten dreams go.”
+- “Sheepy missed you.”
+- “The night sky has been quiet without you.”
+- “Sheepy kept your cloud warm.”
+- “It has been a while. Did any dreams find you?”
+- “My dreams help keep this place alive.”
+- “Your dream became a star.”
+
+Treat these as protected product-copy candidates.
+
+Do not casually rewrite, remove, or deploy all of them at once. Their timing and context matter.
+
+“My dreams help keep this place alive” is the central product concept, but determine whether it is spoken by the user, Sheepy, or the interface before placing it in production.
+
+“Sheepy kept your cloud warm” should only be used when the user’s cloud is visually and conceptually established enough to make the line understandable.
+
+## 4. Product testing status
+
+DreamCatcher is not yet validated as a sustainable business, but it has progressed beyond idea validation.
+
+The product now has a functioning mobile-first experience with the core user journey implemented.
+
+The immediate objective is to stabilize the existing product, place it in front of real users, and evaluate behavior rather than only verbal reactions.
+
+The first test should evaluate:
+
+- whether users complete onboarding
+- whether users save a first dream
+- whether they request and read a Dream Insight
+- whether they revisit the Journal
+- whether they revisit the Sky
+- whether they remember or mention Sheepy
+- whether they save another dream on a later day
+- whether the changing world gives them a reason to return
+- whether users feel any attachment, curiosity, or absence after leaving
+
+The central product question is:
+
+> Will someone record a dream, feel that it changed Sheepy’s world, and return because they care about what happens there?
+
+Primary success signals are repeat usage, user revisits, dream-recording frequency, and eventual paid conversion.
+
+Guardrail metrics include churn, refunds, complaints, notification opt-outs, and account deletion.
+
+Sharing interest and demand for Dream Replay remain useful secondary signals.
+
+Do not delay real-user testing for:
+
+- a complete Sheepy animation system
+- multiple character poses
+- animated constellations
+- a complete Journal redesign
+- Dream Replay
+- a new product name
+- unrelated major features
+
+## 5. Protected working systems
 
 Future agents must preserve the existing working:
 
@@ -74,7 +191,7 @@ Future agents must preserve the existing working:
 
 Do not change the database schema, API contract, authentication flow, environment-variable names, or persistence logic unless the task explicitly requires it.
 
-## 5. Current branch and workflow
+## 6. Current branch and workflow
 
 The stable Dream Insights work was developed on:
 
@@ -84,7 +201,7 @@ The current frontend redesign branch is:
 
 `dream-ai-redesign`
 
-Future substantial frontend redesign work should continue on this redesign branch (or another dedicated branch), not by rewriting the stable Insights history.
+Future substantial frontend work should continue on this redesign branch (or another dedicated branch), not by rewriting the stable Insights history.
 
 Before editing:
 
@@ -107,7 +224,7 @@ unless the user explicitly requests and understands the consequences.
 
 Never commit or push without the user’s explicit instruction.
 
-## 6. Environment variables and secrets
+## 7. Environment variables and secrets
 
 Secrets must never be printed, exposed, added to prompts, or committed.
 
@@ -134,7 +251,7 @@ Known temporary PowerShell approach: load the variables into the current termina
 
 Do not include secret values in this file or in chat.
 
-## 7. Development commands
+## 8. Development commands
 
 From `package.json`:
 
@@ -156,17 +273,17 @@ Notes:
 - The localhost port may change when another port is occupied.
 - A different localhost port is not a code regression.
 
-## 8. Known project history and traps
+## 9. Known project history and traps
 
 - A previous catch-all SPA rewrite in `vercel.json` caused JavaScript module requests to receive `index.html`. Do not restore such a rewrite without understanding the routing consequences. (There is currently no `vercel.json` in the repo root.)
 - `.env.local` previously appeared populated in the editor while its saved disk contents differed. Confirm files are saved before debugging environment problems.
 - Missing server-side Supabase or OpenAI variables caused Dream Insights API failures.
-- The Dream Insight problem is visual presentation, not data: the insight is correctly stored and linked to its dream, but frontend styling makes it resemble another journal entry. Redesign work must fix visual hierarchy without changing the dream–insight data relationship.
-- The current interface began as a desktop learning project and is not the final mobile product direction.
+- The Dream Insight problem is visual presentation, not data: the insight is correctly stored and linked to its dream, but frontend styling can still make it resemble another journal entry. Redesign work must fix visual hierarchy without changing the dream–insight data relationship.
+- The current interface began as a desktop learning project; the mobile-first Sheepy companion direction is the product path forward.
 - Long AI output should not be presented as one unstructured wall of text.
 - Dream Insight should not look like another saved dream.
 
-## 9. Current confirmed behavior
+## 10. Current confirmed behavior
 
 The following currently work:
 
@@ -180,15 +297,15 @@ The following currently work:
 - keeping each insight associated with its correct dream
 - deleting the associated insight when its dream is deleted (DB cascade on `dream_insights.dream_id`)
 
-The insight data relationship is correct. Remaining work is presentation: styling currently makes an insight resemble another journal entry.
+The insight data relationship is correct. Remaining work includes presentation polish so the insight does not resemble another journal entry.
 
 Minor polish issue (not a blocker):
 
 After **Catch Dream** is pressed and the dream is added to the journal, the page may shift upward slightly.
 
-## 10. Frontend redesign rules
+## 11. Frontend redesign rules
 
-For redesign tasks:
+For frontend tasks:
 
 - Work mobile first.
 - Preserve backend behavior.
@@ -199,16 +316,43 @@ For redesign tasks:
 - Keep long dreams readable.
 - Use progressive disclosure for long insights.
 - Make the insight visually attached to its dream; fix visual hierarchy without changing the data relationship.
-- Preserve a night-sky identity, but do not preserve the existing desktop layout merely because it exists.
-- Sheepy may remain as a subtle brand element.
+- Preserve a night-sky identity, but do not preserve outdated desktop layout merely because it exists.
+- Sheepy is a core emotional product element, not merely decoration. Preserve Sheepy unless removal is explicitly requested. Changes to Sheepy should strengthen character attachment, positioning stability, visual integration, or emotional meaning without allowing Sheepy to obstruct dream capture or navigation.
+- The mobile login screen is already large enough. Do not increase its scale without explicit instruction.
+- Sheepy must not overlap text, controls, or navigation.
+- Sheepy must not accidentally move with viewport scrolling unless that behavior is explicitly designed.
+- Inspect positioning, containing blocks, overflow, image boundaries, and stacking contexts when visual artifacts appear near Sheepy.
+- Decorative Sheepy layers should not intercept taps.
+- Avoid making Sheepy insignificant merely to solve layout problems.
+- The environment should eventually react subtly when a dream becomes a star, but do not introduce broad animation systems during unrelated bug-fix tasks.
+- Preserve reduced-motion accessibility when motion is introduced.
 - Avoid generic SaaS dashboards.
 - Avoid excessive glassmorphism, gradients, tiny text, and random AI sparkle icons.
 - Consumer-friendly motion and visual energy are allowed when they support comprehension and engagement.
-- Do not add onboarding, subscriptions, full Dream Replay production, streaks, social features, or unrelated functionality unless explicitly requested.
+- Do not add onboarding persistence, subscriptions, full Dream Replay production, streaks, social features, or unrelated functionality unless explicitly requested.
+
+### Journal and Library direction
+
+The Journal currently works but lacks sufficient personality.
+
+Its long-term role is not to resemble a database, generic notes list, or SaaS activity feed.
+
+It should gradually feel like:
+
+- a library of forgotten dreams
+- a personal archive
+- a place with atmosphere and emotional history
+- a collection connected to Sheepy’s world
+
+Do not perform a full Journal redesign during unrelated tasks.
+
+Future improvements may include more distinctive cards, better hierarchy, atmospheric details, stronger dream–insight relationships, and presentation that makes each dream feel preserved rather than merely stored.
+
+Readability, fast scanning, long-dream handling, and mobile performance remain essential.
 
 Stack note: the app is vanilla JS (`src/main.js`, `src/style.css`, `index.html`) on Vite — not React. Keep that stack unless the user explicitly approves a change.
 
-## 11. AI-output guidelines
+## 12. AI-output guidelines
 
 The current generated insight is functional but can feel like a small university essay.
 
@@ -228,7 +372,25 @@ Future AI-output work should aim for:
 
 Do not change the model or prompt without inspecting `api/dream-insights.js` and discussing the tradeoffs. The live implementation uses structured JSON (`summary`, `emotions`, `people`, `places`, `symbols`, `themes`, `reflection_questions`, `uncertainty_note`, `return_message`) and currently asks for exactly three reflection questions.
 
-## 12. Working style for this user
+### Insight presentation
+
+Dream Insights are technically functional but their current presentation may feel underwhelming relative to the effort and meaning of generating them.
+
+Future versions should make Insights feel more rewarding and special while preserving clarity and avoiding manipulative spectacle.
+
+Possible later directions include:
+
+- staged reveals
+- subtle motion
+- constellation metaphors
+- clearer visual hierarchy
+- a stronger connection between the original dream and its Insight
+
+Do not implement major animated reveal systems unless explicitly requested.
+
+The immediate priority remains making the existing Insight clearly attached to its original dream and visually distinct from another journal entry.
+
+## 13. Working style for this user
 
 Future agents should:
 
@@ -244,7 +406,26 @@ Future agents should:
 - never ask the user to paste environment-file contents
 - remind the user to review prompts and commands carefully before running them
 
-## 13. Definition of done
+## 14. Current product priority protection
+
+Unless the user explicitly changes priorities, future agents should follow this order:
+
+1. Fix blocking bugs and broken interactions.
+2. Resolve mobile layout and stability issues.
+3. Protect authentication, persistence, ownership, and API behavior.
+4. Improve polish and clarity.
+5. Strengthen emotional attachment through small, intentional changes.
+6. Test the existing product with real users.
+7. Use feedback and retention behavior to decide larger investments.
+8. Add major new features only after the above steps justify them.
+
+Do not confuse activity with progress.
+
+A technically impressive new feature is lower priority than fixing a visible product bug, improving the first-use journey, or learning whether users return.
+
+Do not expand scope from a focused bug fix into a redesign, character system, Journal overhaul, or new product feature.
+
+## 15. Definition of done
 
 For every coding task, report:
 

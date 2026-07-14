@@ -65,7 +65,6 @@ const dreamList = document.getElementById("dream-list");
 const dreamCount = document.getElementById("dream-count");
 const wordCount = document.getElementById("word-count");
 const skyCaption = document.getElementById("sky-caption");
-const sheepy = document.getElementById("sheepy");
 const moon = document.getElementById("moon");
 const dreamStage = document.getElementById("dream-stage");
 const pixelCaret = document.getElementById("pixel-caret");
@@ -1191,11 +1190,17 @@ window.addEventListener("resize", () => {
 });
 
 function clearSheepyActions() {
-  sheepy?.classList.remove("is-blink", "is-yawn", "is-sleep");
+  document.querySelectorAll(".sheepy").forEach((el) => {
+    el.classList.remove("is-blink", "is-yawn", "is-sleep");
+  });
 }
 
 function emitSheepyStar() {
-  const bob = sheepy?.querySelector(".sheepy__bob");
+  const hosts = [...document.querySelectorAll(".sheepy")].filter((el) => {
+    const screen = el.closest(".app-screen");
+    return !screen || !screen.hidden;
+  });
+  const bob = hosts[0]?.querySelector(".sheepy__bob");
   if (!bob) return;
   const star = document.createElement("span");
   star.className = "sheepy-star";
@@ -1204,19 +1209,26 @@ function emitSheepyStar() {
 }
 
 function runSheepyAction() {
-  if (prefersReducedMotion || !sheepy) return;
+  if (prefersReducedMotion) return;
+
+  const visible = [...document.querySelectorAll(".sheepy")].filter((el) => {
+    const screen = el.closest(".app-screen");
+    return !screen || !screen.hidden;
+  });
+  if (!visible.length) return;
 
   clearSheepyActions();
   const roll = Math.random();
+  const target = visible[0];
 
   if (roll < 0.35) {
-    sheepy.classList.add("is-blink");
+    target.classList.add("is-blink");
     window.setTimeout(clearSheepyActions, 220);
   } else if (roll < 0.55) {
-    sheepy.classList.add("is-yawn");
+    target.classList.add("is-yawn");
     window.setTimeout(clearSheepyActions, 750);
   } else if (roll < 0.75) {
-    sheepy.classList.add("is-sleep");
+    target.classList.add("is-sleep");
     window.setTimeout(clearSheepyActions, 1600);
   } else {
     emitSheepyStar();

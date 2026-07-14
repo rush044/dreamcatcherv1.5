@@ -23,6 +23,21 @@
     />
   </head>
   <body data-clouds="clear" data-flow="boot">
+    <svg class="visually-hidden-svg" width="0" height="0" aria-hidden="true" focusable="false">
+      <filter id="sheepy-knockout" color-interpolation-filters="sRGB">
+        <!-- Knock out the PNG’s opaque near-black backdrop without editing the asset -->
+        <feColorMatrix
+          in="SourceGraphic"
+          type="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            18 18 18 0 -3.2
+          "
+        />
+      </filter>
+    </svg>
     <div class="sky" aria-hidden="true">
       <div class="sky__gradient"></div>
       <div class="sky__glow"></div>
@@ -175,20 +190,6 @@
     <!-- 3–9. Logged-in app -->
     <div id="app-shell" class="app-shell" hidden>
       <div class="moon" id="moon" aria-hidden="true"></div>
-      <div class="sheepy" id="sheepy" aria-hidden="true">
-        <div class="sheepy__bob">
-          <img
-            class="sheepy__sprite"
-            src="/assets/sheepy.png"
-            width="32"
-            height="32"
-            alt=""
-            draggable="false"
-          />
-          <span class="sheepy__lids"></span>
-          <span class="sheepy__mouth"></span>
-        </div>
-      </div>
 
       <main class="app" id="app-main">
         <!-- Home -->
@@ -197,6 +198,20 @@
             <p class="brand-mark brand-mark--sm">DreamCatcher</p>
           </header>
           <div class="home-stage">
+            <div class="sheepy sheepy--home" id="sheepy" aria-hidden="true">
+              <div class="sheepy__bob">
+                <img
+                  class="sheepy__sprite"
+                  src="/assets/sheepy.png"
+                  width="128"
+                  height="128"
+                  alt=""
+                  draggable="false"
+                />
+                <span class="sheepy__lids"></span>
+                <span class="sheepy__mouth"></span>
+              </div>
+            </div>
             <p id="home-sheepy-message" class="home-message">Did any dreams find you?</p>
             <button type="button" id="home-catch" class="btn-primary btn-catch">Catch a Dream</button>
             <p id="sky-caption" class="sky-caption">Night sky…</p>
@@ -246,6 +261,20 @@
         <!-- Dream saved moment -->
         <section id="screen-saved" class="app-screen" data-screen="saved" aria-label="Dream saved" hidden>
           <div class="saved-moment">
+            <div class="sheepy sheepy--saved" aria-hidden="true">
+              <div class="sheepy__bob">
+                <img
+                  class="sheepy__sprite"
+                  src="/assets/sheepy.png"
+                  width="112"
+                  height="112"
+                  alt=""
+                  draggable="false"
+                />
+                <span class="sheepy__lids"></span>
+                <span class="sheepy__mouth"></span>
+              </div>
+            </div>
             <div class="saved-moment__star" aria-hidden="true"></div>
             <p class="saved-moment__text">I saved a little light from that one.</p>
             <p class="saved-moment__sub">A new star joined the sky.</p>
@@ -295,6 +324,20 @@
           </header>
           <div class="sky-prototype">
             <p class="sky-prototype__lede">My dreams help keep this place alive.</p>
+            <div class="sheepy sheepy--sky" aria-hidden="true">
+              <div class="sheepy__bob">
+                <img
+                  class="sheepy__sprite"
+                  src="/assets/sheepy.png"
+                  width="96"
+                  height="96"
+                  alt=""
+                  draggable="false"
+                />
+                <span class="sheepy__lids"></span>
+                <span class="sheepy__mouth"></span>
+              </div>
+            </div>
             <div class="sky-prototype__field" id="sky-star-field" aria-hidden="true"></div>
             <p id="sky-star-count" class="sky-prototype__count">No stars yet — catch a dream to begin.</p>
             <p class="sky-prototype__hint">
