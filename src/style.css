@@ -827,24 +827,37 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   align-self: flex-start;
   flex-shrink: 0;
   min-height: 3.25rem;
-  padding: 0.75rem 1.2rem;
+  padding: 0.7rem 1.15rem;
   margin: 0 0 1rem;
   max-width: calc(100% - 4.5rem);
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--moonlight) 48%, var(--line));
-  background: color-mix(in srgb, var(--moonlight) 16%, rgba(18, 17, 16, 0.72));
+  border: 1px solid color-mix(in srgb, var(--moonlight) 40%, var(--line));
+  background: color-mix(in srgb, var(--moonlight) 10%, rgba(14, 13, 12, 0.72));
   color: var(--ink);
-  font-family: inherit;
+  font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.3;
   position: relative;
   z-index: 3;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+.capture-return-home__arrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1;
+  color: color-mix(in srgb, var(--ink) 78%, var(--muted));
+}
+
+.capture-return-home__label {
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: 0.01em;
 }
 
 .capture-return-home[hidden] {
@@ -853,8 +866,8 @@ button {
 
 .capture-return-home:hover,
 .capture-return-home:focus-visible {
-  border-color: color-mix(in srgb, var(--moonlight) 65%, var(--line));
-  background: color-mix(in srgb, var(--moonlight) 22%, rgba(18, 17, 16, 0.78));
+  border-color: color-mix(in srgb, var(--moonlight) 58%, var(--line));
+  background: color-mix(in srgb, var(--moonlight) 16%, rgba(14, 13, 12, 0.78));
   outline: none;
 }
 
