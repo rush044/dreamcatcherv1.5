@@ -29,7 +29,7 @@ let cloudDreamsLoading = null;
 const insightInFlight = new Set();
 /** @type {string | null} */
 let activeDreamId = null;
-/** @type {"home" | "capture" | "saved" | "journal" | "detail" | "sky" | "profile"} */
+/** @type {"home" | "capture" | "journal" | "detail" | "sky" | "profile"} */
 let activeAppScreen = "home";
 let onboardingIndex = 0;
 /** @type {Set<string>} */
@@ -54,7 +54,6 @@ const appShell = document.getElementById("app-shell");
 const appScreens = {
   home: document.getElementById("screen-home"),
   capture: document.getElementById("screen-capture"),
-  saved: document.getElementById("screen-saved"),
   journal: document.getElementById("screen-journal"),
   detail: document.getElementById("screen-detail"),
   sky: document.getElementById("screen-sky"),
@@ -70,7 +69,8 @@ const captureForm = document.getElementById("capture-form");
 const captureScreen = document.getElementById("screen-capture");
 const captureComposeHead = document.getElementById("capture-compose-head");
 const captureComposeBack = document.getElementById("capture-compose-back");
-const captureReturnHome = document.getElementById("capture-return-home");
+const captureOpenJournal = document.getElementById("capture-open-journal");
+const captureConfirmHome = document.getElementById("capture-confirm-home");
 const appMain = document.getElementById("app-main");
 const journalEmpty = document.getElementById("journal-empty");
 const emptyState = document.getElementById("empty-state");
@@ -86,7 +86,6 @@ const starCanvas = document.getElementById("starfield");
 const starCtx = starCanvas.getContext("2d", { alpha: true });
 const homeCatchBtn = document.getElementById("home-catch");
 const homeMessageEl = document.getElementById("home-sheepy-message");
-const savedContinueBtn = document.getElementById("saved-continue");
 const detailTitle = document.getElementById("detail-title");
 const detailDate = document.getElementById("detail-date");
 const detailBody = document.getElementById("detail-body");
@@ -167,11 +166,6 @@ function setAppScreen(screen) {
   }
 }
 
-function goHome() {
-  activeDreamId = null;
-  setAppScreen("home");
-}
-
 function updateHomeMessage() {
   if (!homeMessageEl) return;
   homeMessageEl.textContent = HOME_MESSAGE;
@@ -242,9 +236,11 @@ function setAuthTab(tab) {
   if (authTabSignup) authTabSignup.setAttribute("aria-selected", String(authTab === "signup"));
   if (authLoginBtn) authLoginBtn.hidden = authTab !== "login";
   if (authSignupBtn) authSignupBtn.hidden = authTab !== "signup";
+  if (authForgotBtn) authForgotBtn.hidden = authTab !== "login";
   if (authPassword) {
     authPassword.autocomplete = authTab === "signup" ? "new-password" : "current-password";
   }
+  clearStaleAuthStatus();
 }
 
 /* =========================
@@ -299,14 +295,13 @@ function showCaptureConfirm() {
   if (captureConfirm) captureConfirm.hidden = false;
   if (captureForm) captureForm.hidden = true;
   if (captureComposeHead) captureComposeHead.hidden = true;
-  if (captureReturnHome) captureReturnHome.hidden = false;
   captureScreen?.classList.add("is-post-save");
 
   // Keep the return control in view (form scroll can leave the header above the fold).
   if (appMain) appMain.scrollTop = 0;
   if (captureScreen) captureScreen.scrollTop = 0;
   window.scrollTo({ top: 0, left: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
-  captureReturnHome?.focus({ preventScroll: true });
+  captureOpenJournal?.focus({ preventScroll: true });
 }
 
 function hideCaptureConfirm() {
@@ -314,7 +309,6 @@ function hideCaptureConfirm() {
   if (captureConfirm) captureConfirm.hidden = true;
   if (captureForm) captureForm.hidden = false;
   if (captureComposeHead) captureComposeHead.hidden = false;
-  if (captureReturnHome) captureReturnHome.hidden = true;
   captureScreen?.classList.remove("is-post-save");
 }
 
@@ -1392,6 +1386,25 @@ function setAuthStatus(message) {
   if (authStatusEl) authStatusEl.textContent = message || "";
 }
 
+const AUTH_STATUS_KEEP = new Set([
+  "Check your email to confirm your account, then log in.",
+  "If an account exists for that email, a recovery link is on the way. Check your inbox.",
+]);
+
+const AUTH_STATUS_LOADING = new Set([
+  "Creating your account…",
+  "Signing in…",
+  "Sending recovery email…",
+  "Saving your new password…",
+]);
+
+function clearStaleAuthStatus() {
+  const message = (authStatusEl?.textContent || "").trim();
+  if (!message) return;
+  if (AUTH_STATUS_KEEP.has(message) || AUTH_STATUS_LOADING.has(message)) return;
+  setAuthStatus("");
+}
+
 function friendlyAuthError(error) {
   const raw = (error?.message || String(error || "Something went wrong")).trim();
   const lower = raw.toLowerCase();
@@ -1790,7 +1803,16 @@ bodyInput?.addEventListener("keydown", (event) => {
 window.addEventListener("resize", updatePixelCaret);
 
 homeCatchBtn?.addEventListener("click", () => setAppScreen("capture"));
-savedContinueBtn?.addEventListener("click", () => goHome());
+
+captureOpenJournal?.addEventListener("click", () => {
+  activeDreamId = null;
+  setAppScreen("journal");
+});
+
+captureConfirmHome?.addEventListener("click", () => {
+  activeDreamId = null;
+  setAppScreen("home");
+});
 
 detailInsightBtn?.addEventListener("click", () => {
   if (!activeDreamId) return;
@@ -1833,11 +1855,6 @@ document.querySelectorAll(".btn-back[data-nav]").forEach((btn) => {
   });
 });
 
-captureReturnHome?.addEventListener("click", () => {
-  activeDreamId = null;
-  setAppScreen("home");
-});
-
 captureComposeBack?.addEventListener("click", () => {
   activeDreamId = null;
   setAppScreen("home");
@@ -1856,6 +1873,10 @@ onboardingLogin?.addEventListener("click", () => goToAuth({ tab: "login" }));
 
 authTabLogin?.addEventListener("click", () => setAuthTab("login"));
 authTabSignup?.addEventListener("click", () => setAuthTab("signup"));
+
+[authEmail, authPassword].forEach((input) => {
+  input?.addEventListener("input", () => clearStaleAuthStatus());
+});
 
 authLoginBtn?.addEventListener("click", handleLogin);
 authSignupBtn?.addEventListener("click", handleSignup);

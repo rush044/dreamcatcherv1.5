@@ -122,7 +122,7 @@
           </div>
           <div class="auth-panel__actions">
             <button id="auth-login" type="button" class="btn-primary">Log in</button>
-            <button id="auth-signup" type="button" class="btn-secondary" hidden>Create account</button>
+            <button id="auth-signup" type="button" class="btn-primary" hidden>Create account</button>
           </div>
           <button id="auth-forgot" type="button" class="btn-text auth-forgot">Forgot password?</button>
         </div>
@@ -210,23 +210,13 @@
             <button
               type="button"
               id="capture-compose-back"
-              class="capture-return-home capture-return-home--compose"
+              class="capture-return-home"
               data-nav="home"
             >
               <span class="capture-return-home__arrow" aria-hidden="true">←</span>
               <span class="capture-return-home__label">Back to Home</span>
             </button>
           </header>
-          <button
-            type="button"
-            id="capture-return-home"
-            class="capture-return-home"
-            data-nav="home"
-            hidden
-          >
-            <span class="capture-return-home__arrow" aria-hidden="true">←</span>
-            <span class="capture-return-home__label">Back to Home</span>
-          </button>
           <div class="capture-body">
             <div
               id="capture-confirm"
@@ -234,8 +224,26 @@
               hidden
               aria-live="polite"
             >
+              <div class="sheepy sheepy--confirm" aria-hidden="true">
+                <div class="sheepy__bob">
+                  <img
+                    class="sheepy__sprite"
+                    src="/assets/sheepy.png"
+                    width="96"
+                    height="96"
+                    alt=""
+                    draggable="false"
+                  />
+                  <span class="sheepy__lids"></span>
+                  <span class="sheepy__mouth"></span>
+                </div>
+              </div>
               <p class="capture-confirm__headline">Your dream became a star.</p>
               <p class="capture-confirm__sub">Sheepy will keep it safe in your Journal.</p>
+              <div class="capture-confirm__actions">
+                <button type="button" id="capture-open-journal" class="btn-primary">Open Journal</button>
+                <button type="button" id="capture-confirm-home" class="btn-secondary">Back to Home</button>
+              </div>
             </div>
             <div id="capture-form" class="capture-form">
             <div class="field">
@@ -269,30 +277,6 @@
               <p id="status" class="status" aria-live="polite"></p>
             </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Dream saved moment -->
-        <section id="screen-saved" class="app-screen" data-screen="saved" aria-label="Dream saved" hidden>
-          <div class="saved-moment">
-            <div class="sheepy sheepy--saved" aria-hidden="true">
-              <div class="sheepy__bob">
-                <img
-                  class="sheepy__sprite"
-                  src="/assets/sheepy.png"
-                  width="112"
-                  height="112"
-                  alt=""
-                  draggable="false"
-                />
-                <span class="sheepy__lids"></span>
-                <span class="sheepy__mouth"></span>
-              </div>
-            </div>
-            <div class="saved-moment__star" aria-hidden="true"></div>
-            <p class="saved-moment__text">I saved a little light from that one.</p>
-            <p class="saved-moment__sub">A new star joined the sky.</p>
-            <button type="button" id="saved-continue" class="btn-primary">Continue</button>
           </div>
         </section>
 
@@ -333,6 +317,17 @@
             <button type="button" class="btn-back" data-nav="journal" aria-label="Back to journal">←</button>
             <h2>Dream</h2>
           </header>
+          <div class="detail-keep" aria-hidden="true">
+            <img
+              class="detail-keep__sheepy"
+              src="/assets/sheepy.png"
+              width="40"
+              height="40"
+              alt=""
+              draggable="false"
+            />
+            <p class="detail-keep__copy">Sheepy kept this one safe.</p>
+          </div>
           <article class="detail-dream" id="detail-dream">
             <h3 id="detail-title"></h3>
             <time id="detail-date"></time>

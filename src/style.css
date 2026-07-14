@@ -162,7 +162,6 @@ button {
 
 .app-shell[data-active="home"] .moon,
 .app-shell[data-active="capture"] .moon,
-.app-shell[data-active="saved"] .moon,
 .app-shell[data-active="sky"] .moon {
   opacity: 0.85;
 }
@@ -172,7 +171,7 @@ button {
 }
 
 /*
-  Sheepy is in-flow inside each scene (home / saved / sky).
+  Sheepy is in-flow inside each scene (home / confirm / sky / journal empty / detail).
   Never use position: fixed/sticky — he must scroll with his section,
   not float over text or follow the viewport independently.
 */
@@ -199,9 +198,9 @@ button {
   margin-bottom: 1rem;
 }
 
-.sheepy--saved {
-  width: min(6.75rem, 38vw);
-  margin-bottom: 0.65rem;
+.sheepy--confirm {
+  width: min(5.5rem, 32vw);
+  margin: 0 auto 0.7rem;
 }
 
 .sheepy--sky {
@@ -815,7 +814,7 @@ button {
   gap: 0;
 }
 
-/* Shared dream-screen return language; default = post-save emphasis */
+/* Shared dream-screen return language (compose only) */
 .capture-return-home {
   appearance: none;
   display: inline-flex;
@@ -824,43 +823,28 @@ button {
   gap: 0.55rem;
   align-self: flex-start;
   flex-shrink: 0;
-  min-height: 3.25rem;
-  padding: 0.7rem 1.15rem;
-  margin: 0 0 1rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.9rem;
+  margin: 0;
   max-width: calc(100% - 4.5rem);
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--moonlight) 40%, var(--line));
-  background: color-mix(in srgb, var(--moonlight) 10%, rgba(14, 13, 12, 0.72));
+  border: 1px solid color-mix(in srgb, var(--moonlight) 28%, var(--line));
+  background: color-mix(in srgb, var(--moonlight) 6%, rgba(14, 13, 12, 0.55));
   color: var(--ink);
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.3;
   position: relative;
   z-index: 3;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
-}
-
-/* Dream-entry variant: same language, quieter and smaller */
-.capture-return-home--compose {
-  min-height: 2.75rem;
-  padding: 0.45rem 0.9rem;
-  margin: 0;
-  font-size: 0.95rem;
-  border-color: color-mix(in srgb, var(--moonlight) 28%, var(--line));
-  background: color-mix(in srgb, var(--moonlight) 6%, rgba(14, 13, 12, 0.55));
   box-shadow: none;
 }
 
 .capture-return-home__arrow {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 500;
   line-height: 1;
   color: color-mix(in srgb, var(--ink) 78%, var(--muted));
-}
-
-.capture-return-home--compose .capture-return-home__arrow {
-  font-size: 0.72rem;
 }
 
 .capture-return-home__label {
@@ -875,15 +859,9 @@ button {
 
 .capture-return-home:hover,
 .capture-return-home:focus-visible {
-  border-color: color-mix(in srgb, var(--moonlight) 58%, var(--line));
-  background: color-mix(in srgb, var(--moonlight) 16%, rgba(14, 13, 12, 0.78));
-  outline: none;
-}
-
-.capture-return-home--compose:hover,
-.capture-return-home--compose:focus-visible {
   border-color: color-mix(in srgb, var(--moonlight) 45%, var(--line));
   background: color-mix(in srgb, var(--moonlight) 10%, rgba(14, 13, 12, 0.65));
+  outline: none;
 }
 
 #screen-capture.is-post-save .capture-body {
@@ -1015,6 +993,13 @@ button {
   line-height: 1.45;
 }
 
+.capture-confirm__actions {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .capture-confirm:not([hidden]) {
     animation: capture-confirm-in 0.35s ease;
@@ -1030,45 +1015,6 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Saved moment */
-.saved-moment {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.85rem;
-  padding: 2rem 1rem;
-}
-
-.saved-moment__star {
-  width: 0.7rem;
-  height: 0.7rem;
-  background: var(--moonlight);
-  box-shadow: 0 0 18px var(--moonlight-glow);
-  transform: rotate(45deg);
-  animation: soft-pulse 2.4s ease-in-out infinite;
-  margin-bottom: 0.5rem;
-}
-
-.saved-moment__text {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.55rem;
-  line-height: 1.3;
-  max-width: 16rem;
-}
-
-.saved-moment__sub {
-  margin: 0 0 1rem;
-  color: var(--muted);
-}
-
-.saved-moment .btn-primary {
-  max-width: 14rem;
 }
 
 /* Journal cards */
@@ -1183,6 +1129,32 @@ button {
 }
 
 /* Dream detail */
+.detail-keep {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: -0.25rem 0 0.75rem;
+}
+
+.detail-keep__sheepy {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: url(#sheepy-knockout);
+  pointer-events: none;
+}
+
+.detail-keep__copy {
+  margin: 0;
+  color: var(--soft);
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .detail-dream {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1553,7 +1525,6 @@ button {
 }
 
 .app-shell[data-active="capture"] .bottom-nav,
-.app-shell[data-active="saved"] .bottom-nav,
 .app-shell[data-active="detail"] .bottom-nav {
   opacity: 0.35;
   pointer-events: none;
@@ -1590,8 +1561,8 @@ button {
     width: min(9rem, 28vw);
   }
 
-  .sheepy--saved {
-    width: min(7.5rem, 22vw);
+  .sheepy--confirm {
+    width: min(6rem, 18vw);
   }
 
   .sheepy--sky {
@@ -1610,7 +1581,6 @@ button {
   .onboarding__sheepy,
   .onboarding__moon,
   .onboarding__stars,
-  .saved-moment__star,
   .auth-hero__sheepy img,
   .sky-proto-star,
   .pixel-caret.is-on,
