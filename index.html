@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="DreamCatcher — write dreams the moment you wake, keep them on this device."
+      content="DreamCatcher — a mobile dream companion. Record dreams so Sheepy can keep the night sky alive."
     />
     <title>DreamCatcher</title>
     <link rel="icon" href="/assets/logo.png" type="image/png" />
@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
   </head>
-  <body data-clouds="clear">
+  <body data-clouds="clear" data-flow="boot">
     <div class="sky" aria-hidden="true">
       <div class="sky__gradient"></div>
       <div class="sky__glow"></div>
@@ -31,13 +31,70 @@
       <div class="sky__horizon"></div>
     </div>
 
-    <!-- Logged-out: welcome + authentication -->
-    <section id="auth-screen" class="auth-screen" aria-label="Welcome">
+    <!-- 1. Onboarding (presentation only — no persistence) -->
+    <section id="onboarding-screen" class="flow-screen onboarding" aria-label="Introduction" hidden>
+      <div class="onboarding__art" aria-hidden="true">
+        <div class="onboarding__moon"></div>
+        <div class="onboarding__sheepy">
+          <img src="/assets/sheepy.png" width="64" height="64" alt="" draggable="false" />
+        </div>
+        <div class="onboarding__stars"></div>
+      </div>
+
+      <div class="onboarding__slides" id="onboarding-slides">
+        <article class="onboarding-slide is-active" data-slide="0">
+          <h1>This is Sheepy.</h1>
+          <p>Sheepy tends the place where forgotten dreams go.</p>
+        </article>
+        <article class="onboarding-slide" data-slide="1" hidden>
+          <h1>Most dreams disappear within minutes of waking.</h1>
+          <p>A fading dream needs a quiet place to land.</p>
+        </article>
+        <article class="onboarding-slide" data-slide="2" hidden>
+          <h1>When a dream is remembered, a new star appears.</h1>
+          <p>Sheepy keeps those lights safe in the night sky.</p>
+        </article>
+        <article class="onboarding-slide" data-slide="3" hidden>
+          <h1>Some dreams are worth remembering.</h1>
+          <p>Others are worth understanding.</p>
+        </article>
+        <article class="onboarding-slide" data-slide="4" hidden>
+          <h1>Will you help Sheepy keep the night sky alive?</h1>
+          <p>Record dreams so the quiet above stays full of light.</p>
+        </article>
+      </div>
+
+      <div class="onboarding__dots" id="onboarding-dots" aria-hidden="true"></div>
+
+      <div class="onboarding__actions">
+        <button type="button" id="onboarding-next" class="btn-primary">Continue</button>
+        <button type="button" id="onboarding-begin" class="btn-primary" hidden>Begin Dreaming</button>
+        <button type="button" id="onboarding-skip" class="btn-text">Skip introduction</button>
+        <button type="button" id="onboarding-login" class="btn-text">Already dreaming? Log in</button>
+      </div>
+    </section>
+
+    <!-- 2. Authentication — same Supabase behavior, new presentation -->
+    <section id="auth-screen" class="flow-screen auth-screen" aria-label="Sign in" hidden>
+      <div class="auth-hero" aria-hidden="true">
+        <div class="auth-hero__sheepy">
+          <img src="/assets/sheepy.png" width="48" height="48" alt="" draggable="false" />
+        </div>
+        <p class="auth-hero__whisper">Enter Sheepy’s night sky</p>
+      </div>
+
       <div class="auth-panel">
         <p class="brand-mark auth-panel__mark">DreamCatcher</p>
-        <p class="auth-vision">Catch today. Understand tomorrow. Replay forever.</p>
 
-        <!-- Default: log in / sign up -->
+        <div class="auth-tabs" id="auth-tabs" role="tablist" aria-label="Account">
+          <button type="button" class="auth-tab is-active" id="auth-tab-login" role="tab" aria-selected="true">
+            Log In
+          </button>
+          <button type="button" class="auth-tab" id="auth-tab-signup" role="tab" aria-selected="false">
+            Create Account
+          </button>
+        </div>
+
         <div id="auth-signin" class="auth-mode">
           <div class="field">
             <label for="auth-email">Email</label>
@@ -46,6 +103,7 @@
               type="email"
               autocomplete="email"
               placeholder="you@example.com"
+              inputmode="email"
             />
           </div>
           <div class="field">
@@ -58,14 +116,13 @@
               minlength="6"
             />
           </div>
-          <div class="composer-actions auth-panel__actions">
-            <button id="auth-login" type="button">Log in</button>
-            <button id="auth-signup" type="button" class="ghost-btn">Sign up</button>
+          <div class="auth-panel__actions">
+            <button id="auth-login" type="button" class="btn-primary">Log in</button>
+            <button id="auth-signup" type="button" class="btn-secondary" hidden>Create account</button>
           </div>
-          <button id="auth-forgot" type="button" class="auth-forgot">Forgot password?</button>
+          <button id="auth-forgot" type="button" class="btn-text auth-forgot">Forgot password?</button>
         </div>
 
-        <!-- Request a recovery email -->
         <div id="auth-reset-request" class="auth-mode" hidden>
           <p class="auth-mode__lede">Enter your email and we’ll send a recovery link.</p>
           <div class="field">
@@ -75,15 +132,15 @@
               type="email"
               autocomplete="email"
               placeholder="you@example.com"
+              inputmode="email"
             />
           </div>
-          <div class="composer-actions auth-panel__actions">
-            <button id="auth-send-reset" type="button">Send recovery email</button>
-            <button id="auth-back-signin" type="button" class="ghost-btn">Back to log in</button>
+          <div class="auth-panel__actions">
+            <button id="auth-send-reset" type="button" class="btn-primary">Send recovery email</button>
+            <button id="auth-back-signin" type="button" class="btn-secondary">Back to log in</button>
           </div>
         </div>
 
-        <!-- Choose a new password after opening the recovery link -->
         <div id="auth-reset-update" class="auth-mode" hidden>
           <p class="auth-mode__lede">Choose a new password for your account.</p>
           <div class="field">
@@ -106,8 +163,8 @@
               minlength="6"
             />
           </div>
-          <div class="composer-actions auth-panel__actions">
-            <button id="auth-update-password" type="button">Save new password</button>
+          <div class="auth-panel__actions">
+            <button id="auth-update-password" type="button" class="btn-primary">Save new password</button>
           </div>
         </div>
 
@@ -115,9 +172,8 @@
       </div>
     </section>
 
-    <!-- Logged-in: original DreamCatcher app -->
-    <div id="app-shell" hidden>
-      <!-- Soft moon (orb destination) + Sheepy mascot -->
+    <!-- 3–9. Logged-in app -->
+    <div id="app-shell" class="app-shell" hidden>
       <div class="moon" id="moon" aria-hidden="true"></div>
       <div class="sheepy" id="sheepy" aria-hidden="true">
         <div class="sheepy__bob">
@@ -134,67 +190,153 @@
         </div>
       </div>
 
-      <main class="app">
-        <div class="session-bar" aria-label="Account">
-          <p id="auth-user" class="session-bar__user"></p>
-          <button id="auth-logout" type="button" class="ghost-btn session-bar__logout">
-            Log out
-          </button>
-        </div>
-
-        <header class="brand">
-          <p class="brand-mark">DreamCatcher</p>
-          <p class="lede">Dreams disappear faster than you think. Catch them before they fade.</p>
-          <p id="sky-caption" class="sky-caption">Lima night sky…</p>
-        </header>
-
-        <section class="composer" aria-label="Write a dream">
-          <div class="field">
-            <label for="dream-title">Title</label>
-            <input
-              id="dream-title"
-              type="text"
-              placeholder="Optional — e.g. The floating library"
-              autocomplete="off"
-              maxlength="80"
-            />
+      <main class="app" id="app-main">
+        <!-- Home -->
+        <section id="screen-home" class="app-screen" data-screen="home" aria-label="Home">
+          <header class="screen-head screen-head--quiet">
+            <p class="brand-mark brand-mark--sm">DreamCatcher</p>
+          </header>
+          <div class="home-stage">
+            <p id="home-sheepy-message" class="home-message">Did any dreams find you?</p>
+            <button type="button" id="home-catch" class="btn-primary btn-catch">Catch a Dream</button>
+            <p id="sky-caption" class="sky-caption">Night sky…</p>
           </div>
-
-          <div class="field">
-            <div class="field-head">
-              <label for="dream-body">The dream</label>
-              <span id="word-count" class="meta">0 words</span>
-            </div>
-            <div class="dream-stage" id="dream-stage">
-              <textarea
-                id="dream-body"
-                class="dream-body"
-                rows="9"
-                placeholder=""
-                spellcheck="true"
-              ></textarea>
-              <span class="pixel-caret" id="pixel-caret" aria-hidden="true"></span>
-            </div>
-          </div>
-
-          <div class="composer-actions">
-            <button id="save-dream" type="button">Catch Dream</button>
-            <p class="hint">Tip: press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to catch</p>
-          </div>
-          <p id="status" class="status" aria-live="polite"></p>
         </section>
 
-        <section class="journal" aria-label="Saved dreams">
-          <div class="journal-head">
+        <!-- Dream capture -->
+        <section id="screen-capture" class="app-screen" data-screen="capture" aria-label="Catch a dream" hidden>
+          <header class="screen-head">
+            <button type="button" class="btn-back" data-nav="home" aria-label="Back">←</button>
+            <h2>Catch a Dream</h2>
+          </header>
+          <div class="capture-body">
+            <div class="field">
+              <label for="dream-title">Title <span class="optional">(optional)</span></label>
+              <input
+                id="dream-title"
+                type="text"
+                placeholder="e.g. The floating library"
+                autocomplete="off"
+                maxlength="80"
+              />
+            </div>
+            <div class="field field--grow">
+              <div class="field-head">
+                <label for="dream-body">The dream</label>
+                <span id="word-count" class="meta">0 words</span>
+              </div>
+              <div class="dream-stage" id="dream-stage">
+                <textarea
+                  id="dream-body"
+                  class="dream-body"
+                  rows="12"
+                  placeholder="Write what you still remember…"
+                  spellcheck="true"
+                ></textarea>
+                <span class="pixel-caret" id="pixel-caret" aria-hidden="true"></span>
+              </div>
+            </div>
+            <div class="capture-actions">
+              <button id="save-dream" type="button" class="btn-primary">Save Dream</button>
+              <p id="status" class="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dream saved moment -->
+        <section id="screen-saved" class="app-screen" data-screen="saved" aria-label="Dream saved" hidden>
+          <div class="saved-moment">
+            <div class="saved-moment__star" aria-hidden="true"></div>
+            <p class="saved-moment__text">I saved a little light from that one.</p>
+            <p class="saved-moment__sub">A new star joined the sky.</p>
+            <button type="button" id="saved-continue" class="btn-primary">Continue</button>
+          </div>
+        </section>
+
+        <!-- Journal -->
+        <section id="screen-journal" class="app-screen" data-screen="journal" aria-label="Journal" hidden>
+          <header class="screen-head">
             <h2>Journal</h2>
             <p id="dream-count" class="meta">0 saved</p>
-          </div>
+          </header>
           <p id="empty-state" class="empty">
             Nothing here yet. Your first dream becomes the start of the archive.
           </p>
-          <ul id="dream-list"></ul>
+          <ul id="dream-list" class="journal-list"></ul>
+        </section>
+
+        <!-- Dream detail + attached insight -->
+        <section id="screen-detail" class="app-screen" data-screen="detail" aria-label="Dream" hidden>
+          <header class="screen-head">
+            <button type="button" class="btn-back" data-nav="journal" aria-label="Back to journal">←</button>
+            <h2>Dream</h2>
+          </header>
+          <article class="detail-dream" id="detail-dream">
+            <h3 id="detail-title"></h3>
+            <time id="detail-date"></time>
+            <p id="detail-body" class="detail-dream__body"></p>
+            <div class="detail-dream__actions">
+              <button type="button" id="detail-delete" class="btn-text is-danger">Delete dream</button>
+            </div>
+          </article>
+          <aside class="insight-attach" id="detail-insight-wrap" aria-label="Dream Insight">
+            <div class="insight-attach__rail" aria-hidden="true"></div>
+            <div id="detail-insight" class="dream-insight" hidden></div>
+            <button type="button" id="detail-insight-btn" class="btn-secondary insight-cta">
+              Ask Sheepy for Insight
+            </button>
+          </aside>
+        </section>
+
+        <!-- Sky visual prototype -->
+        <section id="screen-sky" class="app-screen" data-screen="sky" aria-label="Sky" hidden>
+          <header class="screen-head">
+            <h2>Sky</h2>
+          </header>
+          <div class="sky-prototype">
+            <p class="sky-prototype__lede">My dreams help keep this place alive.</p>
+            <div class="sky-prototype__field" id="sky-star-field" aria-hidden="true"></div>
+            <p id="sky-star-count" class="sky-prototype__count">No stars yet — catch a dream to begin.</p>
+            <p class="sky-prototype__hint">
+              One day these lights may form constellations. For now, they simply wait with Sheepy.
+            </p>
+          </div>
+        </section>
+
+        <!-- Profile / settings -->
+        <section id="screen-profile" class="app-screen" data-screen="profile" aria-label="Profile" hidden>
+          <header class="screen-head">
+            <h2>Profile</h2>
+          </header>
+          <div class="profile-card">
+            <p class="profile-card__label">Signed in as</p>
+            <p id="auth-user" class="profile-card__email"></p>
+            <button id="auth-logout" type="button" class="btn-secondary">Log out</button>
+          </div>
+          <p class="profile-note">
+            Dream Replay and sky progression are coming later. Your dreams and insights already stay with you.
+          </p>
         </section>
       </main>
+
+      <nav class="bottom-nav" id="bottom-nav" aria-label="Main">
+        <button type="button" class="bottom-nav__item is-active" data-nav="home">
+          <span class="bottom-nav__icon" aria-hidden="true">☽</span>
+          <span>Home</span>
+        </button>
+        <button type="button" class="bottom-nav__item" data-nav="journal">
+          <span class="bottom-nav__icon" aria-hidden="true">▣</span>
+          <span>Journal</span>
+        </button>
+        <button type="button" class="bottom-nav__item" data-nav="sky">
+          <span class="bottom-nav__icon" aria-hidden="true">✧</span>
+          <span>Sky</span>
+        </button>
+        <button type="button" class="bottom-nav__item" data-nav="profile">
+          <span class="bottom-nav__icon" aria-hidden="true">◌</span>
+          <span>Profile</span>
+        </button>
+      </nav>
     </div>
 
     <script type="module" src="/src/main.js"></script>

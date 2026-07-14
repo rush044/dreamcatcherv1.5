@@ -1,11 +1,8 @@
 import "./style.css";
 import { supabase } from "./supabaseClient.js";
 
-// DreamCatcher
-// Dreams (signed in) → Supabase `dreams` table (RLS)
-// Dreams (legacy)    → localStorage kept on device; not auto-imported yet
-// Sheepy → tiny mascot · Moon → orb destination
-// Night sky → ambient stars + dream-stars you earn by saving
+// DreamCatcher — mobile-first Sheepy companion UI
+// Auth / dreams / insights APIs unchanged; presentation and navigation redesigned.
 
 const STORAGE_KEY = "dreamcatcher.dreams";
 const EMPTY_JOURNAL_COPY =
@@ -23,14 +20,40 @@ let cloudDreamsReady = false;
 let cloudDreamsLoading = null;
 /** @type {Set<string>} */
 const insightInFlight = new Set();
-/** @type {Set<string>} Dream ids whose journal body is expanded (Show less). */
-const expandedDreamIds = new Set();
+/** @type {string | null} */
+let activeDreamId = null;
+/** @type {"home" | "capture" | "saved" | "journal" | "detail" | "sky" | "profile"} */
+let activeAppScreen = "home";
+let onboardingIndex = 0;
+/** @type {"login" | "signup"} */
+let authTab = "login";
 
 const LIMA = {
   latitude: -12.0464,
   longitude: -77.0428,
   timezone: "America/Lima",
   label: "Lima",
+};
+
+const HOME_MESSAGES = [
+  "The sky is quiet tonight.",
+  "Did any dreams find you?",
+  "It has been a while.",
+  "I’m still here if something lingered.",
+  "Even a fragment of a dream is light enough.",
+];
+
+const onboardingScreen = document.getElementById("onboarding-screen");
+const authScreen = document.getElementById("auth-screen");
+const appShell = document.getElementById("app-shell");
+const appScreens = {
+  home: document.getElementById("screen-home"),
+  capture: document.getElementById("screen-capture"),
+  saved: document.getElementById("screen-saved"),
+  journal: document.getElementById("screen-journal"),
+  detail: document.getElementById("screen-detail"),
+  sky: document.getElementById("screen-sky"),
+  profile: document.getElementById("screen-profile"),
 };
 
 const titleInput = document.getElementById("dream-title");
@@ -48,9 +71,176 @@ const dreamStage = document.getElementById("dream-stage");
 const pixelCaret = document.getElementById("pixel-caret");
 const starCanvas = document.getElementById("starfield");
 const starCtx = starCanvas.getContext("2d", { alpha: true });
+const homeCatchBtn = document.getElementById("home-catch");
+const homeMessageEl = document.getElementById("home-sheepy-message");
+const savedContinueBtn = document.getElementById("saved-continue");
+const detailTitle = document.getElementById("detail-title");
+const detailDate = document.getElementById("detail-date");
+const detailBody = document.getElementById("detail-body");
+const detailDeleteBtn = document.getElementById("detail-delete");
+const detailInsight = document.getElementById("detail-insight");
+const detailInsightBtn = document.getElementById("detail-insight-btn");
+const skyStarField = document.getElementById("sky-star-field");
+const skyStarCount = document.getElementById("sky-star-count");
+const bottomNav = document.getElementById("bottom-nav");
 
-// Legacy local journal (pre-cloud). Preserved on device; not used while signed in.
-// Migration of these entries into Supabase is still pending.
+const onboardingSlides = [...document.querySelectorAll(".onboarding-slide")];
+const onboardingDots = document.getElementById("onboarding-dots");
+const onboardingNext = document.getElementById("onboarding-next");
+const onboardingBegin = document.getElementById("onboarding-begin");
+const onboardingSkip = document.getElementById("onboarding-skip");
+const onboardingLogin = document.getElementById("onboarding-login");
+
+const authSignin = document.getElementById("auth-signin");
+const authResetRequest = document.getElementById("auth-reset-request");
+const authResetUpdate = document.getElementById("auth-reset-update");
+const authEmail = document.getElementById("auth-email");
+const authPassword = document.getElementById("auth-password");
+const authResetEmail = document.getElementById("auth-reset-email");
+const authNewPassword = document.getElementById("auth-new-password");
+const authConfirmPassword = document.getElementById("auth-confirm-password");
+const authLoginBtn = document.getElementById("auth-login");
+const authSignupBtn = document.getElementById("auth-signup");
+const authForgotBtn = document.getElementById("auth-forgot");
+const authSendResetBtn = document.getElementById("auth-send-reset");
+const authBackSigninBtn = document.getElementById("auth-back-signin");
+const authUpdatePasswordBtn = document.getElementById("auth-update-password");
+const authLogoutBtn = document.getElementById("auth-logout");
+const authUserEl = document.getElementById("auth-user");
+const authStatusEl = document.getElementById("auth-status");
+const authTabLogin = document.getElementById("auth-tab-login");
+const authTabSignup = document.getElementById("auth-tab-signup");
+
+/** @type {"signin" | "request-reset" | "set-password"} */
+let authMode = "signin";
+let passwordRecoveryPending = false;
+/** @type {string | null} */
+let pendingSignedOutMessage = null;
+
+/* =========================
+   FLOW / SCREEN NAVIGATION
+   ========================= */
+
+function showFlow(flow) {
+  document.body.dataset.flow = flow;
+  if (onboardingScreen) onboardingScreen.hidden = flow !== "onboarding";
+  if (authScreen) authScreen.hidden = flow !== "auth";
+  if (appShell) appShell.hidden = flow !== "app";
+}
+
+function setAppScreen(screen) {
+  activeAppScreen = screen;
+  if (appShell) appShell.dataset.active = screen;
+
+  for (const [name, el] of Object.entries(appScreens)) {
+    if (el) el.hidden = name !== screen;
+  }
+
+  bottomNav?.querySelectorAll(".bottom-nav__item").forEach((btn) => {
+    btn.classList.toggle("is-active", btn.dataset.nav === screen);
+  });
+
+  if (screen === "home") updateHomeMessage();
+  if (screen === "sky") renderSkyPrototype();
+  if (screen === "capture") {
+    updateWordCount();
+    window.setTimeout(() => bodyInput?.focus(), 50);
+  }
+}
+
+function goHome() {
+  activeDreamId = null;
+  setAppScreen("home");
+}
+
+function updateHomeMessage() {
+  if (!homeMessageEl) return;
+  const count = cloudDreams.length;
+  if (count === 0) {
+    homeMessageEl.textContent = "Did any dreams find you?";
+    return;
+  }
+  if (count >= 5) {
+    homeMessageEl.textContent = "The sky remembers what you caught.";
+    return;
+  }
+  homeMessageEl.textContent = HOME_MESSAGES[count % HOME_MESSAGES.length];
+}
+
+function renderSkyPrototype() {
+  if (!skyStarField || !skyStarCount) return;
+  skyStarField.replaceChildren();
+  const count = cloudDreams.length;
+  if (count === 0) {
+    skyStarCount.textContent = "No stars yet — catch a dream to begin.";
+    return;
+  }
+
+  skyStarCount.textContent =
+    count === 1 ? "1 dream-star is waiting with Sheepy." : `${count} dream-stars are waiting with Sheepy.`;
+
+  const maxVisual = Math.min(count, 24);
+  for (let i = 0; i < maxVisual; i++) {
+    const star = document.createElement("span");
+    star.className = "sky-proto-star";
+    star.style.left = `${8 + ((i * 37) % 84)}%`;
+    star.style.top = `${12 + ((i * 53) % 70)}%`;
+    star.style.animationDelay = `${(i % 5) * 0.35}s`;
+    skyStarField.appendChild(star);
+  }
+}
+
+function buildOnboardingDots() {
+  if (!onboardingDots) return;
+  onboardingDots.replaceChildren();
+  onboardingSlides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if (i === onboardingIndex) dot.classList.add("is-active");
+    onboardingDots.appendChild(dot);
+  });
+}
+
+function renderOnboardingSlide() {
+  onboardingSlides.forEach((slide, i) => {
+    const active = i === onboardingIndex;
+    slide.hidden = !active;
+    slide.classList.toggle("is-active", active);
+  });
+  buildOnboardingDots();
+  const last = onboardingIndex >= onboardingSlides.length - 1;
+  if (onboardingNext) onboardingNext.hidden = last;
+  if (onboardingBegin) onboardingBegin.hidden = !last;
+}
+
+function startOnboarding() {
+  onboardingIndex = 0;
+  showFlow("onboarding");
+  renderOnboardingSlide();
+}
+
+function goToAuth({ tab = "login" } = {}) {
+  showFlow("auth");
+  setAuthTab(tab);
+  setAuthMode("signin");
+}
+
+function setAuthTab(tab) {
+  authTab = tab === "signup" ? "signup" : "login";
+  authTabLogin?.classList.toggle("is-active", authTab === "login");
+  authTabSignup?.classList.toggle("is-active", authTab === "signup");
+  if (authTabLogin) authTabLogin.setAttribute("aria-selected", String(authTab === "login"));
+  if (authTabSignup) authTabSignup.setAttribute("aria-selected", String(authTab === "signup"));
+  if (authLoginBtn) authLoginBtn.hidden = authTab !== "login";
+  if (authSignupBtn) authSignupBtn.hidden = authTab !== "signup";
+  if (authPassword) {
+    authPassword.autocomplete = authTab === "signup" ? "new-password" : "current-password";
+  }
+}
+
+/* =========================
+   DATA HELPERS (unchanged contracts)
+   ========================= */
+
 function loadLocalDreams() {
   const raw = localStorage.getItem(STORAGE_KEY);
   if (!raw) return [];
@@ -86,11 +276,21 @@ function friendlyInsightError(error, fallback = "Couldn’t generate this insigh
   return raw || fallback;
 }
 
-function createInsightPanel() {
-  const panel = document.createElement("div");
-  panel.className = "dream-insight";
-  panel.hidden = true;
-  return panel;
+function appendInsightListSection(parent, heading, items) {
+  if (!items?.length) return;
+  const section = document.createElement("div");
+  section.className = "dream-insight__section";
+  const h = document.createElement("h4");
+  h.textContent = heading;
+  section.appendChild(h);
+  const ul = document.createElement("ul");
+  for (const item of items) {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  }
+  section.appendChild(ul);
+  parent.appendChild(section);
 }
 
 function renderInsightContent(panel, insight) {
@@ -98,62 +298,72 @@ function renderInsightContent(panel, insight) {
   panel.classList.remove("is-error", "is-loading");
   panel.replaceChildren();
 
-  const title = document.createElement("p");
-  title.className = "dream-insight__label";
-  title.textContent = "Dream Insight";
-  panel.appendChild(title);
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "dream-insight__eyebrow";
+  eyebrow.textContent = "Sheepy’s discovery";
+  panel.appendChild(eyebrow);
+
+  const coreLabel = document.createElement("p");
+  coreLabel.className = "dream-insight__core-label";
+  coreLabel.textContent = "Core reflection";
+  panel.appendChild(coreLabel);
 
   const summary = document.createElement("p");
   summary.className = "dream-insight__summary";
   summary.textContent = insight.summary;
   panel.appendChild(summary);
 
-  const appendListSection = (heading, items) => {
-    if (!items?.length) return;
-    const section = document.createElement("div");
-    section.className = "dream-insight__section";
-    const h = document.createElement("h4");
-    h.textContent = heading;
-    section.appendChild(h);
-    const ul = document.createElement("ul");
-    for (const item of items) {
-      const li = document.createElement("li");
-      li.textContent = item;
-      ul.appendChild(li);
+  if (insight.emotions?.length) {
+    const chips = document.createElement("div");
+    chips.className = "dream-insight__chips";
+    for (const emotion of insight.emotions.slice(0, 6)) {
+      const chip = document.createElement("span");
+      chip.className = "dream-insight__chip";
+      chip.textContent = emotion;
+      chips.appendChild(chip);
     }
-    section.appendChild(ul);
-    panel.appendChild(section);
-  };
+    panel.appendChild(chips);
+  }
 
-  appendListSection("Emotions", insight.emotions);
-  appendListSection(
-    "People",
-    (insight.people || []).map((p) => `${p.name_or_role} — ${p.possible_dynamic}`)
-  );
-  appendListSection(
-    "Places",
-    (insight.places || []).map((p) => `${p.place} — ${p.possible_significance}`)
-  );
-  appendListSection(
+  const details = document.createElement("details");
+  details.className = "dream-insight__details";
+  const summaryEl = document.createElement("summary");
+  summaryEl.textContent = "Explore symbols, themes, and questions";
+  details.appendChild(summaryEl);
+
+  appendInsightListSection(
+    details,
     "Symbols",
     (insight.symbols || []).map((s) => `${s.symbol} — ${s.possible_meaning}`)
   );
-  appendListSection("Themes", insight.themes);
-  appendListSection("Reflection questions", insight.reflection_questions);
+  appendInsightListSection(details, "Themes", insight.themes);
+  appendInsightListSection(
+    details,
+    "People",
+    (insight.people || []).map((p) => `${p.name_or_role} — ${p.possible_dynamic}`)
+  );
+  appendInsightListSection(
+    details,
+    "Places",
+    (insight.places || []).map((p) => `${p.place} — ${p.possible_significance}`)
+  );
+  appendInsightListSection(details, "Reflection questions", insight.reflection_questions);
 
   if (insight.uncertainty_note) {
     const note = document.createElement("p");
     note.className = "dream-insight__note";
     note.textContent = insight.uncertainty_note;
-    panel.appendChild(note);
+    details.appendChild(note);
   }
 
   if (insight.return_message) {
     const ret = document.createElement("p");
     ret.className = "dream-insight__return";
     ret.textContent = insight.return_message;
-    panel.appendChild(ret);
+    details.appendChild(ret);
   }
+
+  panel.appendChild(details);
 }
 
 function showInsightLoading(panel) {
@@ -163,7 +373,7 @@ function showInsightLoading(panel) {
   panel.replaceChildren();
   const p = document.createElement("p");
   p.className = "dream-insight__status";
-  p.textContent = "Listening closely to this dream…";
+  p.textContent = "Sheepy is listening closely to this dream…";
   panel.appendChild(p);
 }
 
@@ -195,7 +405,6 @@ async function fetchInsightsForDreams(dreamIds) {
     .in("dream_id", dreamIds);
 
   if (error) {
-    // Migration may not be applied yet — journal still works without insights.
     console.warn("Could not load dream insights:", error.message || error);
     return new Map();
   }
@@ -307,6 +516,9 @@ async function loadCloudDreamsForUser(userId) {
     cloudDreamsReady = true;
     setJournalLoading(false);
     renderDreams();
+    updateHomeMessage();
+    if (activeAppScreen === "sky") renderSkyPrototype();
+    if (activeAppScreen === "detail" && activeDreamId) renderDreamDetail(activeDreamId);
   } catch (error) {
     if (seq !== dreamsLoadSeq) return;
     cloudDreams = [];
@@ -324,6 +536,7 @@ function countWords(text) {
 }
 
 function updateWordCount() {
+  if (!bodyInput || !wordCount) return;
   const n = countWords(bodyInput.value);
   wordCount.textContent = n === 1 ? "1 word" : `${n} words`;
 }
@@ -335,7 +548,14 @@ function formatWhen(isoString) {
   });
 }
 
+function previewText(body, max = 110) {
+  const cleaned = String(body || "").replace(/\s+/g, " ").trim();
+  if (cleaned.length <= max) return cleaned;
+  return `${cleaned.slice(0, max - 1).trim()}…`;
+}
+
 function setStatus(message) {
+  if (!statusEl) return;
   statusEl.textContent = message;
   if (!message) return;
   window.clearTimeout(setStatus._timer);
@@ -343,6 +563,10 @@ function setStatus(message) {
     statusEl.textContent = "";
   }, 2800);
 }
+
+/* =========================
+   JOURNAL + DETAIL (insight attached)
+   ========================= */
 
 function renderDreams() {
   const dreams = cloudDreams;
@@ -356,106 +580,79 @@ function renderDreams() {
 
   for (const dream of dreams) {
     const item = document.createElement("li");
-    item.className = "dream-entry";
-    item.dataset.id = dream.id;
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "journal-card";
+    card.dataset.id = dream.id;
 
-    const long = countWords(dream.body) > 60;
+    const title = document.createElement("h3");
+    title.className = "journal-card__title";
+    title.textContent = dream.title || "Untitled dream";
 
-    item.innerHTML = `
-      <div class="dream-entry__top">
-        <div>
-          <h3></h3>
-          <time></time>
-        </div>
-      </div>
-      <p class="dream-entry__body"></p>
-      <div class="dream-entry__actions"></div>
-    `;
-
-    item.querySelector("h3").textContent = dream.title || "Untitled dream";
-    const timeEl = item.querySelector("time");
+    const timeEl = document.createElement("time");
+    timeEl.className = "journal-card__date";
     timeEl.textContent = formatWhen(dream.createdAt);
     timeEl.dateTime = dream.createdAt;
 
-    const bodyEl = item.querySelector(".dream-entry__body");
-    bodyEl.textContent = dream.body;
-    const isExpanded = expandedDreamIds.has(dream.id);
-    if (long && !isExpanded) {
-      bodyEl.classList.add("is-clamped");
-    }
+    const preview = document.createElement("p");
+    preview.className = "journal-card__preview";
+    preview.textContent = previewText(dream.body);
 
-    const actions = item.querySelector(".dream-entry__actions");
-
-    if (long) {
-      const toggleBtn = document.createElement("button");
-      toggleBtn.type = "button";
-      toggleBtn.className = "ghost-btn";
-      toggleBtn.textContent = isExpanded ? "Show less" : "Read more";
-      toggleBtn.addEventListener("click", () => {
-        const nowClamped = bodyEl.classList.toggle("is-clamped");
-        if (nowClamped) {
-          expandedDreamIds.delete(dream.id);
-          toggleBtn.textContent = "Read more";
-        } else {
-          expandedDreamIds.add(dream.id);
-          toggleBtn.textContent = "Show less";
-        }
-      });
-      actions.appendChild(toggleBtn);
-    }
-
-    const insightsBtn = document.createElement("button");
-    insightsBtn.type = "button";
-    insightsBtn.className = "ghost-btn";
-    insightsBtn.dataset.role = "insights";
-
-    const insightPanel = createInsightPanel();
-
-    const runInsight = () => {
-      void generateInsightForDream(dream.id);
-    };
+    card.append(title, timeEl, preview);
 
     if (dream.insight) {
-      insightsBtn.textContent = "✨ Dream Insights";
-      insightsBtn.disabled = true;
-      insightsBtn.title = "Insight saved for this dream";
-      renderInsightContent(insightPanel, dream.insight);
-    } else {
-      insightsBtn.textContent = "✨ Dream Insights";
-      insightsBtn.addEventListener("click", runInsight);
+      const badge = document.createElement("span");
+      badge.className = "journal-card__badge";
+      badge.textContent = "Insight waiting";
+      card.appendChild(badge);
     }
 
-    if (insightInFlight.has(dream.id)) {
-      insightsBtn.disabled = true;
-      insightsBtn.textContent = "✨ Listening…";
-      showInsightLoading(insightPanel);
-    }
-
-    actions.appendChild(insightsBtn);
-
-    const replayBtn = document.createElement("button");
-    replayBtn.type = "button";
-    replayBtn.className = "ghost-btn is-soon";
-    replayBtn.textContent = "🎬 Dream Replay · Coming Soon";
-    replayBtn.addEventListener("click", () => {
-      setStatus(
-        "Coming soon. Every dream you save today will be ready when Dream Replay launches."
-      );
+    card.addEventListener("click", () => {
+      openDreamDetail(dream.id);
     });
-    actions.appendChild(replayBtn);
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.type = "button";
-    deleteBtn.className = "ghost-btn is-danger";
-    deleteBtn.textContent = "Delete";
-    deleteBtn.addEventListener("click", () => {
-      void deleteCloudDream(dream.id);
-    });
-    actions.appendChild(deleteBtn);
-
-    item.appendChild(insightPanel);
+    item.appendChild(card);
     dreamList.appendChild(item);
   }
+}
+
+function openDreamDetail(dreamId) {
+  activeDreamId = dreamId;
+  renderDreamDetail(dreamId);
+  setAppScreen("detail");
+}
+
+function renderDreamDetail(dreamId) {
+  const dream = cloudDreams.find((d) => d.id === dreamId);
+  if (!dream || !detailTitle || !detailDate || !detailBody || !detailInsight || !detailInsightBtn) {
+    return;
+  }
+
+  detailTitle.textContent = dream.title || "Untitled dream";
+  detailDate.textContent = formatWhen(dream.createdAt);
+  detailDate.dateTime = dream.createdAt;
+  detailBody.textContent = dream.body;
+
+  detailInsight.classList.remove("is-error", "is-loading");
+
+  if (insightInFlight.has(dream.id)) {
+    detailInsightBtn.hidden = true;
+    showInsightLoading(detailInsight);
+    return;
+  }
+
+  if (dream.insight) {
+    renderInsightContent(detailInsight, dream.insight);
+    detailInsightBtn.hidden = true;
+    detailInsightBtn.disabled = true;
+    return;
+  }
+
+  detailInsight.hidden = true;
+  detailInsight.replaceChildren();
+  detailInsightBtn.hidden = false;
+  detailInsightBtn.disabled = false;
+  detailInsightBtn.textContent = "Ask Sheepy for Insight";
 }
 
 async function generateInsightForDream(dreamId) {
@@ -470,6 +667,7 @@ async function generateInsightForDream(dreamId) {
   if (!dream) return;
 
   if (dream.insight) {
+    if (activeAppScreen === "detail") renderDreamDetail(dreamId);
     renderDreams();
     return;
   }
@@ -480,7 +678,9 @@ async function generateInsightForDream(dreamId) {
   }
 
   insightInFlight.add(dreamId);
-  renderDreams();
+  if (activeAppScreen === "detail" && activeDreamId === dreamId) {
+    renderDreamDetail(dreamId);
+  }
 
   let failed = false;
   try {
@@ -493,24 +693,21 @@ async function generateInsightForDream(dreamId) {
     setStatus("Insight ready.");
   } catch (error) {
     failed = true;
-    const item = dreamList.querySelector(`[data-id="${dreamId}"]`);
-    const panel = item?.querySelector(".dream-insight");
-    const btn = item?.querySelector('[data-role="insights"]');
     const message = friendlyInsightError(error);
-    if (panel) {
-      showInsightError(panel, message, () => {
+    if (activeAppScreen === "detail" && activeDreamId === dreamId && detailInsight) {
+      showInsightError(detailInsight, message, () => {
         void generateInsightForDream(dreamId);
       });
-    }
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = "✨ Dream Insights";
+      if (detailInsightBtn) detailInsightBtn.hidden = true;
     }
     setStatus(message);
   } finally {
     insightInFlight.delete(dreamId);
     if (!failed) {
       renderDreams();
+      if (activeAppScreen === "detail" && activeDreamId === dreamId) {
+        renderDreamDetail(dreamId);
+      }
     }
   }
 }
@@ -523,11 +720,11 @@ async function deleteCloudDream(dreamId) {
     return;
   }
 
-  deleteBtnBusy(dreamId, true);
+  if (detailDeleteBtn) detailDeleteBtn.disabled = true;
 
   const { error } = await supabase.from("dreams").delete().eq("id", dreamId).eq("user_id", currentUserId);
 
-  deleteBtnBusy(dreamId, false);
+  if (detailDeleteBtn) detailDeleteBtn.disabled = false;
 
   if (error) {
     setStatus(friendlyDreamError(error));
@@ -536,21 +733,15 @@ async function deleteCloudDream(dreamId) {
 
   cloudDreams = cloudDreams.filter((d) => d.id !== dreamId);
   insightInFlight.delete(dreamId);
-  expandedDreamIds.delete(dreamId);
+  if (activeDreamId === dreamId) activeDreamId = null;
   setStatus("Dream deleted.");
   renderDreams();
-}
-
-function deleteBtnBusy(dreamId, busy) {
-  const item = dreamList.querySelector(`[data-id="${dreamId}"]`);
-  const btn = item?.querySelector(".ghost-btn.is-danger");
-  if (btn) btn.disabled = busy;
+  updateHomeMessage();
+  setAppScreen("journal");
 }
 
 /* =========================
    PIXEL MOONLIGHT CARET
-   Macro: browsers won’t style the real caret much, so we hide it
-   and draw our own glowing pixel bar that follows the typing spot.
    ========================= */
 
 const caretMirror = document.createElement("div");
@@ -568,6 +759,7 @@ Object.assign(caretMirror.style, {
 document.body.appendChild(caretMirror);
 
 function copyTextareaStylesToMirror() {
+  if (!bodyInput) return;
   const style = window.getComputedStyle(bodyInput);
   const props = [
     "fontFamily",
@@ -597,6 +789,7 @@ function copyTextareaStylesToMirror() {
 }
 
 function updatePixelCaret() {
+  if (!bodyInput || !pixelCaret || !dreamStage) return;
   const focused = document.activeElement === bodyInput;
   const writing = bodyInput.value.length > 0;
 
@@ -622,14 +815,9 @@ function updatePixelCaret() {
   const markerRect = marker.getBoundingClientRect();
   const mirrorRect = caretMirror.getBoundingClientRect();
 
-  // Convert mirror marker position into dream-stage coordinates,
-  // accounting for textarea scroll.
   const x = inputRect.left - stageRect.left + (markerRect.left - mirrorRect.left);
   const y =
-    inputRect.top -
-    stageRect.top +
-    (markerRect.top - mirrorRect.top) -
-    bodyInput.scrollTop;
+    inputRect.top - stageRect.top + (markerRect.top - mirrorRect.top) - bodyInput.scrollTop;
 
   const lineHeight = Number.parseFloat(window.getComputedStyle(bodyInput).lineHeight) || 22;
 
@@ -639,7 +827,7 @@ function updatePixelCaret() {
 }
 
 /* =========================
-   SAVE RITUAL: orb → moon → dream star
+   SAVE RITUAL
    ========================= */
 
 function getMoonCenter() {
@@ -671,7 +859,6 @@ function addDreamStar(x, y, { born = true } = {}) {
 }
 
 function seedDreamStarsFromJournal() {
-  // Quiet stars for dreams already in the cloud journal (no orb animation on load)
   const count = cloudDreams.length;
   const w = window.innerWidth;
   const h = window.innerHeight;
@@ -683,11 +870,12 @@ function seedDreamStarsFromJournal() {
 }
 
 function playSaveRitual() {
+  if (!moon || !bodyInput) return Promise.resolve();
   const start = getTextareaLaunchPoint();
   const end = getMoonCenter();
 
-  if (prefersReducedMotion) {
-    addDreamStar(end.x + (Math.random() * 24 - 12), end.y + (Math.random() * 24 - 12));
+  if (prefersReducedMotion || end.x === 0) {
+    addDreamStar(end.x + (Math.random() * 24 - 12) || window.innerWidth * 0.7, end.y || 80);
     return Promise.resolve();
   }
 
@@ -699,21 +887,12 @@ function playSaveRitual() {
 
   const dx = end.x - start.x;
   const dy = end.y - start.y;
-  // Soft arc: rise a little, then settle into the moon
-  const duration = 2400;
+  const duration = 1800;
 
   const animation = orb.animate(
     [
-      {
-        transform: "translate3d(0, 0, 0) scale(0.55)",
-        opacity: 0,
-        offset: 0,
-      },
-      {
-        transform: "translate3d(0, -12px, 0) scale(1)",
-        opacity: 0.95,
-        offset: 0.12,
-      },
+      { transform: "translate3d(0, 0, 0) scale(0.55)", opacity: 0, offset: 0 },
+      { transform: "translate3d(0, -12px, 0) scale(1)", opacity: 0.95, offset: 0.12 },
       {
         transform: `translate3d(${dx * 0.55}px, ${dy * 0.35 - 40}px, 0) scale(0.9)`,
         opacity: 0.9,
@@ -739,7 +918,6 @@ function playSaveRitual() {
 
   return animation.finished.then(() => {
     orb.remove();
-    // Become a permanent star near the moon, with a tiny scatter
     addDreamStar(end.x + (Math.random() * 36 - 18), end.y + 8 + Math.random() * 28);
   });
 }
@@ -778,29 +956,25 @@ async function saveCurrentDream() {
   saveButton.disabled = false;
 
   if (error) {
-    // Keep typed text so nothing is lost on failure.
     setStatus(friendlyDreamError(error));
     return;
   }
 
   cloudDreams.unshift(mapRowToDream(data));
-  // New cloud dreams are NOT written to localStorage (Supabase is source of truth).
-  // Old localStorage dreams remain on this device until a future migration.
 
   titleInput.value = "";
   bodyInput.value = "";
   updateWordCount();
   updatePixelCaret();
-  setStatus("Caught. A new star joins your sky.");
   renderDreams();
+  updateHomeMessage();
 
-  playSaveRitual().then(() => {
-    bodyInput.focus();
-  });
+  setAppScreen("saved");
+  void playSaveRitual();
 }
 
 /* =========================
-   LIMA CAPTION
+   LIMA CAPTION + STARFIELD + SHEEPY
    ========================= */
 
 function formatClock(date, timeZone) {
@@ -827,7 +1001,9 @@ function cloudLabel(level) {
 function applyCaption(clouds, note) {
   document.body.dataset.clouds = clouds;
   const now = new Date();
-  skyCaption.textContent = `${LIMA.label} · ${formatClock(now, LIMA.timezone)} · night sky · ${cloudLabel(clouds)}${note || ""}`;
+  if (skyCaption) {
+    skyCaption.textContent = `${LIMA.label} · ${formatClock(now, LIMA.timezone)} · night sky · ${cloudLabel(clouds)}${note || ""}`;
+  }
 }
 
 function fallbackCaption() {
@@ -851,10 +1027,6 @@ async function syncLimaSky() {
     fallbackCaption();
   }
 }
-
-/* =========================
-   LIVING NIGHT SKY + DREAM STARS
-   ========================= */
 
 const STAR_COUNT = 240;
 let stars = [];
@@ -919,7 +1091,6 @@ function spawnShootingStar() {
 function drawDreamStar(star, t, now) {
   let alpha = star.base * (0.75 + 0.25 * Math.sin(t * star.speed + star.phase));
 
-  // Soft birth glow when a dream just became a star
   if (star.bornAt) {
     const age = now - star.bornAt;
     if (age < 1800) {
@@ -933,7 +1104,6 @@ function drawDreamStar(star, t, now) {
     }
   }
 
-  // Tiny cross sparkle — more “caught dream” than ambient dust
   starCtx.fillStyle = `rgba(232, 226, 218, ${Math.max(0.35, Math.min(1, alpha))})`;
   const s = star.size;
   starCtx.fillRect(star.x - s, star.y, s * 2 + 1, 1);
@@ -1017,27 +1187,24 @@ function startStarfield() {
 window.addEventListener("resize", () => {
   resizeStarfield();
   createStars();
-  // Keep dream stars; just redraw
   if (!starfieldRunning) drawStarfield(performance.now());
 });
 
-/* =========================
-   SHEEPY IDLE
-   ========================= */
-
 function clearSheepyActions() {
-  sheepy.classList.remove("is-blink", "is-yawn", "is-sleep");
+  sheepy?.classList.remove("is-blink", "is-yawn", "is-sleep");
 }
 
 function emitSheepyStar() {
+  const bob = sheepy?.querySelector(".sheepy__bob");
+  if (!bob) return;
   const star = document.createElement("span");
   star.className = "sheepy-star";
-  sheepy.querySelector(".sheepy__bob").appendChild(star);
+  bob.appendChild(star);
   window.setTimeout(() => star.remove(), 1700);
 }
 
 function runSheepyAction() {
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || !sheepy) return;
 
   clearSheepyActions();
   const roll = Math.random();
@@ -1066,73 +1233,9 @@ function scheduleSheepyAction() {
 }
 
 /* =========================
-   WIRE UP
+   AUTH GATE (Supabase email) — logic preserved
    ========================= */
 
-saveButton.addEventListener("click", () => {
-  void saveCurrentDream();
-});
-
-bodyInput.addEventListener("input", () => {
-  updateWordCount();
-  updatePixelCaret();
-});
-
-bodyInput.addEventListener("focus", updatePixelCaret);
-bodyInput.addEventListener("blur", () => pixelCaret.classList.remove("is-on"));
-bodyInput.addEventListener("click", updatePixelCaret);
-bodyInput.addEventListener("keyup", updatePixelCaret);
-bodyInput.addEventListener("scroll", updatePixelCaret);
-bodyInput.addEventListener("select", updatePixelCaret);
-
-bodyInput.addEventListener("keydown", (event) => {
-  if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
-    event.preventDefault();
-    void saveCurrentDream();
-  }
-});
-
-window.addEventListener("resize", updatePixelCaret);
-
-/* =========================
-   AUTH GATE (Supabase email)
-   Logged out → welcome screen
-   Logged in  → original DreamCatcher app + cloud journal
-   Recovery   → set new password, then sign in normally
-   Legacy localStorage dreams stay on device (migration pending).
-   ========================= */
-
-const authScreen = document.getElementById("auth-screen");
-const appShell = document.getElementById("app-shell");
-const authSignin = document.getElementById("auth-signin");
-const authResetRequest = document.getElementById("auth-reset-request");
-const authResetUpdate = document.getElementById("auth-reset-update");
-const authEmail = document.getElementById("auth-email");
-const authPassword = document.getElementById("auth-password");
-const authResetEmail = document.getElementById("auth-reset-email");
-const authNewPassword = document.getElementById("auth-new-password");
-const authConfirmPassword = document.getElementById("auth-confirm-password");
-const authLoginBtn = document.getElementById("auth-login");
-const authSignupBtn = document.getElementById("auth-signup");
-const authForgotBtn = document.getElementById("auth-forgot");
-const authSendResetBtn = document.getElementById("auth-send-reset");
-const authBackSigninBtn = document.getElementById("auth-back-signin");
-const authUpdatePasswordBtn = document.getElementById("auth-update-password");
-const authLogoutBtn = document.getElementById("auth-logout");
-const authUserEl = document.getElementById("auth-user");
-const authStatusEl = document.getElementById("auth-status");
-
-/** @type {"signin" | "request-reset" | "set-password"} */
-let authMode = "signin";
-let passwordRecoveryPending = false;
-/** @type {string | null} */
-let pendingSignedOutMessage = null;
-
-/**
- * Recovery email return URL.
- * Uses Vite BASE_URL so a future subpath deploy (e.g. /dreamcatcher/) is preserved.
- * Root deploy / local Vite → origin + "/".
- */
 function getPasswordRecoveryRedirectUrl() {
   const base = import.meta.env.BASE_URL || "/";
   return new URL(base, window.location.origin).href;
@@ -1159,6 +1262,8 @@ function setAuthBusy(busy) {
     authSendResetBtn,
     authBackSigninBtn,
     authUpdatePasswordBtn,
+    authTabLogin,
+    authTabSignup,
   ].forEach((btn) => {
     if (btn) btn.disabled = busy;
   });
@@ -1221,6 +1326,9 @@ function setAuthMode(mode, { preserveStatus = false } = {}) {
   if (authResetRequest) authResetRequest.hidden = mode !== "request-reset";
   if (authResetUpdate) authResetUpdate.hidden = mode !== "set-password";
 
+  const tabs = document.getElementById("auth-tabs");
+  if (tabs) tabs.hidden = mode !== "signin";
+
   if (!preserveStatus) setAuthStatus("");
 
   if (mode === "request-reset" && authResetEmail && authEmail) {
@@ -1237,8 +1345,7 @@ function setAuthMode(mode, { preserveStatus = false } = {}) {
 
 function showPasswordRecovery() {
   passwordRecoveryPending = true;
-  appShell.hidden = true;
-  authScreen.hidden = false;
+  showFlow("auth");
   authUserEl.textContent = "";
   hideDreamsFromView();
   setAuthMode("set-password");
@@ -1247,15 +1354,13 @@ function showPasswordRecovery() {
 }
 
 function hideDreamsFromView() {
-  // Clears in-memory / on-screen journal only. Does not delete Supabase rows
-  // or legacy localStorage entries.
   dreamsLoadSeq += 1;
   cloudDreams = [];
   currentUserId = null;
   cloudDreamsReady = false;
   cloudDreamsLoading = null;
   insightInFlight.clear();
-  expandedDreamIds.clear();
+  activeDreamId = null;
   dreamList.innerHTML = "";
   dreamCount.textContent = "0 saved";
   emptyState.hidden = false;
@@ -1264,21 +1369,21 @@ function hideDreamsFromView() {
 
 function showLoggedOut(message = "") {
   passwordRecoveryPending = false;
-  appShell.hidden = true;
-  authScreen.hidden = false;
+  showFlow("auth");
   authUserEl.textContent = "";
   hideDreamsFromView();
   const status = message || pendingSignedOutMessage || "";
   pendingSignedOutMessage = null;
   setAuthMode("signin", { preserveStatus: Boolean(status) });
+  setAuthTab("login");
   if (status) setAuthStatus(status);
 }
 
 async function showLoggedIn(user) {
   passwordRecoveryPending = false;
   setAuthMode("signin");
-  authScreen.hidden = true;
-  appShell.hidden = false;
+  showFlow("app");
+  setAppScreen("home");
   authUserEl.textContent = user?.email || "Signed in";
   setAuthStatus("");
   updateWordCount();
@@ -1286,6 +1391,7 @@ async function showLoggedIn(user) {
 
   if (currentUserId === user.id && cloudDreamsReady) {
     renderDreams();
+    updateHomeMessage();
     return;
   }
 
@@ -1308,10 +1414,8 @@ function renderAuthSession(session, event = null) {
       showPasswordRecovery();
       return;
     }
-    // Recovery link may set the URL before the session is ready.
     if (passwordRecoveryPending && event !== "SIGNED_OUT") {
-      appShell.hidden = true;
-      authScreen.hidden = false;
+      showFlow("auth");
       setAuthMode("set-password", { preserveStatus: true });
       return;
     }
@@ -1321,9 +1425,23 @@ function renderAuthSession(session, event = null) {
   const user = session?.user ?? null;
   if (user) {
     void showLoggedIn(user);
-  } else {
-    showLoggedOut();
+    return;
   }
+
+  // No session: cold boot / INITIAL_SESSION → onboarding (not auth).
+  // Do not interrupt an in-progress onboarding when Supabase emits INITIAL_SESSION.
+  if (!event || event === "INITIAL_SESSION") {
+    if (passwordRecoveryPending) {
+      showFlow("auth");
+      setAuthMode("set-password", { preserveStatus: true });
+      return;
+    }
+    if (document.body.dataset.flow === "onboarding") return;
+    startOnboarding();
+    return;
+  }
+
+  showLoggedOut();
 }
 
 async function handleSignup() {
@@ -1493,14 +1611,13 @@ async function handleLogout() {
     return;
   }
 
-  // Legacy localStorage dreams are intentionally NOT deleted.
-  // Cloud rows are intentionally NOT deleted.
   showLoggedOut("Signed out.");
 }
 
 async function initAuth() {
   if (!supabase) {
-    showLoggedOut("Account features aren't available right now.");
+    startOnboarding();
+    setAuthStatus("Account features aren't available right now.");
     return;
   }
 
@@ -1510,7 +1627,9 @@ async function initAuth() {
 
   const { data, error } = await supabase.auth.getSession();
   if (error) {
-    showLoggedOut(friendlyAuthError(error));
+    startOnboarding();
+    // If they skip to auth, status will show; keep onboarding first for prototype UX
+    pendingSignedOutMessage = friendlyAuthError(error);
   } else {
     renderAuthSession(data?.session ?? null);
   }
@@ -1520,57 +1639,135 @@ async function initAuth() {
   });
 }
 
-authLoginBtn.addEventListener("click", handleLogin);
-authSignupBtn.addEventListener("click", handleSignup);
-authLogoutBtn.addEventListener("click", handleLogout);
-authForgotBtn.addEventListener("click", () => {
-  setAuthMode("request-reset");
-  authResetEmail?.focus();
-});
-authBackSigninBtn.addEventListener("click", () => {
-  setAuthMode("signin");
-  authEmail?.focus();
-});
-authSendResetBtn.addEventListener("click", () => {
-  void handleRequestPasswordReset();
-});
-authUpdatePasswordBtn.addEventListener("click", () => {
-  void handleUpdatePassword();
+/* =========================
+   WIRE UP
+   ========================= */
+
+saveButton?.addEventListener("click", () => {
+  void saveCurrentDream();
 });
 
-authPassword.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
+bodyInput?.addEventListener("input", () => {
+  updateWordCount();
+  updatePixelCaret();
+});
+
+bodyInput?.addEventListener("focus", updatePixelCaret);
+bodyInput?.addEventListener("blur", () => pixelCaret?.classList.remove("is-on"));
+bodyInput?.addEventListener("click", updatePixelCaret);
+bodyInput?.addEventListener("keyup", updatePixelCaret);
+bodyInput?.addEventListener("scroll", updatePixelCaret);
+bodyInput?.addEventListener("select", updatePixelCaret);
+
+bodyInput?.addEventListener("keydown", (event) => {
+  if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
     event.preventDefault();
-    handleLogin();
+    void saveCurrentDream();
   }
 });
 
-authResetEmail.addEventListener("keydown", (event) => {
+window.addEventListener("resize", updatePixelCaret);
+
+homeCatchBtn?.addEventListener("click", () => setAppScreen("capture"));
+savedContinueBtn?.addEventListener("click", () => goHome());
+
+detailInsightBtn?.addEventListener("click", () => {
+  if (activeDreamId) void generateInsightForDream(activeDreamId);
+});
+
+detailDeleteBtn?.addEventListener("click", () => {
+  if (activeDreamId) void deleteCloudDream(activeDreamId);
+});
+
+bottomNav?.addEventListener("click", (event) => {
+  const btn = event.target.closest("[data-nav]");
+  if (!btn || !appShell || appShell.hidden) return;
+  const screen = btn.dataset.nav;
+  if (screen === "home" || screen === "journal" || screen === "sky" || screen === "profile") {
+    activeDreamId = null;
+    setAppScreen(screen);
+  }
+});
+
+document.querySelectorAll(".btn-back[data-nav]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const screen = btn.dataset.nav;
+    if (screen === "home" || screen === "journal") {
+      activeDreamId = null;
+      setAppScreen(screen);
+    }
+  });
+});
+
+onboardingNext?.addEventListener("click", () => {
+  if (onboardingIndex < onboardingSlides.length - 1) {
+    onboardingIndex += 1;
+    renderOnboardingSlide();
+  }
+});
+
+onboardingBegin?.addEventListener("click", () => goToAuth({ tab: "signup" }));
+onboardingSkip?.addEventListener("click", () => goToAuth({ tab: "signup" }));
+onboardingLogin?.addEventListener("click", () => goToAuth({ tab: "login" }));
+
+authTabLogin?.addEventListener("click", () => setAuthTab("login"));
+authTabSignup?.addEventListener("click", () => setAuthTab("signup"));
+
+authLoginBtn?.addEventListener("click", handleLogin);
+authSignupBtn?.addEventListener("click", handleSignup);
+authLogoutBtn?.addEventListener("click", handleLogout);
+authForgotBtn?.addEventListener("click", () => {
+  setAuthMode("request-reset");
+  authResetEmail?.focus();
+});
+authBackSigninBtn?.addEventListener("click", () => {
+  setAuthMode("signin");
+  authEmail?.focus();
+});
+authSendResetBtn?.addEventListener("click", () => {
+  void handleRequestPasswordReset();
+});
+authUpdatePasswordBtn?.addEventListener("click", () => {
+  void handleUpdatePassword();
+});
+
+authPassword?.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    if (authTab === "signup") handleSignup();
+    else handleLogin();
+  }
+});
+
+authResetEmail?.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     void handleRequestPasswordReset();
   }
 });
 
-authConfirmPassword.addEventListener("keydown", (event) => {
+authConfirmPassword?.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     void handleUpdatePassword();
   }
 });
 
-authNewPassword.addEventListener("keydown", (event) => {
+authNewPassword?.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     authConfirmPassword?.focus();
   }
 });
 
+// Silence unused-local warning for legacy helper while migration remains pending.
+void loadLocalDreams;
+
 updateWordCount();
 fallbackCaption();
 syncLimaSky();
 window.setInterval(syncLimaSky, 10 * 60 * 1000);
-
+buildOnboardingDots();
 startStarfield();
 scheduleSheepyAction();
 initAuth();
