@@ -1,18 +1,16 @@
 import OpenAI from "openai";
 import { createClient } from "@supabase/supabase-js";
 import {
-  INSIGHT_V2_JSON_SCHEMA,
   INSIGHT_V2_MODEL,
-  SYSTEM_PROMPT_V2,
-  buildInsightV2UserContent,
   normalizeInsightV2,
   normalizeStoredInsight,
   validateInsightV2,
   validateStoredInsight,
 } from "../lib/insight-v2.mjs";
+import { generateInsightWithSol } from "../lib/insight-v2-openai.mjs";
 
 /**
- * Dream Insights API — Adaptive Insight V2 generation (feature branch prototype).
+ * Dream Insights API — Adaptive Insight V2.2 generation (Sol feature branch).
  * -------------------------------------------------
  * Local (`.env.local`) and Vercel (Development / Preview / Production):
  *
@@ -31,8 +29,8 @@ import {
  * Do NOT use a Supabase service-role key here. Ownership is enforced with the
  * caller's JWT + Row Level Security on `dreams` / `dream_insights`.
  *
- * Cached V1 insights remain valid and are returned as-is (normalized).
- * New generations produce Adaptive Insight V2 JSON in the same content field.
+ * Cached V1 and prior V2 insights remain valid and are returned as-is (normalized).
+ * New generations use gpt-5.6-sol + adaptive-v2.2 via the Responses API.
  */
 
 const MODEL = INSIGHT_V2_MODEL;
@@ -319,30 +317,22 @@ export default async function handler(req, res) {
     const title = String(dream.title || "").trim().slice(0, MAX_TITLE_CHARS);
     const openai = new OpenAI({ apiKey: openaiKey });
 
-    let completion;
+    let rawContent;
     try {
-      completion = await openai.chat.completions.create({
-        model: MODEL,
-        temperature: 0.7,
-        response_format: {
-          type: "json_schema",
-          json_schema: INSIGHT_V2_JSON_SCHEMA,
-        },
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT_V2 },
-          {
-            role: "user",
-            content: buildInsightV2UserContent(title, dreamBody),
-          },
-        ],
+      const generated = await generateInsightWithSol(openai, {
+        title,
+        body: dreamBody,
       });
+      rawContent = generated.rawContent;
     } catch (error) {
-      logServerError("OpenAI request failed", error, { status: error?.status || 0 });
+      logServerError("OpenAI request failed", error, {
+        status: error?.status || 0,
+        model: MODEL,
+      });
       json(res, 502, { error: "The reflection service had trouble. Please try again." }, origin);
       return;
     }
 
-    const rawContent = completion.choices?.[0]?.message?.content;
     if (!rawContent) {
       json(res, 502, { error: "No reflection was returned. Please try again." }, origin);
       return;

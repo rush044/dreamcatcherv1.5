@@ -1,8 +1,11 @@
 # DreamCatcher Adaptive Insight V2 — Product Specification
 
-**Status:** Local prototype on `insight-v2-adaptive`  
-**Model for this validation:** `gpt-4.1-mini` only  
-**Not a release decision.** Human review of `INSIGHT_V2_HUMAN_REVIEW.md` is required before any ship discussion.
+**Status (current candidate):** Feature branch `insight-v2-sol-v2-2`  
+**Selected working model:** `gpt-5.6-sol` (blind human review: 10/10 vs Mini)  
+**Active candidate prompt:** `adaptive-v2.2`  
+**Historical prompt:** `adaptive-v2.1` (frozen Mini-vs-Sol comparison)  
+**Schema:** V2 JSON (unchanged storage shape; V1 cache still supported)  
+**Not production.** Release requires V2.1→V2.2 human review + live preview acceptance.
 
 ---
 
@@ -103,6 +106,8 @@ No redundant “Sheepy noticed something” eyebrow. No extra Sheepy image on th
 
 Optional. Render only when `threads.length > 0`.
 
+**V2.2 optionality:** default empty. Add only when a Thread contributes a distinct observation not already in the notice.
+
 - Collapsed by default
 - Accessible control (`aria-expanded`, `aria-controls`, keyboard)
 - Maximum three short items
@@ -111,6 +116,8 @@ Optional. Render only when `threads.length > 0`.
 ### Something to sit with
 
 Optional. Render only when `reflection_questions.length > 0`.
+
+**V2.2 optionality:** default empty. Many Insights should have no question.
 
 - Normally zero or one question; two maximum
 - Clearly separated from threads
@@ -123,6 +130,7 @@ Optional. Render only when `reflection_questions.length > 0`.
 - Generated closing / thank-you
 - Mandatory sky/light/constellation wording
 - Emotion / theme / person / place / symbol inventory lists
+
 
 ---
 
@@ -159,10 +167,11 @@ Later systems may cluster recurring emotions, people, places, actions, images, r
 
 ## 11. Evaluation process
 
-1. Offline generation against the 16-dream calibration set using `gpt-4.1-mini`
-2. Automated supporting scores (capped when forced depth / generic language / filler appear)
-3. Human review via `INSIGHT_V2_HUMAN_REVIEW.md`
-4. Separate later task for stronger-model comparison after architecture stability
+1. Architecture + Mini validation on `insight-v2-adaptive` / `adaptive-v2.1` (historical)
+2. Blind Mini vs Sol comparison on `insight-v2-model-comparison` → Sol selected 10/10
+3. Sol + `adaptive-v2.2` optionality polish on `insight-v2-sol-v2-2`
+4. Human review of `INSIGHT_V2_SOL_V2_1_VS_V2_2_REVIEW.md` (8 cases)
+5. Live authenticated preview check
 
 Evaluation must not write to Supabase or touch production configuration.
 
@@ -170,16 +179,16 @@ Evaluation must not write to Supabase or touch production configuration.
 
 ## 12. Release requirements
 
-V2 is **not** ready to ship from this prototype alone.
+V2.2 is **not** production-ready from preview alone.
 
 Before any production consideration:
 
-- [ ] Human calibration of `INSIGHT_V2_HUMAN_REVIEW.md`
-- [ ] Accordion / mobile UI acceptance
-- [ ] V1 cache rendering confirmed in a real session
-- [ ] Safety review of sensitive calibration dreams
-- [ ] Separate model-comparison task (if needed)
-- [ ] Explicit product decision to deploy
+- [ ] Complete eight-case V2.1 vs V2.2 human review
+- [ ] Accordion / mobile UI acceptance on Sol preview
+- [ ] V1 and prior V2 cached Insights still render without regeneration
+- [ ] Safety review of sexual / violent material on Sol V2.2
+- [ ] Explicit product decision to promote `gpt-5.6-sol` + adaptive-v2.2
+- [ ] Cost/latency acceptance for deliberate Insight actions
 
 ---
 
