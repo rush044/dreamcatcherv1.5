@@ -354,23 +354,54 @@ Mini flag count **1**; Sol **1**.
 - **The Meeting**: shared caps report_like_opening
 - **Long dream with many details but little supported meaning**: sol scored lower (3 vs mini 4)
 
-## 18. Likely root cause of remaining problems
+## 18. Human blind-review result
 
-Automated read: **primarily model capability (Sol stronger under same prompt)**.
+Ratings were recorded in `INSIGHT_V2_MINI_VS_SOL_BLIND.md` **before** revealing `INSIGHT_V2_MINI_VS_SOL_KEY.json`. Ratings were not changed after reveal.
 
-Missing historical/cross-dream context was intentionally excluded; do not treat that absence as a Sol/mini gap.
+| Metric | Count |
+|---|---:|
+| Sol human wins | **10** |
+| Mini human wins | **0** |
+| Ties | **0** |
+| Decision threshold (≥7/10) | **Met** |
+| Material safety regression | **None** |
 
-## 19. Recommendation for next step
+### Cases won by Sol
 
-Do **not** change production yet. Complete the ten-case blind review in `INSIGHT_V2_MINI_VS_SOL_BLIND.md`.
+The Spoon · The Meeting · The Beach · The Party · My Friend · The Hotel · The Knife · The Interview · Long bizarre dream · Long relationship dream
 
-Automated evidence already favors Sol on Sheepy voice (0% “the dreamer,” 0% report-like openings vs 42.9% each for Mini) and on dense emotional / bizarre / rich cases. Optionality rates remain high for both models (questions still on most dreams), so winning on model choice should be followed by Sol-specific prompt polish for emptiness of Threads/Questions — not a new architecture layer.
+### Cases won by Mini
 
-If Sol wins the blind set without safety regression: select Sol as the working model and polish adaptive-v2.1 for Sol optionality.
+None.
 
-If blind review is mixed: remain on Mini for alpha and prioritize prompt optionality before further model spend.
+### Model problems Sol improved
 
-Automated scores are supporting evidence only and must not declare a winner alone.
+- Report-like openings (“The dream shows/includes/centers…”)
+- Referring to the user as “the dreamer”
+- Failure to stop on sparse dreams (Spoon)
+- Weaker long-dream / rich reasoning
+- Loss of bizarre or comedic tone
+- Generic symbolic overreading and unsupported pressure/readiness frames
+
+### Prompt problems that remained across models
+
+- Optional Threads still appear too often
+- Optional questions still appear too often
+- Questions sometimes invite unnecessary elaboration
+- Straightforward dreams can still receive secondary sections that feel like report completion
+- Models can treat optional sections as part of a “complete” Insight card
+
+### Final conclusion (capability vs prompt)
+
+**Working-model winner: `gpt-5.6-sol`.**
+
+Human review confirms Sol’s superiority is primarily **model capability** under the frozen adaptive-v2.1 prompt.
+
+Remaining defects are primarily **prompt optionality design**: both models (and Sol still, at lower severity) overproduce Threads and questions. Next step is Sol + leaner adaptive-v2.2 optionality polish — not Mini retention and not a new architecture layer.
+
+## 19. Next step
+
+Proceed on a Sol V2.2 feature branch: adopt Sol for generation, refine adaptive-v2.2 for genuine optionality, evaluate Sol V2.1 → V2.2 only, then preview. Do not change production from this comparison branch alone.
 
 ## Paths
 

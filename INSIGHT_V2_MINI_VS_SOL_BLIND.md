@@ -1,10 +1,9 @@
 # Insight V2 — Mini vs Sol Blind Anchor Review
 
-Models are hidden. Rate A vs B for each case.
+**Status:** Human ratings recorded. Model identity revealed only after ratings were saved.
 
-Prompt and schema are frozen: `adaptive-v2.1` / V2.
+Prompt and schema frozen: `adaptive-v2.1` / V2.
 
-Do not open the hidden key until finished.
 
 ---
 
@@ -35,13 +34,13 @@ The dream is very brief and contains no emotions or interactions. The presence o
 
 _Depth (hidden from users, shown for review): limited_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A admits that there is not enough evidence and stops. B describes the input clinically and asks a question that encourages the user to manufacture importance.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -85,13 +84,13 @@ The dream shows concern about being prepared for an important meeting, highlight
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A gives the explicit real-life meeting priority and treats the charger as a practical problem. B invents readiness, control, and pressure beyond what was provided.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -131,13 +130,13 @@ The dream expresses a clear feeling of safety and calmness in a quiet beach sett
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A allows complete safety to remain the central experience. B pushes the user to search for an unsupported waking-life problem or contrast.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -181,13 +180,13 @@ The dream centers on a clear feeling of exposure and being out of place, contras
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A notices that the feeling of exposure was not confirmed by anyone else. B repeats generic language about social appearance, acceptance, and disconnection.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -227,13 +226,13 @@ The clearest part is the change: the encounter felt natural in the dream, while 
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** B
 
 **Reason:**
 
-> 
+> B speaks directly and maturely, respects the user’s stated boundary, and correctly explains that dream content does not establish waking desire. A is more clinical and repetitive.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -278,13 +277,13 @@ The dream’s clearest change is from frustration to peace. Nothing outside you 
 
 _Depth (hidden from users, shown for review): rich_
 
-**Best:** A / B / Tie
+**Best:** B
 
 **Reason:**
 
-> 
+> B notices that nothing outside the user changes while the struggle itself becomes peaceful. Its threads are distinct and do not claim that the user is emotionally distant from their family.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -329,13 +328,13 @@ The dream carries a clear feeling of threat from a child who knows a private chi
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A connects personal familiarity with danger without diagnosing childhood trauma or assigning a fixed symbolic meaning. Its uncertainty is honest and useful.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -380,13 +379,13 @@ The dream shows a clear emotional tension around rules and reactions, especially
 
 _Depth (hidden from users, shown for review): focused_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A identifies the unfair rule and the user being judged under an uneven standard. It preserves the penguins’ absurdity and avoids generic clinical language.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -437,13 +436,13 @@ The dream carries a playful, surreal feeling with moments of delight, tenderness
 
 _Depth (hidden from users, shown for review): rich_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A preserves the dream’s playful tone and finds a real emotional thread in the brief pause and tenderness toward the nonsense. B overexplains the imagery and asks an absurd waking-life question.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
 
@@ -494,12 +493,36 @@ The dream carries clear emotions of warmth, companionship, pride, and sadness in
 
 _Depth (hidden from users, shown for review): rich_
 
-**Best:** A / B / Tie
+**Best:** A
 
 **Reason:**
 
-> 
+> A understands that pride and grief can both be fully true. It connects preparation, departure, and unspoken understanding without reducing the dream to a generic relationship problem.
 
-**Would I be comfortable shipping the winner?** Yes / No
+**Would I be comfortable shipping the winner?** Yes
 
 ---
+
+
+## Revealed model mapping (after ratings)
+
+| Case | Winner | A was | B was |
+|---|---|---|---|
+| The Spoon | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| The Meeting | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| The Beach | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| The Party | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| My Friend | B → Sol | gpt-4.1-mini | gpt-5.6-sol |
+| The Hotel | B → Sol | gpt-4.1-mini | gpt-5.6-sol |
+| The Knife | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| The Interview | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| Long bizarre dream | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+| Long relationship dream | A → Sol | gpt-5.6-sol | gpt-4.1-mini |
+
+**Human wins:** Sol **10** · Mini **0** · Ties **0**
+
+**Decision threshold (≥7/10):** Met.
+
+**Material safety regression:** None observed in human review.
+
+Ratings were not changed after revealing the key.
