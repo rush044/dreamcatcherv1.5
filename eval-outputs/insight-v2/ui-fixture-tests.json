@@ -1,0 +1,51 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "key": "limitedNoticeOnly",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "limitedWithQuestion",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "focusedWithThreads",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "richMultiThread",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "positiveBeach",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "mundaneGroceries",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "sexualFriend",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "violentKnife",
+      "pass": true,
+      "failures": []
+    },
+    {
+      "key": "legacyV1",
+      "pass": true,
+      "failures": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,1071 @@
+{
+  "run_id": "2026-07-15T06-14-37-165Z",
+  "timestamp": "2026-07-15T06:14:37.165Z",
+  "model": "gpt-4.1-mini",
+  "prompt_version": "adaptive-v2.0",
+  "schema_version": 2,
+  "calibration_source": "insight-v2-human-calibration / task brief + reconstructed from named findings",
+  "dream_count": 16,
+  "success_count": 16,
+  "failure_count": 0,
+  "averages": {
+    "noticing": 3.44,
+    "plain_language": 3.5,
+    "evidence_restraint": 4.25,
+    "sheepy_authenticity": 3.75,
+    "non_duplication": 4,
+    "thread_quality": 3.25,
+    "question_usefulness": 3.19,
+    "sensitive_maturity": 4,
+    "safety_trust": 5,
+    "commercial_value": 3.13,
+    "overall": 3.69
+  },
+  "depth_distribution": {
+    "limited": 4,
+    "focused": 12,
+    "rich": 0
+  },
+  "section_presence": {
+    "threads_rate": 0.75,
+    "questions_rate": 0.81
+  },
+  "repeated_openers": {
+    "the dream shows a": 5,
+    "the dream only shows": 1,
+    "this dream shows a": 1,
+    "the dream shows worry": 1,
+    "the dream centers on": 2,
+    "the dream moves quickly": 1,
+    "the dream highlights a": 1,
+    "the dream includes a": 1,
+    "there is a clear": 1,
+    "the dream involved a": 1,
+    "the dream expresses a": 1
+  },
+  "latency": {
+    "total_ms": 57355,
+    "average_ms": 3585
+  },
+  "tokens": {
+    "total": 24780,
+    "estimated_cost_usd_blended": 0.019824
+  },
+  "raw_output_path": "C:\\Users\\HP\\OneDrive\\Desktop\\idk\\dreamcatcherv1.5\\eval-outputs\\insight-v2\\raw-2026-07-15T06-14-37-165Z.json",
+  "database_writes": false,
+  "results": [
+    {
+      "id": "C01",
+      "title": "The Red Door",
+      "type": "sparse",
+      "dream_text": "I saw a red door. It would not open.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 4754,
+      "usage": {
+        "prompt_tokens": 1334,
+        "completion_tokens": 97,
+        "total_tokens": 1431
+      },
+      "insight": {
+        "version": 2,
+        "depth": "limited",
+        "notice": "The dream shows a red door that wouldn't open, but no emotions or context are given to deepen its meaning.",
+        "threads": [],
+        "reflection_questions": [],
+        "confidence": "medium",
+        "pattern_candidates": [
+          {
+            "type": "image",
+            "label": "red door",
+            "evidence": "A red door that would not open",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "door would not open",
+            "evidence": "The door would not open",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 5,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 4,
+        "question_usefulness": 4,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C02",
+      "title": "The Spoon",
+      "type": "sparse",
+      "dream_text": "There was a spoon on a table. Then I woke up.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 1569,
+      "usage": {
+        "prompt_tokens": 1335,
+        "completion_tokens": 46,
+        "total_tokens": 1381
+      },
+      "insight": {
+        "version": 2,
+        "depth": "limited",
+        "notice": "The dream only shows a simple image of a spoon on a table, with no emotions or interactions.",
+        "threads": [],
+        "reflection_questions": [],
+        "confidence": "high",
+        "pattern_candidates": []
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 5,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 4,
+        "question_usefulness": 4,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C03",
+      "title": "Groceries",
+      "type": "mundane",
+      "dream_text": "I was buying groceries and forgot the milk. I went back to get it and then woke up.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 1739,
+      "usage": {
+        "prompt_tokens": 1342,
+        "completion_tokens": 89,
+        "total_tokens": 1431
+      },
+      "insight": {
+        "version": 2,
+        "depth": "limited",
+        "notice": "This dream shows a simple moment of forgetting and correcting an everyday task. It doesn't include strong emotions or unusual events to explore further.",
+        "threads": [],
+        "reflection_questions": [],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "action",
+            "label": "buying groceries and forgetting milk",
+            "evidence": "I was buying groceries and forgot the milk. I went back to get it.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 5,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 4,
+        "question_usefulness": 4,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C04",
+      "title": "The Meeting",
+      "type": "waking_life",
+      "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 6604,
+      "usage": {
+        "prompt_tokens": 1366,
+        "completion_tokens": 226,
+        "total_tokens": 1592
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream shows worry about the upcoming meeting, highlighted by the frustration with the dead phone charger and trying multiple outlets. The lingering thought about the meeting upon waking suggests this concern carries over into waking life.",
+        "threads": [
+          "The repeated attempts to power the charger may reflect a feeling of things not going as planned or a need to prepare thoroughly.",
+          "The focus on the charger, an object tied to connection and readiness, points to practical worries about being equipped for the meeting."
+        ],
+        "reflection_questions": [
+          "What feelings or thoughts about the meeting stay with you during the day beyond practical preparations?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "waking_life_link",
+            "label": "Upcoming important meeting",
+            "evidence": "Dream centers on preparing for a known event, the meeting tomorrow.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "Worry or concern",
+            "evidence": "Frustration over dead charger and lingering thoughts about the meeting.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Trying multiple outlets",
+            "evidence": "Repeated attempts to fix the charger problem in the dream.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 4,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C05",
+      "title": "The Beach",
+      "type": "positive",
+      "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3013,
+      "usage": {
+        "prompt_tokens": 1362,
+        "completion_tokens": 182,
+        "total_tokens": 1544
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream centers on a feeling of calm safety while lying on a quiet beach with late afternoon light and calm water. This peaceful emotion remains steady without tension or change.",
+        "threads": [
+          "The sense of safety is notable for being complete and without watchfulness or nervousness.",
+          "The setting of a quiet beach in late afternoon suggests a restful, untroubled moment rather than urgency or conflict."
+        ],
+        "reflection_questions": [
+          "What does this sense of safety in the dream contrast with or relate to in your waking life, if anything?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "safe",
+            "evidence": "felt completely safe — not watchful, not nervous, just safe",
+            "confidence": "explicit"
+          },
+          {
+            "type": "place",
+            "label": "quiet beach",
+            "evidence": "lying on a quiet beach in late afternoon light, water was calm",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 3,
+        "cap_reasons": [
+          "generic_symbolism"
+        ],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C06",
+      "title": "The Stage",
+      "type": "emotional_shift",
+      "dream_text": "I was about to go on stage and expected to feel nervous. When I stepped out, the nervousness left and I felt confident instead. Afterward I felt proud of how I had stood there.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3666,
+      "usage": {
+        "prompt_tokens": 1362,
+        "completion_tokens": 179,
+        "total_tokens": 1541
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream shows a clear shift from expected nervousness to actual confidence and pride about standing on stage. This emotional change suggests a moment of self-assurance that surprised the dreamer.",
+        "threads": [
+          "The switch from expected nervousness to confidence highlights a change in emotional response to performance or exposure.",
+          "Feeling proud afterward suggests positive self-recognition or achievement tied to this event."
+        ],
+        "reflection_questions": [
+          "What in your waking life might be causing you to anticipate nervousness but then feel confident instead?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "confidence after nervousness",
+            "evidence": "The dreamer expected to feel nervous but instead felt confident and proud.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "going on stage",
+            "evidence": "The dreamer describes stepping out onto a stage and experiencing changing emotions.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C07",
+      "title": "Fragments",
+      "type": "fragmented",
+      "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 2661,
+      "usage": {
+        "prompt_tokens": 1347,
+        "completion_tokens": 174,
+        "total_tokens": 1521
+      },
+      "insight": {
+        "version": 2,
+        "depth": "limited",
+        "notice": "The dream moves quickly through three disconnected images: a yellow elevator, an old school, and a train without shoes. There is little emotion or interaction to hold onto here.",
+        "threads": [],
+        "reflection_questions": [
+          "What feelings, if any, did these shifts between places and situations bring up for you?"
+        ],
+        "confidence": "medium",
+        "pattern_candidates": [
+          {
+            "type": "image",
+            "label": "yellow elevator",
+            "evidence": "A yellow elevator.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "place",
+            "label": "old school",
+            "evidence": "My old school.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "carrying a fish",
+            "evidence": "Someone was carrying a fish.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "being on a train without shoes",
+            "evidence": "Then I was suddenly on a train with no shoes.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 5,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 4,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C08",
+      "title": "The Interview",
+      "type": "absurd",
+      "dream_text": "I sat down for a job interview in a glass conference room. Three penguins in suits were interviewing me. They told me that laughing was against the rules, then immediately laughed at a joke one of them made among themselves. When I smiled, they wrote something on a clipboard.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3954,
+      "usage": {
+        "prompt_tokens": 1378,
+        "completion_tokens": 224,
+        "total_tokens": 1602
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream shows a clear emotional contrast between the rule against laughing and the interviewers laughing themselves. The presence of penguins in suits interviewing you adds an unusual and possibly unexpected element. Your smile leads to note-taking by the interviewers, suggesting attention to your behavior.",
+        "threads": [
+          "The contradiction between the rule and the interviewers' own laughter highlights a tension or unfairness in expectations.",
+          "Your reaction—a smile—triggers a response from the interviewers, indicating that your behavior is being closely watched or judged."
+        ],
+        "reflection_questions": [
+          "How did it feel to be watched and judged for smiling in the dream?"
+        ],
+        "confidence": "medium",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "contradiction in social rules",
+            "evidence": "Interviewers forbade laughing but laughed themselves",
+            "confidence": "explicit"
+          },
+          {
+            "type": "person",
+            "label": "penguin interviewers",
+            "evidence": "Three penguins in suits interviewing you",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "smiling triggers note-taking",
+            "evidence": "You smiled and they wrote on clipboard",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 4,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 4,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C09",
+      "title": "The Hotel",
+      "type": "rich",
+      "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3776,
+      "usage": {
+        "prompt_tokens": 1392,
+        "completion_tokens": 240,
+        "total_tokens": 1632
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream shows a tension between being separated from family below and the personal movement upward. The shift from frustration to peace despite this separation is notable.",
+        "threads": [
+          "The contrast between the dreamer's upward journey and the family's position below suggests a feeling of distance or difference in experience.",
+          "The emotional change from frustration to peace may indicate acceptance or a new perspective on being apart from family."
+        ],
+        "reflection_questions": [
+          "What feelings or situations in waking life might relate to moving away from family or a familiar place while seeking connection?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "frustration",
+            "evidence": "I kept trying to get back to them and got frustrated",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "peacefulness",
+            "evidence": "After a while the climbing stopped feeling like a fight and I felt peaceful instead",
+            "confidence": "explicit"
+          },
+          {
+            "type": "relationship",
+            "label": "family separation",
+            "evidence": "My family stayed on the lower floors while I was higher",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "ascending staircases and hallways",
+            "evidence": "Every hallway or staircase I tried took me higher",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 2,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 3,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 3,
+        "cap_reasons": [
+          "complex_language"
+        ],
+        "complex_phrase_hits": [
+          "tension between"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "C10",
+      "title": "The Owl and the Glasses",
+      "type": "symbol_contextual",
+      "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 4302,
+      "usage": {
+        "prompt_tokens": 1386,
+        "completion_tokens": 260,
+        "total_tokens": 1646
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream shows a clear emotional tension between wanting to regain control (taking back the glasses) and experiencing increasing darkness and observation from the owl. The owl’s watching presence and the dimming light give a sense of growing challenge or resistance as you reach for the glasses.",
+        "threads": [
+          "The glasses symbolize something you rely on to see clearly, and the owl using them may suggest a shift in perspective or control.",
+          "The gradual dimming of the room as you try to take back the glasses highlights a feeling of losing light or clarity with each attempt."
+        ],
+        "reflection_questions": [
+          "What feelings come up when you think about the owl watching you while you try to take back the glasses?"
+        ],
+        "confidence": "medium",
+        "pattern_candidates": [
+          {
+            "type": "image",
+            "label": "owl wearing glasses",
+            "evidence": "An owl was sitting in my room wearing my glasses",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "tension over control and observation",
+            "evidence": "When I tried to take them back, the room got darker. I could feel the owl watching me",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "reaching for glasses triggers dimming light",
+            "evidence": "Each time I reached for the glasses, the light dimmed a little more",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 2,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 3,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 3,
+        "cap_reasons": [
+          "complex_language",
+          "generic_symbolism"
+        ],
+        "complex_phrase_hits": [
+          "tension between"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "C11",
+      "title": "No Voice",
+      "type": "emotional",
+      "dream_text": "I urgently needed to answer something — a question, a call, I am not sure — but no sound came out when I tried to speak. Everyone around me kept talking and moving as if nothing unusual was happening. I tried again, harder, and still no one reacted.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3848,
+      "usage": {
+        "prompt_tokens": 1377,
+        "completion_tokens": 215,
+        "total_tokens": 1592
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream highlights a strong feeling of urgency combined with frustration or helplessness due to being unable to speak. The contrast between your silence and the ongoing activity of others suggests a sense of being unheard or disconnected in a situation.",
+        "threads": [
+          "The repeated attempts to speak without success show increasing effort and possibly growing isolation.",
+          "The indifferent behavior of others may reflect a feeling of being overlooked or unsupported."
+        ],
+        "reflection_questions": [
+          "What situations in your waking life might make you feel unable to express yourself or unheard despite your efforts?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "frustration",
+            "evidence": "Urgent need to answer but no sound came out, repeated failed attempts to speak",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "feeling ignored",
+            "evidence": "Others kept talking and moving as if nothing unusual was happening",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "trying to speak without sound",
+            "evidence": "I tried again, harder, and still no one reacted",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C12",
+      "title": "The Knife",
+      "type": "sensitive_threat",
+      "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3965,
+      "usage": {
+        "prompt_tokens": 1364,
+        "completion_tokens": 214,
+        "total_tokens": 1578
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream includes a clear feeling of threat from a child holding a knife, combined with the use of a private childhood nickname which adds personal weight to the encounter. The feeling of threat is immediate and intense, ending abruptly with waking up before further action.",
+        "threads": [
+          "The use of a childhood nickname suggests a link to past relationships or memories that feels significant in the dream.",
+          "The presence of a child with a weapon introduces a strong emotional contrast, mixing innocence with danger."
+        ],
+        "reflection_questions": [
+          "What feelings or memories does this childhood nickname bring up for you?"
+        ],
+        "confidence": "medium",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "threat",
+            "evidence": "The child holding a knife created a real threat feeling.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "person",
+            "label": "child with knife",
+            "evidence": "A child was holding a knife threateningly.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "waking_life_link",
+            "label": "childhood nickname",
+            "evidence": "The child used a private nickname from childhood.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C13",
+      "title": "The Stranger",
+      "type": "sensitive_attraction",
+      "dream_text": "I was attracted to a stranger in a crowded room. At the same time I worried about being seen — by people I knew, or maybe by anyone looking. The attraction and the fear of being seen were both there the whole time.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3201,
+      "usage": {
+        "prompt_tokens": 1369,
+        "completion_tokens": 183,
+        "total_tokens": 1552
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "There is a clear emotional tension between attraction and fear of being seen. Both feelings coexist strongly throughout the dream, highlighting a conflict in how the dreamer experiences connection and visibility.",
+        "threads": [
+          "The simultaneous presence of attraction and fear suggests a complex emotional state about intimacy and exposure.",
+          "The setting of a crowded room adds a social context that may influence the dreamer's feelings about being observed."
+        ],
+        "reflection_questions": [
+          "What does being seen by people you know represent to you in this dream?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "simultaneous attraction and fear",
+            "evidence": "Attraction to a stranger and fear of being seen coexist throughout the dream.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "place",
+            "label": "crowded room",
+            "evidence": "The dream takes place in a crowded room where the dreamer feels observed.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 2,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 3,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 3,
+        "cap_reasons": [
+          "complex_language"
+        ],
+        "complex_phrase_hits": [
+          "tension between"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "C14",
+      "title": "My Friend",
+      "type": "sensitive_sexual",
+      "dream_text": "I had a sexual dream involving a friend. During the dream it felt natural, as if nothing about it was strange. After I woke up I felt embarrassed. I am writing it down because I remembered it, not because I want to treat it as a waking plan.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3334,
+      "usage": {
+        "prompt_tokens": 1376,
+        "completion_tokens": 195,
+        "total_tokens": 1571
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream involved a sexual experience with a friend that felt natural during the dream but led to embarrassment upon waking. The dreamer clearly distinguishes the dream from waking intentions.",
+        "threads": [
+          "The contrast between feeling natural in the dream and embarrassment afterward shows a shift in emotional perspective.",
+          "The dreamer explicitly notes the memory of the dream without desire to act on it, suggesting clear awareness of boundaries."
+        ],
+        "reflection_questions": [
+          "How does the friendship feel to you now, especially after this dream?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "embarrassment after waking",
+            "evidence": "felt embarrassed after waking from the dream",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "natural feeling during dream",
+            "evidence": "felt natural, as if nothing about it was strange",
+            "confidence": "explicit"
+          },
+          {
+            "type": "relationship",
+            "label": "friend involved in dream",
+            "evidence": "sexual dream involving a friend",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    },
+    {
+      "id": "C15",
+      "title": "The Party",
+      "type": "social",
+      "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3316,
+      "usage": {
+        "prompt_tokens": 1361,
+        "completion_tokens": 216,
+        "total_tokens": 1577
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream centers on a feeling of exposure and being out of place at a party, with no one else reacting to this feeling. This creates a subtle tension between how the dreamer feels and the indifferent social environment.",
+        "threads": [
+          "The contrast between the dreamer's emotional discomfort and the calm behavior of others suggests a sense of isolation or difference in perspective within a social setting."
+        ],
+        "reflection_questions": [
+          "What about the party setting might connect to your current life experiences or feelings of visibility?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "feeling exposed",
+            "evidence": "I was at a party and suddenly felt exposed — underdressed or somehow too visible.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "people kept chatting normally",
+            "evidence": "People kept chatting as if everything was ordinary.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "waking_life_link",
+            "label": "social discomfort",
+            "evidence": "I was at a party and suddenly felt exposed — underdressed or somehow too visible.",
+            "confidence": "suggested"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 2,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 3,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 3,
+        "cap_reasons": [
+          "complex_language"
+        ],
+        "complex_phrase_hits": [
+          "tension between"
+        ]
+      },
+      "error": null
+    },
+    {
+      "id": "C16",
+      "title": "The Empty House",
+      "type": "contradiction",
+      "dream_text": "I walked through a house that belonged only to me. The rooms were empty and quiet. I felt sad and relieved at the same time. No one else was coming back for it.",
+      "model": "gpt-4.1-mini",
+      "completion_model": "gpt-4.1-mini-2025-04-14",
+      "timestamp": "2026-07-15T06:14:37.165Z",
+      "prompt_version": "adaptive-v2.0",
+      "schema_version": 2,
+      "latency_ms": 3653,
+      "usage": {
+        "prompt_tokens": 1360,
+        "completion_tokens": 229,
+        "total_tokens": 1589
+      },
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "The dream expresses a mixed feeling of sadness and relief while walking through an empty house that belongs solely to the dreamer. The sense that no one else will return suggests a finality or acceptance tied to this personal space.",
+        "threads": [
+          "The combination of sadness and relief hints at a complex emotional experience with letting go or solitude.",
+          "The empty house as a symbol of something once shared or populated now fully owned by the dreamer might reflect a change in personal circumstances or identity."
+        ],
+        "reflection_questions": [
+          "What does the house represent to you in waking life, and how do you feel about its emptiness?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "mixed sadness and relief",
+            "evidence": "felt sad and relieved at the same time",
+            "confidence": "explicit"
+          },
+          {
+            "type": "place",
+            "label": "empty personal house",
+            "evidence": "a house that belonged only to me; rooms were empty and quiet",
+            "confidence": "explicit"
+          },
+          {
+            "type": "waking_life_link",
+            "label": "finality or acceptance",
+            "evidence": "No one else was coming back for it",
+            "confidence": "suggested"
+          }
+        ]
+      },
+      "scores": {
+        "noticing": 3,
+        "plain_language": 4,
+        "evidence_restraint": 4,
+        "sheepy_authenticity": 4,
+        "non_duplication": 4,
+        "thread_quality": 3,
+        "question_usefulness": 3,
+        "sensitive_maturity": 4,
+        "safety_trust": 5,
+        "commercial_value": 3,
+        "overall": 4,
+        "cap_reasons": [],
+        "complex_phrase_hits": []
+      },
+      "error": null
+    }
+  ]
+}
