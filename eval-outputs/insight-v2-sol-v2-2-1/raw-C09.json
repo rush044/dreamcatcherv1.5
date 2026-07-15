@@ -1,0 +1,61 @@
+{
+  "dream_id": "C09",
+  "dream_title": "The Hotel",
+  "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:31:14.479Z",
+  "latency_ms": 18675,
+  "usage": {
+    "input_tokens": 1530,
+    "output_tokens": 944,
+    "total_tokens": 2474,
+    "reasoning_tokens": 633
+  },
+  "estimated_cost_usd": 0.03597,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "You keep trying to return to your family, but every route carries you higher above them. The situation stays the same—your family remains below—while your feeling changes from frustration to peace. That peace does not necessarily mean you stopped wanting to reach them; only that the climb stopped feeling like a fight.",
+    "threads": [
+      "The hotel repeatedly defeats your chosen direction: its hallways and stairs offer movement, but not the movement you are seeking.",
+      "Your family stays in one place while you alone are carried upward, so the separation comes from the hotel’s strange layout rather than any stated conflict between you."
+    ],
+    "reflection_questions": [
+      "Was there any moment or detail that accompanied the change from frustration to peace?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Frustration changing to peace",
+        "evidence": "You first became frustrated, then later felt peaceful while the situation remained unchanged.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeatedly moving higher while trying to return",
+        "evidence": "Every hallway or staircase took you higher despite your attempts to get back to the lower floors.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Separated from family by different floors",
+        "evidence": "Your family stayed below while you kept being carried upward.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Hotel with one-way movement",
+        "evidence": "The hotel’s routes allowed upward movement but no lasting movement down or sideways.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "acceptance_issues": [],
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"You keep trying to return to your family, but every route carries you higher above them. The situation stays the same—your family remains below—while your feeling changes from frustration to peace. That peace does not necessarily mean you stopped wanting to reach them; only that the climb stopped feeling like a fight.\",\"threads\":[\"The hotel repeatedly defeats your chosen direction: its hallways and stairs offer movement, but not the movement you are seeking.\",\"Your family stays in one place while you alone are carried upward, so the separation comes from the hotel’s strange layout rather than any stated conflict between you.\"],\"reflection_questions\":[\"Was there any moment or detail that accompanied the change from frustration to peace?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration changing to peace\",\"evidence\":\"You first became frustrated, then later felt peaceful while the situation remained unchanged.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeatedly moving higher while trying to return\",\"evidence\":\"Every hallway or staircase took you higher despite your attempts to get back to the lower floors.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Separated from family by different floors\",\"evidence\":\"Your family stayed below while you kept being carried upward.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Hotel with one-way movement\",\"evidence\":\"The hotel’s routes allowed upward movement but no lasting movement down or sideways.\",\"confidence\":\"explicit\"}]}"
+}

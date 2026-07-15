@@ -2,10 +2,10 @@
 
 **Status (current candidate):** Feature branch `insight-v2-sol-v2-2`  
 **Selected working model:** `gpt-5.6-sol` (blind human review: 10/10 vs Mini)  
-**Active candidate prompt:** `adaptive-v2.2`  
-**Historical prompt:** `adaptive-v2.1` (frozen Mini-vs-Sol comparison)  
+**Active candidate prompt:** `adaptive-v2.2.1`  
+**Historical prompts:** `adaptive-v2.2` (optionality win; under-threaded Hotel), `adaptive-v2.1` (Mini vs Sol)  
 **Schema:** V2 JSON (unchanged storage shape; V1 cache still supported)  
-**Not production.** Release requires V2.1→V2.2 human review + live preview acceptance.
+**Not production.** Release requires V2.2.1 targeted review + live preview acceptance.
 
 ---
 

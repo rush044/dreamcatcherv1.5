@@ -166,3 +166,23 @@ Human side-by-side review: `INSIGHT_V2_SOL_V2_1_VS_V2_2_REVIEW.md`
 Raw V2.2 outputs: `eval-outputs/insight-v2-sol-v2-2/`
 
 Not a production ship decision — complete the eight-case review and live preview check first.
+
+---
+
+## Adaptive-v2.2.1 targeted regression
+
+Narrow correction on `insight-v2-sol-v2-2` after human review found V2.2 under-threaded **The Hotel** and inserted an interpretive forced-choice question.
+
+**Prompt:** `adaptive-v2.2.1` · **Model:** `gpt-5.6-sol` · **Dataset:** Meeting, Hotel, Long bizarre, Long relationship only.
+
+Results:
+
+| Dream | V2.2 | V2.2.1 |
+|---|---|---|
+| Meeting | notice-only; mild “concern/prepared” risk | notice-only; prioritizes meeting without anxiety label |
+| Hotel | focused; 0 Threads; forced-choice Q | **rich**; 2 Threads; open Q; preserves frustration→peace without motive rewrite |
+| Long bizarre | rich; playful Threads | rich Threads retained |
+| Long relationship | rich | rich Threads retained |
+
+Raw: `eval-outputs/insight-v2-sol-v2-2-1/`  
+Side-by-side: `INSIGHT_V2_SOL_V2_1_VS_V2_2_REVIEW.md` (section Adaptive-v2.2.1)

@@ -1,0 +1,44 @@
+{
+  "dream_id": "C04",
+  "dream_title": "The Meeting",
+  "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:30:55.800Z",
+  "latency_ms": 10507,
+  "usage": {
+    "input_tokens": 1504,
+    "output_tokens": 301,
+    "total_tokens": 1805,
+    "reasoning_tokens": 146
+  },
+  "estimated_cost_usd": 0.01655,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "This stays close to tomorrow’s important meeting: your mind rehearsed getting ready and ran into a practical problem. Waking up still thinking about the meeting strengthens that direct link, without giving much reason to read more into the charger.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Tomorrow’s important meeting",
+        "evidence": "You have an important meeting tomorrow and woke up still thinking about it.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated attempts to solve a practical problem",
+        "evidence": "You tried different outlets after noticing the phone charger was dead.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "acceptance_issues": [],
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"This stays close to tomorrow’s important meeting: your mind rehearsed getting ready and ran into a practical problem. Waking up still thinking about the meeting strengthens that direct link, without giving much reason to read more into the charger.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Tomorrow’s important meeting\",\"evidence\":\"You have an important meeting tomorrow and woke up still thinking about it.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to solve a practical problem\",\"evidence\":\"You tried different outlets after noticing the phone charger was dead.\",\"confidence\":\"explicit\"}]}"
+}

@@ -379,3 +379,174 @@ Depth: rich · Visible sections: 3
 **Comfortable shipping V2.2:** Yes / No
 
 ---
+
+## Adaptive-v2.2.1 targeted regression
+
+Narrow correction after human review: restore earned rich depth without undoing V2.2 optionality. Prompt version: `adaptive-v2.2.1`.
+
+Hard acceptance fail: **no**
+
+### The Meeting
+
+> I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.
+
+#### V2.2
+
+**What Sheepy noticed**
+
+Your upcoming meeting carried directly into the dream. The unusable charger may reflect concern about being prepared or having what you need, but the clear waking-life link makes further symbolism unnecessary.
+
+Depth: focused · Visible sections: 1
+
+#### V2.2.1
+
+**What Sheepy noticed**
+
+This stays close to tomorrow’s important meeting: your mind rehearsed getting ready and ran into a practical problem. Waking up still thinking about the meeting strengthens that direct link, without giving much reason to read more into the charger.
+
+Depth: focused · Visible sections: 1 · Issues: none
+
+**Better:** V2.2 / V2.2.1 / Tie
+
+**Reason:**
+
+> 
+
+**Comfortable shipping V2.2.1:** Yes / No
+
+### The Hotel
+
+> I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.
+
+#### V2.2
+
+**What Sheepy noticed**
+
+The strongest shift is from fighting the distance between you and your family to feeling peaceful while that distance remains. Nothing outside you changes; what changes is your need to get back down.
+
+**Something to sit with**
+
+- Did the peace feel more like acceptance, independence, or giving up?
+
+Depth: focused · Visible sections: 2
+
+#### V2.2.1
+
+**What Sheepy noticed**
+
+You keep trying to return to your family, but every route carries you higher above them. The situation stays the same—your family remains below—while your feeling changes from frustration to peace. That peace does not necessarily mean you stopped wanting to reach them; only that the climb stopped feeling like a fight.
+
+**Threads Sheepy found**
+
+- The hotel repeatedly defeats your chosen direction: its hallways and stairs offer movement, but not the movement you are seeking.
+- Your family stays in one place while you alone are carried upward, so the separation comes from the hotel’s strange layout rather than any stated conflict between you.
+
+**Something to sit with**
+
+- Was there any moment or detail that accompanied the change from frustration to peace?
+
+Depth: rich · Visible sections: 3 · Issues: none (checker initially false-flagged denial of “stopped wanting”)
+
+**Better:** V2.2 / V2.2.1 / Tie
+
+**Reason:**
+
+> 
+
+**Comfortable shipping V2.2.1:** Yes / No
+
+### Long bizarre dream
+
+> A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.
+
+Then a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.
+
+The fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.
+
+#### V2.2
+
+**What Sheepy noticed**
+
+You met each strange turn with delight rather than alarm, even when it gave you small duties to perform. The clearest shift came when you paused the parade: the nonsense briefly became tender, as though holding it still let you appreciate it rather than only laugh at it. You woke warmly amused, so the absurdity stayed playful all the way through.
+
+**Threads Sheepy found**
+
+- Responsibility appeared in small, manageable forms—conducting chairs, supervising tiny weather, and certifying a tuxedo. None of it became a burden; it gave you a role inside the joke.
+- Office rules and formal procedures kept being turned into play: hold-music, arbitration panels, catalog numbers, tickets, and certification all behaved absurdly without becoming threatening.
+
+Depth: rich · Visible sections: 2
+
+#### V2.2.1
+
+**What Sheepy noticed**
+
+The nonsense felt strangely right to you, and you joined in rather than resisting it. Your laughter and delight became unexpected tenderness during the one-second pause, then settled into warm amusement that lasted into waking.
+
+**Threads Sheepy found**
+
+- Your delight came with a small sense of responsibility when the kitchen drawers held unsupervised weather. The feeling did not spoil the wonder; both were present together.
+- Polite rules organize nearly every absurd turn: arbitration panels debate north, librarians catalog buttons, and the fox needs formal certification. This gives the chaos a curious order without making it less playful.
+
+**Something to sit with**
+
+- What about that frozen second made the nonsense feel tender rather than only funny?
+
+Depth: rich · Visible sections: 3 · Issues: none
+
+**Better:** V2.2 / V2.2.1 / Tie
+
+**Reason:**
+
+> 
+
+**Comfortable shipping V2.2.1:** Yes / No
+
+### Long relationship dream with contradictory emotions
+
+> My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.
+
+Later she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.
+
+When we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.
+
+#### V2.2
+
+**What Sheepy noticed**
+
+Your pride in your sister and grief at her leaving remain equally true, without either feeling weakening the other. Saying “I’m happy for you” is sincere but incomplete, and her nod gives the moment a quiet sense that the unspoken part was understood. The closeness here includes both protection and the pain of separation.
+
+**Threads Sheepy found**
+
+- The repeated arranging—the flowers, chairs, and table—may reflect an effort to prepare carefully for a change that cannot be made completely orderly.
+
+**Something to sit with**
+
+- What did you feel was the missing part your sister understood?
+
+Depth: rich · Visible sections: 3
+
+#### V2.2.1
+
+**What Sheepy noticed**
+
+Your happiness for your sister and your grief at losing her nearness are both sincere; neither cancels the other. What stays unspoken still seems understood between you, especially in her touch and nod. You wake with the contradiction intact: close to her, proud of her, and grieving her departure.
+
+**Threads Sheepy found**
+
+- Much of the dream is spent preparing for relatives who never arrive. The repeated arranging—and the mysteriously completed table afterward—keeps readiness and absence quietly present around the goodbye.
+- Your sister’s movement from guilt to defensiveness to softness shows her responding to the mixed truth rather than leaving you alone with it.
+
+**Something to sit with**
+
+- Is there a current change involving your sister, or someone you feel similarly close to, that brings pride and grief together?
+
+Depth: rich · Visible sections: 3 · Issues: none
+
+**Better:** V2.2 / V2.2.1 / Tie
+
+**Reason:**
+
+> 
+
+**Comfortable shipping V2.2.1:** Yes / No
+

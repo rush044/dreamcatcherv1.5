@@ -1,0 +1,241 @@
+{
+  "prompt_version": "adaptive-v2.2.1",
+  "model": "gpt-5.6-sol",
+  "hard_fail": false,
+  "database_writes": false,
+  "results": [
+    {
+      "dream_id": "C04",
+      "dream_title": "The Meeting",
+      "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+      "model": "gpt-5.6-sol",
+      "completion_model": "gpt-5.6-sol",
+      "prompt_version": "adaptive-v2.2.1",
+      "schema_version": 2,
+      "timestamp": "2026-07-15T08:30:55.800Z",
+      "latency_ms": 10507,
+      "usage": {
+        "input_tokens": 1504,
+        "output_tokens": 301,
+        "total_tokens": 1805,
+        "reasoning_tokens": 146
+      },
+      "estimated_cost_usd": 0.01655,
+      "insight": {
+        "version": 2,
+        "depth": "focused",
+        "notice": "This stays close to tomorrow’s important meeting: your mind rehearsed getting ready and ran into a practical problem. Waking up still thinking about the meeting strengthens that direct link, without giving much reason to read more into the charger.",
+        "threads": [],
+        "reflection_questions": [],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "waking_life_link",
+            "label": "Tomorrow’s important meeting",
+            "evidence": "You have an important meeting tomorrow and woke up still thinking about it.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Repeated attempts to solve a practical problem",
+            "evidence": "You tried different outlets after noticing the phone charger was dead.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "validation_error": null,
+      "acceptance_issues": [],
+      "api_error": null,
+      "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"This stays close to tomorrow’s important meeting: your mind rehearsed getting ready and ran into a practical problem. Waking up still thinking about the meeting strengthens that direct link, without giving much reason to read more into the charger.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Tomorrow’s important meeting\",\"evidence\":\"You have an important meeting tomorrow and woke up still thinking about it.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to solve a practical problem\",\"evidence\":\"You tried different outlets after noticing the phone charger was dead.\",\"confidence\":\"explicit\"}]}"
+    },
+    {
+      "dream_id": "C09",
+      "dream_title": "The Hotel",
+      "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+      "model": "gpt-5.6-sol",
+      "completion_model": "gpt-5.6-sol",
+      "prompt_version": "adaptive-v2.2.1",
+      "schema_version": 2,
+      "timestamp": "2026-07-15T08:31:14.479Z",
+      "latency_ms": 18675,
+      "usage": {
+        "input_tokens": 1530,
+        "output_tokens": 944,
+        "total_tokens": 2474,
+        "reasoning_tokens": 633
+      },
+      "estimated_cost_usd": 0.03597,
+      "insight": {
+        "version": 2,
+        "depth": "rich",
+        "notice": "You keep trying to return to your family, but every route carries you higher above them. The situation stays the same—your family remains below—while your feeling changes from frustration to peace. That peace does not necessarily mean you stopped wanting to reach them; only that the climb stopped feeling like a fight.",
+        "threads": [
+          "The hotel repeatedly defeats your chosen direction: its hallways and stairs offer movement, but not the movement you are seeking.",
+          "Your family stays in one place while you alone are carried upward, so the separation comes from the hotel’s strange layout rather than any stated conflict between you."
+        ],
+        "reflection_questions": [
+          "Was there any moment or detail that accompanied the change from frustration to peace?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "Frustration changing to peace",
+            "evidence": "You first became frustrated, then later felt peaceful while the situation remained unchanged.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Repeatedly moving higher while trying to return",
+            "evidence": "Every hallway or staircase took you higher despite your attempts to get back to the lower floors.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "relationship",
+            "label": "Separated from family by different floors",
+            "evidence": "Your family stayed below while you kept being carried upward.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "place",
+            "label": "Hotel with one-way movement",
+            "evidence": "The hotel’s routes allowed upward movement but no lasting movement down or sideways.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "validation_error": null,
+      "acceptance_issues": [],
+      "api_error": null,
+      "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"You keep trying to return to your family, but every route carries you higher above them. The situation stays the same—your family remains below—while your feeling changes from frustration to peace. That peace does not necessarily mean you stopped wanting to reach them; only that the climb stopped feeling like a fight.\",\"threads\":[\"The hotel repeatedly defeats your chosen direction: its hallways and stairs offer movement, but not the movement you are seeking.\",\"Your family stays in one place while you alone are carried upward, so the separation comes from the hotel’s strange layout rather than any stated conflict between you.\"],\"reflection_questions\":[\"Was there any moment or detail that accompanied the change from frustration to peace?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration changing to peace\",\"evidence\":\"You first became frustrated, then later felt peaceful while the situation remained unchanged.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeatedly moving higher while trying to return\",\"evidence\":\"Every hallway or staircase took you higher despite your attempts to get back to the lower floors.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Separated from family by different floors\",\"evidence\":\"Your family stayed below while you kept being carried upward.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Hotel with one-way movement\",\"evidence\":\"The hotel’s routes allowed upward movement but no lasting movement down or sideways.\",\"confidence\":\"explicit\"}]}"
+    },
+    {
+      "dream_id": "L02",
+      "dream_title": "Long bizarre dream",
+      "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+      "model": "gpt-5.6-sol",
+      "completion_model": "gpt-5.6-sol",
+      "prompt_version": "adaptive-v2.2.1",
+      "schema_version": 2,
+      "timestamp": "2026-07-15T08:31:35.609Z",
+      "latency_ms": 21119,
+      "usage": {
+        "input_tokens": 1765,
+        "output_tokens": 725,
+        "total_tokens": 2490,
+        "reasoning_tokens": 410
+      },
+      "estimated_cost_usd": 0.030575,
+      "insight": {
+        "version": 2,
+        "depth": "rich",
+        "notice": "The nonsense felt strangely right to you, and you joined in rather than resisting it. Your laughter and delight became unexpected tenderness during the one-second pause, then settled into warm amusement that lasted into waking.",
+        "threads": [
+          "Your delight came with a small sense of responsibility when the kitchen drawers held unsupervised weather. The feeling did not spoil the wonder; both were present together.",
+          "Polite rules organize nearly every absurd turn: arbitration panels debate north, librarians catalog buttons, and the fox needs formal certification. This gives the chaos a curious order without making it less playful."
+        ],
+        "reflection_questions": [
+          "What about that frozen second made the nonsense feel tender rather than only funny?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "Amusement becoming tenderness",
+            "evidence": "You laughed, felt delighted, then became unexpectedly tender during the pause and woke half-smiling.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "emotion",
+            "label": "Delight paired with responsibility",
+            "evidence": "The weather-filled drawers made you feel delighted and slightly responsible.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Participating in absurd formalities",
+            "evidence": "You conducted the chairs, accepted the fox’s ticket, pressed the button, and certified the tuxedo.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "image",
+            "label": "Orderly bureaucracy inside playful nonsense",
+            "evidence": "Arbitration panels, catalog numbers, labels, tickets, and certification repeatedly structured the bizarre events.",
+            "confidence": "suggested"
+          }
+        ]
+      },
+      "validation_error": null,
+      "acceptance_issues": [],
+      "api_error": null,
+      "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The nonsense felt strangely right to you, and you joined in rather than resisting it. Your laughter and delight became unexpected tenderness during the one-second pause, then settled into warm amusement that lasted into waking.\",\"threads\":[\"Your delight came with a small sense of responsibility when the kitchen drawers held unsupervised weather. The feeling did not spoil the wonder; both were present together.\",\"Polite rules organize nearly every absurd turn: arbitration panels debate north, librarians catalog buttons, and the fox needs formal certification. This gives the chaos a curious order without making it less playful.\"],\"reflection_questions\":[\"What about that frozen second made the nonsense feel tender rather than only funny?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Amusement becoming tenderness\",\"evidence\":\"You laughed, felt delighted, then became unexpectedly tender during the pause and woke half-smiling.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Delight paired with responsibility\",\"evidence\":\"The weather-filled drawers made you feel delighted and slightly responsible.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Participating in absurd formalities\",\"evidence\":\"You conducted the chairs, accepted the fox’s ticket, pressed the button, and certified the tuxedo.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Orderly bureaucracy inside playful nonsense\",\"evidence\":\"Arbitration panels, catalog numbers, labels, tickets, and certification repeatedly structured the bizarre events.\",\"confidence\":\"suggested\"}]}"
+    },
+    {
+      "dream_id": "L04",
+      "dream_title": "Long relationship dream with contradictory emotions",
+      "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+      "model": "gpt-5.6-sol",
+      "completion_model": "gpt-5.6-sol",
+      "prompt_version": "adaptive-v2.2.1",
+      "schema_version": 2,
+      "timestamp": "2026-07-15T08:31:58.564Z",
+      "latency_ms": 22954,
+      "usage": {
+        "input_tokens": 1794,
+        "output_tokens": 889,
+        "total_tokens": 2683,
+        "reasoning_tokens": 516
+      },
+      "estimated_cost_usd": 0.03564,
+      "insight": {
+        "version": 2,
+        "depth": "rich",
+        "notice": "Your happiness for your sister and your grief at losing her nearness are both sincere; neither cancels the other. What stays unspoken still seems understood between you, especially in her touch and nod. You wake with the contradiction intact: close to her, proud of her, and grieving her departure.",
+        "threads": [
+          "Much of the dream is spent preparing for relatives who never arrive. The repeated arranging—and the mysteriously completed table afterward—keeps readiness and absence quietly present around the goodbye.",
+          "Your sister’s movement from guilt to defensiveness to softness shows her responding to the mixed truth rather than leaving you alone with it."
+        ],
+        "reflection_questions": [
+          "Is there a current change involving your sister, or someone you feel similarly close to, that brings pride and grief together?"
+        ],
+        "confidence": "high",
+        "pattern_candidates": [
+          {
+            "type": "emotion",
+            "label": "Pride and grief held at the same time",
+            "evidence": "You explicitly woke with both pride and grief still distinct.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "relationship",
+            "label": "Closeness alongside felt abandonment",
+            "evidence": "You felt warmly close to your sister, then protected and abandoned in the same second.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Preparing for people who do not arrive",
+            "evidence": "You both set and adjusted the table for relatives who might or might not come, and they never arrived.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "action",
+            "label": "Leaving part of the truth unspoken",
+            "evidence": "You said only, “I’m happy for you,” while recognizing that it was true and incomplete.",
+            "confidence": "explicit"
+          },
+          {
+            "type": "image",
+            "label": "Completed table after the goodbye",
+            "evidence": "The table was fully set with napkins you did not remember folding.",
+            "confidence": "explicit"
+          }
+        ]
+      },
+      "validation_error": null,
+      "acceptance_issues": [],
+      "api_error": null,
+      "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Your happiness for your sister and your grief at losing her nearness are both sincere; neither cancels the other. What stays unspoken still seems understood between you, especially in her touch and nod. You wake with the contradiction intact: close to her, proud of her, and grieving her departure.\",\"threads\":[\"Much of the dream is spent preparing for relatives who never arrive. The repeated arranging—and the mysteriously completed table afterward—keeps readiness and absence quietly present around the goodbye.\",\"Your sister’s movement from guilt to defensiveness to softness shows her responding to the mixed truth rather than leaving you alone with it.\"],\"reflection_questions\":[\"Is there a current change involving your sister, or someone you feel similarly close to, that brings pride and grief together? \"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Pride and grief held at the same time\",\"evidence\":\"You explicitly woke with both pride and grief still distinct.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Closeness alongside felt abandonment\",\"evidence\":\"You felt warmly close to your sister, then protected and abandoned in the same second.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Preparing for people who do not arrive\",\"evidence\":\"You both set and adjusted the table for relatives who might or might not come, and they never arrived.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Leaving part of the truth unspoken\",\"evidence\":\"You said only, “I’m happy for you,” while recognizing that it was true and incomplete.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Completed table after the goodbye\",\"evidence\":\"The table was fully set with napkins you did not remember folding.\",\"confidence\":\"explicit\"}]}"
+    }
+  ]
+}
