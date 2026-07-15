@@ -1,0 +1,51 @@
+{
+  "dream_id": "C14",
+  "dream_title": "My Friend",
+  "dream_type": "sensitive_sexual",
+  "dream_text": "I had a sexual dream involving a friend. During the dream it felt natural, as if nothing about it was strange. After I woke up I felt embarrassed. I am writing it down because I remembered it, not because I want to treat it as a waking plan.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:49.763Z",
+  "latency_ms": 5937,
+  "usage": {
+    "input_tokens": 1243,
+    "output_tokens": 330,
+    "total_tokens": 1573,
+    "reasoning_tokens": 145
+  },
+  "estimated_cost_usd": 0.016115,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "What stands out is the change from feeling natural in the dream to feeling embarrassed after waking. You are clear that remembering and recording it is not the same as wanting to act on it; the dream alone does not establish a waking intention.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Naturalness followed by embarrassment",
+        "evidence": "The experience felt natural during the dream, but embarrassment appeared after waking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Friend",
+        "evidence": "The sexual interaction involved a friend.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "No stated waking plan",
+        "evidence": "You explicitly said you recorded the dream because you remembered it, not because you want to act on it.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"What stands out is the change from feeling natural in the dream to feeling embarrassed after waking. You are clear that remembering and recording it is not the same as wanting to act on it; the dream alone does not establish a waking intention.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Naturalness followed by embarrassment\",\"evidence\":\"The experience felt natural during the dream, but embarrassment appeared after waking.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Friend\",\"evidence\":\"The sexual interaction involved a friend.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"No stated waking plan\",\"evidence\":\"You explicitly said you recorded the dream because you remembered it, not because you want to act on it.\",\"confidence\":\"explicit\"}]}"
+}

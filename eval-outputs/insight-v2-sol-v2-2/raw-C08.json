@@ -1,0 +1,45 @@
+{
+  "dream_id": "C08",
+  "dream_title": "The Interview",
+  "dream_type": "absurd",
+  "dream_text": "I sat down for a job interview in a glass conference room. Three penguins in suits were interviewing me. They told me that laughing was against the rules, then immediately laughed at a joke one of them made among themselves. When I smiled, they wrote something on a clipboard.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:08:07.376Z",
+  "latency_ms": 9537,
+  "usage": {
+    "input_tokens": 1245,
+    "output_tokens": 337,
+    "total_tokens": 1582,
+    "reasoning_tokens": 192
+  },
+  "estimated_cost_usd": 0.016335,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The interviewers impose a rule they immediately ignore, while your much smaller reaction is recorded. The clearest thread is being judged under a double standard, with even a smile treated as evidence against you.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "relationship",
+        "label": "Unequal rules under evaluation",
+        "evidence": "The interviewers forbid laughter, laugh among themselves, and record your smile.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Natural reaction being monitored",
+        "evidence": "When you smile, the interviewers write something on a clipboard.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The interviewers impose a rule they immediately ignore, while your much smaller reaction is recorded. The clearest thread is being judged under a double standard, with even a smile treated as evidence against you.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"relationship\",\"label\":\"Unequal rules under evaluation\",\"evidence\":\"The interviewers forbid laughter, laugh among themselves, and record your smile.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Natural reaction being monitored\",\"evidence\":\"When you smile, the interviewers write something on a clipboard.\",\"confidence\":\"explicit\"}]}"
+}

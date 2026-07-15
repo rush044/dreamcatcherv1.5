@@ -1,0 +1,51 @@
+{
+  "dream_id": "C15",
+  "dream_title": "The Party",
+  "dream_type": "social",
+  "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:43.825Z",
+  "latency_ms": 6863,
+  "usage": {
+    "input_tokens": 1228,
+    "output_tokens": 340,
+    "total_tokens": 1568,
+    "reasoning_tokens": 177
+  },
+  "estimated_cost_usd": 0.01634,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "Your feeling of exposure was vivid, but no one around you confirmed that anything was wrong. The unease seems to come from waiting to be judged while the party carries on normally.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Feeling exposed",
+        "evidence": "You suddenly felt underdressed or too visible.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Waiting for others to react",
+        "evidence": "You watched for a shocked response from the people around you.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Expected judgment was not confirmed",
+        "evidence": "Everyone continued chatting as though nothing unusual had happened.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"Your feeling of exposure was vivid, but no one around you confirmed that anything was wrong. The unease seems to come from waiting to be judged while the party carries on normally.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Feeling exposed\",\"evidence\":\"You suddenly felt underdressed or too visible.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Waiting for others to react\",\"evidence\":\"You watched for a shocked response from the people around you.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Expected judgment was not confirmed\",\"evidence\":\"Everyone continued chatting as though nothing unusual had happened.\",\"confidence\":\"suggested\"}]}"
+}

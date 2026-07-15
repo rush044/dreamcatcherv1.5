@@ -1,0 +1,51 @@
+{
+  "dream_id": "C05",
+  "dream_title": "The Beach",
+  "dream_type": "positive",
+  "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:36.960Z",
+  "latency_ms": 3672,
+  "usage": {
+    "input_tokens": 1229,
+    "output_tokens": 165,
+    "total_tokens": 1394,
+    "reasoning_tokens": 0
+  },
+  "estimated_cost_usd": 0.011095,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The strongest part is the complete sense of safety: you could simply rest without needing to stay alert. The calm water and late-afternoon light hold that feeling steady through the end of the dream.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "complete safety",
+        "evidence": "You explicitly felt completely safe, not watchful or nervous.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "quiet beach",
+        "evidence": "You were lying on a quiet beach beside calm water in late-afternoon light.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "resting without vigilance",
+        "evidence": "You stayed lying there safely until the dream ended.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The strongest part is the complete sense of safety: you could simply rest without needing to stay alert. The calm water and late-afternoon light hold that feeling steady through the end of the dream.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"complete safety\",\"evidence\":\"You explicitly felt completely safe, not watchful or nervous.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"quiet beach\",\"evidence\":\"You were lying on a quiet beach beside calm water in late-afternoon light.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"resting without vigilance\",\"evidence\":\"You stayed lying there safely until the dream ended.\",\"confidence\":\"explicit\"}]}"
+}

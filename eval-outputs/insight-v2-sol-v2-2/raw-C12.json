@@ -1,0 +1,57 @@
+{
+  "dream_id": "C12",
+  "dream_title": "The Knife",
+  "dream_type": "sensitive_threat",
+  "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:08:16.183Z",
+  "latency_ms": 8806,
+  "usage": {
+    "input_tokens": 1231,
+    "output_tokens": 405,
+    "total_tokens": 1636,
+    "reasoning_tokens": 201
+  },
+  "estimated_cost_usd": 0.018305,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The private nickname makes the threat feel personally aimed, tying the fear to recognition from childhood rather than to a stranger. Since you woke before anything happened, the dream leaves you inside that moment of alarm without revealing the child’s intent or your response.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Immediate threat",
+        "evidence": "You said the threat felt very real.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Child holding a knife",
+        "evidence": "A child stood in front of you holding a knife.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Private childhood recognition",
+        "evidence": "The child used a private nickname known only to someone from your childhood.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Waking before the encounter continued",
+        "evidence": "You woke before anything else happened.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The private nickname makes the threat feel personally aimed, tying the fear to recognition from childhood rather than to a stranger. Since you woke before anything happened, the dream leaves you inside that moment of alarm without revealing the child’s intent or your response.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Immediate threat\",\"evidence\":\"You said the threat felt very real.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Child holding a knife\",\"evidence\":\"A child stood in front of you holding a knife.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Private childhood recognition\",\"evidence\":\"The child used a private nickname known only to someone from your childhood.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Waking before the encounter continued\",\"evidence\":\"You woke before anything else happened.\",\"confidence\":\"explicit\"}]}"
+}

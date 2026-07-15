@@ -1,0 +1,51 @@
+{
+  "dream_id": "L03",
+  "dream_title": "Long dream with many details but little supported meaning",
+  "dream_type": "long_sparse_meaning",
+  "dream_text": "I walked through a shopping center with glass ceilings and beige tiles. There were three escalators, two kiosks selling phone cases, and a fountain with coins that looked newer than they should. A security guard adjusted a radio. A child dropped a blue mitten and picked it up again. I passed a bakery display of croissants, muffins, and a tray of plain cookies. Somewhere a cleaning machine hummed. Announcements mentioned a lost bag on level two.\n\nI went into a clothing store and touched the sleeves of several jackets without buying anything. The sizes were labeled in a mix of letters and numbers. A mannequin wore a green hat. In the fitting room hallway, the carpet was shorter than in the main aisle. I checked my phone, saw no messages, put it away, and continued. Outside the store, a directory map showed restrooms near the parking elevator. I followed the signs, washed my hands, and looked at myself in the mirror for a few seconds without special feeling.\n\nBack in the corridor, I bought a bottle of water from a machine that returned the correct change. I sat on a bench near a potted plant and watched people walk by with shopping bags. One woman carried a folded umbrella. A teenager wore headphones. A couple argued quietly about where they parked, then kept walking. I finished half the water, capped it, and stood up. Near the exit, automatic doors opened a little late. Outside it was overcast. I walked toward a row of cars without identifying mine, and the dream ended before I found it.",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:09:20.989Z",
+  "latency_ms": 7662,
+  "usage": {
+    "input_tokens": 1509,
+    "output_tokens": 339,
+    "total_tokens": 1848,
+    "reasoning_tokens": 145
+  },
+  "estimated_cost_usd": 0.017715,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "Most of this stays ordinary and emotionally neutral: you move through the shopping center, notice details, and complete small tasks without much reaction. The unfinished search for your car adds a slight sense of incompletion, but there isn’t enough feeling around it to support a stronger reading.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "shopping center",
+        "evidence": "Nearly the entire dream takes place while moving through a detailed shopping center.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "emotional neutrality",
+        "evidence": "You looked in the mirror “without special feeling,” and no other strong emotion was named.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "unfinished search for car",
+        "evidence": "You walked toward the parked cars, but the dream ended before you identified yours.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"Most of this stays ordinary and emotionally neutral: you move through the shopping center, notice details, and complete small tasks without much reaction. The unfinished search for your car adds a slight sense of incompletion, but there isn’t enough feeling around it to support a stronger reading.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"shopping center\",\"evidence\":\"Nearly the entire dream takes place while moving through a detailed shopping center.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"emotional neutrality\",\"evidence\":\"You looked in the mirror “without special feeling,” and no other strong emotion was named.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"unfinished search for car\",\"evidence\":\"You walked toward the parked cars, but the dream ended before you identified yours.\",\"confidence\":\"explicit\"}]}"
+}

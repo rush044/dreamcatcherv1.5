@@ -1,0 +1,68 @@
+{
+  "dream_id": "L01",
+  "dream_title": "Long coherent emotional dream",
+  "dream_type": "long_emotional",
+  "dream_text": "I arrived at my old apartment building in the rain, though the lobby carpet was somehow already dry. The elevator buttons were the wrong colors, and a neighbor I recognized from years ago waved without speaking. On the third floor I found my former roommate organizing cardboard boxes labeled with seasons instead of rooms. She handed me a scarf I had lost in college and smiled as if this were ordinary. I felt glad to see her, then suddenly restless because I could hear music playing behind a closed door down the hall.\n\nWhen I opened that door, the room was a kitchen from my childhood home, rearranged slightly: the table faced the window, and the fruit bowl was filled with keys. My younger cousin sat there drawing circles on a napkin. He asked if I wanted tea. I sat down and said yes, and for a moment I felt calm. Then the kettle whistled and he stood up too quickly, knocking over a stack of postcards with pictures of places I have never visited. The calm drained out and I felt embarrassed for no clear reason, as if I had interrupted something private.\n\nOutside the window, people walked past carrying grocery bags and umbrellas with tiny painted moons. None of them looked up. My cousin put a mug in front of me and said, “You can stay if you want,” but his voice sounded farther away than his face. I wanted to answer kindly and also wanted to leave. I chose to leave. In the hallway the scarf felt heavier, and by the time I reached the lobby I was almost crying from a mix of affection and unease. I woke while still holding the scarf in my mind.",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:08:52.741Z",
+  "latency_ms": 18146,
+  "usage": {
+    "input_tokens": 1519,
+    "output_tokens": 670,
+    "total_tokens": 2189,
+    "reasoning_tokens": 287
+  },
+  "estimated_cost_usd": 0.027695,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Familiar people and places keep offering you warmth, but each moment of comfort shifts into restlessness or unease. You accept the scarf and the tea, yet finally choose to leave, carrying both affection and near-tears with you. The dream does not make the welcome feel unsafe; it makes staying feel emotionally difficult.",
+    "threads": [
+      "The lost scarf changes from a welcome return into something heavy. It seems to hold the emotional cost of leaving without turning that choice into a clear mistake.",
+      "Several periods of your life are folded together—college, childhood, and an old apartment—while each familiar setting is slightly altered. You are returning, but not quite arriving anywhere unchanged."
+    ],
+    "reflection_questions": [
+      "What about the invitation to stay made leaving feel like the kinder or more bearable choice?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Warmth shifting into unease",
+        "evidence": "Gladness and calm repeatedly give way to restlessness, embarrassment, and near-tears.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Choosing to leave after being welcomed",
+        "evidence": "Your cousin says you can stay, but you want both to answer kindly and to leave, and you choose to leave.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Recovered scarf becoming heavy",
+        "evidence": "Your former roommate returns a scarf lost in college; it feels heavier as you make your way out.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Familiar spaces subtly rearranged",
+        "evidence": "The old apartment building and childhood kitchen are recognizable but contain changed details.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Affection without ease",
+        "evidence": "The former roommate and cousin are welcoming, while your response combines affection, calm, embarrassment, and unease.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Familiar people and places keep offering you warmth, but each moment of comfort shifts into restlessness or unease. You accept the scarf and the tea, yet finally choose to leave, carrying both affection and near-tears with you. The dream does not make the welcome feel unsafe; it makes staying feel emotionally difficult.\",\"threads\":[\"The lost scarf changes from a welcome return into something heavy. It seems to hold the emotional cost of leaving without turning that choice into a clear mistake.\",\"Several periods of your life are folded together—college, childhood, and an old apartment—while each familiar setting is slightly altered. You are returning, but not quite arriving anywhere unchanged.\"],\"reflection_questions\":[\"What about the invitation to stay made leaving feel like the kinder or more bearable choice?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Warmth shifting into unease\",\"evidence\":\"Gladness and calm repeatedly give way to restlessness, embarrassment, and near-tears.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Choosing to leave after being welcomed\",\"evidence\":\"Your cousin says you can stay, but you want both to answer kindly and to leave, and you choose to leave.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Recovered scarf becoming heavy\",\"evidence\":\"Your former roommate returns a scarf lost in college; it feels heavier as you make your way out.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Familiar spaces subtly rearranged\",\"evidence\":\"The old apartment building and childhood kitchen are recognizable but contain changed details.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Affection without ease\",\"evidence\":\"The former roommate and cousin are welcoming, while your response combines affection, calm, embarrassment, and unease.\",\"confidence\":\"explicit\"}]}"
+}

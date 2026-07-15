@@ -1,0 +1,67 @@
+{
+  "dream_id": "L04",
+  "dream_title": "Long relationship dream with contradictory emotions",
+  "dream_type": "long_relationship",
+  "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:09:36.549Z",
+  "latency_ms": 15559,
+  "usage": {
+    "input_tokens": 1523,
+    "output_tokens": 711,
+    "total_tokens": 2234,
+    "reasoning_tokens": 381
+  },
+  "estimated_cost_usd": 0.028945,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Your pride in your sister and grief at her leaving remain equally true, without either feeling weakening the other. Saying “I’m happy for you” is sincere but incomplete, and her nod gives the moment a quiet sense that the unspoken part was understood. The closeness here includes both protection and the pain of separation.",
+    "threads": [
+      "The repeated arranging—the flowers, chairs, and table—may reflect an effort to prepare carefully for a change that cannot be made completely orderly."
+    ],
+    "reflection_questions": [
+      "What did you feel was the missing part your sister understood?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Pride and grief held at once",
+        "evidence": "You woke with both feelings still distinct after sincerely congratulating your sister while feeling sharp sadness.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Sisterly closeness alongside separation",
+        "evidence": "You felt warmly close, then protected and abandoned in the same second when she was leaving.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated careful arranging",
+        "evidence": "You both adjusted flowers, chairs, and places while waiting for relatives who might not arrive.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Lake house and dock",
+        "evidence": "The borrowed summer house and quiet dock frame the movement from companionship into news of departure.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Fully set table",
+        "evidence": "The table became fully set despite the relatives not arriving and without you remembering folding the napkins.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Your pride in your sister and grief at her leaving remain equally true, without either feeling weakening the other. Saying “I’m happy for you” is sincere but incomplete, and her nod gives the moment a quiet sense that the unspoken part was understood. The closeness here includes both protection and the pain of separation.\",\"threads\":[\"The repeated arranging—the flowers, chairs, and table—may reflect an effort to prepare carefully for a change that cannot be made completely orderly.\"],\"reflection_questions\":[\"What did you feel was the missing part your sister understood? \"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Pride and grief held at once\",\"evidence\":\"You woke with both feelings still distinct after sincerely congratulating your sister while feeling sharp sadness.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Sisterly closeness alongside separation\",\"evidence\":\"You felt warmly close, then protected and abandoned in the same second when she was leaving.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated careful arranging\",\"evidence\":\"You both adjusted flowers, chairs, and places while waiting for relatives who might not arrive.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Lake house and dock\",\"evidence\":\"The borrowed summer house and quiet dock frame the movement from companionship into news of departure.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Fully set table\",\"evidence\":\"The table became fully set despite the relatives not arriving and without you remembering folding the napkins.\",\"confidence\":\"suggested\"}]}"
+}

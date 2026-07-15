@@ -1,0 +1,51 @@
+{
+  "dream_id": "C04",
+  "dream_title": "The Meeting",
+  "dream_type": "waking_life",
+  "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:33.277Z",
+  "latency_ms": 5720,
+  "usage": {
+    "input_tokens": 1233,
+    "output_tokens": 166,
+    "total_tokens": 1399,
+    "reasoning_tokens": 0
+  },
+  "estimated_cost_usd": 0.011145,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "Your upcoming meeting carried directly into the dream. The unusable charger may reflect concern about being prepared or having what you need, but the clear waking-life link makes further symbolism unnecessary.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Upcoming important meeting",
+        "evidence": "You have an important meeting tomorrow and were packing for it in the dream.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated attempts to prepare",
+        "evidence": "You tried different outlets after finding the phone charger dead.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Unusable phone charger",
+        "evidence": "The charger was dead and no outlet worked.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"Your upcoming meeting carried directly into the dream. The unusable charger may reflect concern about being prepared or having what you need, but the clear waking-life link makes further symbolism unnecessary.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Upcoming important meeting\",\"evidence\":\"You have an important meeting tomorrow and were packing for it in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to prepare\",\"evidence\":\"You tried different outlets after finding the phone charger dead.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Unusable phone charger\",\"evidence\":\"The charger was dead and no outlet worked.\",\"confidence\":\"explicit\"}]}"
+}

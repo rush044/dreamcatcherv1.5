@@ -140,3 +140,29 @@ Known human standards from calibration findings:
 ## Release recommendation
 
 **Do not deploy from this report alone.** Proceed to human review.
+
+---
+
+## Adaptive-v2.2 / Sol update (historical addendum)
+
+**Branch:** `insight-v2-sol-v2-2`  
+**Working model (selected):** `gpt-5.6-sol` — blind human review **10/10** vs Mini (`INSIGHT_V2_MINI_VS_SOL_BLIND.md`)  
+**Active candidate prompt:** `adaptive-v2.2`  
+**Historical:** Mini/Sol `adaptive-v2.1` comparison remains in `eval-outputs/insight-v2-mini-vs-sol/`
+
+### Sol V2.1 → V2.2 optionality (same 14 frozen dreams)
+
+| Metric | Sol V2.1 | Sol V2.2 |
+|---|---:|---:|
+| Notice-only rate | 0.14 | **0.64** |
+| Threads presence | 0.71 | **0.21** |
+| Questions presence | 0.79 | **0.29** |
+| Avg threads | 1.29 | **0.36** |
+| Avg questions | 0.86 | **0.29** |
+
+Sparse/waking/positive targets (Spoon, Meeting, Beach, Party) were notice-only under V2.2. Long rich fixtures still earned Threads when justified. L03 stayed limited/notice-only.
+
+Human side-by-side review: `INSIGHT_V2_SOL_V2_1_VS_V2_2_REVIEW.md`  
+Raw V2.2 outputs: `eval-outputs/insight-v2-sol-v2-2/`
+
+Not a production ship decision — complete the eight-case review and live preview check first.

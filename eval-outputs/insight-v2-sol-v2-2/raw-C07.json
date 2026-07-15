@@ -1,0 +1,57 @@
+{
+  "dream_id": "C07",
+  "dream_title": "Fragments",
+  "dream_type": "fragmented",
+  "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:08:34.594Z",
+  "latency_ms": 7092,
+  "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 393,
+    "total_tokens": 1607,
+    "reasoning_tokens": 193
+  },
+  "estimated_cost_usd": 0.01786,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "This reads as a handful of vivid snapshots rather than one clear story: a yellow elevator, your old school, a carried fish, and being shoeless on a train. With no named feeling or connection between them, there isn’t enough here to draw a firm thread.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "low",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "Yellow elevator",
+        "evidence": "The elevator is specifically remembered as yellow.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Old school",
+        "evidence": "Part of the dream takes place at your old school.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Someone carrying a fish",
+        "evidence": "You saw someone carrying a fish.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Riding a train without shoes",
+        "evidence": "You were suddenly on a train with no shoes.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"This reads as a handful of vivid snapshots rather than one clear story: a yellow elevator, your old school, a carried fish, and being shoeless on a train. With no named feeling or connection between them, there isn’t enough here to draw a firm thread.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Yellow elevator\",\"evidence\":\"The elevator is specifically remembered as yellow.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Old school\",\"evidence\":\"Part of the dream takes place at your old school.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Someone carrying a fish\",\"evidence\":\"You saw someone carrying a fish.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Riding a train without shoes\",\"evidence\":\"You were suddenly on a train with no shoes.\",\"confidence\":\"explicit\"}]}"
+}

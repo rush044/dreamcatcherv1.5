@@ -1,0 +1,66 @@
+{
+  "dream_id": "L02",
+  "dream_title": "Long bizarre dream",
+  "dream_type": "long_bizarre",
+  "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:09:13.325Z",
+  "latency_ms": 20582,
+  "usage": {
+    "input_tokens": 1494,
+    "output_tokens": 806,
+    "total_tokens": 2300,
+    "reasoning_tokens": 445
+  },
+  "estimated_cost_usd": 0.03165,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "You met each strange turn with delight rather than alarm, even when it gave you small duties to perform. The clearest shift came when you paused the parade: the nonsense briefly became tender, as though holding it still let you appreciate it rather than only laugh at it. You woke warmly amused, so the absurdity stayed playful all the way through.",
+    "threads": [
+      "Responsibility appeared in small, manageable forms—conducting chairs, supervising tiny weather, and certifying a tuxedo. None of it became a burden; it gave you a role inside the joke.",
+      "Office rules and formal procedures kept being turned into play: hold-music, arbitration panels, catalog numbers, tickets, and certification all behaved absurdly without becoming threatening."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "delighted amusement",
+        "evidence": "You laughed aloud, felt delighted, became warmly amused, and woke half-smiling.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "light responsibility",
+        "evidence": "You felt slightly responsible for the weather and repeatedly accepted small official duties.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "pausing to appreciate",
+        "evidence": "Pressing the red button froze the parade for one second and changed your amusement into tenderness.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "playful bureaucracy",
+        "evidence": "Hold-music, arbitration panels, librarians, tickets, labels, and certification repeatedly became part of the absurdity.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "relationship",
+        "label": "polite cooperation with the fox",
+        "evidence": "You accepted the fox's ticket out of politeness and later certified the tuxedo.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"You met each strange turn with delight rather than alarm, even when it gave you small duties to perform. The clearest shift came when you paused the parade: the nonsense briefly became tender, as though holding it still let you appreciate it rather than only laugh at it. You woke warmly amused, so the absurdity stayed playful all the way through.\",\"threads\":[\"Responsibility appeared in small, manageable forms—conducting chairs, supervising tiny weather, and certifying a tuxedo. None of it became a burden; it gave you a role inside the joke.\",\"Office rules and formal procedures kept being turned into play: hold-music, arbitration panels, catalog numbers, tickets, and certification all behaved absurdly without becoming threatening.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"delighted amusement\",\"evidence\":\"You laughed aloud, felt delighted, became warmly amused, and woke half-smiling.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"light responsibility\",\"evidence\":\"You felt slightly responsible for the weather and repeatedly accepted small official duties.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"pausing to appreciate\",\"evidence\":\"Pressing the red button froze the parade for one second and changed your amusement into tenderness.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"playful bureaucracy\",\"evidence\":\"Hold-music, arbitration panels, librarians, tickets, labels, and certification repeatedly became part of the absurdity.\",\"confidence\":\"suggested\"},{\"type\":\"relationship\",\"label\":\"polite cooperation with the fox\",\"evidence\":\"You accepted the fox's ticket out of politeness and later certified the tuxedo.\",\"confidence\":\"explicit\"}]}"
+}

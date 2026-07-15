@@ -1,0 +1,39 @@
+{
+  "dream_id": "C02",
+  "dream_title": "The Spoon",
+  "dream_type": "sparse",
+  "dream_text": "There was a spoon on a table. Then I woke up.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:27.555Z",
+  "latency_ms": 3699,
+  "usage": {
+    "input_tokens": 1202,
+    "output_tokens": 96,
+    "total_tokens": 1298,
+    "reasoning_tokens": 0
+  },
+  "estimated_cost_usd": 0.00889,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "A spoon on a table is all that remained. There isn’t enough here to support a deeper reading, but the simple image is still worth keeping.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "spoon on a table",
+        "evidence": "You recalled a spoon resting on a table.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"A spoon on a table is all that remained. There isn’t enough here to support a deeper reading, but the simple image is still worth keeping.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"spoon on a table\",\"evidence\":\"You recalled a spoon resting on a table.\",\"confidence\":\"explicit\"}]}"
+}

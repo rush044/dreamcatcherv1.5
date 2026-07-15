@@ -1,0 +1,53 @@
+{
+  "dream_id": "C09",
+  "dream_title": "The Hotel",
+  "dream_type": "rich",
+  "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:07:57.838Z",
+  "latency_ms": 8072,
+  "usage": {
+    "input_tokens": 1259,
+    "output_tokens": 345,
+    "total_tokens": 1604,
+    "reasoning_tokens": 148
+  },
+  "estimated_cost_usd": 0.016645,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The strongest shift is from fighting the distance between you and your family to feeling peaceful while that distance remains. Nothing outside you changes; what changes is your need to get back down.",
+    "threads": [],
+    "reflection_questions": [
+      "Did the peace feel more like acceptance, independence, or giving up?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Frustration turning into peace",
+        "evidence": "You became frustrated trying to return, then later felt peaceful even though your family remained below.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeatedly moving higher",
+        "evidence": "Every hallway or staircase you tried took you higher rather than back to your family.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Distance from family",
+        "evidence": "Your family stayed on the lower floors while you kept trying to get back to them.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The strongest shift is from fighting the distance between you and your family to feeling peaceful while that distance remains. Nothing outside you changes; what changes is your need to get back down.\",\"threads\":[],\"reflection_questions\":[\"Did the peace feel more like acceptance, independence, or giving up?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration turning into peace\",\"evidence\":\"You became frustrated trying to return, then later felt peaceful even though your family remained below.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeatedly moving higher\",\"evidence\":\"Every hallway or staircase you tried took you higher rather than back to your family.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Distance from family\",\"evidence\":\"Your family stayed on the lower floors while you kept trying to get back to them.\",\"confidence\":\"explicit\"}]}"
+}

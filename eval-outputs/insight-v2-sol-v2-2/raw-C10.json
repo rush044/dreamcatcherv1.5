@@ -1,0 +1,53 @@
+{
+  "dream_id": "C10",
+  "dream_title": "The Owl and the Glasses",
+  "dream_type": "symbol_contextual",
+  "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+  "synthetic_label": null,
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "prompt_version": "adaptive-v2.2",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T08:08:27.501Z",
+  "latency_ms": 11317,
+  "usage": {
+    "input_tokens": 1253,
+    "output_tokens": 472,
+    "total_tokens": 1725,
+    "reasoning_tokens": 274
+  },
+  "estimated_cost_usd": 0.020425,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "Your usual means of seeing clearly is being used by something that watches you, and every attempt to reclaim it costs more light. It creates a quiet trap: trying to restore clarity only makes the room harder to see, though the owl’s role remains uncertain.",
+    "threads": [],
+    "reflection_questions": [
+      "Did the owl’s watching feel threatening, patient, or simply attentive?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "Owl wearing your glasses",
+        "evidence": "The owl wore the same glasses you normally use to see.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Reaching for the glasses dims the room",
+        "evidence": "Each attempt to take the glasses back made the light dim further.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Feeling watched",
+        "evidence": "You could feel the owl watching you as you tried.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"Your usual means of seeing clearly is being used by something that watches you, and every attempt to reclaim it costs more light. It creates a quiet trap: trying to restore clarity only makes the room harder to see, though the owl’s role remains uncertain.\",\"threads\":[],\"reflection_questions\":[\"Did the owl’s watching feel threatening, patient, or simply attentive?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Owl wearing your glasses\",\"evidence\":\"The owl wore the same glasses you normally use to see.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Reaching for the glasses dims the room\",\"evidence\":\"Each attempt to take the glasses back made the light dim further.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Feeling watched\",\"evidence\":\"You could feel the owl watching you as you tried.\",\"confidence\":\"explicit\"}]}"
+}
