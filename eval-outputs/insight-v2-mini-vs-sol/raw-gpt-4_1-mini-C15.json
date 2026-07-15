@@ -1,0 +1,86 @@
+{
+  "dream_id": "C15",
+  "dream_title": "The Party",
+  "dream_type": "social",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:20.110Z",
+  "latency_ms": 3137,
+  "usage": {
+    "prompt_tokens": 1501,
+    "completion_tokens": 216,
+    "total_tokens": 1717,
+    "reasoning_tokens": 0,
+    "input_tokens": 1501,
+    "output_tokens": 216
+  },
+  "estimated_cost_usd": 0.000946,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream centers on a clear feeling of exposure and being out of place, contrasted with others' indifference. This emotional difference stands out and may relate to how the dreamer felt in that social setting.",
+    "threads": [
+      "The feeling of being underdressed or too visible suggests sensitivity to social appearance or acceptance.",
+      "The lack of reaction from others highlights a disconnect between the dreamer's inner state and the external environment."
+    ],
+    "reflection_questions": [
+      "How did it feel to wait for someone to notice your discomfort and be met with silence?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "feeling exposed",
+        "evidence": "I was at a party and suddenly felt exposed — underdressed or somehow too visible",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "waiting for reaction",
+        "evidence": "I waited for someone to react",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "social interaction discomfort",
+        "evidence": "feeling exposed and underdressed at a party",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream centers on",
+    "dreamer_mentions": 2,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream centers on a clear feeling of exposure and being out of place, contrasted with others' indifference. This emotional difference stands out and may relate to how the dreamer felt in that social setting.\",\"threads\":[\"The feeling of being underdressed or too visible suggests sensitivity to social appearance or acceptance.\",\"The lack of reaction from others highlights a disconnect between the dreamer's inner state and the external environment.\"],\"reflection_questions\":[\"How did it feel to wait for someone to notice your discomfort and be met with silence?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"feeling exposed\",\"evidence\":\"I was at a party and suddenly felt exposed — underdressed or somehow too visible\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"waiting for reaction\",\"evidence\":\"I waited for someone to react\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"social interaction discomfort\",\"evidence\":\"feeling exposed and underdressed at a party\",\"confidence\":\"suggested\"}]}"
+}

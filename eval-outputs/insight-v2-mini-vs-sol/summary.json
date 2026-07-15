@@ -1,0 +1,103 @@
+{
+  "run_id": "2026-07-15T07-25-48-726Z",
+  "prompt_version": "adaptive-v2.1",
+  "prompt_sha256": "a1c2ce30d1c623c747b3b8f25b2fc2660f4eb378c86574482b6e46997d6862be",
+  "schema_version": 2,
+  "database_writes": false,
+  "models": {
+    "gpt-4.1-mini": {
+      "success_count": 14,
+      "failure_count": 0,
+      "averages": {
+        "genuine_noticing": 3.64,
+        "plain_language": 3.29,
+        "evidence_restraint": 4.21,
+        "sheepy_authenticity": 2.5,
+        "non_duplication": 4,
+        "optionality": 4,
+        "thread_quality": 3.36,
+        "question_usefulness": 3.07,
+        "sensitive_maturity": 4,
+        "bizarre_tone_preservation": 4,
+        "commercial_value": 3.36,
+        "overall": 3.14
+      },
+      "depth_distribution": {
+        "limited": 3,
+        "focused": 8,
+        "rich": 3
+      },
+      "notice_only_rate": 0.14,
+      "threads_presence_rate": 0.79,
+      "questions_presence_rate": 0.86,
+      "avg_thread_count": 1.57,
+      "avg_question_count": 1,
+      "pct_using_the_dreamer": 42.9,
+      "pct_report_like_opening": 42.9,
+      "unsupported_inference_count": 1,
+      "repeated_section_count": 0,
+      "sensitive_content_failures": 0,
+      "bizarre_tone_failures": 0,
+      "validation_failures": 0,
+      "latency": {
+        "average_ms": 3646,
+        "total_ms": 51047
+      },
+      "tokens": {
+        "input": 22204,
+        "output": 3315,
+        "reasoning": 0,
+        "total": 25519
+      },
+      "estimated_cost_usd": 0.014186,
+      "estimated_cost_per_insight_usd": 0.001013
+    },
+    "gpt-5.6-sol": {
+      "success_count": 14,
+      "failure_count": 0,
+      "averages": {
+        "genuine_noticing": 3.71,
+        "plain_language": 4,
+        "evidence_restraint": 4.21,
+        "sheepy_authenticity": 3.71,
+        "non_duplication": 4,
+        "optionality": 4.14,
+        "thread_quality": 3.5,
+        "question_usefulness": 3.21,
+        "sensitive_maturity": 3.79,
+        "bizarre_tone_preservation": 4,
+        "commercial_value": 3.43,
+        "overall": 3.79
+      },
+      "depth_distribution": {
+        "limited": 3,
+        "focused": 6,
+        "rich": 5
+      },
+      "notice_only_rate": 0.14,
+      "threads_presence_rate": 0.71,
+      "questions_presence_rate": 0.79,
+      "avg_thread_count": 1.29,
+      "avg_question_count": 0.86,
+      "pct_using_the_dreamer": 0,
+      "pct_report_like_opening": 0,
+      "unsupported_inference_count": 1,
+      "repeated_section_count": 0,
+      "sensitive_content_failures": 1,
+      "bizarre_tone_failures": 0,
+      "validation_failures": 0,
+      "latency": {
+        "average_ms": 12335,
+        "total_ms": 172691
+      },
+      "tokens": {
+        "input": 22092,
+        "output": 6800,
+        "reasoning": 3245,
+        "total": 28892
+      },
+      "estimated_cost_usd": 0.31446,
+      "estimated_cost_per_insight_usd": 0.022461
+    }
+  }
+}

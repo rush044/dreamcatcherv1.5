@@ -1,0 +1,99 @@
+{
+  "dream_id": "L04",
+  "dream_title": "Long relationship dream with contradictory emotions",
+  "dream_type": "long_relationship",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:25:48.724Z",
+  "latency_ms": 23187,
+  "usage": {
+    "prompt_tokens": 1788,
+    "completion_tokens": 888,
+    "total_tokens": 2676,
+    "reasoning_tokens": 482,
+    "input_tokens": 1788,
+    "output_tokens": 888
+  },
+  "estimated_cost_usd": 0.03558,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Two truths remain fully present: you are sincerely proud of your sister, and sincerely grieving her departure. Neither feeling cancels the other, and her nod suggests that “I’m happy for you” carried the part you could not say. Feeling protected and abandoned in the same moment makes the coming separation loving as well as painful.",
+    "threads": [
+      "Much of the dream involves preparing for uncertain arrivals and a certain departure. The repeated arranging may reflect wanting to be ready for a change that cannot be made tidy.",
+      "The relationship repeatedly softens after difficult feelings appear: guilt and defensiveness pass, silence is shared, and her hand rests on your shoulder. The sadness does not erase the closeness."
+    ],
+    "reflection_questions": [
+      "Did her final nod feel more comforting because she understood, or more painful because the missing part remained unspoken?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Pride and grief held together",
+        "evidence": "The dreamer woke with pride and grief still distinct after feeling sincerely happy and sharply sad about the sister's departure.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Closeness alongside separation",
+        "evidence": "Warm companionship, shared childhood memories, and a protective touch accompany the sister's announcement that she will be gone for a long time.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Preparing amid uncertainty",
+        "evidence": "The sisters arrange flowers, adjust chairs, and set a table for relatives who might not arrive.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "action",
+        "label": "True but incomplete reassurance",
+        "evidence": "The dreamer says only, “I’m happy for you,” while also wanting the sister to stay and not wanting to ask.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Fully set table",
+        "evidence": "The table is somehow fully set with napkins the dreamer does not remember folding, although the relatives have not arrived.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Two truths remain fully present: you are sincerely proud of your sister, and sincerely grieving her departure. Neither feeling cancels the other, and her nod suggests that “I’m happy for you” carried the part you could not say. Feeling protected and abandoned in the same moment makes the coming separation loving as well as painful.\",\"threads\":[\"Much of the dream involves preparing for uncertain arrivals and a certain departure. The repeated arranging may reflect wanting to be ready for a change that cannot be made tidy.\",\"The relationship repeatedly softens after difficult feelings appear: guilt and defensiveness pass, silence is shared, and her hand rests on your shoulder. The sadness does not erase the closeness.\"],\"reflection_questions\":[\"Did her final nod feel more comforting because she understood, or more painful because the missing part remained unspoken?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Pride and grief held together\",\"evidence\":\"The dreamer woke with pride and grief still distinct after feeling sincerely happy and sharply sad about the sister's departure.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Closeness alongside separation\",\"evidence\":\"Warm companionship, shared childhood memories, and a protective touch accompany the sister's announcement that she will be gone for a long time.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Preparing amid uncertainty\",\"evidence\":\"The sisters arrange flowers, adjust chairs, and set a table for relatives who might not arrive.\",\"confidence\":\"suggested\"},{\"type\":\"action\",\"label\":\"True but incomplete reassurance\",\"evidence\":\"The dreamer says only, “I’m happy for you,” while also wanting the sister to stay and not wanting to ask.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Fully set table\",\"evidence\":\"The table is somehow fully set with napkins the dreamer does not remember folding, although the relatives have not arrived.\",\"confidence\":\"explicit\"}]}"
+}

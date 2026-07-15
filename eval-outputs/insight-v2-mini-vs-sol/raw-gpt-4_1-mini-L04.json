@@ -1,0 +1,96 @@
+{
+  "dream_id": "L04",
+  "dream_title": "Long relationship dream with contradictory emotions",
+  "dream_type": "long_relationship",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:56.014Z",
+  "latency_ms": 4306,
+  "usage": {
+    "prompt_tokens": 1796,
+    "completion_tokens": 349,
+    "total_tokens": 2145,
+    "reasoning_tokens": 0,
+    "input_tokens": 1796,
+    "output_tokens": 349
+  },
+  "estimated_cost_usd": 0.001277,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The dream carries clear emotions of warmth, companionship, pride, and sadness intertwined in the interaction with the sister. The changing emotions between the two, especially the simultaneous feelings of happiness and grief, stand out. The shared moments of setting the table and the quiet time on the dock highlight a complex, tender relationship. The dream ends with unresolved feelings expressed quietly but felt deeply.",
+    "threads": [
+      "The simultaneous expression of pride and sadness in the dreamer’s face and the sister’s shifting reactions show a moment of emotional complexity and mutual understanding.",
+      "The act of setting a table for relatives who never arrive, yet having the table mysteriously set, suggests a tension between preparation and absence, presence and emptiness.",
+      "The final gesture of the sister placing her hand on the dreamer’s shoulder evokes both protection and abandonment, capturing the bittersweet nature of transition."
+    ],
+    "reflection_questions": [
+      "How do you feel about the balance of closeness and distance in your relationship with your sister right now?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "contradictory emotions",
+        "evidence": "Feeling both happiness and sharp sadness simultaneously about sister's news",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "sibling relationship complexity",
+        "evidence": "Sharing memories, mixed feelings of protection and abandonment with older sister",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "summer house near lake",
+        "evidence": "Setting takes place in a shared summer house by a lake with sensory details",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "setting table for absent relatives",
+        "evidence": "Both dreamer and sister prepare a table for relatives who might not arrive, but table ends up set",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 2,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening",
+      "complex_language"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 2,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": [
+      "tension between"
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream carries clear emotions of warmth, companionship, pride, and sadness intertwined in the interaction with the sister. The changing emotions between the two, especially the simultaneous feelings of happiness and grief, stand out. The shared moments of setting the table and the quiet time on the dock highlight a complex, tender relationship. The dream ends with unresolved feelings expressed quietly but felt deeply.\",\"threads\":[\"The simultaneous expression of pride and sadness in the dreamer’s face and the sister’s shifting reactions show a moment of emotional complexity and mutual understanding.\",\"The act of setting a table for relatives who never arrive, yet having the table mysteriously set, suggests a tension between preparation and absence, presence and emptiness.\",\"The final gesture of the sister placing her hand on the dreamer’s shoulder evokes both protection and abandonment, capturing the bittersweet nature of transition.\"],\"reflection_questions\":[\"How do you feel about the balance of closeness and distance in your relationship with your sister right now?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"contradictory emotions\",\"evidence\":\"Feeling both happiness and sharp sadness simultaneously about sister's news\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"sibling relationship complexity\",\"evidence\":\"Sharing memories, mixed feelings of protection and abandonment with older sister\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"summer house near lake\",\"evidence\":\"Setting takes place in a shared summer house by a lake with sensory details\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"setting table for absent relatives\",\"evidence\":\"Both dreamer and sister prepare a table for relatives who might not arrive, but table ends up set\",\"confidence\":\"explicit\"}]}"
+}

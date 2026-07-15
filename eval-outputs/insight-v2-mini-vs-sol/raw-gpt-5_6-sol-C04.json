@@ -1,0 +1,88 @@
+{
+  "dream_id": "C04",
+  "dream_title": "The Meeting",
+  "dream_type": "waking_life",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:23:12.368Z",
+  "latency_ms": 12036,
+  "usage": {
+    "prompt_tokens": 1498,
+    "completion_tokens": 479,
+    "total_tokens": 1977,
+    "reasoning_tokens": 247,
+    "input_tokens": 1498,
+    "output_tokens": 479
+  },
+  "estimated_cost_usd": 0.02186,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream stays close to tomorrow’s real meeting, so it may simply be carrying your preparation into sleep rather than pointing to a deeper meaning. The failed outlets add a sense of being unable to get one needed thing ready, and the meeting remained on your mind when you woke.",
+    "threads": [
+      "The charger may matter less as an object than as something necessary that would not cooperate before an important event."
+    ],
+    "reflection_questions": [
+      "Is there any practical part of the meeting preparation you still want to check?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Upcoming important meeting",
+        "evidence": "The dreamer has an important meeting tomorrow and woke still thinking about it.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated attempts to prepare",
+        "evidence": "The dreamer packed a bag and tried several outlets to make the charger work.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Dead phone charger",
+        "evidence": "The charger was dead and could not be restored through different outlets.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream stays close to tomorrow’s real meeting, so it may simply be carrying your preparation into sleep rather than pointing to a deeper meaning. The failed outlets add a sense of being unable to get one needed thing ready, and the meeting remained on your mind when you woke.\",\"threads\":[\"The charger may matter less as an object than as something necessary that would not cooperate before an important event.\"],\"reflection_questions\":[\"Is there any practical part of the meeting preparation you still want to check?\"] ,\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Upcoming important meeting\",\"evidence\":\"The dreamer has an important meeting tomorrow and woke still thinking about it.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to prepare\",\"evidence\":\"The dreamer packed a bag and tried several outlets to make the charger work.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Dead phone charger\",\"evidence\":\"The charger was dead and could not be restored through different outlets.\",\"confidence\":\"explicit\"}]}"
+}

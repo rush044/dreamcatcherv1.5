@@ -1,0 +1,101 @@
+{
+  "dream_id": "L01",
+  "dream_title": "Long coherent emotional dream",
+  "dream_type": "long_emotional",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "I arrived at my old apartment building in the rain, though the lobby carpet was somehow already dry. The elevator buttons were the wrong colors, and a neighbor I recognized from years ago waved without speaking. On the third floor I found my former roommate organizing cardboard boxes labeled with seasons instead of rooms. She handed me a scarf I had lost in college and smiled as if this were ordinary. I felt glad to see her, then suddenly restless because I could hear music playing behind a closed door down the hall.\n\nWhen I opened that door, the room was a kitchen from my childhood home, rearranged slightly: the table faced the window, and the fruit bowl was filled with keys. My younger cousin sat there drawing circles on a napkin. He asked if I wanted tea. I sat down and said yes, and for a moment I felt calm. Then the kettle whistled and he stood up too quickly, knocking over a stack of postcards with pictures of places I have never visited. The calm drained out and I felt embarrassed for no clear reason, as if I had interrupted something private.\n\nOutside the window, people walked past carrying grocery bags and umbrellas with tiny painted moons. None of them looked up. My cousin put a mug in front of me and said, “You can stay if you want,” but his voice sounded farther away than his face. I wanted to answer kindly and also wanted to leave. I chose to leave. In the hallway the scarf felt heavier, and by the time I reached the lobby I was almost crying from a mix of affection and unease. I woke while still holding the scarf in my mind.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:24:56.352Z",
+  "latency_ms": 22834,
+  "usage": {
+    "prompt_tokens": 1784,
+    "completion_tokens": 845,
+    "total_tokens": 2629,
+    "reasoning_tokens": 424,
+    "input_tokens": 1784,
+    "output_tokens": 845
+  },
+  "estimated_cost_usd": 0.03427,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Familiar people and places offer welcome, but each moment of comfort gives way to restlessness, embarrassment, or unease. You choose to leave even after being invited to stay, while the affection remains with you through the scarf. The dream does not settle on either comfort or escape; both feelings stay present at waking.",
+    "threads": [
+      "The welcome is gentle throughout: a smile, returned scarf, tea, and permission to stay. Nothing openly threatens you, which makes the urge to leave more striking.",
+      "The scarf changes from a recovered possession into something heavy as you leave, carrying the emotional weight of the visit without fixing its meaning.",
+      "Keys, postcards, and boxes labeled by seasons all suggest sorting, movement, or different times, but the dream leaves their connection open."
+    ],
+    "reflection_questions": [
+      "What did the lost scarf mean to you when you had it in college?",
+      "In the kitchen, what made leaving feel more right than accepting the invitation to stay?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Comfort giving way to unease",
+        "evidence": "Gladness becomes restlessness; calm becomes embarrassment; the dream ends with affection, unease, and near tears.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Choosing to leave",
+        "evidence": "The cousin says, “You can stay if you want,” and the dreamer chooses to leave.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Recovered scarf becoming heavy",
+        "evidence": "The former roommate returns a scarf lost in college; it feels heavier on the way out and remains in mind at waking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Familiar places slightly changed",
+        "evidence": "The old apartment building and childhood kitchen are recognizable but contain altered details.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Warm but distant reunion",
+        "evidence": "The former roommate smiles and the cousin offers tea and a place to stay, while the cousin’s voice sounds far away.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Familiar people and places offer welcome, but each moment of comfort gives way to restlessness, embarrassment, or unease. You choose to leave even after being invited to stay, while the affection remains with you through the scarf. The dream does not settle on either comfort or escape; both feelings stay present at waking.\",\"threads\":[\"The welcome is gentle throughout: a smile, returned scarf, tea, and permission to stay. Nothing openly threatens you, which makes the urge to leave more striking.\",\"The scarf changes from a recovered possession into something heavy as you leave, carrying the emotional weight of the visit without fixing its meaning.\",\"Keys, postcards, and boxes labeled by seasons all suggest sorting, movement, or different times, but the dream leaves their connection open.\"],\"reflection_questions\":[\"What did the lost scarf mean to you when you had it in college?\",\"In the kitchen, what made leaving feel more right than accepting the invitation to stay?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Comfort giving way to unease\",\"evidence\":\"Gladness becomes restlessness; calm becomes embarrassment; the dream ends with affection, unease, and near tears.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Choosing to leave\",\"evidence\":\"The cousin says, “You can stay if you want,” and the dreamer chooses to leave.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Recovered scarf becoming heavy\",\"evidence\":\"The former roommate returns a scarf lost in college; it feels heavier on the way out and remains in mind at waking.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Familiar places slightly changed\",\"evidence\":\"The old apartment building and childhood kitchen are recognizable but contain altered details.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Warm but distant reunion\",\"evidence\":\"The former roommate smiles and the cousin offers tea and a place to stay, while the cousin’s voice sounds far away.\",\"confidence\":\"suggested\"}]}"
+}

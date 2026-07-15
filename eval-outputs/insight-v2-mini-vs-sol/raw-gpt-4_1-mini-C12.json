@@ -1,0 +1,86 @@
+{
+  "dream_id": "C12",
+  "dream_title": "The Knife",
+  "dream_type": "sensitive_threat",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:33.944Z",
+  "latency_ms": 2901,
+  "usage": {
+    "prompt_tokens": 1504,
+    "completion_tokens": 207,
+    "total_tokens": 1711,
+    "reasoning_tokens": 0,
+    "input_tokens": 1504,
+    "output_tokens": 207
+  },
+  "estimated_cost_usd": 0.000933,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream carries a clear feeling of threat from a child who knows a private childhood nickname, which makes the danger feel very real. The dream ends abruptly with waking, leaving the outcome unknown.",
+    "threads": [
+      "The use of a private childhood nickname suggests a link to past or early life experiences affecting the feeling of threat.",
+      "The child holding a knife introduces a serious, unexpected element that contrasts with the usual innocence associated with children."
+    ],
+    "reflection_questions": [
+      "How did it feel to hear that private nickname in this threatening context?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "threat",
+        "evidence": "The threat felt very real in the dream.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "child",
+        "evidence": "A child was holding a knife and using a private nickname.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "private childhood nickname",
+        "evidence": "The child used a private nickname known only from childhood.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream carries a clear feeling of threat from a child who knows a private childhood nickname, which makes the danger feel very real. The dream ends abruptly with waking, leaving the outcome unknown.\",\"threads\":[\"The use of a private childhood nickname suggests a link to past or early life experiences affecting the feeling of threat.\",\"The child holding a knife introduces a serious, unexpected element that contrasts with the usual innocence associated with children.\"],\"reflection_questions\":[\"How did it feel to hear that private nickname in this threatening context?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"threat\",\"evidence\":\"The threat felt very real in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"child\",\"evidence\":\"A child was holding a knife and using a private nickname.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"private childhood nickname\",\"evidence\":\"The child used a private nickname known only from childhood.\",\"confidence\":\"explicit\"}]}"
+}

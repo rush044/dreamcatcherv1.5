@@ -1,0 +1,79 @@
+{
+  "dream_id": "C05",
+  "dream_title": "The Beach",
+  "dream_type": "positive",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:16.972Z",
+  "latency_ms": 2818,
+  "usage": {
+    "prompt_tokens": 1502,
+    "completion_tokens": 166,
+    "total_tokens": 1668,
+    "reasoning_tokens": 0,
+    "input_tokens": 1502,
+    "output_tokens": 166
+  },
+  "estimated_cost_usd": 0.000866,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream expresses a clear feeling of safety and calmness in a quiet beach setting. There is no sense of worry or vigilance, only peaceful rest until the end. This calm emotion stands out as a central feature.",
+    "threads": [
+      "The feeling of safety without watchfulness suggests a moment of genuine relaxation or trust in the environment."
+    ],
+    "reflection_questions": [
+      "What does feeling completely safe in the dream contrast with in your waking life, if anything?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "quiet beach",
+        "evidence": "lying on a quiet beach in late afternoon light",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "feeling completely safe",
+        "evidence": "I felt completely safe — not watchful, not nervous, just safe",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream expresses",
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream expresses a clear feeling of safety and calmness in a quiet beach setting. There is no sense of worry or vigilance, only peaceful rest until the end. This calm emotion stands out as a central feature.\",\"threads\":[\"The feeling of safety without watchfulness suggests a moment of genuine relaxation or trust in the environment.\"],\"reflection_questions\":[\"What does feeling completely safe in the dream contrast with in your waking life, if anything?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"quiet beach\",\"evidence\":\"lying on a quiet beach in late afternoon light\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"feeling completely safe\",\"evidence\":\"I felt completely safe — not watchful, not nervous, just safe\",\"confidence\":\"explicit\"}]}"
+}

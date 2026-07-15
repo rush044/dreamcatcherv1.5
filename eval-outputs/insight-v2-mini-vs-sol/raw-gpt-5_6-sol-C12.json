@@ -1,0 +1,93 @@
+{
+  "dream_id": "C12",
+  "dream_title": "The Knife",
+  "dream_type": "sensitive_threat",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:24:18.873Z",
+  "latency_ms": 13692,
+  "usage": {
+    "prompt_tokens": 1496,
+    "completion_tokens": 696,
+    "total_tokens": 2192,
+    "reasoning_tokens": 412,
+    "input_tokens": 1496,
+    "output_tokens": 696
+  },
+  "estimated_cost_usd": 0.02836,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The private childhood nickname makes the threat feel not only dangerous, but personally knowing. A child carrying both a knife and knowledge from your past brings familiarity and danger into the same moment. Since you woke before anything happened, the dream gives no clear answer about what the child intended or represented.",
+    "threads": [
+      "The child’s age may matter because the private knowledge also comes from childhood, linking the threatening figure to that earlier time without showing how.",
+      "The dream’s force lies in anticipation: the danger felt real, but the outcome remained unknown."
+    ],
+    "reflection_questions": [
+      "How did hearing the nickname change what you felt toward the child, if at all?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Immediate sense of threat",
+        "evidence": "The threat felt very real.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Threatening child",
+        "evidence": "A child stood in front of the dreamer holding a knife.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Knife held without attack",
+        "evidence": "The child held a knife, but the dream ended before anything else happened.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Private childhood nickname",
+        "evidence": "The child used a nickname known only to someone from the dreamer’s childhood.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The private childhood nickname makes the threat feel not only dangerous, but personally knowing. A child carrying both a knife and knowledge from your past brings familiarity and danger into the same moment. Since you woke before anything happened, the dream gives no clear answer about what the child intended or represented.\",\"threads\":[\"The child’s age may matter because the private knowledge also comes from childhood, linking the threatening figure to that earlier time without showing how.\",\"The dream’s force lies in anticipation: the danger felt real, but the outcome remained unknown.\"],\"reflection_questions\":[\"How did hearing the nickname change what you felt toward the child, if at all?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Immediate sense of threat\",\"evidence\":\"The threat felt very real.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Threatening child\",\"evidence\":\"A child stood in front of the dreamer holding a knife.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Knife held without attack\",\"evidence\":\"The child held a knife, but the dream ended before anything else happened.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Private childhood nickname\",\"evidence\":\"The child used a nickname known only to someone from the dreamer’s childhood.\",\"confidence\":\"explicit\"}]}"
+}

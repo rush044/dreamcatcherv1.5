@@ -1,0 +1,86 @@
+{
+  "dream_id": "C04",
+  "dream_title": "The Meeting",
+  "dream_type": "waking_life",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:14.151Z",
+  "latency_ms": 5699,
+  "usage": {
+    "prompt_tokens": 1506,
+    "completion_tokens": 225,
+    "total_tokens": 1731,
+    "reasoning_tokens": 0,
+    "input_tokens": 1506,
+    "output_tokens": 225
+  },
+  "estimated_cost_usd": 0.000962,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream shows concern about being prepared for an important meeting, highlighted by the repeated attempts to charge the phone without success. This may reflect a waking-life worry about readiness or control over details. The lingering thought upon waking suggests the meeting carries significance or pressure.",
+    "threads": [
+      "The dead phone charger and failed attempts at different outlets might reveal a feeling of frustration or a barrier to feeling fully prepared."
+    ],
+    "reflection_questions": [
+      "How do you feel about this meeting in waking life?",
+      "Is there a particular reason the phone charger’s failure stood out in the dream?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Important meeting",
+        "evidence": "The dream centers on preparation for an important meeting tomorrow.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Concern about readiness",
+        "evidence": "Repeated attempts to charge the phone and waking thoughts about the meeting suggest worry or stress.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Trying different outlets",
+        "evidence": "Dreamer's repeated action of trying outlets to charge the phone.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream shows",
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows concern about being prepared for an important meeting, highlighted by the repeated attempts to charge the phone without success. This may reflect a waking-life worry about readiness or control over details. The lingering thought upon waking suggests the meeting carries significance or pressure.\",\"threads\":[\"The dead phone charger and failed attempts at different outlets might reveal a feeling of frustration or a barrier to feeling fully prepared.\"],\"reflection_questions\":[\"How do you feel about this meeting in waking life?\",\"Is there a particular reason the phone charger’s failure stood out in the dream?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Important meeting\",\"evidence\":\"The dream centers on preparation for an important meeting tomorrow.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Concern about readiness\",\"evidence\":\"Repeated attempts to charge the phone and waking thoughts about the meeting suggest worry or stress.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Trying different outlets\",\"evidence\":\"Dreamer's repeated action of trying outlets to charge the phone.\",\"confidence\":\"explicit\"}]}"
+}

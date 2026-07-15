@@ -1,0 +1,82 @@
+{
+  "dream_id": "C07",
+  "dream_title": "Fragments",
+  "dream_type": "fragmented",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:24:33.516Z",
+  "latency_ms": 5968,
+  "usage": {
+    "prompt_tokens": 1479,
+    "completion_tokens": 259,
+    "total_tokens": 1738,
+    "reasoning_tokens": 100,
+    "input_tokens": 1479,
+    "output_tokens": 259
+  },
+  "estimated_cost_usd": 0.015165,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "There isn’t enough here to know why these fragments stayed together. The yellow elevator, carried fish, and missing shoes may simply be the details that remained after the rest faded.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "low",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "old school",
+        "evidence": "The dream took place briefly at the dreamer’s old school.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "yellow elevator",
+        "evidence": "A yellow elevator appeared as a distinct fragment.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "traveling without shoes",
+        "evidence": "The dreamer was suddenly on a train with no shoes.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 5,
+    "thread_quality": 4,
+    "question_usefulness": 4,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"There isn’t enough here to know why these fragments stayed together. The yellow elevator, carried fish, and missing shoes may simply be the details that remained after the rest faded.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"old school\",\"evidence\":\"The dream took place briefly at the dreamer’s old school.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"yellow elevator\",\"evidence\":\"A yellow elevator appeared as a distinct fragment.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"traveling without shoes\",\"evidence\":\"The dreamer was suddenly on a train with no shoes.\",\"confidence\":\"explicit\"}]}"
+}

@@ -1,0 +1,103 @@
+{
+  "dream_id": "L01",
+  "dream_title": "Long coherent emotional dream",
+  "dream_type": "long_emotional",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "I arrived at my old apartment building in the rain, though the lobby carpet was somehow already dry. The elevator buttons were the wrong colors, and a neighbor I recognized from years ago waved without speaking. On the third floor I found my former roommate organizing cardboard boxes labeled with seasons instead of rooms. She handed me a scarf I had lost in college and smiled as if this were ordinary. I felt glad to see her, then suddenly restless because I could hear music playing behind a closed door down the hall.\n\nWhen I opened that door, the room was a kitchen from my childhood home, rearranged slightly: the table faced the window, and the fruit bowl was filled with keys. My younger cousin sat there drawing circles on a napkin. He asked if I wanted tea. I sat down and said yes, and for a moment I felt calm. Then the kettle whistled and he stood up too quickly, knocking over a stack of postcards with pictures of places I have never visited. The calm drained out and I felt embarrassed for no clear reason, as if I had interrupted something private.\n\nOutside the window, people walked past carrying grocery bags and umbrellas with tiny painted moons. None of them looked up. My cousin put a mug in front of me and said, “You can stay if you want,” but his voice sounded farther away than his face. I wanted to answer kindly and also wanted to leave. I chose to leave. In the hallway the scarf felt heavier, and by the time I reached the lobby I was almost crying from a mix of affection and unease. I woke while still holding the scarf in my mind.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:45.063Z",
+  "latency_ms": 4953,
+  "usage": {
+    "prompt_tokens": 1792,
+    "completion_tokens": 386,
+    "total_tokens": 2178,
+    "reasoning_tokens": 0,
+    "input_tokens": 1792,
+    "output_tokens": 386
+  },
+  "estimated_cost_usd": 0.001334,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "This dream moves through emotions of gladness, restlessness, calm, embarrassment, affection, and unease. Familiar people and places appear with subtle changes that create a feeling of dissonance, especially the roommate with the scarf and the cousin in a childhood kitchen rearranged with unusual details. The scarf's weight and the shifting closeness of the cousin’s voice highlight complex feelings about connection and distance.",
+    "threads": [
+      "The scarf's presence and changing weight suggest a link to past memories and emotional weight carried over time.",
+      "The cousin's invitation to stay contrasts with the distance in his voice, reflecting mixed feelings about belonging or leaving.",
+      "The rearranged childhood kitchen and the unexpected fruit bowl of keys create a setting that is both familiar and subtly unsettling, influencing the dreamer's emotional shifts."
+    ],
+    "reflection_questions": [
+      "How do the feelings of affection and unease balance in your waking life when you think about past relationships or places?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "mixed affection and unease",
+        "evidence": "dreamer felt glad, calm, embarrassed, affectionate, and uneasy at different points",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "former roommate",
+        "evidence": "roommate handing a lost scarf and smiling",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "younger cousin",
+        "evidence": "cousin offering tea and inviting the dreamer to stay",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "old apartment building and childhood kitchen",
+        "evidence": "dreamer arrives at old apartment with altered details and finds a childhood kitchen rearranged",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "scarf",
+        "evidence": "scarf lost in college is handed back and later feels heavier",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "fruit bowl filled with keys",
+        "evidence": "unusual detail in childhood kitchen",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 1,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"This dream moves through emotions of gladness, restlessness, calm, embarrassment, affection, and unease. Familiar people and places appear with subtle changes that create a feeling of dissonance, especially the roommate with the scarf and the cousin in a childhood kitchen rearranged with unusual details. The scarf's weight and the shifting closeness of the cousin’s voice highlight complex feelings about connection and distance.\",\"threads\":[\"The scarf's presence and changing weight suggest a link to past memories and emotional weight carried over time.\",\"The cousin's invitation to stay contrasts with the distance in his voice, reflecting mixed feelings about belonging or leaving.\",\"The rearranged childhood kitchen and the unexpected fruit bowl of keys create a setting that is both familiar and subtly unsettling, influencing the dreamer's emotional shifts.\"],\"reflection_questions\":[\"How do the feelings of affection and unease balance in your waking life when you think about past relationships or places?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"mixed affection and unease\",\"evidence\":\"dreamer felt glad, calm, embarrassed, affectionate, and uneasy at different points\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"former roommate\",\"evidence\":\"roommate handing a lost scarf and smiling\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"younger cousin\",\"evidence\":\"cousin offering tea and inviting the dreamer to stay\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"old apartment building and childhood kitchen\",\"evidence\":\"dreamer arrives at old apartment with altered details and finds a childhood kitchen rearranged\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"scarf\",\"evidence\":\"scarf lost in college is handed back and later feels heavier\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"fruit bowl filled with keys\",\"evidence\":\"unusual detail in childhood kitchen\",\"confidence\":\"explicit\"}]}"
+}

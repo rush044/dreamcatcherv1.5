@@ -1,0 +1,93 @@
+{
+  "dream_id": "C09",
+  "dream_title": "The Hotel",
+  "dream_type": "rich",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:23:53.742Z",
+  "latency_ms": 14995,
+  "usage": {
+    "prompt_tokens": 1524,
+    "completion_tokens": 562,
+    "total_tokens": 2086,
+    "reasoning_tokens": 264,
+    "input_tokens": 1524,
+    "output_tokens": 562
+  },
+  "estimated_cost_usd": 0.02448,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The dream’s clearest change is from frustration to peace. Nothing outside you is fixed—you still cannot return to your family—but the upward movement stops feeling like something you must fight.",
+    "threads": [
+      "Going higher is not presented as success at first; it feels imposed because every route prevents the return you want.",
+      "The peace does not require reunion. Within the dream, distance from your family becomes bearable without making the family disappear or matter less."
+    ],
+    "reflection_questions": [
+      "What changed when the climbing became peaceful: your thoughts about your family, your sense of where you were going, or only the feeling itself?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Frustration becoming peace",
+        "evidence": "The dreamer first felt frustrated by being unable to return, then peaceful while the situation remained unchanged.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated involuntary ascent",
+        "evidence": "Every hallway or staircase led higher despite repeated attempts to go back down.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Distance from family",
+        "evidence": "The family stayed on the lower floors while the dreamer kept moving higher and tried to return.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Hotel with one-way routes",
+        "evidence": "The hotel’s hallways and staircases allowed upward movement but no lasting sideways or downward route.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream’s clearest change is from frustration to peace. Nothing outside you is fixed—you still cannot return to your family—but the upward movement stops feeling like something you must fight.\",\"threads\":[\"Going higher is not presented as success at first; it feels imposed because every route prevents the return you want.\",\"The peace does not require reunion. Within the dream, distance from your family becomes bearable without making the family disappear or matter less.\"],\"reflection_questions\":[\"What changed when the climbing became peaceful: your thoughts about your family, your sense of where you were going, or only the feeling itself?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration becoming peace\",\"evidence\":\"The dreamer first felt frustrated by being unable to return, then peaceful while the situation remained unchanged.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated involuntary ascent\",\"evidence\":\"Every hallway or staircase led higher despite repeated attempts to go back down.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Distance from family\",\"evidence\":\"The family stayed on the lower floors while the dreamer kept moving higher and tried to return.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Hotel with one-way routes\",\"evidence\":\"The hotel’s hallways and staircases allowed upward movement but no lasting sideways or downward route.\",\"confidence\":\"explicit\"}]}"
+}

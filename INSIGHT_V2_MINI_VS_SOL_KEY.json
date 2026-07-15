@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-07-15T07:25:48.730Z",
+  "prompt_version": "adaptive-v2.1",
+  "cases": {
+    "C02": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "C04": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "C05": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "C15": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "C14": {
+      "A": "gpt-4.1-mini",
+      "B": "gpt-5.6-sol"
+    },
+    "C09": {
+      "A": "gpt-4.1-mini",
+      "B": "gpt-5.6-sol"
+    },
+    "C12": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "C08": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "L02": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    },
+    "L04": {
+      "A": "gpt-5.6-sol",
+      "B": "gpt-4.1-mini"
+    }
+  }
+}

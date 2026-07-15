@@ -1,0 +1,86 @@
+{
+  "dream_id": "C10",
+  "dream_title": "The Owl and the Glasses",
+  "dream_type": "symbol_contextual",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:24:27.546Z",
+  "latency_ms": 8672,
+  "usage": {
+    "prompt_tokens": 1518,
+    "completion_tokens": 364,
+    "total_tokens": 1882,
+    "reasoning_tokens": 134,
+    "input_tokens": 1518,
+    "output_tokens": 364
+  },
+  "estimated_cost_usd": 0.01851,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The glasses are directly tied to your ability to see, yet trying to reclaim them makes the room harder to see. The owl stays still and watches, leaving you to choose whether to keep reaching as the darkness grows.",
+    "threads": [
+      "Your effort causes the change: each attempt costs a little more light. That consequence may matter more than the owl or glasses alone."
+    ],
+    "reflection_questions": [
+      "Did the owl’s watching feel threatening, calm, judging, or simply attentive?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "Owl wearing the dreamer’s glasses",
+        "evidence": "An owl sat in the dreamer’s room wearing the same glasses they normally use to see.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Reaching makes the room darker",
+        "evidence": "Each attempt to take back the glasses caused the light to dim further.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Being watched while trying",
+        "evidence": "The dreamer could feel the owl watching during each attempt.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The glasses are directly tied to your ability to see, yet trying to reclaim them makes the room harder to see. The owl stays still and watches, leaving you to choose whether to keep reaching as the darkness grows.\",\"threads\":[\"Your effort causes the change: each attempt costs a little more light. That consequence may matter more than the owl or glasses alone.\"],\"reflection_questions\":[\"Did the owl’s watching feel threatening, calm, judging, or simply attentive?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Owl wearing the dreamer’s glasses\",\"evidence\":\"An owl sat in the dreamer’s room wearing the same glasses they normally use to see.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Reaching makes the room darker\",\"evidence\":\"Each attempt to take back the glasses caused the light to dim further.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Being watched while trying\",\"evidence\":\"The dreamer could feel the owl watching during each attempt.\",\"confidence\":\"explicit\"}]}"
+}

@@ -1,0 +1,92 @@
+{
+  "dream_id": "C09",
+  "dream_title": "The Hotel",
+  "dream_type": "rich",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:27.473Z",
+  "latency_ms": 3479,
+  "usage": {
+    "prompt_tokens": 1532,
+    "completion_tokens": 253,
+    "total_tokens": 1785,
+    "reasoning_tokens": 0,
+    "input_tokens": 1532,
+    "output_tokens": 253
+  },
+  "estimated_cost_usd": 0.001018,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream shows a clear emotional shift from frustration to peace despite physical separation from family. The repeated upward movement suggests a change in effort or perspective rather than progress toward reunion. The feeling of peace at the end stands out as important.",
+    "threads": [
+      "The climb stopping being a fight may reflect acceptance rather than giving up.",
+      "The family staying below while the dreamer goes higher suggests a distance that feels both real and emotional."
+    ],
+    "reflection_questions": [
+      "What does the feeling of peace mean to you in this context of separation?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "frustration",
+        "evidence": "I kept trying to get back to them and got frustrated",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "peace",
+        "evidence": "After a while the climbing stopped feeling like a fight and I felt peaceful",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "hotel staircases",
+        "evidence": "Every hallway or staircase I tried took me higher — never down, never sideways for long",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "family separation",
+        "evidence": "My family stayed on the lower floors. I kept trying to get back to them and got frustrated",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream shows",
+    "dreamer_mentions": 1,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional shift from frustration to peace despite physical separation from family. The repeated upward movement suggests a change in effort or perspective rather than progress toward reunion. The feeling of peace at the end stands out as important.\",\"threads\":[\"The climb stopping being a fight may reflect acceptance rather than giving up.\",\"The family staying below while the dreamer goes higher suggests a distance that feels both real and emotional.\"],\"reflection_questions\":[\"What does the feeling of peace mean to you in this context of separation?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"frustration\",\"evidence\":\"I kept trying to get back to them and got frustrated\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"peace\",\"evidence\":\"After a while the climbing stopped feeling like a fight and I felt peaceful\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"hotel staircases\",\"evidence\":\"Every hallway or staircase I tried took me higher — never down, never sideways for long\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"family separation\",\"evidence\":\"My family stayed on the lower floors. I kept trying to get back to them and got frustrated\",\"confidence\":\"explicit\"}]}"
+}

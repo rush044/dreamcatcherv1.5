@@ -1,0 +1,86 @@
+{
+  "dream_id": "C08",
+  "dream_title": "The Interview",
+  "dream_type": "absurd",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I sat down for a job interview in a glass conference room. Three penguins in suits were interviewing me. They told me that laughing was against the rules, then immediately laughed at a joke one of them made among themselves. When I smiled, they wrote something on a clipboard.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:31.042Z",
+  "latency_ms": 3567,
+  "usage": {
+    "prompt_tokens": 1518,
+    "completion_tokens": 225,
+    "total_tokens": 1743,
+    "reasoning_tokens": 0,
+    "input_tokens": 1518,
+    "output_tokens": 225
+  },
+  "estimated_cost_usd": 0.000967,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream shows a clear emotional tension around rules and reactions, especially about laughter and smiling. There's a sense of unfairness or contradiction in how the penguin interviewers enforce rules while breaking them themselves. Your smile being noted suggests feeling observed or judged in your response.",
+    "threads": [
+      "The contrast between the rule against laughing and the penguins laughing themselves highlights a sense of inconsistency or double standard.",
+      "Your smile eliciting note-taking may point to feeling scrutinized in a situation where personal expression is limited."
+    ],
+    "reflection_questions": [
+      "How did it feel to be watched and judged for smiling when laughter was forbidden?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "feeling judged",
+        "evidence": "smile noted by interviewers after rule against laughing",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "rule violation by interviewers",
+        "evidence": "penguins laughed despite stating laughing was against the rules",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "penguin interviewers",
+        "evidence": "three penguins in suits conducting interview",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream shows",
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional tension around rules and reactions, especially about laughter and smiling. There's a sense of unfairness or contradiction in how the penguin interviewers enforce rules while breaking them themselves. Your smile being noted suggests feeling observed or judged in your response.\",\"threads\":[\"The contrast between the rule against laughing and the penguins laughing themselves highlights a sense of inconsistency or double standard.\",\"Your smile eliciting note-taking may point to feeling scrutinized in a situation where personal expression is limited.\"],\"reflection_questions\":[\"How did it feel to be watched and judged for smiling when laughter was forbidden?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"feeling judged\",\"evidence\":\"smile noted by interviewers after rule against laughing\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"rule violation by interviewers\",\"evidence\":\"penguins laughed despite stating laughing was against the rules\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"penguin interviewers\",\"evidence\":\"three penguins in suits conducting interview\",\"confidence\":\"explicit\"}]}"
+}

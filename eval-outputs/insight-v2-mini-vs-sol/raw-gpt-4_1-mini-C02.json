@@ -1,0 +1,74 @@
+{
+  "dream_id": "C02",
+  "dream_title": "The Spoon",
+  "dream_type": "sparse",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "There was a spoon on a table. Then I woke up.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:08.450Z",
+  "latency_ms": 3506,
+  "usage": {
+    "prompt_tokens": 1475,
+    "completion_tokens": 105,
+    "total_tokens": 1580,
+    "reasoning_tokens": 0,
+    "input_tokens": 1475,
+    "output_tokens": 105
+  },
+  "estimated_cost_usd": 0.000758,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "The dream is very brief and contains no emotions or interactions. The presence of a spoon on a table is clear but isolated, offering little to interpret beyond its simple appearance.",
+    "threads": [],
+    "reflection_questions": [
+      "Was there anything about the spoon or the table that felt unusual or important to you in the dream?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "spoon",
+        "evidence": "There was a spoon on a table.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 2,
+    "thread_quality": 4,
+    "question_usefulness": 2,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening",
+      "filler_question"
+    ],
+    "unsupported_flags": [
+      "sparse_forced_question"
+    ],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream is very brief and contains no emotions or interactions. The presence of a spoon on a table is clear but isolated, offering little to interpret beyond its simple appearance.\",\"threads\":[],\"reflection_questions\":[\"Was there anything about the spoon or the table that felt unusual or important to you in the dream?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"spoon\",\"evidence\":\"There was a spoon on a table.\",\"confidence\":\"explicit\"}]}"
+}

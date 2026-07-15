@@ -1,0 +1,70 @@
+{
+  "dream_id": "C02",
+  "dream_title": "The Spoon",
+  "dream_type": "sparse",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "There was a spoon on a table. Then I woke up.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:23:00.331Z",
+  "latency_ms": 4316,
+  "usage": {
+    "prompt_tokens": 1467,
+    "completion_tokens": 93,
+    "total_tokens": 1560,
+    "reasoning_tokens": 0,
+    "input_tokens": 1467,
+    "output_tokens": 93
+  },
+  "estimated_cost_usd": 0.010125,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "There isn’t enough here to know why the spoon mattered. It may simply be the one image that stayed with you.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "low",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "Spoon on a table",
+        "evidence": "The only remembered image was a spoon resting on a table.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 5,
+    "thread_quality": 4,
+    "question_usefulness": 4,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"There isn’t enough here to know why the spoon mattered. It may simply be the one image that stayed with you.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Spoon on a table\",\"evidence\":\"The only remembered image was a spoon resting on a table.\",\"confidence\":\"explicit\"}]}"
+}

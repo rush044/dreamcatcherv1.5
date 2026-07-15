@@ -1,0 +1,86 @@
+{
+  "dream_id": "C15",
+  "dream_title": "The Party",
+  "dream_type": "social",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:23:24.564Z",
+  "latency_ms": 7362,
+  "usage": {
+    "prompt_tokens": 1493,
+    "completion_tokens": 310,
+    "total_tokens": 1803,
+    "reasoning_tokens": 108,
+    "input_tokens": 1493,
+    "output_tokens": 310
+  },
+  "estimated_cost_usd": 0.016765,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The feeling of exposure is clear, but it was not confirmed by anyone around you. Their ordinary reactions leave an important uncertainty: you may have been safer than you felt, or more alone with the feeling.",
+    "threads": [
+      "The dream centers on waiting for others to notice, rather than on anything they actually said or did."
+    ],
+    "reflection_questions": [
+      "Did nobody reacting make you feel relieved, or even more exposed?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Feeling exposed",
+        "evidence": "The dreamer suddenly felt underdressed or too visible.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Waiting for a reaction",
+        "evidence": "The dreamer waited for someone else to respond to their apparent exposure.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Others remain unconcerned",
+        "evidence": "People kept chatting and did not appear shocked.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The feeling of exposure is clear, but it was not confirmed by anyone around you. Their ordinary reactions leave an important uncertainty: you may have been safer than you felt, or more alone with the feeling.\",\"threads\":[\"The dream centers on waiting for others to notice, rather than on anything they actually said or did.\"],\"reflection_questions\":[\"Did nobody reacting make you feel relieved, or even more exposed?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Feeling exposed\",\"evidence\":\"The dreamer suddenly felt underdressed or too visible.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Waiting for a reaction\",\"evidence\":\"The dreamer waited for someone else to respond to their apparent exposure.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Others remain unconcerned\",\"evidence\":\"People kept chatting and did not appear shocked.\",\"confidence\":\"explicit\"}]}"
+}

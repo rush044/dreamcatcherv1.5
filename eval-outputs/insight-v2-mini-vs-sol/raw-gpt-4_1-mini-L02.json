@@ -1,0 +1,99 @@
+{
+  "dream_id": "L02",
+  "dream_title": "Long bizarre dream",
+  "dream_type": "long_bizarre",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:49.496Z",
+  "latency_ms": 4432,
+  "usage": {
+    "prompt_tokens": 1767,
+    "completion_tokens": 375,
+    "total_tokens": 2142,
+    "reasoning_tokens": 0,
+    "input_tokens": 1767,
+    "output_tokens": 375
+  },
+  "estimated_cost_usd": 0.001307,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The dream carries a playful, surreal feeling with moments of delight, tenderness, and mild responsibility. The dreamer interacts with whimsical, nonsensical elements like office chairs sailing, arbitration bubbles, and weather in kitchen drawers. A fox in a tuxedo guides some actions, and the dreamer’s gentle amusement and tender pause on the parade highlight a shift in engagement with the dream's absurdity.",
+    "threads": [
+      "The dream’s blend of control (conducting with celery, pressing pause) and surrender (accepting the fox’s ticket, going sideways on the escalator) suggests an exploration of how the dreamer relates to unpredictable, playful experiences.",
+      "The fox’s tuxedo and the certification with a comma-shaped stamp add a layer of humorous formality, hinting at the dreamer’s gentle acceptance of nonsense as meaningful in its own way."
+    ],
+    "reflection_questions": [
+      "What feelings come up when you think about pausing the parade and feeling tender toward the nonsense?",
+      "How do you relate to the fox and the idea of certifying formality for celery in waking life?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "amusement",
+        "evidence": "laughing aloud and feeling warmly amused",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "pausing the parade",
+        "evidence": "pressing the red button to pause the chairs mid-sail",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "fox in tuxedo",
+        "evidence": "fox offering ticket and requesting tuxedo certification",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "weather in kitchen drawers",
+        "evidence": "map showing drawers containing weather systems like thunderstorms and sunny afternoons",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "kitchen drawers",
+        "evidence": "map of kitchen drawers linked to weather systems",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 2,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 4,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream carries a playful, surreal feeling with moments of delight, tenderness, and mild responsibility. The dreamer interacts with whimsical, nonsensical elements like office chairs sailing, arbitration bubbles, and weather in kitchen drawers. A fox in a tuxedo guides some actions, and the dreamer’s gentle amusement and tender pause on the parade highlight a shift in engagement with the dream's absurdity.\",\"threads\":[\"The dream’s blend of control (conducting with celery, pressing pause) and surrender (accepting the fox’s ticket, going sideways on the escalator) suggests an exploration of how the dreamer relates to unpredictable, playful experiences.\",\"The fox’s tuxedo and the certification with a comma-shaped stamp add a layer of humorous formality, hinting at the dreamer’s gentle acceptance of nonsense as meaningful in its own way.\"],\"reflection_questions\":[\"What feelings come up when you think about pausing the parade and feeling tender toward the nonsense?\",\"How do you relate to the fox and the idea of certifying formality for celery in waking life?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"amusement\",\"evidence\":\"laughing aloud and feeling warmly amused\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"pausing the parade\",\"evidence\":\"pressing the red button to pause the chairs mid-sail\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"fox in tuxedo\",\"evidence\":\"fox offering ticket and requesting tuxedo certification\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"weather in kitchen drawers\",\"evidence\":\"map showing drawers containing weather systems like thunderstorms and sunny afternoons\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"kitchen drawers\",\"evidence\":\"map of kitchen drawers linked to weather systems\",\"confidence\":\"explicit\"}]}"
+}

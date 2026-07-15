@@ -1,0 +1,86 @@
+{
+  "dream_id": "C10",
+  "dream_title": "The Owl and the Glasses",
+  "dream_type": "symbol_contextual",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:37.112Z",
+  "latency_ms": 3166,
+  "usage": {
+    "prompt_tokens": 1526,
+    "completion_tokens": 237,
+    "total_tokens": 1763,
+    "reasoning_tokens": 0,
+    "input_tokens": 1526,
+    "output_tokens": 237
+  },
+  "estimated_cost_usd": 0.00099,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream shows a clear emotional shift as the room darkens each time you try to take back your glasses, suggesting a tension about losing your usual way of seeing. The owl's watchful presence adds a quiet feeling of being observed or challenged while this happens.",
+    "threads": [
+      "The repeated dimming of light with each attempt to reclaim the glasses highlights a gradual loss or change in clarity or control.",
+      "The owl wearing your glasses and watching you suggests an unusual or unexpected shift in perspective or authority within your familiar space."
+    ],
+    "reflection_questions": [
+      "What feelings did you notice as the room darkened and the owl watched you?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "owl wearing glasses",
+        "evidence": "An owl was sitting in my room wearing my glasses",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "reaching for glasses triggers dimming light",
+        "evidence": "Each time I reached for the glasses, the light dimmed a little more",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "feeling watched",
+        "evidence": "I could feel the owl watching me as I tried",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 3,
+    "plain_language": 3,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": "the dream shows",
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional shift as the room darkens each time you try to take back your glasses, suggesting a tension about losing your usual way of seeing. The owl's watchful presence adds a quiet feeling of being observed or challenged while this happens.\",\"threads\":[\"The repeated dimming of light with each attempt to reclaim the glasses highlights a gradual loss or change in clarity or control.\",\"The owl wearing your glasses and watching you suggests an unusual or unexpected shift in perspective or authority within your familiar space.\"],\"reflection_questions\":[\"What feelings did you notice as the room darkened and the owl watched you?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"owl wearing glasses\",\"evidence\":\"An owl was sitting in my room wearing my glasses\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"reaching for glasses triggers dimming light\",\"evidence\":\"Each time I reached for the glasses, the light dimmed a little more\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"feeling watched\",\"evidence\":\"I could feel the owl watching me as I tried\",\"confidence\":\"explicit\"}]}"
+}

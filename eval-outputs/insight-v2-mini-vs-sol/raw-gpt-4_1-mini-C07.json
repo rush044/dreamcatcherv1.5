@@ -1,0 +1,90 @@
+{
+  "dream_id": "C07",
+  "dream_title": "Fragments",
+  "dream_type": "fragmented",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:40.109Z",
+  "latency_ms": 2994,
+  "usage": {
+    "prompt_tokens": 1487,
+    "completion_tokens": 170,
+    "total_tokens": 1657,
+    "reasoning_tokens": 0,
+    "input_tokens": 1487,
+    "output_tokens": 170
+  },
+  "estimated_cost_usd": 0.000867,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "The dream contains a series of disconnected images without clear emotional cues or interactions. There isn’t enough here to know how these scenes relate or what feelings they carried.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "yellow elevator",
+        "evidence": "A yellow elevator appears early in the dream.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "old school",
+        "evidence": "The dream includes the setting of the old school.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "someone carrying a fish",
+        "evidence": "Someone was carrying a fish in the dream.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "being on a train with no shoes",
+        "evidence": "The dreamer suddenly finds themselves on a train without shoes.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 2,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 5,
+    "thread_quality": 4,
+    "question_usefulness": 4,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening",
+      "complex_language"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": [
+      "emotional cues"
+    ]
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream contains a series of disconnected images without clear emotional cues or interactions. There isn’t enough here to know how these scenes relate or what feelings they carried.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"yellow elevator\",\"evidence\":\"A yellow elevator appears early in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"old school\",\"evidence\":\"The dream includes the setting of the old school.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"someone carrying a fish\",\"evidence\":\"Someone was carrying a fish in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"being on a train with no shoes\",\"evidence\":\"The dreamer suddenly finds themselves on a train without shoes.\",\"confidence\":\"explicit\"}]}"
+}

@@ -1,0 +1,93 @@
+{
+  "dream_id": "L02",
+  "dream_title": "Long bizarre dream",
+  "dream_type": "long_bizarre",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:25:13.452Z",
+  "latency_ms": 17099,
+  "usage": {
+    "prompt_tokens": 1759,
+    "completion_tokens": 491,
+    "total_tokens": 2250,
+    "reasoning_tokens": 156,
+    "input_tokens": 1759,
+    "output_tokens": 491
+  },
+  "estimated_cost_usd": 0.023525,
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The nonsense felt welcoming rather than threatening: you laughed, felt delighted, and woke half-smiling. Even the slight sense of responsibility became part of the play. The brief pause seems important because it let you feel tenderness toward the whole strange performance before choosing to rejoin it.",
+    "threads": [
+      "Rules, tickets, panels, labels, and certification usually organize things here, but the dream keeps turning them into jokes rather than burdens.",
+      "You were not just watching the absurdity; you conducted it, paused it, and signed off on it. Your role was active, willing, and warmly amused."
+    ],
+    "reflection_questions": [
+      "Did the one perfect second of stillness feel more like relief, appreciation, or both?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Delight in absurdity",
+        "evidence": "The dreamer laughed aloud, felt delighted, became tender toward the nonsense, and woke half-smiling.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Playful responsibility",
+        "evidence": "The dreamer felt slightly responsible for the weather and took on roles conducting, pausing, and certifying events.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Pausing to appreciate",
+        "evidence": "Pressing “pause the parade” created one perfect second that changed the dreamer's response to tenderness.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Bureaucracy made playful",
+        "evidence": "Arbitration panels, tickets, catalog numbers, labels, and certification appeared as parts of the dream's humor.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 4,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The nonsense felt welcoming rather than threatening: you laughed, felt delighted, and woke half-smiling. Even the slight sense of responsibility became part of the play. The brief pause seems important because it let you feel tenderness toward the whole strange performance before choosing to rejoin it.\",\"threads\":[\"Rules, tickets, panels, labels, and certification usually organize things here, but the dream keeps turning them into jokes rather than burdens.\",\"You were not just watching the absurdity; you conducted it, paused it, and signed off on it. Your role was active, willing, and warmly amused.\"],\"reflection_questions\":[\"Did the one perfect second of stillness feel more like relief, appreciation, or both?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Delight in absurdity\",\"evidence\":\"The dreamer laughed aloud, felt delighted, became tender toward the nonsense, and woke half-smiling.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Playful responsibility\",\"evidence\":\"The dreamer felt slightly responsible for the weather and took on roles conducting, pausing, and certifying events.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Pausing to appreciate\",\"evidence\":\"Pressing “pause the parade” created one perfect second that changed the dreamer's response to tenderness.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Bureaucracy made playful\",\"evidence\":\"Arbitration panels, tickets, catalog numbers, labels, and certification appeared as parts of the dream's humor.\",\"confidence\":\"suggested\"}]}"
+}

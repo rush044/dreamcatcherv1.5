@@ -1,0 +1,86 @@
+{
+  "dream_id": "L03",
+  "dream_title": "Long dream with many details but little supported meaning",
+  "dream_type": "long_sparse_meaning",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "I walked through a shopping center with glass ceilings and beige tiles. There were three escalators, two kiosks selling phone cases, and a fountain with coins that looked newer than they should. A security guard adjusted a radio. A child dropped a blue mitten and picked it up again. I passed a bakery display of croissants, muffins, and a tray of plain cookies. Somewhere a cleaning machine hummed. Announcements mentioned a lost bag on level two.\n\nI went into a clothing store and touched the sleeves of several jackets without buying anything. The sizes were labeled in a mix of letters and numbers. A mannequin wore a green hat. In the fitting room hallway, the carpet was shorter than in the main aisle. I checked my phone, saw no messages, put it away, and continued. Outside the store, a directory map showed restrooms near the parking elevator. I followed the signs, washed my hands, and looked at myself in the mirror for a few seconds without special feeling.\n\nBack in the corridor, I bought a bottle of water from a machine that returned the correct change. I sat on a bench near a potted plant and watched people walk by with shopping bags. One woman carried a folded umbrella. A teenager wore headphones. A couple argued quietly about where they parked, then kept walking. I finished half the water, capped it, and stood up. Near the exit, automatic doors opened a little late. Outside it was overcast. I walked toward a row of cars without identifying mine, and the dream ended before I found it.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:25:25.536Z",
+  "latency_ms": 12082,
+  "usage": {
+    "prompt_tokens": 1774,
+    "completion_tokens": 561,
+    "total_tokens": 2335,
+    "reasoning_tokens": 353,
+    "input_tokens": 1774,
+    "output_tokens": 561
+  },
+  "estimated_cost_usd": 0.0257,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "The dream preserves many precise, ordinary details, but gives almost no feeling or reaction to guide an interpretation. There isn’t enough here to know whether the unfinished search for the car mattered, or whether it was simply where the dream stopped.",
+    "threads": [],
+    "reflection_questions": [
+      "Did not finding the car bring any feeling as the dream ended?"
+    ],
+    "confidence": "low",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "Shopping center",
+        "evidence": "Nearly the entire dream took place in and around a detailed shopping center.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Moving through ordinary tasks",
+        "evidence": "The dreamer browsed, checked a phone, washed their hands, bought water, rested, and continued walking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Unfinished search for car",
+        "evidence": "The dream ended while the dreamer walked toward the parked cars without identifying their own.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 4,
+    "question_usefulness": 3,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 3,
+    "cap_reasons": [
+      "report_like_opening"
+    ],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream preserves many precise, ordinary details, but gives almost no feeling or reaction to guide an interpretation. There isn’t enough here to know whether the unfinished search for the car mattered, or whether it was simply where the dream stopped.\",\"threads\":[],\"reflection_questions\":[\"Did not finding the car bring any feeling as the dream ended? \"],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Shopping center\",\"evidence\":\"Nearly the entire dream took place in and around a detailed shopping center.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Moving through ordinary tasks\",\"evidence\":\"The dreamer browsed, checked a phone, washed their hands, bought water, rested, and continued walking.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Unfinished search for car\",\"evidence\":\"The dream ended while the dreamer walked toward the parked cars without identifying their own.\",\"confidence\":\"explicit\"}]}"
+}

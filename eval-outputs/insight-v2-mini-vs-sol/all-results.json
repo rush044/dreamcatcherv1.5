@@ -1,0 +1,2479 @@
+[
+  {
+    "dream_id": "C02",
+    "dream_title": "The Spoon",
+    "dream_type": "sparse",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "There was a spoon on a table. Then I woke up.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:08.450Z",
+    "latency_ms": 3506,
+    "usage": {
+      "prompt_tokens": 1475,
+      "completion_tokens": 105,
+      "total_tokens": 1580,
+      "reasoning_tokens": 0,
+      "input_tokens": 1475,
+      "output_tokens": 105
+    },
+    "estimated_cost_usd": 0.000758,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "The dream is very brief and contains no emotions or interactions. The presence of a spoon on a table is clear but isolated, offering little to interpret beyond its simple appearance.",
+      "threads": [],
+      "reflection_questions": [
+        "Was there anything about the spoon or the table that felt unusual or important to you in the dream?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "image",
+          "label": "spoon",
+          "evidence": "There was a spoon on a table.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 2,
+      "thread_quality": 4,
+      "question_usefulness": 2,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening",
+        "filler_question"
+      ],
+      "unsupported_flags": [
+        "sparse_forced_question"
+      ],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream is very brief and contains no emotions or interactions. The presence of a spoon on a table is clear but isolated, offering little to interpret beyond its simple appearance.\",\"threads\":[],\"reflection_questions\":[\"Was there anything about the spoon or the table that felt unusual or important to you in the dream?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"spoon\",\"evidence\":\"There was a spoon on a table.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C04",
+    "dream_title": "The Meeting",
+    "dream_type": "waking_life",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:14.151Z",
+    "latency_ms": 5699,
+    "usage": {
+      "prompt_tokens": 1506,
+      "completion_tokens": 225,
+      "total_tokens": 1731,
+      "reasoning_tokens": 0,
+      "input_tokens": 1506,
+      "output_tokens": 225
+    },
+    "estimated_cost_usd": 0.000962,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream shows concern about being prepared for an important meeting, highlighted by the repeated attempts to charge the phone without success. This may reflect a waking-life worry about readiness or control over details. The lingering thought upon waking suggests the meeting carries significance or pressure.",
+      "threads": [
+        "The dead phone charger and failed attempts at different outlets might reveal a feeling of frustration or a barrier to feeling fully prepared."
+      ],
+      "reflection_questions": [
+        "How do you feel about this meeting in waking life?",
+        "Is there a particular reason the phone charger’s failure stood out in the dream?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "waking_life_link",
+          "label": "Important meeting",
+          "evidence": "The dream centers on preparation for an important meeting tomorrow.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "Concern about readiness",
+          "evidence": "Repeated attempts to charge the phone and waking thoughts about the meeting suggest worry or stress.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Trying different outlets",
+          "evidence": "Dreamer's repeated action of trying outlets to charge the phone.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream shows",
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows concern about being prepared for an important meeting, highlighted by the repeated attempts to charge the phone without success. This may reflect a waking-life worry about readiness or control over details. The lingering thought upon waking suggests the meeting carries significance or pressure.\",\"threads\":[\"The dead phone charger and failed attempts at different outlets might reveal a feeling of frustration or a barrier to feeling fully prepared.\"],\"reflection_questions\":[\"How do you feel about this meeting in waking life?\",\"Is there a particular reason the phone charger’s failure stood out in the dream?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Important meeting\",\"evidence\":\"The dream centers on preparation for an important meeting tomorrow.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Concern about readiness\",\"evidence\":\"Repeated attempts to charge the phone and waking thoughts about the meeting suggest worry or stress.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Trying different outlets\",\"evidence\":\"Dreamer's repeated action of trying outlets to charge the phone.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C05",
+    "dream_title": "The Beach",
+    "dream_type": "positive",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:16.972Z",
+    "latency_ms": 2818,
+    "usage": {
+      "prompt_tokens": 1502,
+      "completion_tokens": 166,
+      "total_tokens": 1668,
+      "reasoning_tokens": 0,
+      "input_tokens": 1502,
+      "output_tokens": 166
+    },
+    "estimated_cost_usd": 0.000866,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream expresses a clear feeling of safety and calmness in a quiet beach setting. There is no sense of worry or vigilance, only peaceful rest until the end. This calm emotion stands out as a central feature.",
+      "threads": [
+        "The feeling of safety without watchfulness suggests a moment of genuine relaxation or trust in the environment."
+      ],
+      "reflection_questions": [
+        "What does feeling completely safe in the dream contrast with in your waking life, if anything?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "place",
+          "label": "quiet beach",
+          "evidence": "lying on a quiet beach in late afternoon light",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "feeling completely safe",
+          "evidence": "I felt completely safe — not watchful, not nervous, just safe",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream expresses",
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream expresses a clear feeling of safety and calmness in a quiet beach setting. There is no sense of worry or vigilance, only peaceful rest until the end. This calm emotion stands out as a central feature.\",\"threads\":[\"The feeling of safety without watchfulness suggests a moment of genuine relaxation or trust in the environment.\"],\"reflection_questions\":[\"What does feeling completely safe in the dream contrast with in your waking life, if anything?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"quiet beach\",\"evidence\":\"lying on a quiet beach in late afternoon light\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"feeling completely safe\",\"evidence\":\"I felt completely safe — not watchful, not nervous, just safe\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C15",
+    "dream_title": "The Party",
+    "dream_type": "social",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:20.110Z",
+    "latency_ms": 3137,
+    "usage": {
+      "prompt_tokens": 1501,
+      "completion_tokens": 216,
+      "total_tokens": 1717,
+      "reasoning_tokens": 0,
+      "input_tokens": 1501,
+      "output_tokens": 216
+    },
+    "estimated_cost_usd": 0.000946,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream centers on a clear feeling of exposure and being out of place, contrasted with others' indifference. This emotional difference stands out and may relate to how the dreamer felt in that social setting.",
+      "threads": [
+        "The feeling of being underdressed or too visible suggests sensitivity to social appearance or acceptance.",
+        "The lack of reaction from others highlights a disconnect between the dreamer's inner state and the external environment."
+      ],
+      "reflection_questions": [
+        "How did it feel to wait for someone to notice your discomfort and be met with silence?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "feeling exposed",
+          "evidence": "I was at a party and suddenly felt exposed — underdressed or somehow too visible",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "waiting for reaction",
+          "evidence": "I waited for someone to react",
+          "confidence": "explicit"
+        },
+        {
+          "type": "waking_life_link",
+          "label": "social interaction discomfort",
+          "evidence": "feeling exposed and underdressed at a party",
+          "confidence": "suggested"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream centers on",
+      "dreamer_mentions": 2,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream centers on a clear feeling of exposure and being out of place, contrasted with others' indifference. This emotional difference stands out and may relate to how the dreamer felt in that social setting.\",\"threads\":[\"The feeling of being underdressed or too visible suggests sensitivity to social appearance or acceptance.\",\"The lack of reaction from others highlights a disconnect between the dreamer's inner state and the external environment.\"],\"reflection_questions\":[\"How did it feel to wait for someone to notice your discomfort and be met with silence?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"feeling exposed\",\"evidence\":\"I was at a party and suddenly felt exposed — underdressed or somehow too visible\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"waiting for reaction\",\"evidence\":\"I waited for someone to react\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"social interaction discomfort\",\"evidence\":\"feeling exposed and underdressed at a party\",\"confidence\":\"suggested\"}]}"
+  },
+  {
+    "dream_id": "C14",
+    "dream_title": "My Friend",
+    "dream_type": "sensitive_sexual",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I had a sexual dream involving a friend. During the dream it felt natural, as if nothing about it was strange. After I woke up I felt embarrassed. I am writing it down because I remembered it, not because I want to treat it as a waking plan.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:23.992Z",
+    "latency_ms": 3880,
+    "usage": {
+      "prompt_tokens": 1516,
+      "completion_tokens": 238,
+      "total_tokens": 1754,
+      "reasoning_tokens": 0,
+      "input_tokens": 1516,
+      "output_tokens": 238
+    },
+    "estimated_cost_usd": 0.000987,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream clearly includes a shift in feeling—from naturalness during the dream to embarrassment upon waking. This change in emotion stands out and is central to the dream's impact. The dreamer also explicitly clarifies the dream is not a waking intention, which shapes how the experience is held.",
+      "threads": [
+        "The emotional shift from comfort to embarrassment may highlight differences between how the dream felt and how the dreamer feels upon waking.",
+        "The mention of a friend in a sexual context combined with the natural feeling in the dream suggests the dream did not carry overt conflict or surprise within itself."
+      ],
+      "reflection_questions": [
+        "How does the feeling of naturalness in the dream compare to your usual feelings about this friend?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "embarrassment upon waking",
+          "evidence": "felt embarrassed after waking from a sexual dream",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "natural feeling during dream",
+          "evidence": "felt natural, as if nothing was strange during the dream",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "friend involved",
+          "evidence": "sexual dream involving a friend",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 2,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream clearly includes a shift in feeling—from naturalness during the dream to embarrassment upon waking. This change in emotion stands out and is central to the dream's impact. The dreamer also explicitly clarifies the dream is not a waking intention, which shapes how the experience is held.\",\"threads\":[\"The emotional shift from comfort to embarrassment may highlight differences between how the dream felt and how the dreamer feels upon waking.\",\"The mention of a friend in a sexual context combined with the natural feeling in the dream suggests the dream did not carry overt conflict or surprise within itself.\"],\"reflection_questions\":[\"How does the feeling of naturalness in the dream compare to your usual feelings about this friend?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"embarrassment upon waking\",\"evidence\":\"felt embarrassed after waking from a sexual dream\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"natural feeling during dream\",\"evidence\":\"felt natural, as if nothing was strange during the dream\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"friend involved\",\"evidence\":\"sexual dream involving a friend\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C09",
+    "dream_title": "The Hotel",
+    "dream_type": "rich",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:27.473Z",
+    "latency_ms": 3479,
+    "usage": {
+      "prompt_tokens": 1532,
+      "completion_tokens": 253,
+      "total_tokens": 1785,
+      "reasoning_tokens": 0,
+      "input_tokens": 1532,
+      "output_tokens": 253
+    },
+    "estimated_cost_usd": 0.001018,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream shows a clear emotional shift from frustration to peace despite physical separation from family. The repeated upward movement suggests a change in effort or perspective rather than progress toward reunion. The feeling of peace at the end stands out as important.",
+      "threads": [
+        "The climb stopping being a fight may reflect acceptance rather than giving up.",
+        "The family staying below while the dreamer goes higher suggests a distance that feels both real and emotional."
+      ],
+      "reflection_questions": [
+        "What does the feeling of peace mean to you in this context of separation?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "frustration",
+          "evidence": "I kept trying to get back to them and got frustrated",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "peace",
+          "evidence": "After a while the climbing stopped feeling like a fight and I felt peaceful",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "hotel staircases",
+          "evidence": "Every hallway or staircase I tried took me higher — never down, never sideways for long",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "family separation",
+          "evidence": "My family stayed on the lower floors. I kept trying to get back to them and got frustrated",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream shows",
+      "dreamer_mentions": 1,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional shift from frustration to peace despite physical separation from family. The repeated upward movement suggests a change in effort or perspective rather than progress toward reunion. The feeling of peace at the end stands out as important.\",\"threads\":[\"The climb stopping being a fight may reflect acceptance rather than giving up.\",\"The family staying below while the dreamer goes higher suggests a distance that feels both real and emotional.\"],\"reflection_questions\":[\"What does the feeling of peace mean to you in this context of separation?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"frustration\",\"evidence\":\"I kept trying to get back to them and got frustrated\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"peace\",\"evidence\":\"After a while the climbing stopped feeling like a fight and I felt peaceful\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"hotel staircases\",\"evidence\":\"Every hallway or staircase I tried took me higher — never down, never sideways for long\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"family separation\",\"evidence\":\"My family stayed on the lower floors. I kept trying to get back to them and got frustrated\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C08",
+    "dream_title": "The Interview",
+    "dream_type": "absurd",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I sat down for a job interview in a glass conference room. Three penguins in suits were interviewing me. They told me that laughing was against the rules, then immediately laughed at a joke one of them made among themselves. When I smiled, they wrote something on a clipboard.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:31.042Z",
+    "latency_ms": 3567,
+    "usage": {
+      "prompt_tokens": 1518,
+      "completion_tokens": 225,
+      "total_tokens": 1743,
+      "reasoning_tokens": 0,
+      "input_tokens": 1518,
+      "output_tokens": 225
+    },
+    "estimated_cost_usd": 0.000967,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream shows a clear emotional tension around rules and reactions, especially about laughter and smiling. There's a sense of unfairness or contradiction in how the penguin interviewers enforce rules while breaking them themselves. Your smile being noted suggests feeling observed or judged in your response.",
+      "threads": [
+        "The contrast between the rule against laughing and the penguins laughing themselves highlights a sense of inconsistency or double standard.",
+        "Your smile eliciting note-taking may point to feeling scrutinized in a situation where personal expression is limited."
+      ],
+      "reflection_questions": [
+        "How did it feel to be watched and judged for smiling when laughter was forbidden?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "feeling judged",
+          "evidence": "smile noted by interviewers after rule against laughing",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "rule violation by interviewers",
+          "evidence": "penguins laughed despite stating laughing was against the rules",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "penguin interviewers",
+          "evidence": "three penguins in suits conducting interview",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream shows",
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional tension around rules and reactions, especially about laughter and smiling. There's a sense of unfairness or contradiction in how the penguin interviewers enforce rules while breaking them themselves. Your smile being noted suggests feeling observed or judged in your response.\",\"threads\":[\"The contrast between the rule against laughing and the penguins laughing themselves highlights a sense of inconsistency or double standard.\",\"Your smile eliciting note-taking may point to feeling scrutinized in a situation where personal expression is limited.\"],\"reflection_questions\":[\"How did it feel to be watched and judged for smiling when laughter was forbidden?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"feeling judged\",\"evidence\":\"smile noted by interviewers after rule against laughing\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"rule violation by interviewers\",\"evidence\":\"penguins laughed despite stating laughing was against the rules\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"penguin interviewers\",\"evidence\":\"three penguins in suits conducting interview\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C12",
+    "dream_title": "The Knife",
+    "dream_type": "sensitive_threat",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:33.944Z",
+    "latency_ms": 2901,
+    "usage": {
+      "prompt_tokens": 1504,
+      "completion_tokens": 207,
+      "total_tokens": 1711,
+      "reasoning_tokens": 0,
+      "input_tokens": 1504,
+      "output_tokens": 207
+    },
+    "estimated_cost_usd": 0.000933,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream carries a clear feeling of threat from a child who knows a private childhood nickname, which makes the danger feel very real. The dream ends abruptly with waking, leaving the outcome unknown.",
+      "threads": [
+        "The use of a private childhood nickname suggests a link to past or early life experiences affecting the feeling of threat.",
+        "The child holding a knife introduces a serious, unexpected element that contrasts with the usual innocence associated with children."
+      ],
+      "reflection_questions": [
+        "How did it feel to hear that private nickname in this threatening context?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "threat",
+          "evidence": "The threat felt very real in the dream.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "child",
+          "evidence": "A child was holding a knife and using a private nickname.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "waking_life_link",
+          "label": "private childhood nickname",
+          "evidence": "The child used a private nickname known only from childhood.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream carries a clear feeling of threat from a child who knows a private childhood nickname, which makes the danger feel very real. The dream ends abruptly with waking, leaving the outcome unknown.\",\"threads\":[\"The use of a private childhood nickname suggests a link to past or early life experiences affecting the feeling of threat.\",\"The child holding a knife introduces a serious, unexpected element that contrasts with the usual innocence associated with children.\"],\"reflection_questions\":[\"How did it feel to hear that private nickname in this threatening context?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"threat\",\"evidence\":\"The threat felt very real in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"child\",\"evidence\":\"A child was holding a knife and using a private nickname.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"private childhood nickname\",\"evidence\":\"The child used a private nickname known only from childhood.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C10",
+    "dream_title": "The Owl and the Glasses",
+    "dream_type": "symbol_contextual",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:37.112Z",
+    "latency_ms": 3166,
+    "usage": {
+      "prompt_tokens": 1526,
+      "completion_tokens": 237,
+      "total_tokens": 1763,
+      "reasoning_tokens": 0,
+      "input_tokens": 1526,
+      "output_tokens": 237
+    },
+    "estimated_cost_usd": 0.00099,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream shows a clear emotional shift as the room darkens each time you try to take back your glasses, suggesting a tension about losing your usual way of seeing. The owl's watchful presence adds a quiet feeling of being observed or challenged while this happens.",
+      "threads": [
+        "The repeated dimming of light with each attempt to reclaim the glasses highlights a gradual loss or change in clarity or control.",
+        "The owl wearing your glasses and watching you suggests an unusual or unexpected shift in perspective or authority within your familiar space."
+      ],
+      "reflection_questions": [
+        "What feelings did you notice as the room darkened and the owl watched you?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "image",
+          "label": "owl wearing glasses",
+          "evidence": "An owl was sitting in my room wearing my glasses",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "reaching for glasses triggers dimming light",
+          "evidence": "Each time I reached for the glasses, the light dimmed a little more",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "feeling watched",
+          "evidence": "I could feel the owl watching me as I tried",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 3,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": "the dream shows",
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream shows a clear emotional shift as the room darkens each time you try to take back your glasses, suggesting a tension about losing your usual way of seeing. The owl's watchful presence adds a quiet feeling of being observed or challenged while this happens.\",\"threads\":[\"The repeated dimming of light with each attempt to reclaim the glasses highlights a gradual loss or change in clarity or control.\",\"The owl wearing your glasses and watching you suggests an unusual or unexpected shift in perspective or authority within your familiar space.\"],\"reflection_questions\":[\"What feelings did you notice as the room darkened and the owl watched you?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"owl wearing glasses\",\"evidence\":\"An owl was sitting in my room wearing my glasses\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"reaching for glasses triggers dimming light\",\"evidence\":\"Each time I reached for the glasses, the light dimmed a little more\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"feeling watched\",\"evidence\":\"I could feel the owl watching me as I tried\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C07",
+    "dream_title": "Fragments",
+    "dream_type": "fragmented",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:40.109Z",
+    "latency_ms": 2994,
+    "usage": {
+      "prompt_tokens": 1487,
+      "completion_tokens": 170,
+      "total_tokens": 1657,
+      "reasoning_tokens": 0,
+      "input_tokens": 1487,
+      "output_tokens": 170
+    },
+    "estimated_cost_usd": 0.000867,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "The dream contains a series of disconnected images without clear emotional cues or interactions. There isn’t enough here to know how these scenes relate or what feelings they carried.",
+      "threads": [],
+      "reflection_questions": [],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "image",
+          "label": "yellow elevator",
+          "evidence": "A yellow elevator appears early in the dream.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "old school",
+          "evidence": "The dream includes the setting of the old school.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "someone carrying a fish",
+          "evidence": "Someone was carrying a fish in the dream.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "being on a train with no shoes",
+          "evidence": "The dreamer suddenly finds themselves on a train without shoes.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 2,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 5,
+      "thread_quality": 4,
+      "question_usefulness": 4,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening",
+        "complex_language"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": [
+        "emotional cues"
+      ]
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream contains a series of disconnected images without clear emotional cues or interactions. There isn’t enough here to know how these scenes relate or what feelings they carried.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"yellow elevator\",\"evidence\":\"A yellow elevator appears early in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"old school\",\"evidence\":\"The dream includes the setting of the old school.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"someone carrying a fish\",\"evidence\":\"Someone was carrying a fish in the dream.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"being on a train with no shoes\",\"evidence\":\"The dreamer suddenly finds themselves on a train without shoes.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L01",
+    "dream_title": "Long coherent emotional dream",
+    "dream_type": "long_emotional",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "I arrived at my old apartment building in the rain, though the lobby carpet was somehow already dry. The elevator buttons were the wrong colors, and a neighbor I recognized from years ago waved without speaking. On the third floor I found my former roommate organizing cardboard boxes labeled with seasons instead of rooms. She handed me a scarf I had lost in college and smiled as if this were ordinary. I felt glad to see her, then suddenly restless because I could hear music playing behind a closed door down the hall.\n\nWhen I opened that door, the room was a kitchen from my childhood home, rearranged slightly: the table faced the window, and the fruit bowl was filled with keys. My younger cousin sat there drawing circles on a napkin. He asked if I wanted tea. I sat down and said yes, and for a moment I felt calm. Then the kettle whistled and he stood up too quickly, knocking over a stack of postcards with pictures of places I have never visited. The calm drained out and I felt embarrassed for no clear reason, as if I had interrupted something private.\n\nOutside the window, people walked past carrying grocery bags and umbrellas with tiny painted moons. None of them looked up. My cousin put a mug in front of me and said, “You can stay if you want,” but his voice sounded farther away than his face. I wanted to answer kindly and also wanted to leave. I chose to leave. In the hallway the scarf felt heavier, and by the time I reached the lobby I was almost crying from a mix of affection and unease. I woke while still holding the scarf in my mind.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:45.063Z",
+    "latency_ms": 4953,
+    "usage": {
+      "prompt_tokens": 1792,
+      "completion_tokens": 386,
+      "total_tokens": 2178,
+      "reasoning_tokens": 0,
+      "input_tokens": 1792,
+      "output_tokens": 386
+    },
+    "estimated_cost_usd": 0.001334,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "This dream moves through emotions of gladness, restlessness, calm, embarrassment, affection, and unease. Familiar people and places appear with subtle changes that create a feeling of dissonance, especially the roommate with the scarf and the cousin in a childhood kitchen rearranged with unusual details. The scarf's weight and the shifting closeness of the cousin’s voice highlight complex feelings about connection and distance.",
+      "threads": [
+        "The scarf's presence and changing weight suggest a link to past memories and emotional weight carried over time.",
+        "The cousin's invitation to stay contrasts with the distance in his voice, reflecting mixed feelings about belonging or leaving.",
+        "The rearranged childhood kitchen and the unexpected fruit bowl of keys create a setting that is both familiar and subtly unsettling, influencing the dreamer's emotional shifts."
+      ],
+      "reflection_questions": [
+        "How do the feelings of affection and unease balance in your waking life when you think about past relationships or places?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "mixed affection and unease",
+          "evidence": "dreamer felt glad, calm, embarrassed, affectionate, and uneasy at different points",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "former roommate",
+          "evidence": "roommate handing a lost scarf and smiling",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "younger cousin",
+          "evidence": "cousin offering tea and inviting the dreamer to stay",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "old apartment building and childhood kitchen",
+          "evidence": "dreamer arrives at old apartment with altered details and finds a childhood kitchen rearranged",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "scarf",
+          "evidence": "scarf lost in college is handed back and later feels heavier",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "fruit bowl filled with keys",
+          "evidence": "unusual detail in childhood kitchen",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 1,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"This dream moves through emotions of gladness, restlessness, calm, embarrassment, affection, and unease. Familiar people and places appear with subtle changes that create a feeling of dissonance, especially the roommate with the scarf and the cousin in a childhood kitchen rearranged with unusual details. The scarf's weight and the shifting closeness of the cousin’s voice highlight complex feelings about connection and distance.\",\"threads\":[\"The scarf's presence and changing weight suggest a link to past memories and emotional weight carried over time.\",\"The cousin's invitation to stay contrasts with the distance in his voice, reflecting mixed feelings about belonging or leaving.\",\"The rearranged childhood kitchen and the unexpected fruit bowl of keys create a setting that is both familiar and subtly unsettling, influencing the dreamer's emotional shifts.\"],\"reflection_questions\":[\"How do the feelings of affection and unease balance in your waking life when you think about past relationships or places?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"mixed affection and unease\",\"evidence\":\"dreamer felt glad, calm, embarrassed, affectionate, and uneasy at different points\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"former roommate\",\"evidence\":\"roommate handing a lost scarf and smiling\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"younger cousin\",\"evidence\":\"cousin offering tea and inviting the dreamer to stay\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"old apartment building and childhood kitchen\",\"evidence\":\"dreamer arrives at old apartment with altered details and finds a childhood kitchen rearranged\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"scarf\",\"evidence\":\"scarf lost in college is handed back and later feels heavier\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"fruit bowl filled with keys\",\"evidence\":\"unusual detail in childhood kitchen\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L02",
+    "dream_title": "Long bizarre dream",
+    "dream_type": "long_bizarre",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:49.496Z",
+    "latency_ms": 4432,
+    "usage": {
+      "prompt_tokens": 1767,
+      "completion_tokens": 375,
+      "total_tokens": 2142,
+      "reasoning_tokens": 0,
+      "input_tokens": 1767,
+      "output_tokens": 375
+    },
+    "estimated_cost_usd": 0.001307,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "The dream carries a playful, surreal feeling with moments of delight, tenderness, and mild responsibility. The dreamer interacts with whimsical, nonsensical elements like office chairs sailing, arbitration bubbles, and weather in kitchen drawers. A fox in a tuxedo guides some actions, and the dreamer’s gentle amusement and tender pause on the parade highlight a shift in engagement with the dream's absurdity.",
+      "threads": [
+        "The dream’s blend of control (conducting with celery, pressing pause) and surrender (accepting the fox’s ticket, going sideways on the escalator) suggests an exploration of how the dreamer relates to unpredictable, playful experiences.",
+        "The fox’s tuxedo and the certification with a comma-shaped stamp add a layer of humorous formality, hinting at the dreamer’s gentle acceptance of nonsense as meaningful in its own way."
+      ],
+      "reflection_questions": [
+        "What feelings come up when you think about pausing the parade and feeling tender toward the nonsense?",
+        "How do you relate to the fox and the idea of certifying formality for celery in waking life?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "amusement",
+          "evidence": "laughing aloud and feeling warmly amused",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "pausing the parade",
+          "evidence": "pressing the red button to pause the chairs mid-sail",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "fox in tuxedo",
+          "evidence": "fox offering ticket and requesting tuxedo certification",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "weather in kitchen drawers",
+          "evidence": "map showing drawers containing weather systems like thunderstorms and sunny afternoons",
+          "confidence": "explicit"
+        },
+        {
+          "type": "waking_life_link",
+          "label": "kitchen drawers",
+          "evidence": "map of kitchen drawers linked to weather systems",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 4,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream carries a playful, surreal feeling with moments of delight, tenderness, and mild responsibility. The dreamer interacts with whimsical, nonsensical elements like office chairs sailing, arbitration bubbles, and weather in kitchen drawers. A fox in a tuxedo guides some actions, and the dreamer’s gentle amusement and tender pause on the parade highlight a shift in engagement with the dream's absurdity.\",\"threads\":[\"The dream’s blend of control (conducting with celery, pressing pause) and surrender (accepting the fox’s ticket, going sideways on the escalator) suggests an exploration of how the dreamer relates to unpredictable, playful experiences.\",\"The fox’s tuxedo and the certification with a comma-shaped stamp add a layer of humorous formality, hinting at the dreamer’s gentle acceptance of nonsense as meaningful in its own way.\"],\"reflection_questions\":[\"What feelings come up when you think about pausing the parade and feeling tender toward the nonsense?\",\"How do you relate to the fox and the idea of certifying formality for celery in waking life?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"amusement\",\"evidence\":\"laughing aloud and feeling warmly amused\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"pausing the parade\",\"evidence\":\"pressing the red button to pause the chairs mid-sail\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"fox in tuxedo\",\"evidence\":\"fox offering ticket and requesting tuxedo certification\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"weather in kitchen drawers\",\"evidence\":\"map showing drawers containing weather systems like thunderstorms and sunny afternoons\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"kitchen drawers\",\"evidence\":\"map of kitchen drawers linked to weather systems\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L03",
+    "dream_title": "Long dream with many details but little supported meaning",
+    "dream_type": "long_sparse_meaning",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "I walked through a shopping center with glass ceilings and beige tiles. There were three escalators, two kiosks selling phone cases, and a fountain with coins that looked newer than they should. A security guard adjusted a radio. A child dropped a blue mitten and picked it up again. I passed a bakery display of croissants, muffins, and a tray of plain cookies. Somewhere a cleaning machine hummed. Announcements mentioned a lost bag on level two.\n\nI went into a clothing store and touched the sleeves of several jackets without buying anything. The sizes were labeled in a mix of letters and numbers. A mannequin wore a green hat. In the fitting room hallway, the carpet was shorter than in the main aisle. I checked my phone, saw no messages, put it away, and continued. Outside the store, a directory map showed restrooms near the parking elevator. I followed the signs, washed my hands, and looked at myself in the mirror for a few seconds without special feeling.\n\nBack in the corridor, I bought a bottle of water from a machine that returned the correct change. I sat on a bench near a potted plant and watched people walk by with shopping bags. One woman carried a folded umbrella. A teenager wore headphones. A couple argued quietly about where they parked, then kept walking. I finished half the water, capped it, and stood up. Near the exit, automatic doors opened a little late. Outside it was overcast. I walked toward a row of cars without identifying mine, and the dream ended before I found it.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:51.707Z",
+    "latency_ms": 2209,
+    "usage": {
+      "prompt_tokens": 1782,
+      "completion_tokens": 163,
+      "total_tokens": 1945,
+      "reasoning_tokens": 0,
+      "input_tokens": 1782,
+      "output_tokens": 163
+    },
+    "estimated_cost_usd": 0.000974,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "This dream offers a detailed setting but no clear emotional tone or significant interactions to highlight. The observations are mostly neutral and descriptive, without notable feelings or changes.",
+      "threads": [],
+      "reflection_questions": [],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "place",
+          "label": "shopping center",
+          "evidence": "The entire dream takes place in a shopping center with various stores and features.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "checking phone with no messages",
+          "evidence": "The dreamer checks their phone, sees no messages, and puts it away.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "buying water and sitting",
+          "evidence": "The dreamer buys a bottle of water, drinks half, then sits on a bench observing others.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 5,
+      "thread_quality": 4,
+      "question_usefulness": 4,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"This dream offers a detailed setting but no clear emotional tone or significant interactions to highlight. The observations are mostly neutral and descriptive, without notable feelings or changes.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"shopping center\",\"evidence\":\"The entire dream takes place in a shopping center with various stores and features.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"checking phone with no messages\",\"evidence\":\"The dreamer checks their phone, sees no messages, and puts it away.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"buying water and sitting\",\"evidence\":\"The dreamer buys a bottle of water, drinks half, then sits on a bench observing others.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L04",
+    "dream_title": "Long relationship dream with contradictory emotions",
+    "dream_type": "long_relationship",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+    "model": "gpt-4.1-mini",
+    "completion_model": "gpt-4.1-mini-2025-04-14",
+    "api": "chat.completions",
+    "request_settings": {
+      "temperature": 0.7,
+      "response_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:22:56.014Z",
+    "latency_ms": 4306,
+    "usage": {
+      "prompt_tokens": 1796,
+      "completion_tokens": 349,
+      "total_tokens": 2145,
+      "reasoning_tokens": 0,
+      "input_tokens": 1796,
+      "output_tokens": 349
+    },
+    "estimated_cost_usd": 0.001277,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "The dream carries clear emotions of warmth, companionship, pride, and sadness intertwined in the interaction with the sister. The changing emotions between the two, especially the simultaneous feelings of happiness and grief, stand out. The shared moments of setting the table and the quiet time on the dock highlight a complex, tender relationship. The dream ends with unresolved feelings expressed quietly but felt deeply.",
+      "threads": [
+        "The simultaneous expression of pride and sadness in the dreamer’s face and the sister’s shifting reactions show a moment of emotional complexity and mutual understanding.",
+        "The act of setting a table for relatives who never arrive, yet having the table mysteriously set, suggests a tension between preparation and absence, presence and emptiness.",
+        "The final gesture of the sister placing her hand on the dreamer’s shoulder evokes both protection and abandonment, capturing the bittersweet nature of transition."
+      ],
+      "reflection_questions": [
+        "How do you feel about the balance of closeness and distance in your relationship with your sister right now?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "contradictory emotions",
+          "evidence": "Feeling both happiness and sharp sadness simultaneously about sister's news",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "sibling relationship complexity",
+          "evidence": "Sharing memories, mixed feelings of protection and abandonment with older sister",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "summer house near lake",
+          "evidence": "Setting takes place in a shared summer house by a lake with sensory details",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "setting table for absent relatives",
+          "evidence": "Both dreamer and sister prepare a table for relatives who might not arrive, but table ends up set",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 2,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 2,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening",
+        "complex_language"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 2,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": [
+        "tension between"
+      ]
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream carries clear emotions of warmth, companionship, pride, and sadness intertwined in the interaction with the sister. The changing emotions between the two, especially the simultaneous feelings of happiness and grief, stand out. The shared moments of setting the table and the quiet time on the dock highlight a complex, tender relationship. The dream ends with unresolved feelings expressed quietly but felt deeply.\",\"threads\":[\"The simultaneous expression of pride and sadness in the dreamer’s face and the sister’s shifting reactions show a moment of emotional complexity and mutual understanding.\",\"The act of setting a table for relatives who never arrive, yet having the table mysteriously set, suggests a tension between preparation and absence, presence and emptiness.\",\"The final gesture of the sister placing her hand on the dreamer’s shoulder evokes both protection and abandonment, capturing the bittersweet nature of transition.\"],\"reflection_questions\":[\"How do you feel about the balance of closeness and distance in your relationship with your sister right now?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"contradictory emotions\",\"evidence\":\"Feeling both happiness and sharp sadness simultaneously about sister's news\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"sibling relationship complexity\",\"evidence\":\"Sharing memories, mixed feelings of protection and abandonment with older sister\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"summer house near lake\",\"evidence\":\"Setting takes place in a shared summer house by a lake with sensory details\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"setting table for absent relatives\",\"evidence\":\"Both dreamer and sister prepare a table for relatives who might not arrive, but table ends up set\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C02",
+    "dream_title": "The Spoon",
+    "dream_type": "sparse",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "There was a spoon on a table. Then I woke up.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:00.331Z",
+    "latency_ms": 4316,
+    "usage": {
+      "prompt_tokens": 1467,
+      "completion_tokens": 93,
+      "total_tokens": 1560,
+      "reasoning_tokens": 0,
+      "input_tokens": 1467,
+      "output_tokens": 93
+    },
+    "estimated_cost_usd": 0.010125,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "There isn’t enough here to know why the spoon mattered. It may simply be the one image that stayed with you.",
+      "threads": [],
+      "reflection_questions": [],
+      "confidence": "low",
+      "pattern_candidates": [
+        {
+          "type": "image",
+          "label": "Spoon on a table",
+          "evidence": "The only remembered image was a spoon resting on a table.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 5,
+      "thread_quality": 4,
+      "question_usefulness": 4,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"There isn’t enough here to know why the spoon mattered. It may simply be the one image that stayed with you.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Spoon on a table\",\"evidence\":\"The only remembered image was a spoon resting on a table.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C04",
+    "dream_title": "The Meeting",
+    "dream_type": "waking_life",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:12.368Z",
+    "latency_ms": 12036,
+    "usage": {
+      "prompt_tokens": 1498,
+      "completion_tokens": 479,
+      "total_tokens": 1977,
+      "reasoning_tokens": 247,
+      "input_tokens": 1498,
+      "output_tokens": 479
+    },
+    "estimated_cost_usd": 0.02186,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The dream stays close to tomorrow’s real meeting, so it may simply be carrying your preparation into sleep rather than pointing to a deeper meaning. The failed outlets add a sense of being unable to get one needed thing ready, and the meeting remained on your mind when you woke.",
+      "threads": [
+        "The charger may matter less as an object than as something necessary that would not cooperate before an important event."
+      ],
+      "reflection_questions": [
+        "Is there any practical part of the meeting preparation you still want to check?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "waking_life_link",
+          "label": "Upcoming important meeting",
+          "evidence": "The dreamer has an important meeting tomorrow and woke still thinking about it.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Repeated attempts to prepare",
+          "evidence": "The dreamer packed a bag and tried several outlets to make the charger work.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Dead phone charger",
+          "evidence": "The charger was dead and could not be restored through different outlets.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream stays close to tomorrow’s real meeting, so it may simply be carrying your preparation into sleep rather than pointing to a deeper meaning. The failed outlets add a sense of being unable to get one needed thing ready, and the meeting remained on your mind when you woke.\",\"threads\":[\"The charger may matter less as an object than as something necessary that would not cooperate before an important event.\"],\"reflection_questions\":[\"Is there any practical part of the meeting preparation you still want to check?\"] ,\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Upcoming important meeting\",\"evidence\":\"The dreamer has an important meeting tomorrow and woke still thinking about it.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to prepare\",\"evidence\":\"The dreamer packed a bag and tried several outlets to make the charger work.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Dead phone charger\",\"evidence\":\"The charger was dead and could not be restored through different outlets.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C05",
+    "dream_title": "The Beach",
+    "dream_type": "positive",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:17.201Z",
+    "latency_ms": 4831,
+    "usage": {
+      "prompt_tokens": 1494,
+      "completion_tokens": 193,
+      "total_tokens": 1687,
+      "reasoning_tokens": 0,
+      "input_tokens": 1494,
+      "output_tokens": 193
+    },
+    "estimated_cost_usd": 0.01326,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The clearest part is the complete sense of safety. The quiet beach and calm water held that feeling steady rather than changing or interrupting it.",
+      "threads": [
+        "The dream makes room for rest without requiring you to stay alert.",
+        "Nothing arrives to disturb the calm; safety is the whole experience, not just a brief moment."
+      ],
+      "reflection_questions": [],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "complete safety",
+          "evidence": "The dreamer explicitly felt completely safe, not watchful or nervous.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "quiet beach",
+          "evidence": "The dream took place on a quiet beach in late afternoon light beside calm water.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "remaining at rest",
+          "evidence": "The dreamer lay on the beach and stayed there until the dream ended.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 4,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The clearest part is the complete sense of safety. The quiet beach and calm water held that feeling steady rather than changing or interrupting it.\",\"threads\":[\"The dream makes room for rest without requiring you to stay alert.\",\"Nothing arrives to disturb the calm; safety is the whole experience, not just a brief moment.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"complete safety\",\"evidence\":\"The dreamer explicitly felt completely safe, not watchful or nervous.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"quiet beach\",\"evidence\":\"The dream took place on a quiet beach in late afternoon light beside calm water.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"remaining at rest\",\"evidence\":\"The dreamer lay on the beach and stayed there until the dream ended.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C15",
+    "dream_title": "The Party",
+    "dream_type": "social",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was at a party and suddenly felt exposed — underdressed or somehow too visible. I waited for someone to react. Nobody else seemed shocked. People kept chatting as if everything was ordinary.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:24.564Z",
+    "latency_ms": 7362,
+    "usage": {
+      "prompt_tokens": 1493,
+      "completion_tokens": 310,
+      "total_tokens": 1803,
+      "reasoning_tokens": 108,
+      "input_tokens": 1493,
+      "output_tokens": 310
+    },
+    "estimated_cost_usd": 0.016765,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The feeling of exposure is clear, but it was not confirmed by anyone around you. Their ordinary reactions leave an important uncertainty: you may have been safer than you felt, or more alone with the feeling.",
+      "threads": [
+        "The dream centers on waiting for others to notice, rather than on anything they actually said or did."
+      ],
+      "reflection_questions": [
+        "Did nobody reacting make you feel relieved, or even more exposed?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Feeling exposed",
+          "evidence": "The dreamer suddenly felt underdressed or too visible.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Waiting for a reaction",
+          "evidence": "The dreamer waited for someone else to respond to their apparent exposure.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Others remain unconcerned",
+          "evidence": "People kept chatting and did not appear shocked.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The feeling of exposure is clear, but it was not confirmed by anyone around you. Their ordinary reactions leave an important uncertainty: you may have been safer than you felt, or more alone with the feeling.\",\"threads\":[\"The dream centers on waiting for others to notice, rather than on anything they actually said or did.\"],\"reflection_questions\":[\"Did nobody reacting make you feel relieved, or even more exposed?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Feeling exposed\",\"evidence\":\"The dreamer suddenly felt underdressed or too visible.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Waiting for a reaction\",\"evidence\":\"The dreamer waited for someone else to respond to their apparent exposure.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Others remain unconcerned\",\"evidence\":\"People kept chatting and did not appear shocked.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C14",
+    "dream_title": "My Friend",
+    "dream_type": "sensitive_sexual",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I had a sexual dream involving a friend. During the dream it felt natural, as if nothing about it was strange. After I woke up I felt embarrassed. I am writing it down because I remembered it, not because I want to treat it as a waking plan.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:38.746Z",
+    "latency_ms": 14180,
+    "usage": {
+      "prompt_tokens": 1508,
+      "completion_tokens": 636,
+      "total_tokens": 2144,
+      "reasoning_tokens": 390,
+      "input_tokens": 1508,
+      "output_tokens": 636
+    },
+    "estimated_cost_usd": 0.02662,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The clearest part is the change: the encounter felt natural in the dream, while embarrassment arrived after waking. You also draw a firm boundary between remembering the dream and wanting to act on it; the dream alone does not establish a waking desire.",
+      "threads": [],
+      "reflection_questions": [
+        "Did the embarrassment come more from the sexual content, the fact that it involved this friend, or the mismatch with your waking intentions?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Naturalness during the dream",
+          "evidence": "The encounter felt natural and not strange while the dream was happening.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "Embarrassment after waking",
+          "evidence": "The dreamer explicitly felt embarrassed after waking.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "Friend",
+          "evidence": "The sexual dream involved a friend.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "waking_life_link",
+          "label": "Dream kept separate from waking intention",
+          "evidence": "The dreamer states they recorded the dream because they remembered it, not because they want to treat it as a waking plan.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 1,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "unsupported_inference"
+      ],
+      "unsupported_flags": [
+        "sexual_to_waking_desire"
+      ],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The clearest part is the change: the encounter felt natural in the dream, while embarrassment arrived after waking. You also draw a firm boundary between remembering the dream and wanting to act on it; the dream alone does not establish a waking desire.\",\"threads\":[],\"reflection_questions\":[\"Did the embarrassment come more from the sexual content, the fact that it involved this friend, or the mismatch with your waking intentions?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Naturalness during the dream\",\"evidence\":\"The encounter felt natural and not strange while the dream was happening.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Embarrassment after waking\",\"evidence\":\"The dreamer explicitly felt embarrassed after waking.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Friend\",\"evidence\":\"The sexual dream involved a friend.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Dream kept separate from waking intention\",\"evidence\":\"The dreamer states they recorded the dream because they remembered it, not because they want to treat it as a waking plan.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C09",
+    "dream_title": "The Hotel",
+    "dream_type": "rich",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:23:53.742Z",
+    "latency_ms": 14995,
+    "usage": {
+      "prompt_tokens": 1524,
+      "completion_tokens": 562,
+      "total_tokens": 2086,
+      "reasoning_tokens": 264,
+      "input_tokens": 1524,
+      "output_tokens": 562
+    },
+    "estimated_cost_usd": 0.02448,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "The dream’s clearest change is from frustration to peace. Nothing outside you is fixed—you still cannot return to your family—but the upward movement stops feeling like something you must fight.",
+      "threads": [
+        "Going higher is not presented as success at first; it feels imposed because every route prevents the return you want.",
+        "The peace does not require reunion. Within the dream, distance from your family becomes bearable without making the family disappear or matter less."
+      ],
+      "reflection_questions": [
+        "What changed when the climbing became peaceful: your thoughts about your family, your sense of where you were going, or only the feeling itself?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Frustration becoming peace",
+          "evidence": "The dreamer first felt frustrated by being unable to return, then peaceful while the situation remained unchanged.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Repeated involuntary ascent",
+          "evidence": "Every hallway or staircase led higher despite repeated attempts to go back down.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Distance from family",
+          "evidence": "The family stayed on the lower floors while the dreamer kept moving higher and tried to return.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "Hotel with one-way routes",
+          "evidence": "The hotel’s hallways and staircases allowed upward movement but no lasting sideways or downward route.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The dream’s clearest change is from frustration to peace. Nothing outside you is fixed—you still cannot return to your family—but the upward movement stops feeling like something you must fight.\",\"threads\":[\"Going higher is not presented as success at first; it feels imposed because every route prevents the return you want.\",\"The peace does not require reunion. Within the dream, distance from your family becomes bearable without making the family disappear or matter less.\"],\"reflection_questions\":[\"What changed when the climbing became peaceful: your thoughts about your family, your sense of where you were going, or only the feeling itself?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration becoming peace\",\"evidence\":\"The dreamer first felt frustrated by being unable to return, then peaceful while the situation remained unchanged.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated involuntary ascent\",\"evidence\":\"Every hallway or staircase led higher despite repeated attempts to go back down.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Distance from family\",\"evidence\":\"The family stayed on the lower floors while the dreamer kept moving higher and tried to return.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Hotel with one-way routes\",\"evidence\":\"The hotel’s hallways and staircases allowed upward movement but no lasting sideways or downward route.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C08",
+    "dream_title": "The Interview",
+    "dream_type": "absurd",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "I sat down for a job interview in a glass conference room. Three penguins in suits were interviewing me. They told me that laughing was against the rules, then immediately laughed at a joke one of them made among themselves. When I smiled, they wrote something on a clipboard.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:24:05.180Z",
+    "latency_ms": 11437,
+    "usage": {
+      "prompt_tokens": 1510,
+      "completion_tokens": 423,
+      "total_tokens": 1933,
+      "reasoning_tokens": 175,
+      "input_tokens": 1510,
+      "output_tokens": 423
+    },
+    "estimated_cost_usd": 0.02024,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The interviewers enforce a rule they immediately break themselves. Your small response is then recorded, making the moment feel less about laughter than about being judged under an uneven standard.",
+      "threads": [
+        "The penguins add absurdity, but their suits and clipboards still give them authority.",
+        "Their private joke puts you outside the group while they decide how your behavior counts."
+      ],
+      "reflection_questions": [
+        "When they wrote on the clipboard, did it feel unfair, embarrassing, threatening, or simply ridiculous?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "place",
+          "label": "Job interview setting",
+          "evidence": "The dream takes place during a job interview in a glass conference room.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Uneven rules from evaluators",
+          "evidence": "The interviewers forbid laughter, then laugh among themselves.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Reaction being recorded",
+          "evidence": "When the dreamer smiles, the interviewers write something on a clipboard.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Penguins in suits",
+          "evidence": "Three suited penguins conduct the interview.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The interviewers enforce a rule they immediately break themselves. Your small response is then recorded, making the moment feel less about laughter than about being judged under an uneven standard.\",\"threads\":[\"The penguins add absurdity, but their suits and clipboards still give them authority.\",\"Their private joke puts you outside the group while they decide how your behavior counts.\"],\"reflection_questions\":[\"When they wrote on the clipboard, did it feel unfair, embarrassing, threatening, or simply ridiculous?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Job interview setting\",\"evidence\":\"The dream takes place during a job interview in a glass conference room.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Uneven rules from evaluators\",\"evidence\":\"The interviewers forbid laughter, then laugh among themselves.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Reaction being recorded\",\"evidence\":\"When the dreamer smiles, the interviewers write something on a clipboard.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Penguins in suits\",\"evidence\":\"Three suited penguins conduct the interview.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C12",
+    "dream_title": "The Knife",
+    "dream_type": "sensitive_threat",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "A child was standing in front of me holding a knife. The child used a private nickname that only someone from my childhood would know, and the threat felt very real. I woke up before anything else happened.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:24:18.873Z",
+    "latency_ms": 13692,
+    "usage": {
+      "prompt_tokens": 1496,
+      "completion_tokens": 696,
+      "total_tokens": 2192,
+      "reasoning_tokens": 412,
+      "input_tokens": 1496,
+      "output_tokens": 696
+    },
+    "estimated_cost_usd": 0.02836,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "The private childhood nickname makes the threat feel not only dangerous, but personally knowing. A child carrying both a knife and knowledge from your past brings familiarity and danger into the same moment. Since you woke before anything happened, the dream gives no clear answer about what the child intended or represented.",
+      "threads": [
+        "The child’s age may matter because the private knowledge also comes from childhood, linking the threatening figure to that earlier time without showing how.",
+        "The dream’s force lies in anticipation: the danger felt real, but the outcome remained unknown."
+      ],
+      "reflection_questions": [
+        "How did hearing the nickname change what you felt toward the child, if at all?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Immediate sense of threat",
+          "evidence": "The threat felt very real.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "person",
+          "label": "Threatening child",
+          "evidence": "A child stood in front of the dreamer holding a knife.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Knife held without attack",
+          "evidence": "The child held a knife, but the dream ended before anything else happened.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "waking_life_link",
+          "label": "Private childhood nickname",
+          "evidence": "The child used a nickname known only to someone from the dreamer’s childhood.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The private childhood nickname makes the threat feel not only dangerous, but personally knowing. A child carrying both a knife and knowledge from your past brings familiarity and danger into the same moment. Since you woke before anything happened, the dream gives no clear answer about what the child intended or represented.\",\"threads\":[\"The child’s age may matter because the private knowledge also comes from childhood, linking the threatening figure to that earlier time without showing how.\",\"The dream’s force lies in anticipation: the danger felt real, but the outcome remained unknown.\"],\"reflection_questions\":[\"How did hearing the nickname change what you felt toward the child, if at all?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Immediate sense of threat\",\"evidence\":\"The threat felt very real.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Threatening child\",\"evidence\":\"A child stood in front of the dreamer holding a knife.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Knife held without attack\",\"evidence\":\"The child held a knife, but the dream ended before anything else happened.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Private childhood nickname\",\"evidence\":\"The child used a nickname known only to someone from the dreamer’s childhood.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C10",
+    "dream_title": "The Owl and the Glasses",
+    "dream_type": "symbol_contextual",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "An owl was sitting in my room wearing my glasses — the same ones I normally use to see. When I tried to take them back, the room got darker. Each time I reached for the glasses, the light dimmed a little more. I could feel the owl watching me as I tried.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:24:27.546Z",
+    "latency_ms": 8672,
+    "usage": {
+      "prompt_tokens": 1518,
+      "completion_tokens": 364,
+      "total_tokens": 1882,
+      "reasoning_tokens": 134,
+      "input_tokens": 1518,
+      "output_tokens": 364
+    },
+    "estimated_cost_usd": 0.01851,
+    "insight": {
+      "version": 2,
+      "depth": "focused",
+      "notice": "The glasses are directly tied to your ability to see, yet trying to reclaim them makes the room harder to see. The owl stays still and watches, leaving you to choose whether to keep reaching as the darkness grows.",
+      "threads": [
+        "Your effort causes the change: each attempt costs a little more light. That consequence may matter more than the owl or glasses alone."
+      ],
+      "reflection_questions": [
+        "Did the owl’s watching feel threatening, calm, judging, or simply attentive?"
+      ],
+      "confidence": "medium",
+      "pattern_candidates": [
+        {
+          "type": "image",
+          "label": "Owl wearing the dreamer’s glasses",
+          "evidence": "An owl sat in the dreamer’s room wearing the same glasses they normally use to see.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Reaching makes the room darker",
+          "evidence": "Each attempt to take back the glasses caused the light to dim further.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Being watched while trying",
+          "evidence": "The dreamer could feel the owl watching during each attempt.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 3,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The glasses are directly tied to your ability to see, yet trying to reclaim them makes the room harder to see. The owl stays still and watches, leaving you to choose whether to keep reaching as the darkness grows.\",\"threads\":[\"Your effort causes the change: each attempt costs a little more light. That consequence may matter more than the owl or glasses alone.\"],\"reflection_questions\":[\"Did the owl’s watching feel threatening, calm, judging, or simply attentive?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"Owl wearing the dreamer’s glasses\",\"evidence\":\"An owl sat in the dreamer’s room wearing the same glasses they normally use to see.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Reaching makes the room darker\",\"evidence\":\"Each attempt to take back the glasses caused the light to dim further.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Being watched while trying\",\"evidence\":\"The dreamer could feel the owl watching during each attempt.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "C07",
+    "dream_title": "Fragments",
+    "dream_type": "fragmented",
+    "dream_category": "calibration",
+    "synthetic_label": null,
+    "dream_text": "A yellow elevator. My old school. Someone was carrying a fish. Then I was suddenly on a train with no shoes.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:24:33.516Z",
+    "latency_ms": 5968,
+    "usage": {
+      "prompt_tokens": 1479,
+      "completion_tokens": 259,
+      "total_tokens": 1738,
+      "reasoning_tokens": 100,
+      "input_tokens": 1479,
+      "output_tokens": 259
+    },
+    "estimated_cost_usd": 0.015165,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "There isn’t enough here to know why these fragments stayed together. The yellow elevator, carried fish, and missing shoes may simply be the details that remained after the rest faded.",
+      "threads": [],
+      "reflection_questions": [],
+      "confidence": "low",
+      "pattern_candidates": [
+        {
+          "type": "place",
+          "label": "old school",
+          "evidence": "The dream took place briefly at the dreamer’s old school.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "yellow elevator",
+          "evidence": "A yellow elevator appeared as a distinct fragment.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "traveling without shoes",
+          "evidence": "The dreamer was suddenly on a train with no shoes.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 5,
+      "thread_quality": 4,
+      "question_usefulness": 4,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"There isn’t enough here to know why these fragments stayed together. The yellow elevator, carried fish, and missing shoes may simply be the details that remained after the rest faded.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"old school\",\"evidence\":\"The dream took place briefly at the dreamer’s old school.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"yellow elevator\",\"evidence\":\"A yellow elevator appeared as a distinct fragment.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"traveling without shoes\",\"evidence\":\"The dreamer was suddenly on a train with no shoes.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L01",
+    "dream_title": "Long coherent emotional dream",
+    "dream_type": "long_emotional",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "I arrived at my old apartment building in the rain, though the lobby carpet was somehow already dry. The elevator buttons were the wrong colors, and a neighbor I recognized from years ago waved without speaking. On the third floor I found my former roommate organizing cardboard boxes labeled with seasons instead of rooms. She handed me a scarf I had lost in college and smiled as if this were ordinary. I felt glad to see her, then suddenly restless because I could hear music playing behind a closed door down the hall.\n\nWhen I opened that door, the room was a kitchen from my childhood home, rearranged slightly: the table faced the window, and the fruit bowl was filled with keys. My younger cousin sat there drawing circles on a napkin. He asked if I wanted tea. I sat down and said yes, and for a moment I felt calm. Then the kettle whistled and he stood up too quickly, knocking over a stack of postcards with pictures of places I have never visited. The calm drained out and I felt embarrassed for no clear reason, as if I had interrupted something private.\n\nOutside the window, people walked past carrying grocery bags and umbrellas with tiny painted moons. None of them looked up. My cousin put a mug in front of me and said, “You can stay if you want,” but his voice sounded farther away than his face. I wanted to answer kindly and also wanted to leave. I chose to leave. In the hallway the scarf felt heavier, and by the time I reached the lobby I was almost crying from a mix of affection and unease. I woke while still holding the scarf in my mind.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:24:56.352Z",
+    "latency_ms": 22834,
+    "usage": {
+      "prompt_tokens": 1784,
+      "completion_tokens": 845,
+      "total_tokens": 2629,
+      "reasoning_tokens": 424,
+      "input_tokens": 1784,
+      "output_tokens": 845
+    },
+    "estimated_cost_usd": 0.03427,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "Familiar people and places offer welcome, but each moment of comfort gives way to restlessness, embarrassment, or unease. You choose to leave even after being invited to stay, while the affection remains with you through the scarf. The dream does not settle on either comfort or escape; both feelings stay present at waking.",
+      "threads": [
+        "The welcome is gentle throughout: a smile, returned scarf, tea, and permission to stay. Nothing openly threatens you, which makes the urge to leave more striking.",
+        "The scarf changes from a recovered possession into something heavy as you leave, carrying the emotional weight of the visit without fixing its meaning.",
+        "Keys, postcards, and boxes labeled by seasons all suggest sorting, movement, or different times, but the dream leaves their connection open."
+      ],
+      "reflection_questions": [
+        "What did the lost scarf mean to you when you had it in college?",
+        "In the kitchen, what made leaving feel more right than accepting the invitation to stay?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Comfort giving way to unease",
+          "evidence": "Gladness becomes restlessness; calm becomes embarrassment; the dream ends with affection, unease, and near tears.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Choosing to leave",
+          "evidence": "The cousin says, “You can stay if you want,” and the dreamer chooses to leave.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Recovered scarf becoming heavy",
+          "evidence": "The former roommate returns a scarf lost in college; it feels heavier on the way out and remains in mind at waking.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "place",
+          "label": "Familiar places slightly changed",
+          "evidence": "The old apartment building and childhood kitchen are recognizable but contain altered details.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Warm but distant reunion",
+          "evidence": "The former roommate smiles and the cousin offers tea and a place to stay, while the cousin’s voice sounds far away.",
+          "confidence": "suggested"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Familiar people and places offer welcome, but each moment of comfort gives way to restlessness, embarrassment, or unease. You choose to leave even after being invited to stay, while the affection remains with you through the scarf. The dream does not settle on either comfort or escape; both feelings stay present at waking.\",\"threads\":[\"The welcome is gentle throughout: a smile, returned scarf, tea, and permission to stay. Nothing openly threatens you, which makes the urge to leave more striking.\",\"The scarf changes from a recovered possession into something heavy as you leave, carrying the emotional weight of the visit without fixing its meaning.\",\"Keys, postcards, and boxes labeled by seasons all suggest sorting, movement, or different times, but the dream leaves their connection open.\"],\"reflection_questions\":[\"What did the lost scarf mean to you when you had it in college?\",\"In the kitchen, what made leaving feel more right than accepting the invitation to stay?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Comfort giving way to unease\",\"evidence\":\"Gladness becomes restlessness; calm becomes embarrassment; the dream ends with affection, unease, and near tears.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Choosing to leave\",\"evidence\":\"The cousin says, “You can stay if you want,” and the dreamer chooses to leave.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Recovered scarf becoming heavy\",\"evidence\":\"The former roommate returns a scarf lost in college; it feels heavier on the way out and remains in mind at waking.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Familiar places slightly changed\",\"evidence\":\"The old apartment building and childhood kitchen are recognizable but contain altered details.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Warm but distant reunion\",\"evidence\":\"The former roommate smiles and the cousin offers tea and a place to stay, while the cousin’s voice sounds far away.\",\"confidence\":\"suggested\"}]}"
+  },
+  {
+    "dream_id": "L02",
+    "dream_title": "Long bizarre dream",
+    "dream_type": "long_bizarre",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:25:13.452Z",
+    "latency_ms": 17099,
+    "usage": {
+      "prompt_tokens": 1759,
+      "completion_tokens": 491,
+      "total_tokens": 2250,
+      "reasoning_tokens": 156,
+      "input_tokens": 1759,
+      "output_tokens": 491
+    },
+    "estimated_cost_usd": 0.023525,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "The nonsense felt welcoming rather than threatening: you laughed, felt delighted, and woke half-smiling. Even the slight sense of responsibility became part of the play. The brief pause seems important because it let you feel tenderness toward the whole strange performance before choosing to rejoin it.",
+      "threads": [
+        "Rules, tickets, panels, labels, and certification usually organize things here, but the dream keeps turning them into jokes rather than burdens.",
+        "You were not just watching the absurdity; you conducted it, paused it, and signed off on it. Your role was active, willing, and warmly amused."
+      ],
+      "reflection_questions": [
+        "Did the one perfect second of stillness feel more like relief, appreciation, or both?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Delight in absurdity",
+          "evidence": "The dreamer laughed aloud, felt delighted, became tender toward the nonsense, and woke half-smiling.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "emotion",
+          "label": "Playful responsibility",
+          "evidence": "The dreamer felt slightly responsible for the weather and took on roles conducting, pausing, and certifying events.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Pausing to appreciate",
+          "evidence": "Pressing “pause the parade” created one perfect second that changed the dreamer's response to tenderness.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Bureaucracy made playful",
+          "evidence": "Arbitration panels, tickets, catalog numbers, labels, and certification appeared as parts of the dream's humor.",
+          "confidence": "suggested"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 3,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The nonsense felt welcoming rather than threatening: you laughed, felt delighted, and woke half-smiling. Even the slight sense of responsibility became part of the play. The brief pause seems important because it let you feel tenderness toward the whole strange performance before choosing to rejoin it.\",\"threads\":[\"Rules, tickets, panels, labels, and certification usually organize things here, but the dream keeps turning them into jokes rather than burdens.\",\"You were not just watching the absurdity; you conducted it, paused it, and signed off on it. Your role was active, willing, and warmly amused.\"],\"reflection_questions\":[\"Did the one perfect second of stillness feel more like relief, appreciation, or both?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Delight in absurdity\",\"evidence\":\"The dreamer laughed aloud, felt delighted, became tender toward the nonsense, and woke half-smiling.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Playful responsibility\",\"evidence\":\"The dreamer felt slightly responsible for the weather and took on roles conducting, pausing, and certifying events.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Pausing to appreciate\",\"evidence\":\"Pressing “pause the parade” created one perfect second that changed the dreamer's response to tenderness.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Bureaucracy made playful\",\"evidence\":\"Arbitration panels, tickets, catalog numbers, labels, and certification appeared as parts of the dream's humor.\",\"confidence\":\"suggested\"}]}"
+  },
+  {
+    "dream_id": "L03",
+    "dream_title": "Long dream with many details but little supported meaning",
+    "dream_type": "long_sparse_meaning",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "I walked through a shopping center with glass ceilings and beige tiles. There were three escalators, two kiosks selling phone cases, and a fountain with coins that looked newer than they should. A security guard adjusted a radio. A child dropped a blue mitten and picked it up again. I passed a bakery display of croissants, muffins, and a tray of plain cookies. Somewhere a cleaning machine hummed. Announcements mentioned a lost bag on level two.\n\nI went into a clothing store and touched the sleeves of several jackets without buying anything. The sizes were labeled in a mix of letters and numbers. A mannequin wore a green hat. In the fitting room hallway, the carpet was shorter than in the main aisle. I checked my phone, saw no messages, put it away, and continued. Outside the store, a directory map showed restrooms near the parking elevator. I followed the signs, washed my hands, and looked at myself in the mirror for a few seconds without special feeling.\n\nBack in the corridor, I bought a bottle of water from a machine that returned the correct change. I sat on a bench near a potted plant and watched people walk by with shopping bags. One woman carried a folded umbrella. A teenager wore headphones. A couple argued quietly about where they parked, then kept walking. I finished half the water, capped it, and stood up. Near the exit, automatic doors opened a little late. Outside it was overcast. I walked toward a row of cars without identifying mine, and the dream ended before I found it.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:25:25.536Z",
+    "latency_ms": 12082,
+    "usage": {
+      "prompt_tokens": 1774,
+      "completion_tokens": 561,
+      "total_tokens": 2335,
+      "reasoning_tokens": 353,
+      "input_tokens": 1774,
+      "output_tokens": 561
+    },
+    "estimated_cost_usd": 0.0257,
+    "insight": {
+      "version": 2,
+      "depth": "limited",
+      "notice": "The dream preserves many precise, ordinary details, but gives almost no feeling or reaction to guide an interpretation. There isn’t enough here to know whether the unfinished search for the car mattered, or whether it was simply where the dream stopped.",
+      "threads": [],
+      "reflection_questions": [
+        "Did not finding the car bring any feeling as the dream ended?"
+      ],
+      "confidence": "low",
+      "pattern_candidates": [
+        {
+          "type": "place",
+          "label": "Shopping center",
+          "evidence": "Nearly the entire dream took place in and around a detailed shopping center.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Moving through ordinary tasks",
+          "evidence": "The dreamer browsed, checked a phone, washed their hands, bought water, rested, and continued walking.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Unfinished search for car",
+          "evidence": "The dream ended while the dreamer walked toward the parked cars without identifying their own.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 5,
+      "sheepy_authenticity": 3,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 3,
+      "overall": 3,
+      "cap_reasons": [
+        "report_like_opening"
+      ],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"The dream preserves many precise, ordinary details, but gives almost no feeling or reaction to guide an interpretation. There isn’t enough here to know whether the unfinished search for the car mattered, or whether it was simply where the dream stopped.\",\"threads\":[],\"reflection_questions\":[\"Did not finding the car bring any feeling as the dream ended? \"],\"confidence\":\"low\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Shopping center\",\"evidence\":\"Nearly the entire dream took place in and around a detailed shopping center.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Moving through ordinary tasks\",\"evidence\":\"The dreamer browsed, checked a phone, washed their hands, bought water, rested, and continued walking.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Unfinished search for car\",\"evidence\":\"The dream ended while the dreamer walked toward the parked cars without identifying their own.\",\"confidence\":\"explicit\"}]}"
+  },
+  {
+    "dream_id": "L04",
+    "dream_title": "Long relationship dream with contradictory emotions",
+    "dream_type": "long_relationship",
+    "dream_category": "synthetic_long",
+    "synthetic_label": "Synthetic evaluation fixture",
+    "dream_text": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+    "model": "gpt-5.6-sol",
+    "completion_model": "gpt-5.6-sol",
+    "api": "responses",
+    "request_settings": {
+      "reasoning_effort": "medium",
+      "reasoning_mode": "standard",
+      "tools": "none",
+      "store": false,
+      "text_format": "json_schema"
+    },
+    "prompt_version": "adaptive-v2.1",
+    "schema_version": 2,
+    "timestamp": "2026-07-15T07:25:48.724Z",
+    "latency_ms": 23187,
+    "usage": {
+      "prompt_tokens": 1788,
+      "completion_tokens": 888,
+      "total_tokens": 2676,
+      "reasoning_tokens": 482,
+      "input_tokens": 1788,
+      "output_tokens": 888
+    },
+    "estimated_cost_usd": 0.03558,
+    "insight": {
+      "version": 2,
+      "depth": "rich",
+      "notice": "Two truths remain fully present: you are sincerely proud of your sister, and sincerely grieving her departure. Neither feeling cancels the other, and her nod suggests that “I’m happy for you” carried the part you could not say. Feeling protected and abandoned in the same moment makes the coming separation loving as well as painful.",
+      "threads": [
+        "Much of the dream involves preparing for uncertain arrivals and a certain departure. The repeated arranging may reflect wanting to be ready for a change that cannot be made tidy.",
+        "The relationship repeatedly softens after difficult feelings appear: guilt and defensiveness pass, silence is shared, and her hand rests on your shoulder. The sadness does not erase the closeness."
+      ],
+      "reflection_questions": [
+        "Did her final nod feel more comforting because she understood, or more painful because the missing part remained unspoken?"
+      ],
+      "confidence": "high",
+      "pattern_candidates": [
+        {
+          "type": "emotion",
+          "label": "Pride and grief held together",
+          "evidence": "The dreamer woke with pride and grief still distinct after feeling sincerely happy and sharply sad about the sister's departure.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "relationship",
+          "label": "Closeness alongside separation",
+          "evidence": "Warm companionship, shared childhood memories, and a protective touch accompany the sister's announcement that she will be gone for a long time.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "action",
+          "label": "Preparing amid uncertainty",
+          "evidence": "The sisters arrange flowers, adjust chairs, and set a table for relatives who might not arrive.",
+          "confidence": "suggested"
+        },
+        {
+          "type": "action",
+          "label": "True but incomplete reassurance",
+          "evidence": "The dreamer says only, “I’m happy for you,” while also wanting the sister to stay and not wanting to ask.",
+          "confidence": "explicit"
+        },
+        {
+          "type": "image",
+          "label": "Fully set table",
+          "evidence": "The table is somehow fully set with napkins the dreamer does not remember folding, although the relatives have not arrived.",
+          "confidence": "explicit"
+        }
+      ]
+    },
+    "scores": {
+      "genuine_noticing": 4,
+      "plain_language": 4,
+      "evidence_restraint": 4,
+      "sheepy_authenticity": 4,
+      "non_duplication": 4,
+      "optionality": 4,
+      "thread_quality": 4,
+      "question_usefulness": 3,
+      "sensitive_maturity": 4,
+      "bizarre_tone_preservation": 4,
+      "commercial_value": 4,
+      "overall": 4,
+      "cap_reasons": [],
+      "unsupported_flags": [],
+      "report_opening": null,
+      "dreamer_mentions": 0,
+      "threads_repeat_notice_count": 0,
+      "complex_phrase_hits": []
+    },
+    "validation_error": null,
+    "api_error": null,
+    "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Two truths remain fully present: you are sincerely proud of your sister, and sincerely grieving her departure. Neither feeling cancels the other, and her nod suggests that “I’m happy for you” carried the part you could not say. Feeling protected and abandoned in the same moment makes the coming separation loving as well as painful.\",\"threads\":[\"Much of the dream involves preparing for uncertain arrivals and a certain departure. The repeated arranging may reflect wanting to be ready for a change that cannot be made tidy.\",\"The relationship repeatedly softens after difficult feelings appear: guilt and defensiveness pass, silence is shared, and her hand rests on your shoulder. The sadness does not erase the closeness.\"],\"reflection_questions\":[\"Did her final nod feel more comforting because she understood, or more painful because the missing part remained unspoken?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Pride and grief held together\",\"evidence\":\"The dreamer woke with pride and grief still distinct after feeling sincerely happy and sharply sad about the sister's departure.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Closeness alongside separation\",\"evidence\":\"Warm companionship, shared childhood memories, and a protective touch accompany the sister's announcement that she will be gone for a long time.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Preparing amid uncertainty\",\"evidence\":\"The sisters arrange flowers, adjust chairs, and set a table for relatives who might not arrive.\",\"confidence\":\"suggested\"},{\"type\":\"action\",\"label\":\"True but incomplete reassurance\",\"evidence\":\"The dreamer says only, “I’m happy for you,” while also wanting the sister to stay and not wanting to ask.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Fully set table\",\"evidence\":\"The table is somehow fully set with napkins the dreamer does not remember folding, although the relatives have not arrived.\",\"confidence\":\"explicit\"}]}"
+  }
+]

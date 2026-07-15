@@ -1,0 +1,85 @@
+{
+  "dream_id": "C05",
+  "dream_title": "The Beach",
+  "dream_type": "positive",
+  "dream_category": "calibration",
+  "synthetic_label": null,
+  "dream_text": "I was lying on a quiet beach in late afternoon light. The water was calm. I felt completely safe — not watchful, not nervous, just safe — and stayed there until the dream ended.",
+  "model": "gpt-5.6-sol",
+  "completion_model": "gpt-5.6-sol",
+  "api": "responses",
+  "request_settings": {
+    "reasoning_effort": "medium",
+    "reasoning_mode": "standard",
+    "tools": "none",
+    "store": false,
+    "text_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:23:17.201Z",
+  "latency_ms": 4831,
+  "usage": {
+    "prompt_tokens": 1494,
+    "completion_tokens": 193,
+    "total_tokens": 1687,
+    "reasoning_tokens": 0,
+    "input_tokens": 1494,
+    "output_tokens": 193
+  },
+  "estimated_cost_usd": 0.01326,
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The clearest part is the complete sense of safety. The quiet beach and calm water held that feeling steady rather than changing or interrupting it.",
+    "threads": [
+      "The dream makes room for rest without requiring you to stay alert.",
+      "Nothing arrives to disturb the calm; safety is the whole experience, not just a brief moment."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "complete safety",
+        "evidence": "The dreamer explicitly felt completely safe, not watchful or nervous.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "quiet beach",
+        "evidence": "The dream took place on a quiet beach in late afternoon light beside calm water.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "remaining at rest",
+        "evidence": "The dreamer lay on the beach and stayed there until the dream ended.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 4,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 4,
+    "thread_quality": 3,
+    "question_usefulness": 4,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 3,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The clearest part is the complete sense of safety. The quiet beach and calm water held that feeling steady rather than changing or interrupting it.\",\"threads\":[\"The dream makes room for rest without requiring you to stay alert.\",\"Nothing arrives to disturb the calm; safety is the whole experience, not just a brief moment.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"complete safety\",\"evidence\":\"The dreamer explicitly felt completely safe, not watchful or nervous.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"quiet beach\",\"evidence\":\"The dream took place on a quiet beach in late afternoon light beside calm water.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"remaining at rest\",\"evidence\":\"The dreamer lay on the beach and stayed there until the dream ended.\",\"confidence\":\"explicit\"}]}"
+}

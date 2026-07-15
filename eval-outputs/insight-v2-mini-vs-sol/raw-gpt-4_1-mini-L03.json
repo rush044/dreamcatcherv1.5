@@ -1,0 +1,79 @@
+{
+  "dream_id": "L03",
+  "dream_title": "Long dream with many details but little supported meaning",
+  "dream_type": "long_sparse_meaning",
+  "dream_category": "synthetic_long",
+  "synthetic_label": "Synthetic evaluation fixture",
+  "dream_text": "I walked through a shopping center with glass ceilings and beige tiles. There were three escalators, two kiosks selling phone cases, and a fountain with coins that looked newer than they should. A security guard adjusted a radio. A child dropped a blue mitten and picked it up again. I passed a bakery display of croissants, muffins, and a tray of plain cookies. Somewhere a cleaning machine hummed. Announcements mentioned a lost bag on level two.\n\nI went into a clothing store and touched the sleeves of several jackets without buying anything. The sizes were labeled in a mix of letters and numbers. A mannequin wore a green hat. In the fitting room hallway, the carpet was shorter than in the main aisle. I checked my phone, saw no messages, put it away, and continued. Outside the store, a directory map showed restrooms near the parking elevator. I followed the signs, washed my hands, and looked at myself in the mirror for a few seconds without special feeling.\n\nBack in the corridor, I bought a bottle of water from a machine that returned the correct change. I sat on a bench near a potted plant and watched people walk by with shopping bags. One woman carried a folded umbrella. A teenager wore headphones. A couple argued quietly about where they parked, then kept walking. I finished half the water, capped it, and stood up. Near the exit, automatic doors opened a little late. Outside it was overcast. I walked toward a row of cars without identifying mine, and the dream ended before I found it.",
+  "model": "gpt-4.1-mini",
+  "completion_model": "gpt-4.1-mini-2025-04-14",
+  "api": "chat.completions",
+  "request_settings": {
+    "temperature": 0.7,
+    "response_format": "json_schema"
+  },
+  "prompt_version": "adaptive-v2.1",
+  "schema_version": 2,
+  "timestamp": "2026-07-15T07:22:51.707Z",
+  "latency_ms": 2209,
+  "usage": {
+    "prompt_tokens": 1782,
+    "completion_tokens": 163,
+    "total_tokens": 1945,
+    "reasoning_tokens": 0,
+    "input_tokens": 1782,
+    "output_tokens": 163
+  },
+  "estimated_cost_usd": 0.000974,
+  "insight": {
+    "version": 2,
+    "depth": "limited",
+    "notice": "This dream offers a detailed setting but no clear emotional tone or significant interactions to highlight. The observations are mostly neutral and descriptive, without notable feelings or changes.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "shopping center",
+        "evidence": "The entire dream takes place in a shopping center with various stores and features.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "checking phone with no messages",
+        "evidence": "The dreamer checks their phone, sees no messages, and puts it away.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "buying water and sitting",
+        "evidence": "The dreamer buys a bottle of water, drinks half, then sits on a bench observing others.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "scores": {
+    "genuine_noticing": 4,
+    "plain_language": 4,
+    "evidence_restraint": 5,
+    "sheepy_authenticity": 3,
+    "non_duplication": 4,
+    "optionality": 5,
+    "thread_quality": 4,
+    "question_usefulness": 4,
+    "sensitive_maturity": 4,
+    "bizarre_tone_preservation": 4,
+    "commercial_value": 4,
+    "overall": 4,
+    "cap_reasons": [],
+    "unsupported_flags": [],
+    "report_opening": null,
+    "dreamer_mentions": 0,
+    "threads_repeat_notice_count": 0,
+    "complex_phrase_hits": []
+  },
+  "validation_error": null,
+  "api_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"limited\",\"notice\":\"This dream offers a detailed setting but no clear emotional tone or significant interactions to highlight. The observations are mostly neutral and descriptive, without notable feelings or changes.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"shopping center\",\"evidence\":\"The entire dream takes place in a shopping center with various stores and features.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"checking phone with no messages\",\"evidence\":\"The dreamer checks their phone, sees no messages, and puts it away.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"buying water and sitting\",\"evidence\":\"The dreamer buys a bottle of water, drinks half, then sits on a bench observing others.\",\"confidence\":\"explicit\"}]}"
+}
