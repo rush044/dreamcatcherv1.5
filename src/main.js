@@ -1,5 +1,6 @@
 import "./style.css";
 import { supabase } from "./supabaseClient.js";
+import { renderInsightContent } from "./insightRender.js";
 
 // DreamCatcher — mobile-first Sheepy companion UI
 // Auth / dreams / insights APIs unchanged; presentation and navigation redesigned.
@@ -321,105 +322,6 @@ function setJournalEmptyVisible(visible) {
 function setJournalEmptyCopy() {
   if (emptyState) emptyState.textContent = EMPTY_JOURNAL_HEADLINE;
   if (emptyStateSub) emptyStateSub.textContent = EMPTY_JOURNAL_SUBLINE;
-}
-
-function buildSymbolsAndPatternsLines(insight) {
-  const lines = [];
-
-  for (const symbol of insight.symbols || []) {
-    lines.push(`${symbol.symbol} — ${symbol.possible_meaning}`);
-  }
-  for (const theme of insight.themes || []) {
-    lines.push(theme);
-  }
-  for (const emotion of insight.emotions || []) {
-    lines.push(`Feeling: ${emotion}`);
-  }
-  for (const person of insight.people || []) {
-    lines.push(`${person.name_or_role} — ${person.possible_dynamic}`);
-  }
-  for (const place of insight.places || []) {
-    lines.push(`${place.place} — ${place.possible_significance}`);
-  }
-
-  return lines;
-}
-
-function renderInsightContent(panel, insight, { fresh = false } = {}) {
-  panel.hidden = false;
-  panel.classList.remove("is-error", "is-loading");
-  panel.replaceChildren();
-
-  const noticedHeading = document.createElement("h4");
-  noticedHeading.className = "dream-insight__heading";
-  noticedHeading.textContent = "What Sheepy noticed";
-  panel.appendChild(noticedHeading);
-
-  const summary = document.createElement("p");
-  summary.className = "dream-insight__summary";
-  summary.textContent = insight.summary;
-  panel.appendChild(summary);
-
-  const patternsLines = buildSymbolsAndPatternsLines(insight);
-  if (patternsLines.length) {
-    const patternsWrap = document.createElement("details");
-    patternsWrap.className = "dream-insight__section-block dream-insight__details";
-    patternsWrap.open = patternsLines.length <= 4;
-
-    const patternsSummary = document.createElement("summary");
-    patternsSummary.className = "dream-insight__section-toggle";
-    patternsSummary.textContent = "Symbols and patterns";
-    patternsWrap.appendChild(patternsSummary);
-
-    const patternsBody = document.createElement("div");
-    patternsBody.className = "dream-insight__section-body";
-    const patternsList = document.createElement("ul");
-    for (const line of patternsLines) {
-      const li = document.createElement("li");
-      li.textContent = line;
-      patternsList.appendChild(li);
-    }
-    patternsBody.appendChild(patternsList);
-    patternsWrap.appendChild(patternsBody);
-    panel.appendChild(patternsWrap);
-  }
-
-  if (insight.reflection_questions?.length) {
-    const reflectHeading = document.createElement("h4");
-    reflectHeading.className = "dream-insight__heading";
-    reflectHeading.textContent = "Something to reflect on";
-    panel.appendChild(reflectHeading);
-
-    const reflectList = document.createElement("ul");
-    reflectList.className = "dream-insight__reflect-list";
-    for (const question of insight.reflection_questions) {
-      const li = document.createElement("li");
-      li.textContent = question;
-      reflectList.appendChild(li);
-    }
-    panel.appendChild(reflectList);
-  }
-
-  if (insight.uncertainty_note) {
-    const note = document.createElement("p");
-    note.className = "dream-insight__note";
-    note.textContent = insight.uncertainty_note;
-    panel.appendChild(note);
-  }
-
-  if (insight.return_message) {
-    const ret = document.createElement("p");
-    ret.className = "dream-insight__return";
-    ret.textContent = insight.return_message;
-    panel.appendChild(ret);
-  }
-
-  if (fresh) {
-    const freshLabel = document.createElement("p");
-    freshLabel.className = "dream-insight__fresh-label";
-    freshLabel.textContent = INSIGHT_LABEL.fresh;
-    panel.prepend(freshLabel);
-  }
 }
 
 function showInsightLoading(panel) {

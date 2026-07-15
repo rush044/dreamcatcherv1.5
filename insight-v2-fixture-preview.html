@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Insight V2 Fixture Preview (local)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Minimal page chrome — product card styles come from style.css */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #0a0908;
+        color: #f3efe6;
+        font-family: Outfit, system-ui, sans-serif;
+      }
+      .preview {
+        max-width: 390px;
+        margin: 0 auto;
+        padding: 1rem 1rem 3rem;
+      }
+      .preview__banner {
+        margin: 0 0 1rem;
+        padding: 0.75rem 0.85rem;
+        border: 1px dashed #c9a35a;
+        border-radius: 10px;
+        color: #c9a35a;
+        font-size: 0.88rem;
+        line-height: 1.4;
+      }
+      .preview__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        margin-bottom: 1.25rem;
+      }
+      .preview__nav button {
+        min-height: 2.75rem;
+        text-align: left;
+        padding: 0.55rem 0.75rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+        color: inherit;
+        cursor: pointer;
+      }
+      .preview__nav button.is-active {
+        border-color: #c9a35a;
+        color: #c9a35a;
+      }
+      .preview__meta {
+        margin: 0 0 0.75rem;
+        font-size: 0.82rem;
+        color: rgba(243, 239, 230, 0.65);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="preview">
+      <p class="preview__banner" id="fixture-banner"></p>
+      <nav class="preview__nav" id="fixture-nav" aria-label="Fixture states"></nav>
+      <p class="preview__meta" id="fixture-meta"></p>
+      <div id="detail-insight" class="dream-insight" hidden></div>
+    </main>
+    <script type="module">
+      import "./src/style.css";
+      import { renderInsightContent } from "./src/insightRender.js";
+      import { FIXTURE_NOTE, fixtureLabels, insightFixtures } from "./src/insightFixtures.js";
+
+      const panel = document.getElementById("detail-insight");
+      const nav = document.getElementById("fixture-nav");
+      const meta = document.getElementById("fixture-meta");
+      document.getElementById("fixture-banner").textContent = FIXTURE_NOTE;
+
+      const keys = Object.keys(insightFixtures);
+
+      function show(key) {
+        const insight = insightFixtures[key];
+        for (const btn of nav.querySelectorAll("button")) {
+          btn.classList.toggle("is-active", btn.dataset.key === key);
+        }
+        const threads = insight.threads?.length ?? 0;
+        const qs = insight.reflection_questions?.length ?? 0;
+        const version = insight.version === 2 ? "V2" : "V1 legacy";
+        meta.textContent = `${fixtureLabels[key] || key} · ${version} · depth=${insight.depth || "n/a"} · threads=${threads} · questions=${qs}`;
+        renderInsightContent(panel, insight, { fresh: false });
+
+        // Console checks for local verification
+        const hasUncertainty = Boolean(panel.querySelector(".dream-insight__note"));
+        const hasReturn = Boolean(panel.querySelector(".dream-insight__return"));
+        const accordion = panel.querySelector(".dream-insight__accordion");
+        const sitWith = panel.querySelector(".dream-insight__sit-with, .dream-insight__reflect-heading");
+        console.info("[fixture-preview]", {
+          key,
+          hasUncertainty,
+          hasReturn,
+          accordionCollapsed: accordion
+            ? accordion.querySelector("[aria-expanded]")?.getAttribute("aria-expanded") === "false"
+            : null,
+          sitWithAfterAccordion: Boolean(sitWith),
+        });
+      }
+
+      for (const key of keys) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.dataset.key = key;
+        btn.textContent = fixtureLabels[key] || key;
+        btn.addEventListener("click", () => show(key));
+        nav.appendChild(btn);
+      }
+
+      const params = new URLSearchParams(location.search);
+      const initial = params.get("fixture") || "limitedNoticeOnly";
+      show(insightFixtures[initial] ? initial : keys[0]);
+    </script>
+  </body>
+</html>

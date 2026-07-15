@@ -1288,6 +1288,93 @@ button {
   line-height: 1.45;
 }
 
+/* V2 (and shared) accordion: unmistakable closed boundary */
+.dream-insight__accordion {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.dream-insight__accordion-toggle {
+  width: 100%;
+  min-height: 2.75rem;
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dream-insight__accordion-toggle:focus-visible {
+  outline: 2px solid var(--discovery);
+  outline-offset: -2px;
+}
+
+.dream-insight__accordion-label {
+  flex: 1;
+}
+
+.dream-insight__accordion-chevron {
+  color: var(--soft);
+  transform: rotate(90deg);
+  transition: transform 0.15s ease;
+}
+
+.dream-insight__accordion.is-open .dream-insight__accordion-chevron {
+  transform: rotate(-90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dream-insight__accordion-chevron {
+    transition: none;
+  }
+}
+
+.dream-insight__accordion-panel {
+  border-top: 1px solid var(--line);
+  padding: 0.65rem 0.85rem 0.85rem;
+}
+
+.dream-insight__thread-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.dream-insight__thread-list li + li {
+  margin-top: 0.4rem;
+}
+
+.dream-insight__sit-with {
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+}
+
+.dream-insight__reflect-heading {
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+}
+
+.dream-insight__question-single {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
 .dream-insight__reflect-list {
   margin: 0;
   padding-left: 1.1rem;
@@ -1297,6 +1384,10 @@ button {
 
 .dream-insight__reflect-list li + li {
   margin-top: 0.45rem;
+}
+
+.dream-insight__notice {
+  margin-bottom: 0;
 }
 
 .dream-insight__core-label {
