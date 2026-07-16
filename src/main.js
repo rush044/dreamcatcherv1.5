@@ -121,6 +121,7 @@ const authBackSigninBtn = document.getElementById("auth-back-signin");
 const authUpdatePasswordBtn = document.getElementById("auth-update-password");
 const authLogoutBtn = document.getElementById("auth-logout");
 const authUserEl = document.getElementById("auth-user");
+const profileDreamCountEl = document.getElementById("profile-dream-count");
 const authStatusEl = document.getElementById("auth-status");
 const authTabLogin = document.getElementById("auth-tab-login");
 const authTabSignup = document.getElementById("auth-tab-signup");
@@ -160,6 +161,7 @@ function setAppScreen(screen) {
 
   if (screen === "home") updateHomeMessage();
   if (screen === "sky") renderSkyPrototype();
+  if (screen === "profile") updateProfileStats();
   if (screen === "capture") {
     updateWordCount();
     window.setTimeout(() => {
@@ -171,6 +173,12 @@ function setAppScreen(screen) {
 function updateHomeMessage() {
   if (!homeMessageEl) return;
   homeMessageEl.textContent = HOME_MESSAGE;
+}
+
+function updateProfileStats() {
+  if (!profileDreamCountEl) return;
+  const count = cloudDreams.length;
+  profileDreamCountEl.textContent = count === 1 ? "1 dream safe" : `${count} dreams safe`;
 }
 
 function renderSkyPrototype() {
@@ -541,6 +549,7 @@ function renderDreams() {
   dreamList.innerHTML = "";
 
   dreamCount.textContent = dreams.length === 1 ? "1 saved" : `${dreams.length} saved`;
+  updateProfileStats();
   const showEmpty = dreams.length === 0 && !journalLoadFailed;
   setJournalEmptyVisible(showEmpty);
   if (showEmpty) {

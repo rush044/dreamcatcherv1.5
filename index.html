@@ -24,7 +24,15 @@
   </head>
   <body data-clouds="clear" data-flow="boot">
     <svg class="visually-hidden-svg" width="0" height="0" aria-hidden="true" focusable="false">
-      <filter id="sheepy-knockout" color-interpolation-filters="sRGB">
+      <filter
+        id="sheepy-knockout"
+        x="0%"
+        y="0%"
+        width="100%"
+        height="100%"
+        filterUnits="objectBoundingBox"
+        color-interpolation-filters="sRGB"
+      >
         <!-- Knock out the PNG’s opaque near-black backdrop without editing the asset -->
         <feColorMatrix
           in="SourceGraphic"
@@ -63,30 +71,29 @@
         </article>
         <article class="onboarding-slide" data-slide="1" hidden>
           <h1>This is Sheepy.</h1>
-          <p>
-            He comes from a quiet flock of dreamkeepers who live among the stars. Sheepy cares for every kind of
-            dream—the beautiful ones, the strange ones, and the ones that are hard to carry.
-          </p>
+          <p>He comes from a quiet flock of dreamkeepers who live among the stars.</p>
+          <p>Beautiful, strange, or hard to carry—Sheepy cares for every dream.</p>
         </article>
         <article class="onboarding-slide" data-slide="2" hidden>
           <h1>Even a fragment is light enough.</h1>
-          <p>
-            A person. A place. A strange turn. A feeling you cannot explain. Give Sheepy whatever stayed. The more you
-            remember, the more he has to notice.
-          </p>
+          <p>A person. A place. A strange turn. A feeling you cannot explain.</p>
+          <p>Give Sheepy whatever stayed. Sometimes one small detail brings the whole dream back.</p>
         </article>
         <article class="onboarding-slide" data-slide="3" hidden>
           <h1>Your dream deserves more than a recycled symbol list.</h1>
+          <p>Not every dog means loyalty. Not every storm means anxiety.</p>
           <p>
-            Not every dog means loyalty. Not every storm means anxiety. Sheepy follows the people, absences, unfinished
-            moments, and changes that make your dream yours—then looks for the strongest reading it has earned.
+            Sheepy follows the people, absences, unfinished moments, and changes that make your dream yours—then looks
+            for the strongest reading it has earned.
           </p>
         </article>
         <article class="onboarding-slide" data-slide="4" hidden>
           <h1>Your dreams become Sheepy’s sky.</h1>
+          <p>Every dream you save becomes a star in the Sky.</p>
+          <p>For now, each light keeps a dream close.</p>
           <p>
-            Each dream you save becomes a star in the Sky. For now, every light keeps a dream from disappearing. When
-            patterns begin to return, those stars may one day form constellations.
+            Later, when patterns return across different dreams, Sheepy may one day connect those stars into
+            constellations.
           </p>
         </article>
       </div>
@@ -349,7 +356,7 @@
               alt=""
               draggable="false"
             />
-            <p class="detail-keep__copy">Sheepy has been looking after this dream.</p>
+            <p class="detail-keep__copy">Sheepy kept this one safe.</p>
           </div>
           <article class="detail-dream" id="detail-dream">
             <h3 id="detail-title"></h3>
@@ -412,11 +419,12 @@
           <div class="profile-card">
             <p class="profile-card__label">Signed in as</p>
             <p id="auth-user" class="profile-card__email"></p>
+            <div class="profile-stat" aria-live="polite">
+              <p id="profile-dream-count" class="profile-stat__value">0 dreams safe</p>
+              <p class="profile-stat__label">Dreams kept with Sheepy</p>
+            </div>
             <button id="auth-logout" type="button" class="btn-secondary">Log out</button>
           </div>
-          <p class="profile-note">
-            Dream Replay and sky progression are coming later. Your dreams and insights already stay with you.
-          </p>
         </section>
       </main>
 
