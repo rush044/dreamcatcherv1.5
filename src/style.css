@@ -28,6 +28,9 @@
   --touch: 3rem;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --nav-h: calc(4.25rem + var(--safe-b));
+  --sheepy-onboarding: clamp(84px, 18vw, 116px);
+  --sheepy-onboarding-featured: clamp(104px, 22vw, 144px);
+  --sheepy-detail: clamp(72px, 16vw, 96px);
 }
 
 .visually-hidden-svg {
@@ -199,12 +202,12 @@ button {
 }
 
 .sheepy--confirm {
-  width: min(5.5rem, 32vw);
+  width: min(6.75rem, 36vw);
   margin: 0 auto 0.7rem;
 }
 
 .sheepy--sky {
-  width: min(5.75rem, 34vw);
+  width: min(7rem, 38vw);
   margin: 0.35rem auto 1rem;
 }
 
@@ -562,13 +565,15 @@ button {
 
 .onboarding {
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: clamp(0.65rem, 2vh, 1.15rem);
+  overflow: hidden;
 }
 
 .onboarding__art {
   position: relative;
-  flex: 1;
-  min-height: 38vh;
+  flex: 1 1 auto;
+  min-height: clamp(7.5rem, 26vh, 12rem);
+  max-height: 32vh;
   display: grid;
   place-items: center;
 }
@@ -592,10 +597,15 @@ button {
 }
 
 .onboarding__sheepy img {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: var(--sheepy-onboarding);
+  height: var(--sheepy-onboarding);
   image-rendering: pixelated;
   filter: url(#sheepy-knockout);
+}
+
+.onboarding__sheepy--featured img {
+  width: var(--sheepy-onboarding-featured);
+  height: var(--sheepy-onboarding-featured);
 }
 
 .onboarding__stars {
@@ -628,28 +638,26 @@ button {
   margin: 0 auto;
 }
 
-.onboarding-slide__copy {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 5.2vw, 1.55rem);
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--ink);
+.onboarding__slides {
+  flex: 0 1 auto;
+  min-height: 0;
+  width: 100%;
 }
 
 .onboarding-slide h1 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.55rem;
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 6.2vw, 1.9rem);
+  font-size: clamp(1.35rem, 5.4vw, 1.75rem);
   font-weight: 650;
   line-height: 1.2;
+  color: var(--ink);
 }
 
 .onboarding-slide p {
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.45;
+  font-size: clamp(0.92rem, 3.6vw, 1.02rem);
+  line-height: 1.42;
 }
 
 .onboarding__dots {
@@ -1124,8 +1132,22 @@ button {
   border-top: 1px solid var(--line);
   width: 100%;
   font-size: 0.88rem;
-  color: var(--discovery);
   line-height: 1.35;
+}
+
+.journal-card__state--ask {
+  color: var(--discovery);
+  font-weight: 550;
+}
+
+.journal-card__state--saved {
+  color: var(--soft);
+  font-weight: 450;
+}
+
+.journal-card__state--loading {
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* Dream detail */
@@ -1137,8 +1159,8 @@ button {
 }
 
 .detail-keep__sheepy {
-  width: 5rem;
-  height: 5rem;
+  width: var(--sheepy-detail);
+  height: var(--sheepy-detail);
   flex-shrink: 0;
   object-fit: contain;
   image-rendering: pixelated;
@@ -1159,7 +1181,7 @@ button {
 }
 
 .detail-dream {
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
   border-radius: var(--radius);
   background: var(--panel);
   padding: 1.15rem 1.15rem 1rem;
@@ -1193,7 +1215,7 @@ button {
 /* Insight attached to dream — discovery, not a second entry */
 .insight-attach {
   position: relative;
-  margin-top: 0.35rem;
+  margin-top: 0.85rem;
   padding: 0.85rem 0 0 1rem;
 }
 
@@ -1212,12 +1234,13 @@ button {
 }
 
 .dream-insight {
-  border: 1px solid color-mix(in srgb, var(--discovery) 28%, var(--line));
+  border: 1px solid color-mix(in srgb, var(--discovery) 44%, var(--line));
   border-radius: var(--radius-sm);
   background:
-    linear-gradient(160deg, color-mix(in srgb, var(--discovery) 10%, transparent), transparent 42%),
-    rgba(10, 9, 8, 0.55);
-  padding: 1rem 1rem 0.85rem;
+    linear-gradient(165deg, color-mix(in srgb, var(--discovery) 14%, transparent), transparent 50%),
+    color-mix(in srgb, var(--panel-strong) 90%, rgba(201, 184, 150, 0.05));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--discovery) 14%, transparent);
+  padding: 1.15rem 1.05rem 1rem;
   margin-bottom: 0.75rem;
 }
 
@@ -1242,9 +1265,9 @@ button {
 }
 
 .dream-insight__heading {
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.55rem;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 650;
   color: var(--ink);
 }
@@ -1290,8 +1313,8 @@ button {
 
 /* V2 (and shared) accordion: unmistakable closed boundary */
 .dream-insight__accordion {
-  margin-top: 1rem;
-  border: 1px solid var(--line);
+  margin-top: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--discovery) 22%, var(--line));
   border-radius: var(--radius-sm);
   background: rgba(0, 0, 0, 0.18);
   overflow: hidden;
@@ -1357,9 +1380,9 @@ button {
 }
 
 .dream-insight__sit-with {
-  margin-top: 1.15rem;
-  padding-top: 1rem;
-  border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
+  margin-top: 1.25rem;
+  padding-top: 1.05rem;
+  border-top: 1px solid color-mix(in srgb, var(--discovery) 20%, var(--line));
 }
 
 .dream-insight__reflect-heading {
@@ -1388,8 +1411,12 @@ button {
 
 .dream-insight__notice {
   margin-bottom: 0;
-  /* Preserve paragraph breaks from multi-paragraph recognition notices. */
   white-space: pre-wrap;
+  line-height: 1.58;
+}
+
+.dream-insight__notice + .dream-insight__notice {
+  margin-top: 0.85rem;
 }
 
 .dream-insight__core-label {
@@ -1540,15 +1567,51 @@ button {
 }
 
 .sky-prototype__count {
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.4;
+  max-width: 18rem;
 }
 
-.sky-prototype__hint {
+.sky-constellations-card {
+  width: min(100%, 20rem);
   margin: 0;
-  max-width: 18rem;
+  padding: 0.95rem 1rem;
+  border: 1px dashed color-mix(in srgb, var(--line) 70%, var(--soft));
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  text-align: left;
+}
+
+.sky-constellations-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin-bottom: 0.45rem;
+}
+
+.sky-constellations-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.sky-constellations-card__status {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--soft);
-  font-size: 0.92rem;
+}
+
+.sky-constellations-card__body {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
   line-height: 1.45;
 }
 
@@ -1650,7 +1713,11 @@ button {
   }
 
   .onboarding-slide h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .onboarding-slide p {
+    font-size: 1.05rem;
   }
 
   .sheepy--home {
@@ -1658,11 +1725,11 @@ button {
   }
 
   .sheepy--confirm {
-    width: min(6rem, 18vw);
+    width: min(7rem, 20vw);
   }
 
   .sheepy--sky {
-    width: min(6.5rem, 18vw);
+    width: min(7.5rem, 20vw);
   }
 
   .sheepy--journal-empty {

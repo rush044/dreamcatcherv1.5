@@ -98,6 +98,7 @@ const skyStarCount = document.getElementById("sky-star-count");
 const bottomNav = document.getElementById("bottom-nav");
 
 const onboardingSlides = [...document.querySelectorAll(".onboarding-slide")];
+const onboardingSheepy = document.getElementById("onboarding-sheepy");
 const onboardingDots = document.getElementById("onboarding-dots");
 const onboardingNext = document.getElementById("onboarding-next");
 const onboardingBegin = document.getElementById("onboarding-begin");
@@ -182,7 +183,9 @@ function renderSkyPrototype() {
   }
 
   skyStarCount.textContent =
-    count === 1 ? "1 dream-star is waiting with Sheepy." : `${count} dream-stars are waiting with Sheepy.`;
+    count === 1
+      ? "1 light keeps a dream from disappearing."
+      : `${count} lights keep your dreams from disappearing.`;
 
   const maxVisual = Math.min(count, 24);
   for (let i = 0; i < maxVisual; i++) {
@@ -212,6 +215,7 @@ function renderOnboardingSlide() {
     slide.classList.toggle("is-active", active);
   });
   buildOnboardingDots();
+  onboardingSheepy?.classList.toggle("onboarding__sheepy--featured", onboardingIndex === 1);
   const last = onboardingIndex >= onboardingSlides.length - 1;
   if (onboardingNext) onboardingNext.hidden = last;
   if (onboardingBegin) onboardingBegin.hidden = !last;
@@ -577,7 +581,15 @@ function renderDreams() {
 
     const state = document.createElement("span");
     state.className = "journal-card__state";
-    state.textContent = getInsightStateLabel(dream);
+    const stateLabel = getInsightStateLabel(dream);
+    state.textContent = stateLabel;
+    if (insightInFlight.has(dream.id)) {
+      state.classList.add("journal-card__state--loading");
+    } else if (dream.insight) {
+      state.classList.add("journal-card__state--saved");
+    } else {
+      state.classList.add("journal-card__state--ask");
+    }
 
     openBtn.append(head, timeEl, preview, state);
     openBtn.addEventListener("click", () => {

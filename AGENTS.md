@@ -37,7 +37,7 @@ The current strategic framing is:
 
 > “You are no longer testing an idea. You are testing a product.”
 
-The mobile-first implementation is deployed and functioning. Authentication, cloud sync, onboarding, dream saving, Dream Insights, Journal, Sky, Profile, and navigation are operational.
+The mobile-first implementation is deployed and functioning. Authentication, cloud sync, a five-slide onboarding story (dream value, Sheepy, capture, Insight differentiation, Sky), dream saving, Dream Insights, Journal, Sky, Profile, and navigation are operational.
 
 The current phase is not another broad redesign or a major feature-expansion cycle.
 
@@ -121,7 +121,7 @@ Protected high-value product lines include:
 - “My dreams help keep this place alive.”
 - “Your dream became a star.”
 
-Treat these as protected product-copy candidates.
+Treat these as protected product-copy candidates for in-app moments (home, return, save rituals—not necessarily onboarding slides).
 
 Do not casually rewrite, remove, or deploy all of them at once. Their timing and context matter.
 

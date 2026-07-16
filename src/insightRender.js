@@ -124,16 +124,35 @@ function appendReflection(panel, questions) {
   panel.appendChild(section);
 }
 
+function appendNoticeParagraphs(panel, noticeText) {
+  const blocks = String(noticeText)
+    .split(/\n\n+/)
+    .map((block) => block.trim())
+    .filter(Boolean);
+
+  if (blocks.length <= 1) {
+    const notice = document.createElement("p");
+    notice.className = "dream-insight__summary dream-insight__notice";
+    notice.textContent = noticeText;
+    panel.appendChild(notice);
+    return;
+  }
+
+  for (const block of blocks) {
+    const notice = document.createElement("p");
+    notice.className = "dream-insight__summary dream-insight__notice";
+    notice.textContent = block;
+    panel.appendChild(notice);
+  }
+}
+
 function renderInsightV2(panel, insight, { fresh = false } = {}) {
   const noticedHeading = document.createElement("h4");
   noticedHeading.className = "dream-insight__heading";
   noticedHeading.textContent = "What Sheepy noticed";
   panel.appendChild(noticedHeading);
 
-  const notice = document.createElement("p");
-  notice.className = "dream-insight__summary dream-insight__notice";
-  notice.textContent = insight.notice;
-  panel.appendChild(notice);
+  appendNoticeParagraphs(panel, insight.notice);
 
   const threads = (insight.threads || []).map((t) => String(t).trim()).filter(Boolean).slice(0, 3);
   if (threads.length) {

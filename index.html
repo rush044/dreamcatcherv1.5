@@ -50,21 +50,44 @@
     <section id="onboarding-screen" class="flow-screen onboarding" aria-label="Introduction" hidden>
       <div class="onboarding__art" aria-hidden="true">
         <div class="onboarding__moon"></div>
-        <div class="onboarding__sheepy">
-          <img src="/assets/sheepy.png" width="64" height="64" alt="" draggable="false" />
+        <div class="onboarding__sheepy" id="onboarding-sheepy">
+          <img src="/assets/sheepy.png" width="116" height="116" alt="" draggable="false" />
         </div>
         <div class="onboarding__stars"></div>
       </div>
 
       <div class="onboarding__slides" id="onboarding-slides">
         <article class="onboarding-slide is-active" data-slide="0">
-          <p class="onboarding-slide__copy">This is Sheepy. He tends the place where forgotten dreams go.</p>
+          <h1>Some dreams disappear by morning.</h1>
+          <p>Save one, and reading it later can bring back the place, the people, and the feeling all at once.</p>
         </article>
         <article class="onboarding-slide" data-slide="1" hidden>
-          <p class="onboarding-slide__copy">Each dream you save brings a new star to Sheepy’s sky.</p>
+          <h1>This is Sheepy.</h1>
+          <p>
+            He comes from a quiet flock of dreamkeepers who live among the stars. Sheepy cares for every kind of
+            dream—the beautiful ones, the strange ones, and the ones that are hard to carry.
+          </p>
         </article>
         <article class="onboarding-slide" data-slide="2" hidden>
-          <p class="onboarding-slide__copy">Over time, your dreams may begin to form constellations.</p>
+          <h1>Even a fragment is light enough.</h1>
+          <p>
+            A person. A place. A strange turn. A feeling you cannot explain. Give Sheepy whatever stayed. The more you
+            remember, the more he has to notice.
+          </p>
+        </article>
+        <article class="onboarding-slide" data-slide="3" hidden>
+          <h1>Your dream deserves more than a recycled symbol list.</h1>
+          <p>
+            Not every dog means loyalty. Not every storm means anxiety. Sheepy follows the people, absences, unfinished
+            moments, and changes that make your dream yours—then looks for the strongest reading it has earned.
+          </p>
+        </article>
+        <article class="onboarding-slide" data-slide="4" hidden>
+          <h1>Your dreams become Sheepy’s sky.</h1>
+          <p>
+            Each dream you save becomes a star in the Sky. For now, every light keeps a dream from disappearing. When
+            patterns begin to return, those stars may one day form constellations.
+          </p>
         </article>
       </div>
 
@@ -368,9 +391,16 @@
             </div>
             <div class="sky-prototype__field" id="sky-star-field" aria-hidden="true"></div>
             <p id="sky-star-count" class="sky-prototype__count">No stars yet — catch a dream to begin.</p>
-            <p class="sky-prototype__hint">
-              One day these lights may form constellations. For now, they simply wait with Sheepy.
-            </p>
+            <aside class="sky-constellations-card" aria-label="Constellations — coming later">
+              <div class="sky-constellations-card__head">
+                <h3 class="sky-constellations-card__title">Constellations</h3>
+                <span class="sky-constellations-card__status">Coming later</span>
+              </div>
+              <p class="sky-constellations-card__body">
+                When the same people, places, feelings, or unfinished moments return across your dreams, Sheepy may
+                begin connecting the lights.
+              </p>
+            </aside>
           </div>
         </section>
 
