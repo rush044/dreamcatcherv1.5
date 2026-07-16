@@ -756,7 +756,7 @@ button {
 
 /* Very short viewports / landscape / large text: allow stage to flex down slightly
    without changing Sheepy’s token size; page may scroll as graceful fallback. */
-@media (max-height: 700px) {
+@media (max-height: 700px), (min-width: 720px) and (max-height: 800px) {
   .onboarding {
     max-height: none;
   }
@@ -769,6 +769,7 @@ button {
   }
 
   .onboarding__slides {
+    flex: 0 0 auto;
     min-height: 0;
   }
 }
