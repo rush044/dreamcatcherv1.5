@@ -1,0 +1,59 @@
+{
+  "id": "R04",
+  "title": "Stella emotional stand-in",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "secret desire for the affair friend’s husband",
+      "face change as prophecy"
+    ],
+    "should_seek": [
+      "emotional stand-in / one friendship carrying another’s disappointment pattern",
+      "changed position inside that kind of relationship"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "One possible reading is that the coworker’s brief return reopened more than disappointment: the unsettling experience of someone feeling emotionally reachable while the relationship itself is no longer dependable or recognizable. The hug restores familiar warmth, but the changed face and smaller stature immediately reveal that you cannot quite meet the person—or the friendship—you remember. Your old friend may carry this feeling more strongly because that bond was also altered by another person’s actions and a breach around commitment. The engagement party quietly sharpens that contradiction. You recover the closeness for a moment, but only inside a scene that confirms how thoroughly its conditions have changed. Waking shaken may come from that double experience: reunion and renewed loss happening at once.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "person",
+        "label": "Old friend as an emotional stand-in",
+        "evidence": "A former coworker’s intermittent contact preceded a dream reunion with an older, more consequential lost connection.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "action",
+        "label": "Reunion immediately qualified by change",
+        "evidence": "You hugged your friend, but her altered face and stature made the familiar contact feel wrong or incomplete.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Intermittent closeness reopening an older relational loss",
+        "evidence": "The dream followed a former coworker texting and then going silent, which left you disappointed.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3155,
+    "output_tokens": 680,
+    "total_tokens": 3835,
+    "reasoning_tokens": 373
+  },
+  "estimated_cost_usd": 0.036175,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"One possible reading is that the coworker’s brief return reopened more than disappointment: the unsettling experience of someone feeling emotionally reachable while the relationship itself is no longer dependable or recognizable. The hug restores familiar warmth, but the changed face and smaller stature immediately reveal that you cannot quite meet the person—or the friendship—you remember. Your old friend may carry this feeling more strongly because that bond was also altered by another person’s actions and a breach around commitment. The engagement party quietly sharpens that contradiction. You recover the closeness for a moment, but only inside a scene that confirms how thoroughly its conditions have changed. Waking shaken may come from that double experience: reunion and renewed loss happening at once.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"person\",\"label\":\"Old friend as an emotional stand-in\",\"evidence\":\"A former coworker’s intermittent contact preceded a dream reunion with an older, more consequential lost connection.\",\"confidence\":\"suggested\"},{\"type\":\"action\",\"label\":\"Reunion immediately qualified by change\",\"evidence\":\"You hugged your friend, but her altered face and stature made the familiar contact feel wrong or incomplete.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Intermittent closeness reopening an older relational loss\",\"evidence\":\"The dream followed a former coworker texting and then going silent, which left you disappointed.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "I hugged an old friend at that friend’s engagement party. She felt short, and her face looked different. I woke shaken.\n\nWaking context: I lost touch with that friend after her husband initiated an emotional affair involving me. The day before this dream, a different former coworker texted and then went silent again. I felt disappointed by that intermittent connection."
+}

@@ -1,0 +1,55 @@
+{
+  "id": "R10",
+  "title": "The Thursday Review",
+  "category": "calibration",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "invented panic",
+      "recap-only Insight",
+      "broad anxiety/control label soup"
+    ],
+    "should_seek": [
+      "rehearsal of recoverability",
+      "competence under a small disruption",
+      "testing whether preparation holds when something briefly goes wrong"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "One possible reading is that your mind was rehearsing recoverability rather than failure. The visible mistake does not become humiliation or derail the review: you notice it, correct it plainly, and remain able to answer what comes next. Competence here is not being flawless; it is staying present when something imperfect is seen. The ordinary ending may be the point—a small error can remain small, without changing how others regard you or how you regard yourself.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Calm correction under observation",
+        "evidence": "You corrected the mislabeled month out loud and continued without panic.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Rehearsing recoverability",
+        "evidence": "The mistake remained manageable, the practical question was answered, and the review still ended on time.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3172,
+    "output_tokens": 376,
+    "total_tokens": 3548,
+    "reasoning_tokens": 171
+  },
+  "estimated_cost_usd": 0.02714,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"One possible reading is that your mind was rehearsing recoverability rather than failure. The visible mistake does not become humiliation or derail the review: you notice it, correct it plainly, and remain able to answer what comes next. Competence here is not being flawless; it is staying present when something imperfect is seen. The ordinary ending may be the point—a small error can remain small, without changing how others regard you or how you regard yourself.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Calm correction under observation\",\"evidence\":\"You corrected the mislabeled month out loud and continued without panic.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Rehearsing recoverability\",\"evidence\":\"The mistake remained manageable, the practical question was answered, and the review still ended on time.\",\"confidence\":\"suggested\"}]}",
+  "dream_text": "I was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken."
+}

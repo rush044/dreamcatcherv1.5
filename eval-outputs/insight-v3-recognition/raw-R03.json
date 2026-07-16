@@ -1,0 +1,80 @@
+{
+  "id": "R03",
+  "title": "University crushes / threshold pattern",
+  "category": "organic",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "deny stated attraction",
+      "literal desire for every sexual-dream character as proven",
+      "adopt shaming identity label as diagnosis",
+      "anxiety disorder diagnosis"
+    ],
+    "should_seek": [
+      "action that never happens / threshold",
+      "observation instead of entry",
+      "self-monitoring or inhibition",
+      "underwear as exposure-before-readiness (tentative)"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The important action may be what never happens. Attraction is present and unmistakable, but becoming visible to another person is repeatedly delayed: you watch the girls rather than speak, approach sexual contact without completing it, and appear in underwear without having chosen that exposure. Together, these dreams may be processing less a lack of desire than the risk of being seen while desiring.\n\nThere is also a quiet difference between inhibition and powerlessness. In the sexual dreams, you retain the ability to stop. That can represent self-monitoring or fear, but it also preserves agency at the exact point where an imagined situation would become consequential. Your harsh judgment may be treating every uncompleted act as failure, while the dreams themselves leave open another possibility: part of you was trying to keep desire close without crossing into exposure, rejection, or consequences before you felt ready.",
+    "threads": [
+      "Desire meeting self-monitoring — Wanting is allowed to develop, but expression is checked at the point where another person could respond.",
+      "Exposure without readiness — The underwear dream reverses the usual pattern: instead of choosing whether to reveal yourself, you are already visible and insufficiently protected."
+    ],
+    "reflection_questions": [
+      "At those thresholds, did the stronger danger feel like rejection, being fully seen, losing control of what followed, or something else?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Approach followed by withdrawal",
+        "evidence": "Sexual contact was repeatedly approached but not completed.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Watching instead of approaching",
+        "evidence": "You strongly liked girls in class but watched them pass without speaking in waking life or dreams.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Unchosen exposure",
+        "evidence": "An older school dream placed you in underwear.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Fear and inhibition around attraction",
+        "evidence": "You connect not speaking with your own fear and inhibition.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Harsh self-judgment about restraint",
+        "evidence": "You judge yourself harshly for the interrupted sexual pattern while noting that this is not a clinical conclusion.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3207,
+    "output_tokens": 665,
+    "total_tokens": 3872,
+    "reasoning_tokens": 205
+  },
+  "estimated_cost_usd": 0.035985,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The important action may be what never happens. Attraction is present and unmistakable, but becoming visible to another person is repeatedly delayed: you watch the girls rather than speak, approach sexual contact without completing it, and appear in underwear without having chosen that exposure. Together, these dreams may be processing less a lack of desire than the risk of being seen while desiring.\\n\\nThere is also a quiet difference between inhibition and powerlessness. In the sexual dreams, you retain the ability to stop. That can represent self-monitoring or fear, but it also preserves agency at the exact point where an imagined situation would become consequential. Your harsh judgment may be treating every uncompleted act as failure, while the dreams themselves leave open another possibility: part of you was trying to keep desire close without crossing into exposure, rejection, or consequences before you felt ready.\",\"threads\":[\"Desire meeting self-monitoring — Wanting is allowed to develop, but expression is checked at the point where another person could respond.\",\"Exposure without readiness — The underwear dream reverses the usual pattern: instead of choosing whether to reveal yourself, you are already visible and insufficiently protected.\"],\"reflection_questions\":[\"At those thresholds, did the stronger danger feel like rejection, being fully seen, losing control of what followed, or something else?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Approach followed by withdrawal\",\"evidence\":\"Sexual contact was repeatedly approached but not completed.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Watching instead of approaching\",\"evidence\":\"You strongly liked girls in class but watched them pass without speaking in waking life or dreams.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Unchosen exposure\",\"evidence\":\"An older school dream placed you in underwear.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Fear and inhibition around attraction\",\"evidence\":\"You connect not speaking with your own fear and inhibition.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Harsh self-judgment about restraint\",\"evidence\":\"You judge yourself harshly for the interrupted sexual pattern while noting that this is not a clinical conclusion.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "During university I repeatedly dreamed about girls in class I strongly liked. I watched them pass but did not speak to them in waking life or in the dreams.\n\nIn sexual dreams involving socially inappropriate but non-criminal people, the act was often approached but not completed. I pulled back or never crossed the threshold.\n\nThere was also an older school dream where I was present in underwear.\n\nWaking notes: the attraction to the university girls was real. I interpret not speaking as recreating my fear and inhibition. I judge myself harshly for the interrupted sexual pattern, but that harsh label is mine — not a clinical fact."
+}

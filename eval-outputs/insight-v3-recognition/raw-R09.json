@@ -1,0 +1,76 @@
+{
+  "id": "R09",
+  "title": "Simi generic-AI near miss",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "only generic stuck/control/past labels",
+      "school always = lessons dictionary",
+      "grandmother always = wise guidance dictionary"
+    ],
+    "should_seek": [
+      "personal map: school safety, grandmother, mango tree",
+      "early safety / family history rather than label soup"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The ground giving way is not just any loss of control: it happens beneath the first place where you felt safe. One possible reading is that some part of you is testing whether an early refuge can still hold you—or whether it now survives mainly as memory. Your grandmother’s silent call deepens that distance. Because you know her through memories and photographs, she may carry a form of belonging that is real but cannot answer you in the present. The mango tree keeps her rooted in your particular family history while the soil beneath that history sinks. Your mother’s lived care sits quietly behind the scene: safety in that world was not simply provided by the place or by ancestry; it was made for you through hardship. The heaviness may belong to recognizing both truths at once—that this past helped form your safety, and that you cannot rely on it in quite the same way now.",
+    "threads": [
+      "Inherited belonging versus lived protection — your grandmother holds the family memory, while your mother’s difficult work is what made that world survivable for you."
+    ],
+    "reflection_questions": [
+      "Has anything recently made the safety connected to your village feel less reachable, or did the sinking seem to carry a different kind of loss?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "Earliest place of safety becoming unstable",
+        "evidence": "The village primary school is where you first felt safety, and its dry soil was sinking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Grandmother as inherited family connection",
+        "evidence": "Your grandmother, known through memory and photos, appeared beneath the mango tree tied to that place and family history.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "A call that cannot be heard",
+        "evidence": "Your grandmother called to you without sound.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Heaviness after threatened refuge",
+        "evidence": "You woke heavy after the school ground sank and the silent call.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Safety created through maternal hardship",
+        "evidence": "You identify your mother as having raised you through hard times connected to that world.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3185,
+    "output_tokens": 965,
+    "total_tokens": 4150,
+    "reasoning_tokens": 514
+  },
+  "estimated_cost_usd": 0.044875,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The ground giving way is not just any loss of control: it happens beneath the first place where you felt safe. One possible reading is that some part of you is testing whether an early refuge can still hold you—or whether it now survives mainly as memory. Your grandmother’s silent call deepens that distance. Because you know her through memories and photographs, she may carry a form of belonging that is real but cannot answer you in the present. The mango tree keeps her rooted in your particular family history while the soil beneath that history sinks. Your mother’s lived care sits quietly behind the scene: safety in that world was not simply provided by the place or by ancestry; it was made for you through hardship. The heaviness may belong to recognizing both truths at once—that this past helped form your safety, and that you cannot rely on it in quite the same way now.\",\"threads\":[\"Inherited belonging versus lived protection — your grandmother holds the family memory, while your mother’s difficult work is what made that world survivable for you.\"],\"reflection_questions\":[\"Has anything recently made the safety connected to your village feel less reachable, or did the sinking seem to carry a different kind of loss?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Earliest place of safety becoming unstable\",\"evidence\":\"The village primary school is where you first felt safety, and its dry soil was sinking.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Grandmother as inherited family connection\",\"evidence\":\"Your grandmother, known through memory and photos, appeared beneath the mango tree tied to that place and family history.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"A call that cannot be heard\",\"evidence\":\"Your grandmother called to you without sound.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Heaviness after threatened refuge\",\"evidence\":\"You woke heavy after the school ground sank and the silent call.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Safety created through maternal hardship\",\"evidence\":\"You identify your mother as having raised you through hard times connected to that world.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "I was back at my village primary school. The dry soil was sinking. My grandmother was under a mango tree and called to me without sound. I woke heavy.\n\nPersonal map: that school is where I first felt safety. My grandmother is known through memory and photos. The mango tree belongs to that specific place and family history. My mother raised me through hard times connected to that world.\n\nA generic reading would only say I feel stuck, fear losing control, and carry emotional weight from the past."
+}

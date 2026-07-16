@@ -1,0 +1,64 @@
+{
+  "id": "R06",
+  "title": "Juliana Airbnb ended belonging",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "tell dreamer to return to the relationship",
+      "Airbnb as travel aspiration dictionary meaning"
+    ],
+    "should_seek": [
+      "belonging has ended",
+      "familiar/loved place can still feel like trespass",
+      "nostalgia without reunion permission"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream may be separating a valid need from a place that can no longer meet it. The Airbnb still offers the old ingredients of ease—familiarity, company, snacks, television—but without a booking, that comfort has lost its legitimate container. Your friend behaves like the tempting part of you that says, “It used to feel safe here, so perhaps we can still use it.” Your alarm answers that familiarity is not the same as present access. This does not make the longing wrong. It may mean you are grieving not only your ex, but a once-available state of being soothed and at home. The dream seems to recognize that the need survives even though the arrangement that once held it has ended.",
+    "threads": [
+      "The need remains, but its former home is unavailable"
+    ],
+    "reflection_questions": [
+      "When you picture that Airbnb, do you miss him most, the way you felt there, or the version of yourself who could receive comfort without questioning whether you belonged—or something else?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "Familiar comfort without present access",
+        "evidence": "The beloved Airbnb still feels inviting, but you have no booking and experience being there as trespassing.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Co-regulation through an unavailable former bond",
+        "evidence": "Waking context names temptation to seek co-regulation with your ex despite knowing he is unavailable for that need.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Permission-giving companion",
+        "evidence": "Your friend acts as though returning without a booking is harmless, contrasting with your strong boundary alarm.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3160,
+    "output_tokens": 551,
+    "total_tokens": 3711,
+    "reasoning_tokens": 198
+  },
+  "estimated_cost_usd": 0.03233,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream may be separating a valid need from a place that can no longer meet it. The Airbnb still offers the old ingredients of ease—familiarity, company, snacks, television—but without a booking, that comfort has lost its legitimate container. Your friend behaves like the tempting part of you that says, “It used to feel safe here, so perhaps we can still use it.” Your alarm answers that familiarity is not the same as present access. This does not make the longing wrong. It may mean you are grieving not only your ex, but a once-available state of being soothed and at home. The dream seems to recognize that the need survives even though the arrangement that once held it has ended.\",\"threads\":[\"The need remains, but its former home is unavailable\"],\"reflection_questions\":[\"When you picture that Airbnb, do you miss him most, the way you felt there, or the version of yourself who could receive comfort without questioning whether you belonged—or something else?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Familiar comfort without present access\",\"evidence\":\"The beloved Airbnb still feels inviting, but you have no booking and experience being there as trespassing.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Co-regulation through an unavailable former bond\",\"evidence\":\"Waking context names temptation to seek co-regulation with your ex despite knowing he is unavailable for that need.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Permission-giving companion\",\"evidence\":\"Your friend acts as though returning without a booking is harmless, contrasting with your strong boundary alarm.\",\"confidence\":\"suggested\"}]}",
+  "dream_text": "I returned with a friend to a beloved Airbnb connected to my ex. We had no booking. My friend acted like it was fine — snacks, TV. I felt appalled, like we were trespassing.\n\nWaking context: there is temptation to seek co-regulation with him again, and I know he is not available for that need. The place still feels loved and familiar."
+}

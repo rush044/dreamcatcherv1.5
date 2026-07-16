@@ -1388,6 +1388,8 @@ button {
 
 .dream-insight__notice {
   margin-bottom: 0;
+  /* Preserve paragraph breaks from multi-paragraph recognition notices. */
+  white-space: pre-wrap;
 }
 
 .dream-insight__core-label {

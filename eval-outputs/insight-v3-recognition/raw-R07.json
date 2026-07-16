@@ -1,0 +1,87 @@
+{
+  "id": "R07",
+  "title": "Siobhan and Nic interrupted goodbye",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "prove literal afterlife communication as fact",
+      "kitchen = universal nourishment symbol"
+    ],
+    "should_seek": [
+      "interrupted goodbye / unfinished conversation",
+      "kitchen as place belonging to the lived relationship"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The important action may be the conversation waking life did not allow. Rather than undoing Nic’s death, your mind placed you together in Nic’s kitchen and let the two of you speak directly about what death means. That makes this feel less like denial and more like an attempt to form a goodbye that could acknowledge the reality of the loss. The card that never arrived carries a similar shape: something meant to cross the distance did not reach its destination, just as the suddenness of Nic’s death prevented words from arriving in time. Your daughter’s presence may quietly hold the other side of this meeting—life continuing while a relationship of more than twenty years changes into memory. The vivid realism suggests how urgently your mind may have needed one more ordinary, truthful encounter.",
+    "threads": [
+      "Grief entering ongoing life — Your daughter’s presence places this unfinished goodbye inside the life that continues, rather than separating remembrance of Nic from the present."
+    ],
+    "reflection_questions": [
+      "Did the undelivered card feel as though it was meant for Nic, meant for you, or did it carry some other association?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "person",
+        "label": "Nic",
+        "evidence": "Nic is the friend with whom the vivid conversation takes place.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Nic’s kitchen",
+        "evidence": "The meeting occurs in Nic’s familiar domestic space.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Conversation about death",
+        "evidence": "You and Nic directly discuss death and its implications.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Card that never arrived",
+        "evidence": "An undelivered card appears alongside the interrupted goodbye.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Daughter as present witness",
+        "evidence": "Your daughter is present during the conversation.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Interrupted goodbye",
+        "evidence": "A friendship of more than twenty years ended through Nic’s sudden death without a natural goodbye.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Early grief after sudden loss",
+        "evidence": "The dream occurred about five weeks after Nic’s death and two weeks after the funeral.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3171,
+    "output_tokens": 825,
+    "total_tokens": 3996,
+    "reasoning_tokens": 364
+  },
+  "estimated_cost_usd": 0.040605,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The important action may be the conversation waking life did not allow. Rather than undoing Nic’s death, your mind placed you together in Nic’s kitchen and let the two of you speak directly about what death means. That makes this feel less like denial and more like an attempt to form a goodbye that could acknowledge the reality of the loss. The card that never arrived carries a similar shape: something meant to cross the distance did not reach its destination, just as the suddenness of Nic’s death prevented words from arriving in time. Your daughter’s presence may quietly hold the other side of this meeting—life continuing while a relationship of more than twenty years changes into memory. The vivid realism suggests how urgently your mind may have needed one more ordinary, truthful encounter.\",\"threads\":[\"Grief entering ongoing life — Your daughter’s presence places this unfinished goodbye inside the life that continues, rather than separating remembrance of Nic from the present.\"],\"reflection_questions\":[\"Did the undelivered card feel as though it was meant for Nic, meant for you, or did it carry some other association? \"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"person\",\"label\":\"Nic\",\"evidence\":\"Nic is the friend with whom the vivid conversation takes place.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Nic’s kitchen\",\"evidence\":\"The meeting occurs in Nic’s familiar domestic space.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Conversation about death\",\"evidence\":\"You and Nic directly discuss death and its implications.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Card that never arrived\",\"evidence\":\"An undelivered card appears alongside the interrupted goodbye.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Daughter as present witness\",\"evidence\":\"Your daughter is present during the conversation.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Interrupted goodbye\",\"evidence\":\"A friendship of more than twenty years ended through Nic’s sudden death without a natural goodbye.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Early grief after sudden loss\",\"evidence\":\"The dream occurred about five weeks after Nic’s death and two weeks after the funeral.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "I had a vivid talk with my friend Nic in Nic’s kitchen about death and the implications of it. My daughter was present. There was also a card that never arrived. It felt like a real meeting.\n\nWaking context: Nic died suddenly of sarcoma before Christmas. We had been friends for more than twenty years. There was no natural goodbye. This was about five weeks after the death and two weeks after the funeral."
+}

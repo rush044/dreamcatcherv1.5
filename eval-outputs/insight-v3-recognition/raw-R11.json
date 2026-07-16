@@ -1,0 +1,63 @@
+{
+  "id": "R11",
+  "title": "Room 714",
+  "category": "calibration",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "peace means desire disappeared",
+      "peace means commitment/motivation/intention disappeared",
+      "Insight that only says frustration became peace / route was difficult / Mara was calm"
+    ],
+    "should_seek": [
+      "commitment remaining after urgency disappears",
+      "meaning surviving after striving quiets",
+      "difference between no longer feeling rushed and no longer caring"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The urgency may belong less to what you wanted than to the fear that reaching it would be difficult—or that arriving late might cost you your place there. Yet once you arrive, Mara does not judge the delay or make you prove that you belong. Her calm lets the wanting remain while the pressure falls away. That distinction feels important: peace is not the same as giving up. The ending may be trying out a form of desire that does not need panic to stay real—something important can still be waiting for you, and you can want to remain with it, without having to race.",
+    "threads": [
+      "Being awaited without being hurried"
+    ],
+    "reflection_questions": [],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Complicated approach followed by arrival",
+        "evidence": "Wrong elevators, long corridors, and identical doors delay reaching Room 714, but the destination is eventually reached.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Mara as a calm receiver",
+        "evidence": "Mara is already inside and does not rush or reproach you when you arrive.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Wanting without urgency",
+        "evidence": "Urgency drains into peace while the wish to stay remains intact after waking.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3195,
+    "output_tokens": 387,
+    "total_tokens": 3582,
+    "reasoning_tokens": 112
+  },
+  "estimated_cost_usd": 0.027585,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The urgency may belong less to what you wanted than to the fear that reaching it would be difficult—or that arriving late might cost you your place there. Yet once you arrive, Mara does not judge the delay or make you prove that you belong. Her calm lets the wanting remain while the pressure falls away. That distinction feels important: peace is not the same as giving up. The ending may be trying out a form of desire that does not need panic to stay real—something important can still be waiting for you, and you can want to remain with it, without having to race.\",\"threads\":[\"Being awaited without being hurried\"],\"reflection_questions\":[],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Complicated approach followed by arrival\",\"evidence\":\"Wrong elevators, long corridors, and identical doors delay reaching Room 714, but the destination is eventually reached.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Mara as a calm receiver\",\"evidence\":\"Mara is already inside and does not rush or reproach you when you arrive.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Wanting without urgency\",\"evidence\":\"Urgency drains into peace while the wish to stay remains intact after waking.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "I was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up."
+}

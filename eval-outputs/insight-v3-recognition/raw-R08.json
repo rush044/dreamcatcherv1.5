@@ -1,0 +1,63 @@
+{
+  "id": "R08",
+  "title": "Julia octopus / day residue",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "octopus universal dictionary meaning alone",
+      "ignore waking day residue and personal language"
+    ],
+    "should_seek": [
+      "day residue becoming personal",
+      "stuck / attached decision connected to mother help and water problem"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The octopus may be your mind making “sticky” literal: a home decision that began as one practical choice is expanding, attaching itself to money, family help, and the fear of hidden water problems. Searching for your mother matters because she is not only family here; she is part of what makes the purchase possible. Her help may feel reassuring while also making the decision harder to separate from dependence, obligation, or the wish for someone trusted to help contain it. The leak supplied the water imagery, but the octopus gives that recent event a useful shape: the concern is not just that something could go wrong with a house, but that the commitment could keep spreading once you are attached.",
+    "threads": [
+      "Help that also binds — your mother’s support may make the home possible while adding another layer to a decision already difficult to leave or contain."
+    ],
+    "reflection_questions": [
+      "In searching for your mother, were you looking for reassurance, practical rescue, the person tied to the purchase—or did it feel different?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "image",
+        "label": "A sticky decision becoming literal",
+        "evidence": "The expanding octopus and its suckers echo the waking description of the house decision as sticky or stuck.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Water damage entering the home decision",
+        "evidence": "The bathtub and water closely follow the upstairs neighbor’s soaked mattress and dripping water.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Mother as support within the commitment",
+        "evidence": "You searched for your mother while, in waking life, she is helping with the down payment.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3152,
+    "output_tokens": 585,
+    "total_tokens": 3737,
+    "reasoning_tokens": 232
+  },
+  "estimated_cost_usd": 0.03331,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The octopus may be your mind making “sticky” literal: a home decision that began as one practical choice is expanding, attaching itself to money, family help, and the fear of hidden water problems. Searching for your mother matters because she is not only family here; she is part of what makes the purchase possible. Her help may feel reassuring while also making the decision harder to separate from dependence, obligation, or the wish for someone trusted to help contain it. The leak supplied the water imagery, but the octopus gives that recent event a useful shape: the concern is not just that something could go wrong with a house, but that the commitment could keep spreading once you are attached.\",\"threads\":[\"Help that also binds — your mother’s support may make the home possible while adding another layer to a decision already difficult to leave or contain.\"],\"reflection_questions\":[\"In searching for your mother, were you looking for reassurance, practical rescue, the person tied to the purchase—or did it feel different?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"image\",\"label\":\"A sticky decision becoming literal\",\"evidence\":\"The expanding octopus and its suckers echo the waking description of the house decision as sticky or stuck.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Water damage entering the home decision\",\"evidence\":\"The bathtub and water closely follow the upstairs neighbor’s soaked mattress and dripping water.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Mother as support within the commitment\",\"evidence\":\"You searched for your mother while, in waking life, she is helping with the down payment.\",\"confidence\":\"suggested\"}]}",
+  "dream_text": "There was an expanding octopus that stuck with suckers, water and a bathtub, and I was searching for my mother.\n\nWaking context: water had dripped from an upstairs neighbor’s soaked mattress. I was considering buying a home. My mother was helping with the down payment. The house decision has started to feel sticky / stuck."
+}

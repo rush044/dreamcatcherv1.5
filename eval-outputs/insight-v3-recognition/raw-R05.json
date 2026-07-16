@@ -1,0 +1,62 @@
+{
+  "id": "R05",
+  "title": "Axel boundary rehearsal",
+  "category": "research",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "label friend toxic as fact",
+      "command cutting all contact forever"
+    ],
+    "should_seek": [
+      "boundary already beginning",
+      "rehearsing why further intervention feels dangerous or futile",
+      "validating a step already taken rather than inventing a new moral command"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "One possible reading is that your mind was rehearsing why stepping back had already become necessary. Lacy is the one driving, but you are close enough to witness the near-misses and collision without having the power to steer for her. Your anger matters more than fear here: it may mark the point where concern turns into recognition that you cannot keep absorbing responsibility for choices she controls. Her leaving the scene sharpens this—not necessarily as a judgment about her character, but as an image of consequences you cannot make another person face. The blue Chevy was likely borrowed from the previous day, while the accident gave that ordinary detail a role in processing the boundary you had just begun.",
+    "threads": [
+      "Responsibility without control — being beside someone’s risky choices can create pressure to intervene, even when the steering wheel was never yours."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "relationship",
+        "label": "Stepping back from responsibility for a friend’s choices",
+        "evidence": "You had recently stopped trying to redirect Lacy’s habits; in the dream she drives recklessly while you witness the consequences.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Anger marking a boundary",
+        "evidence": "You emphasized that anger, rather than fear, was the main emotion after repeated near-misses and the collision.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Blue Chevy as recent visual residue",
+        "evidence": "You saw a blue Chevy the day before the dream.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3156,
+    "output_tokens": 534,
+    "total_tokens": 3690,
+    "reasoning_tokens": 209
+  },
+  "estimated_cost_usd": 0.0318,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"One possible reading is that your mind was rehearsing why stepping back had already become necessary. Lacy is the one driving, but you are close enough to witness the near-misses and collision without having the power to steer for her. Your anger matters more than fear here: it may mark the point where concern turns into recognition that you cannot keep absorbing responsibility for choices she controls. Her leaving the scene sharpens this—not necessarily as a judgment about her character, but as an image of consequences you cannot make another person face. The blue Chevy was likely borrowed from the previous day, while the accident gave that ordinary detail a role in processing the boundary you had just begun.\",\"threads\":[\"Responsibility without control — being beside someone’s risky choices can create pressure to intervene, even when the steering wheel was never yours.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"relationship\",\"label\":\"Stepping back from responsibility for a friend’s choices\",\"evidence\":\"You had recently stopped trying to redirect Lacy’s habits; in the dream she drives recklessly while you witness the consequences.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Anger marking a boundary\",\"evidence\":\"You emphasized that anger, rather than fear, was the main emotion after repeated near-misses and the collision.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Blue Chevy as recent visual residue\",\"evidence\":\"You saw a blue Chevy the day before the dream.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "My friend Lacy was driving while on her phone. Near-misses. She rear-ended a blue Chevy and left the scene. I was angry in the dream — not mainly afraid.\n\nWaking context: I had already stepped back about four days earlier from trying to redirect her gym and diet habits. She returned to partying. I had seen a blue Chevy the day before."
+}

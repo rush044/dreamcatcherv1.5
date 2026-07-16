@@ -1,11 +1,12 @@
 # DreamCatcher Adaptive Insight V2 — Product Specification
 
-**Status (current candidate):** Feature branch `insight-v2-sol-v2-2`  
+**Status (current candidate):** Feature branch `insight-v3-recognition`  
 **Selected working model:** `gpt-5.6-sol` (blind human review: 10/10 vs Mini)  
-**Active candidate prompt:** `adaptive-v2.2.1`  
+**Active candidate prompt:** `recognition-v3.0`  
+**Preserved fallback:** `adaptive-v2.2.1` (`SYSTEM_PROMPT_V2`)  
 **Historical prompts:** `adaptive-v2.2` (optionality win; under-threaded Hotel), `adaptive-v2.1` (Mini vs Sol)  
 **Schema:** V2 JSON (unchanged storage shape; V1 cache still supported)  
-**Not production.** Release requires V2.2.1 targeted review + live preview acceptance.
+**Not production.** Recognition quality requires authenticated human preview review. See `INSIGHT_RECOGNITION_V3.md`.
 
 ---
 

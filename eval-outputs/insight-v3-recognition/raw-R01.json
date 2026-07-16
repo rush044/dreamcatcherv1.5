@@ -1,0 +1,78 @@
+{
+  "id": "R01",
+  "title": "Clavicular / church / time skip",
+  "category": "organic",
+  "context_mode": "with_context",
+  "prompt_version": "recognition-v3.0",
+  "schema_version": 2,
+  "model": "gpt-5.6-sol",
+  "expected": {
+    "must_not": [
+      "wish for harm / wanting Clavicular dead",
+      "default envy claim",
+      "forced romance in fatherhood scene",
+      "fatherhood as proven intention"
+    ],
+    "should_seek": [
+      "observer / watching another life",
+      "shift toward imagining a personal life",
+      "desire held with fear of failing dependents",
+      "faith-before-certainty if context used carefully"
+    ]
+  },
+  "validation_error": null,
+  "error": null,
+  "acceptance_issues": [],
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "One possible reading is that the dream begins inside someone else’s dramatic life and ends by trying to picture a life that would actually belong to you. Being Clavicular’s cameraman keeps you close to excitement but still behind the lens; his fall may mark that borrowed world losing some of its hold as you began watching less, rather than any wish for harm.\n\nThat observer position continues in the church. Faith is becoming more present, but you are watching uncertain events rather than confidently joining a side. The possible dove or miracle fits belief appearing before certainty or religious identity.\n\nAfter the time skip, spectacle gives way to care: a possible child, a dog, and a quieter home. Yet what depends on you becomes terribly vulnerable, and money enters only after the injury—as compensation, not prevention or repair. This may be your mind testing both halves of a hoped-for future: wanting a life of your own, while fearing that financial instability could leave you unable to protect or provide for those you love. The dream does not erase the wish; it shows how closely the wish has become tied to anticipated responsibility and loss.",
+    "threads": [
+      "Watching instead of entering — You remain near public chaos, faith, and even a possible future without fully stepping into any of them, which may reflect a life period where important identities still feel provisional.",
+      "Care becoming risk — The later life is simpler and more personal, but dependence immediately creates the possibility of failure; money can answer the aftermath without undoing what happened."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "person",
+        "label": "Clavicular as a borrowed public life",
+        "evidence": "You were unusually close to him but occupied a cameraman-like observer role; waking life included heavy viewing that had recently decreased.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Watching rather than participating",
+        "evidence": "You stayed mostly observational around both Clavicular and the church crisis.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Faith before settled identity",
+        "evidence": "Uncertain miracle imagery appeared in a church while God had become more present without a fully Christian identity.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "relationship",
+        "label": "Desired care paired with fear of failing dependents",
+        "evidence": "The later life may include a child and definitely includes an injured dog, followed by money or compensation; waking context links financial instability with possible fatherhood.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "place",
+        "label": "Movement from public spectacle to private life",
+        "evidence": "The dream shifts from chaotic public scenes into a simpler beach-like future with family or caregiving elements.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 3306,
+    "output_tokens": 736,
+    "total_tokens": 4042,
+    "reasoning_tokens": 181
+  },
+  "estimated_cost_usd": 0.03861,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"One possible reading is that the dream begins inside someone else’s dramatic life and ends by trying to picture a life that would actually belong to you. Being Clavicular’s cameraman keeps you close to excitement but still behind the lens; his fall may mark that borrowed world losing some of its hold as you began watching less, rather than any wish for harm.\\n\\nThat observer position continues in the church. Faith is becoming more present, but you are watching uncertain events rather than confidently joining a side. The possible dove or miracle fits belief appearing before certainty or religious identity.\\n\\nAfter the time skip, spectacle gives way to care: a possible child, a dog, and a quieter home. Yet what depends on you becomes terribly vulnerable, and money enters only after the injury—as compensation, not prevention or repair. This may be your mind testing both halves of a hoped-for future: wanting a life of your own, while fearing that financial instability could leave you unable to protect or provide for those you love. The dream does not erase the wish; it shows how closely the wish has become tied to anticipated responsibility and loss.\",\"threads\":[\"Watching instead of entering — You remain near public chaos, faith, and even a possible future without fully stepping into any of them, which may reflect a life period where important identities still feel provisional.\",\"Care becoming risk — The later life is simpler and more personal, but dependence immediately creates the possibility of failure; money can answer the aftermath without undoing what happened.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"person\",\"label\":\"Clavicular as a borrowed public life\",\"evidence\":\"You were unusually close to him but occupied a cameraman-like observer role; waking life included heavy viewing that had recently decreased.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Watching rather than participating\",\"evidence\":\"You stayed mostly observational around both Clavicular and the church crisis.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Faith before settled identity\",\"evidence\":\"Uncertain miracle imagery appeared in a church while God had become more present without a fully Christian identity.\",\"confidence\":\"suggested\"},{\"type\":\"relationship\",\"label\":\"Desired care paired with fear of failing dependents\",\"evidence\":\"The later life may include a child and definitely includes an injured dog, followed by money or compensation; waking context links financial instability with possible fatherhood.\",\"confidence\":\"suggested\"},{\"type\":\"place\",\"label\":\"Movement from public spectacle to private life\",\"evidence\":\"The dream shifts from chaotic public scenes into a simpler beach-like future with family or caregiving elements.\",\"confidence\":\"explicit\"}]}",
+  "dream_text": "I was somehow with Clavicular — like his cameraman or just very close while everything around him was chaotic and public. Then he fell and died. After that it jumped into a church where there was a shooting or hostage situation. I mostly watched. There may have been unknown shooters, police, people turning on each other, and something almost miracle-like with photographs or a white dove, but some of that is uncertain.\n\nThen there was a cinematic time skip into a later life. There might have been a child. There was a dog. It felt simpler, like a beach. The dog got injured and lost its legs. Money or compensation became part of what happened after.\n\nWaking context I know: I was unemployed. I had watched a lot of Clavicular and recently started watching less. God had become more present for me over the past year, but I do not fully consider myself Christian. I was beginning to accept that financial instability might mean I never become a father, even though I suspect having a child is something I want. Women and romance were not really in this dream."
+}

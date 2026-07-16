@@ -30,7 +30,9 @@ import { generateInsightWithSol } from "../lib/insight-v2-openai.mjs";
  * caller's JWT + Row Level Security on `dreams` / `dream_insights`.
  *
  * Cached V1 and prior V2 insights remain valid and are returned as-is (normalized).
- * New generations use gpt-5.6-sol + adaptive-v2.2 via the Responses API.
+ * New generations use gpt-5.6-sol + recognition-v3.0 via the Responses API.
+ * Prompt version changes do not regenerate existing cached insights.
+ * Fallback prompt adaptive-v2.2.1 remains available in lib/insight-v2.mjs.
  */
 
 const MODEL = INSIGHT_V2_MODEL;
