@@ -28,8 +28,13 @@
   --touch: 3rem;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --nav-h: calc(4.25rem + var(--safe-b));
-  --sheepy-onboarding: clamp(100px, 24vw, 116px);
-  --sheepy-onboarding-featured: clamp(120px, 29vw, 136px);
+  --sheepy-onboarding: clamp(112px, 28vw, 128px);
+  --sheepy-onboarding-featured: clamp(118px, 29.5vw, 134px);
+  --onboarding-headline: clamp(1.8rem, 6.4vw, 2.15rem);
+  --onboarding-headline-long: clamp(1.62rem, 5.7vw, 1.95rem);
+  --onboarding-body-size: clamp(1.03rem, 4.3vw, 1.16rem);
+  --onboarding-body: #c4bbb0;
+  --onboarding-stage-h: clamp(9.5rem, 26svh, 11.75rem);
   --sheepy-detail: clamp(72px, 16vw, 96px);
 }
 
@@ -584,36 +589,52 @@ button {
 }
 
 .onboarding {
-  justify-content: space-between;
-  gap: clamp(0.65rem, 2vh, 1.15rem);
-  overflow: hidden;
+  /* Stable scene: svh preferred, vh fallback. Auto scroll only when content cannot fit. */
+  height: 100vh;
+  height: 100svh;
+  min-height: 100vh;
+  min-height: 100svh;
+  max-height: 100vh;
+  max-height: 100svh;
+  justify-content: flex-start;
+  gap: 0.55rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
+/* 1. Visual stage — fixed height; text quantity must not resize this */
 .onboarding__art {
   position: relative;
-  flex: 1 1 auto;
-  min-height: clamp(8.25rem, 28vh, 13rem);
-  max-height: 34vh;
+  flex: 0 0 var(--onboarding-stage-h);
+  width: 100%;
+  height: var(--onboarding-stage-h);
+  min-height: var(--onboarding-stage-h);
+  max-height: var(--onboarding-stage-h);
   display: grid;
   place-items: center;
+  overflow: visible;
 }
 
 .onboarding__moon {
   position: absolute;
-  top: 12%;
-  right: 18%;
-  width: 3.5rem;
-  height: 3.5rem;
+  top: 0.55rem;
+  right: 1.1rem;
+  width: 3.25rem;
+  height: 3.25rem;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #f2eee6, #b9b2a6 58%, #8d877d 100%);
   box-shadow: 0 0 28px rgba(210, 202, 190, 0.3);
   animation: soft-pulse 5s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .onboarding__sheepy {
   position: relative;
   z-index: 1;
   animation: sheepy-bob 4s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 .onboarding__sheepy img {
@@ -633,7 +654,7 @@ button {
 
 .onboarding__stars {
   position: absolute;
-  inset: 18% 12% 28%;
+  inset: 12% 8% 18%;
   background-image:
     radial-gradient(circle, rgba(232, 226, 218, 0.9) 0 1px, transparent 1.5px),
     radial-gradient(circle, rgba(232, 226, 218, 0.55) 0 1px, transparent 1.5px);
@@ -641,6 +662,7 @@ button {
   background-position: 10% 20%, 60% 55%;
   opacity: 0.55;
   animation: soft-pulse 7s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 @keyframes soft-pulse {
@@ -655,50 +677,58 @@ button {
   }
 }
 
+/* 2. Text stage — reserved height so short slides do not inflate the visual stage */
+.onboarding__slides {
+  flex: 1 1 auto;
+  min-height: 10.75rem;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .onboarding-slide {
   text-align: center;
   max-width: 20.5rem;
+  width: 100%;
   margin: 0 auto;
 }
 
-.onboarding__slides {
-  flex: 0 1 auto;
-  min-height: 0;
-  width: 100%;
-}
-
 .onboarding-slide h1 {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.75rem;
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+  font-size: var(--onboarding-headline);
   font-weight: 650;
   line-height: 1.22;
   color: var(--ink);
   text-transform: none;
 }
 
+/* Slide 4 only — long headline variant; Sheepy and body stay shared */
 .onboarding-slide[data-slide="3"] h1 {
-  font-size: clamp(1.55rem, 5.8vw, 1.95rem);
+  font-size: var(--onboarding-headline-long);
 }
 
 .onboarding-slide p {
   margin: 0;
-  color: var(--muted);
-  font-size: clamp(1.05rem, 3.8vw, 1.15rem);
+  color: var(--onboarding-body);
+  font-size: var(--onboarding-body-size);
   line-height: 1.5;
   max-width: 19.5rem;
   margin-inline: auto;
 }
 
 .onboarding-slide p + p {
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
 }
 
+/* 3. Progress + action stage — never compressed by text quantity */
 .onboarding__dots {
   display: flex;
   justify-content: center;
   gap: 0.45rem;
-  margin: 0.25rem 0 0.5rem;
+  flex: 0 0 auto;
+  margin: 0.15rem 0 0.2rem;
 }
 
 .onboarding__dots span {
@@ -715,10 +745,31 @@ button {
 
 .onboarding__actions {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.3rem;
   max-width: 22rem;
   width: 100%;
   margin: 0 auto;
+  flex: 0 0 auto;
+  padding-bottom: 0.15rem;
+}
+
+/* Very short viewports / landscape / large text: allow stage to flex down slightly
+   without changing Sheepy’s token size; page may scroll as graceful fallback. */
+@media (max-height: 700px) {
+  .onboarding {
+    max-height: none;
+  }
+
+  .onboarding__art {
+    flex-basis: clamp(7.5rem, 22svh, 9.5rem);
+    height: clamp(7.5rem, 22svh, 9.5rem);
+    min-height: clamp(7.5rem, 22svh, 9.5rem);
+    max-height: clamp(7.5rem, 22svh, 9.5rem);
+  }
+
+  .onboarding__slides {
+    min-height: 0;
+  }
 }
 
 /* ---- Auth ---- */
@@ -1823,15 +1874,15 @@ button {
   }
 
   .onboarding-slide h1 {
-    font-size: 2.05rem;
+    font-size: var(--onboarding-headline);
   }
 
   .onboarding-slide[data-slide="3"] h1 {
-    font-size: 1.9rem;
+    font-size: var(--onboarding-headline-long);
   }
 
   .onboarding-slide p {
-    font-size: 1.12rem;
+    font-size: var(--onboarding-body-size);
   }
 
   .sheepy--home {
