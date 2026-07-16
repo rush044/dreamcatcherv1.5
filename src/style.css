@@ -35,7 +35,7 @@
   --onboarding-body-size: clamp(1.03rem, 4.3vw, 1.16rem);
   --onboarding-body: #c4bbb0;
   --onboarding-stage-h: clamp(9.5rem, 26svh, 11.75rem);
-  --sheepy-auth: clamp(76px, 21vw, 96px);
+  --sheepy-auth: clamp(108px, 29.5vw, 126px);
   --sheepy-detail: clamp(72px, 16vw, 96px);
 }
 
@@ -777,7 +777,7 @@ button {
 .auth-screen {
   justify-content: flex-start;
   gap: 0;
-  padding-top: max(2rem, env(safe-area-inset-top));
+  padding-top: max(1.5rem, env(safe-area-inset-top));
 }
 
 /* Welcome stack in normal flow: title → reserved Sheepy → subtitle → card */
@@ -792,7 +792,7 @@ button {
 }
 
 .auth-welcome__mark {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.5rem;
   position: relative;
   z-index: 1;
 }
@@ -802,7 +802,7 @@ button {
   --auth-bob: 5px;
   width: var(--sheepy-auth);
   height: calc(var(--sheepy-auth) + var(--auth-bob));
-  margin: 0 auto 1rem; /* ≥16px clearance from lowest Sheepy pose to subtitle */
+  margin: 0 auto 0.875rem; /* ≥14px clearance from lowest Sheepy pose to subtitle */
   display: grid;
   place-items: end center;
   overflow: visible;
@@ -842,7 +842,7 @@ button {
 }
 
 .auth-welcome__subtitle {
-  margin: 0 0 1.35rem; /* ≥18–24px before auth card */
+  margin: 0 0 1.25rem; /* ~20px before auth card */
   max-width: 18rem;
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 5vw, 1.4rem);
