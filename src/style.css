@@ -35,6 +35,7 @@
   --onboarding-body-size: clamp(1.03rem, 4.3vw, 1.16rem);
   --onboarding-body: #c4bbb0;
   --onboarding-stage-h: clamp(9.5rem, 26svh, 11.75rem);
+  --sheepy-auth: clamp(76px, 21vw, 96px);
   --sheepy-detail: clamp(72px, 16vw, 96px);
 }
 
@@ -775,30 +776,81 @@ button {
 /* ---- Auth ---- */
 .auth-screen {
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 0;
   padding-top: max(2rem, env(safe-area-inset-top));
 }
 
-.auth-hero {
+/* Welcome stack in normal flow: title → reserved Sheepy → subtitle → card */
+.auth-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 0.5rem 0 0.25rem;
+  width: min(24rem, 100%);
+  margin: 0 auto;
+  position: relative;
 }
 
-.auth-hero__sheepy img {
-  width: 3rem;
-  height: 3rem;
+.auth-welcome__mark {
+  margin: 0 0 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-welcome__sheepy {
+  /* Reserve full bob travel (≈5px up) inside the container — never overlap neighbors */
+  --auth-bob: 5px;
+  width: var(--sheepy-auth);
+  height: calc(var(--sheepy-auth) + var(--auth-bob));
+  margin: 0 auto 1rem; /* ≥16px clearance from lowest Sheepy pose to subtitle */
+  display: grid;
+  place-items: end center;
+  overflow: visible;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.auth-welcome__sheepy-bob {
+  width: var(--sheepy-auth);
+  height: var(--sheepy-auth);
+  animation: auth-sheepy-bob 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.auth-welcome__sheepy-sprite {
+  display: block;
+  width: var(--sheepy-auth);
+  height: var(--sheepy-auth);
   image-rendering: pixelated;
-  animation: sheepy-bob 4s ease-in-out infinite;
   filter: url(#sheepy-knockout);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform: translateZ(0);
+  background: transparent;
 }
 
-.auth-hero__whisper {
-  margin: 0.65rem 0 0;
-  color: var(--caption);
-  font-size: 0.95rem;
+@keyframes auth-sheepy-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(-1 * var(--auth-bob, 5px)));
+  }
+}
+
+.auth-welcome__subtitle {
+  margin: 0 0 1.35rem; /* ≥18–24px before auth card */
+  max-width: 18rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 5vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--moonlight);
+  position: relative;
+  z-index: 1;
 }
 
 .auth-panel {
@@ -809,11 +861,6 @@ button {
   border-radius: var(--radius);
   background: var(--panel-strong);
   box-shadow: var(--shadow);
-}
-
-.auth-panel__mark {
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 .auth-tabs {
@@ -1909,7 +1956,7 @@ button {
   .onboarding__sheepy,
   .onboarding__moon,
   .onboarding__stars,
-  .auth-hero__sheepy img,
+  .auth-welcome__sheepy-bob,
   .sky-proto-star,
   .pixel-caret.is-on,
   .capture-confirm:not([hidden]) {

@@ -110,16 +110,24 @@
 
     <!-- 2. Authentication — same Supabase behavior, new presentation -->
     <section id="auth-screen" class="flow-screen auth-screen" aria-label="Sign in" hidden>
-      <div class="auth-hero" aria-hidden="true">
-        <div class="auth-hero__sheepy">
-          <img src="/assets/sheepy.png" width="48" height="48" alt="" draggable="false" />
+      <div class="auth-welcome">
+        <p class="brand-mark auth-welcome__mark">DreamCatcher</p>
+        <div class="auth-welcome__sheepy" aria-hidden="true">
+          <div class="auth-welcome__sheepy-bob">
+            <img
+              class="auth-welcome__sheepy-sprite"
+              src="/assets/sheepy.png"
+              width="96"
+              height="96"
+              alt=""
+              draggable="false"
+            />
+          </div>
         </div>
-        <p class="auth-hero__whisper">Enter Sheepy’s night sky</p>
+        <p class="auth-welcome__subtitle">Step into Sheepy’s sky</p>
       </div>
 
       <div class="auth-panel">
-        <p class="brand-mark auth-panel__mark">DreamCatcher</p>
-
         <div class="auth-tabs" id="auth-tabs" role="tablist" aria-label="Account">
           <button type="button" class="auth-tab is-active" id="auth-tab-login" role="tab" aria-selected="true">
             Log In
