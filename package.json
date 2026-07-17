@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test:insight-v2-schema": "node scripts/insight-v2/test-schema.mjs",
     "test:insight-v2-ui": "node scripts/insight-v2/test-ui-fixtures.mjs",
+    "test:security-insights-guards": "node scripts/security/test-dream-insights-guards.mjs",
     "eval:insight-v2": "node scripts/insight-v2/run-evaluation.mjs",
     "eval:insight-v2-mini-vs-sol": "node scripts/insight-v2/run-model-comparison.mjs",
     "eval:insight-v2-sol-v2-2": "node scripts/insight-v2/run-sol-v2-2-evaluation.mjs",

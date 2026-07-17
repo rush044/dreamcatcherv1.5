@@ -38,6 +38,11 @@ import { generateInsightWithSol } from "../lib/insight-v2-openai.mjs";
 const MODEL = INSIGHT_V2_MODEL;
 const MAX_DREAM_CHARS = 8000;
 const MAX_TITLE_CHARS = 200;
+const MAX_REQUEST_BYTES = 4096;
+const MAX_NEW_INSIGHTS_PER_HOUR = 15;
+const MAX_NEW_INSIGHTS_PER_DAY = 60;
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 /** Log server diagnostics without printing secrets or tokens. */
 function logServerError(label, error, extra = {}) {
@@ -51,11 +56,7 @@ function logServerError(label, error, extra = {}) {
   }
 
   const message = error?.message || String(error || "unknown error");
-  const stack = typeof error?.stack === "string" ? error.stack : undefined;
   console.error(`[dream-insights] ${label}`, { message, ...safeExtra });
-  if (stack) {
-    console.error(stack);
-  }
 }
 
 function resolveSupabaseEnv() {
@@ -93,12 +94,35 @@ function resolveSupabaseEnv() {
   };
 }
 
+function isAllowedOrigin(origin) {
+  if (!origin || typeof origin !== "string") return false;
+
+  const configured = (process.env.ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  if (configured.includes(origin)) return true;
+
+  try {
+    const { hostname, protocol } = new URL(origin);
+    if (protocol !== "http:" && protocol !== "https:") return false;
+    if (hostname === "localhost" || hostname === "127.0.0.1") return true;
+    if (hostname.endsWith(".vercel.app")) return true;
+  } catch {
+    return false;
+  }
+
+  return false;
+}
+
 function getCorsHeaders(origin) {
+  const allowOrigin = isAllowedOrigin(origin) ? origin : "null";
   return {
-    "Access-Control-Allow-Origin": origin || "*",
+    "Access-Control-Allow-Origin": allowOrigin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
     "Access-Control-Max-Age": "86400",
+    "Vary": "Origin",
   };
 }
 
@@ -157,12 +181,37 @@ async function readJsonBody(req) {
   }
 
   const chunks = [];
+  let totalBytes = 0;
   for await (const chunk of req) {
+    totalBytes += chunk.length;
+    if (totalBytes > MAX_REQUEST_BYTES) {
+      const err = new Error("Request body too large.");
+      err.code = "BODY_TOO_LARGE";
+      throw err;
+    }
     chunks.push(chunk);
   }
   const raw = Buffer.concat(chunks).toString("utf8").trim();
   if (!raw) return {};
   return JSON.parse(raw);
+}
+
+function hoursAgoIso(hours) {
+  return new Date(Date.now() - hours * 60 * 60 * 1000).toISOString();
+}
+
+async function countRecentInsightGenerations(supabase, userId, sinceIso) {
+  const { count, error } = await supabase
+    .from("dream_insights")
+    .select("*", { count: "exact", head: true })
+    .eq("user_id", userId)
+    .gte("created_at", sinceIso);
+
+  if (error) {
+    throw error;
+  }
+
+  return count ?? 0;
 }
 
 export default async function handler(req, res) {
@@ -214,7 +263,11 @@ export default async function handler(req, res) {
     let body;
     try {
       body = await readJsonBody(req);
-    } catch {
+    } catch (error) {
+      if (error?.code === "BODY_TOO_LARGE") {
+        json(res, 413, { error: "Request too large." }, origin);
+        return;
+      }
       json(res, 400, { error: "Invalid request body." }, origin);
       return;
     }
@@ -222,6 +275,11 @@ export default async function handler(req, res) {
     const dreamId = typeof body?.dreamId === "string" ? body.dreamId.trim() : "";
     if (!dreamId) {
       json(res, 400, { error: "A dream id is required." }, origin);
+      return;
+    }
+
+    if (!UUID_RE.test(dreamId)) {
+      json(res, 400, { error: "Invalid dream id." }, origin);
       return;
     }
 
@@ -313,6 +371,26 @@ export default async function handler(req, res) {
         hasOpenAiKey: false,
       });
       json(res, 503, { error: "Dream Insights isn’t configured yet." }, origin);
+      return;
+    }
+
+    try {
+      const hourlyCount = await countRecentInsightGenerations(supabase, user.id, hoursAgoIso(1));
+      if (hourlyCount >= MAX_NEW_INSIGHTS_PER_HOUR) {
+        json(res, 429, { error: "Too many insights right now. Please try again later." }, origin);
+        return;
+      }
+
+      const dailyCount = await countRecentInsightGenerations(supabase, user.id, hoursAgoIso(24));
+      if (dailyCount >= MAX_NEW_INSIGHTS_PER_DAY) {
+        json(res, 429, { error: "Daily insight limit reached. Please try again tomorrow." }, origin);
+        return;
+      }
+    } catch (error) {
+      logServerError("insight rate limit check failed", error, {
+        code: error?.code || "unknown",
+      });
+      json(res, 500, { error: "Couldn’t start this insight right now." }, origin);
       return;
     }
 

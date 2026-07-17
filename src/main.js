@@ -6,6 +6,8 @@ import { renderInsightContent } from "./insightRender.js";
 // Auth / dreams / insights APIs unchanged; presentation and navigation redesigned.
 
 const STORAGE_KEY = "dreamcatcher.dreams";
+const MAX_DREAM_BODY_CHARS = 8000;
+const MAX_DREAM_TITLE_CHARS = 200;
 const EMPTY_JOURNAL_HEADLINE = "No dreams have found their way here yet.";
 const EMPTY_JOURNAL_SUBLINE = "Catch one, and Sheepy will give it a place among the stars.";
 
@@ -952,6 +954,18 @@ async function saveCurrentDream() {
   if (!body) {
     setStatus("Write the dream first — even a few messy lines.");
     bodyInput.focus();
+    return;
+  }
+
+  if (body.length > MAX_DREAM_BODY_CHARS) {
+    setStatus(`This dream is too long to save (max ${MAX_DREAM_BODY_CHARS} characters).`);
+    bodyInput.focus();
+    return;
+  }
+
+  if (title.length > MAX_DREAM_TITLE_CHARS) {
+    setStatus(`Title is too long (max ${MAX_DREAM_TITLE_CHARS} characters).`);
+    titleInput.focus();
     return;
   }
 
