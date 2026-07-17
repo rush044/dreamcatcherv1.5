@@ -62,9 +62,9 @@ flowchart LR
 | Auth + ownership on Insights API | Code review `api/dream-insights.js` | Prevents unauthenticated or cross-user insight generation |
 | RLS policy definitions | Repository SQL migrations | Baseline for per-user isolation (not remote proof) |
 | Server-only secrets | Grep + code review | `OPENAI_API_KEY` must not reach client bundle |
-| Request method/body validation | Code review + guard test | Blocks malformed abuse and oversized payloads |
-| Insight generation rate limits | Code fix + guard test | Limits OpenAI cost abuse by authenticated users |
-| CORS tightening | Code fix + guard test | Reduces cross-site token misuse with permissive `*` |
+| Request method/body validation | Code review + behavioral guard tests | Blocks malformed abuse and oversized payloads (stream + parsed body) |
+| Insight generation rate limits | Code fix + guard test | Best-effort saved-Insight quota; reduces casual OpenAI cost abuse |
+| CORS tightening | Code fix + behavioral guard test | Exact ALLOWED_ORIGINS + localhost only; no `*` or `*.vercel.app` |
 | Dream deletion cascade | Migration review | Prevents orphaned insight rows after dream delete |
 | Logging hygiene | Code review + grep | Dream content must not appear in logs |
 | Generic client errors | Code review | Internal paths/DB details not returned to browser |
@@ -85,7 +85,6 @@ flowchart LR
 | # | Issue | Evidence |
 |---|-------|----------|
 | C1 | **No Insight generation rate limiting** — authenticated user could spam OpenAI | No limits in `api/dream-insights.js`; no `vercel.json` throttling |
-| C2 | **No account/data erasure flow** | Profile UI: logout only; no delete-account path |
 
 ### High — pre-fix
 
@@ -100,18 +99,19 @@ flowchart LR
 | # | Issue | Evidence |
 |---|-------|----------|
 | M1 | **Unbounded dream save size** | Client insert had no max; Insights capped at 8000 chars only on API path |
-| M2 | **No request body size limit** on Insights API | `readJsonBody` streamed unbounded |
+| M2 | **No request body size limit** on Insights API | `readJsonBody` streamed unbounded; parsed `req.body` also unchecked |
 | M3 | **Client could write `dream_insights` directly** (RLS allows insert/update for owner) | Migration policies; app does not use this path today |
 | M4 | **Production RLS apply state unknown** | Migration comment: “Do not treat as applied until confirmed” |
 | M5 | **Stack traces logged server-side** | `logServerError` emitted full stacks |
 
-### Low — accepted limitations
+### Low — accepted for operator-supported closed alpha
 
 | # | Issue | Notes |
 |---|-------|-------|
-| L1 | Password min 6 chars (client-only) | Supabase Auth defaults apply server-side |
-| L2 | Committed eval fixtures contain sample dream text | Research artifacts; not runtime |
-| L3 | Dead localStorage loader remains in `main.js` | Not used for cloud dreams |
+| L1 | **No self-service account deletion** | Acceptable for closed alpha when a **verified operator deletion SOP** exists (Supabase Auth user delete + cascade). Self-service UI is a public-launch / post-alpha improvement, not Critical for this gate. |
+| L2 | Password min 6 chars (client-only) | Supabase Auth defaults apply server-side |
+| L3 | Committed eval fixtures contain sample dream text | Research artifacts; not runtime |
+| L4 | Dead localStorage loader remains in `main.js` | Not used for cloud dreams |
 
 ---
 
@@ -119,13 +119,13 @@ flowchart LR
 
 | File | Change |
 |------|--------|
-| `api/dream-insights.js` | CORS allowlist (localhost, `*.vercel.app`, optional `ALLOWED_ORIGINS`); 4 KB request body cap; UUID `dreamId` validation; hourly (15) and daily (60) new-insight caps before OpenAI; removed stack trace logging |
+| `api/dream-insights.js` | CORS: localhost + exact `ALLOWED_ORIGINS` only (no `*` / no `*.vercel.app`); 4 KB body cap on stream **and** pre-parsed `req.body`; UUID `dreamId` validation; best-effort saved-Insight quota (15/hour, 60/day); removed stack trace logging |
 | `src/main.js` | Client save limits: body ≤ 8000, title ≤ 200 chars |
 | `supabase/migrations/20260717000000_dream_length_limits.sql` | DB constraints matching API caps (**repository only until applied**) |
-| `scripts/security/test-dream-insights-guards.mjs` | Static guard verification |
+| `scripts/security/test-dream-insights-guards.mjs` | Behavioral tests for parsed-body limits and origin acceptance |
 | `package.json` | `test:security-insights-guards` script |
 
-**Not changed (by design):** Insight prompt/schema/model, UI copy, account deletion UI, service-role Supabase pattern, production deploy.
+**Not changed (by design):** Insight prompt/schema/model, UI copy, account deletion UI, service-role Supabase pattern, production deploy, distributed/attempt-based rate limiting.
 
 ---
 
@@ -144,12 +144,12 @@ flowchart LR
 
 ## Remaining limitations
 
-1. **Account deletion:** No self-service erasure. Alpha operators must delete users via Supabase Dashboard (Auth + cascade) on request.
+1. **Account deletion:** No self-service erasure. For operator-supported closed alpha this is **Low**, not Critical, provided a verified Supabase Dashboard deletion SOP exists. Self-service UI is deferred past this gate.
 2. **Privacy disclosure:** Product UI implies safety without stating OpenAI processing. Alpha requires **external consent copy** (email/doc) before onboarding testers.
 3. **RLS remote state:** Migrations must be confirmed applied in production Supabase; length-limit migration is new and unapplied until operator runs it.
 4. **`dream_insights` direct client writes:** Theoretically possible via Supabase client with user JWT; mitigated by app not using that path; full fix would need server-side service role or revoked insert/update policies plus API refactor.
-5. **Rate limits:** Per-user DB counts reduce cost abuse but are not global IP throttling; sufficient for small closed alpha, not public launch.
-6. **CORS:** Custom production domains must be added to `ALLOWED_ORIGINS` env var on Vercel.
+5. **Insight quota (best-effort):** Counts **saved** `dream_insights` rows only. Failed OpenAI calls and concurrent in-flight generations may bypass the cap. Sufficient for small closed alpha; **robust attempt-based throttling is a public-launch gate**, not this alpha gate.
+6. **CORS:** Production and preview hosts must be listed exactly in `ALLOWED_ORIGINS`. Same-origin SPA traffic does not require broad CORS. Do not rely on `*.vercel.app`.
 
 ---
 
@@ -193,11 +193,11 @@ flowchart LR
 
 ### **NOT READY**
 
-Technical hardening on this branch closes several alpha-blocking code gaps (rate limits, CORS, validation, save caps, logging). **External adult alpha should not start** until:
+Technical hardening on this branch closes several alpha-blocking code gaps (best-effort Insight quota, CORS, validation, save caps, logging). **External adult alpha should not start** until:
 
 1. Production Supabase RLS and migrations are **remotely confirmed**.
 2. A **written alpha consent** discloses OpenAI processing and data storage.
-3. An **operator account-deletion SOP** is in place (self-service deletion remains a post-alpha improvement).
+3. An **operator account-deletion SOP** is verified in place (self-service deletion is not required for closed alpha).
 
 Once those three manual items are complete, a **small, consenting-adult, operator-supported closed alpha** is acceptable from a security/privacy baseline perspective.
 

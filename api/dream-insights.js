@@ -26,6 +26,11 @@ import { generateInsightWithSol } from "../lib/insight-v2-openai.mjs";
  * Also required for generation (server-only; never prefix with VITE_):
  *   OPENAI_API_KEY
  *
+ * Optional:
+ *   ALLOWED_ORIGINS         — comma-separated exact origins for CORS (e.g. https://app.example.com)
+ *                             localhost / 127.0.0.1 are always allowed for local development.
+ *                             Same-origin browser calls do not need CORS; do not blanket-trust *.vercel.app.
+ *
  * Do NOT use a Supabase service-role key here. Ownership is enforced with the
  * caller's JWT + Row Level Security on `dreams` / `dream_insights`.
  *
@@ -33,12 +38,15 @@ import { generateInsightWithSol } from "../lib/insight-v2-openai.mjs";
  * New generations use gpt-5.6-sol + recognition-v3.0 via the Responses API.
  * Prompt version changes do not regenerate existing cached insights.
  * Fallback prompt adaptive-v2.2.1 remains available in lib/insight-v2.mjs.
+ *
+ * Insight quota: counts saved dream_insights rows (best-effort). Failed and concurrent
+ * generations may bypass it. Robust attempt-based throttling is deferred to public launch.
  */
 
 const MODEL = INSIGHT_V2_MODEL;
 const MAX_DREAM_CHARS = 8000;
 const MAX_TITLE_CHARS = 200;
-const MAX_REQUEST_BYTES = 4096;
+export const MAX_REQUEST_BYTES = 4096;
 const MAX_NEW_INSIGHTS_PER_HOUR = 15;
 const MAX_NEW_INSIGHTS_PER_DAY = 60;
 const UUID_RE =
@@ -94,7 +102,7 @@ function resolveSupabaseEnv() {
   };
 }
 
-function isAllowedOrigin(origin) {
+export function isAllowedOrigin(origin) {
   if (!origin || typeof origin !== "string") return false;
 
   const configured = (process.env.ALLOWED_ORIGINS || "")
@@ -106,8 +114,9 @@ function isAllowedOrigin(origin) {
   try {
     const { hostname, protocol } = new URL(origin);
     if (protocol !== "http:" && protocol !== "https:") return false;
+    // Local development only. Production / preview hosts must be listed in ALLOWED_ORIGINS.
+    // Same-origin SPA requests typically omit Origin or do not need cross-origin CORS.
     if (hostname === "localhost" || hostname === "127.0.0.1") return true;
-    if (hostname.endsWith(".vercel.app")) return true;
   } catch {
     return false;
   }
@@ -175,8 +184,18 @@ function createUserSupabase(accessToken) {
   });
 }
 
-async function readJsonBody(req) {
+function bodyTooLargeError() {
+  const err = new Error("Request body too large.");
+  err.code = "BODY_TOO_LARGE";
+  return err;
+}
+
+export async function readJsonBody(req) {
   if (req.body && typeof req.body === "object") {
+    const serialized = JSON.stringify(req.body);
+    if (Buffer.byteLength(serialized, "utf8") > MAX_REQUEST_BYTES) {
+      throw bodyTooLargeError();
+    }
     return req.body;
   }
 
@@ -185,14 +204,15 @@ async function readJsonBody(req) {
   for await (const chunk of req) {
     totalBytes += chunk.length;
     if (totalBytes > MAX_REQUEST_BYTES) {
-      const err = new Error("Request body too large.");
-      err.code = "BODY_TOO_LARGE";
-      throw err;
+      throw bodyTooLargeError();
     }
     chunks.push(chunk);
   }
   const raw = Buffer.concat(chunks).toString("utf8").trim();
   if (!raw) return {};
+  if (Buffer.byteLength(raw, "utf8") > MAX_REQUEST_BYTES) {
+    throw bodyTooLargeError();
+  }
   return JSON.parse(raw);
 }
 
@@ -201,6 +221,8 @@ function hoursAgoIso(hours) {
 }
 
 async function countRecentInsightGenerations(supabase, userId, sinceIso) {
+  // Best-effort quota on saved insights only — not attempt-based throttling.
+  // Failed or concurrent generations may still reach OpenAI before a row exists.
   const { count, error } = await supabase
     .from("dream_insights")
     .select("*", { count: "exact", head: true })
