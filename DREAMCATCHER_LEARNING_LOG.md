@@ -206,6 +206,18 @@ When doctrine and runtime disagree, a **paired blind human review** on the same 
 
 ---
 
+## Q — Why the closed-alpha security gate felt easy (2026-07-17)
+
+For DreamCatcher, the focused security/privacy gate felt like the easiest implementation phase so far.
+
+- The existing foundation already carried most of the security load: Supabase Auth, user-scoped RLS, JWT-authenticated API access, a server-side OpenAI key, and cascading deletion.
+- The remaining alpha work was bounded hardening and verification: input limits, CORS, a best-effort cost quota, log hygiene, live Supabase checks, disclosure, and a deletion procedure.
+- This does not establish that security is inherently easy. Public scale, payments, uploads, minors, new providers, incidents, or changed data flows require new security work.
+- Reusable workflow: establish a verified baseline once, then review only changes affecting where data goes, access, storage, deletion, or external cost.
+- Agents and automation own deterministic verification. Fabrizzio’s manual testing stays limited to authenticated external state, subjective acceptance, and one changed critical path. Do not retest unchanged behavior without a concrete reason.
+
+---
+
 ## Future-entry topics (placeholders, not yet written)
 
 - initial Cursor and terminal setup
