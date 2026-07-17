@@ -50,11 +50,32 @@ Do not rerun those checks for the unchanged commit.
 
 ## Current action
 
-Insight recognition-v3.0 acceptance checkpoint on branch `insight/recognition-v3-reevaluation`. Doctrine and runtime are aligned; discrepancy closed (see Insight section below).
+Security/privacy alpha gate closed on branch `security/privacy-alpha-gate` (hardening through `af45d9e`; documentation closure on this commit).
 
-**Next product gate:** Focused security/privacy work before external adult alpha testing.
+**Verdict:** **READY** for a small, consenting-adult, operator-supported closed alpha. **Not ready** for a public or paid launch.
 
-Do not begin constellations, Replay, audio, or another major redesign before the core loop and alpha gate are proven.
+**Access rule:** Each tester must receive the approved adult-alpha disclosure and explicitly agree before receiving access. Operator account deletion follows the approved procedure in [SECURITY_PRIVACY_ALPHA_GATE.md](./SECURITY_PRIVACY_ALPHA_GATE.md).
+
+Do not begin constellations, Replay, audio, or another major redesign before the closed alpha is underway and the core loop is proven with real adult testers.
+
+---
+
+## Security / privacy alpha gate
+
+| Item | Status |
+|------|--------|
+| Working branch | `security/privacy-alpha-gate` |
+| Hardening base | `af45d9eabc906a2e6be9087e9b5e8f7709dbfa13` |
+| Production RLS (`dreams`, `dream_insights`) | Enabled; policies restrict to `auth.uid() = user_id` |
+| Length constraints | Applied and verified (preflight: 0 oversized bodies, 0 oversized titles) |
+| Cascade FKs | Remotely verified (`ON DELETE CASCADE`) |
+| Vercel configuration | User-confirmed as set |
+| Preview smoke | Passed (login, save, Journal/open, Insight, deletion) |
+| Disclosure + deletion SOP | Fabrizzio accepted; exact wording in gate doc |
+| Closed adult alpha | **READY** |
+| Public / paid launch | **Not ready** |
+
+Canonical detail: [SECURITY_PRIVACY_ALPHA_GATE.md](./SECURITY_PRIVACY_ALPHA_GATE.md).
 
 ---
 
