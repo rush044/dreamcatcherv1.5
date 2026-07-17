@@ -14,13 +14,15 @@
 
 | Item | Value |
 |------|-------|
-| Branch | `ux-mobile-polish-v2` |
-| Commit | `a52d8bfa905ed038bba38c847fee4ae4264df5ad` |
-| Onboarding fix branch | `fix/onboarding-desktop-overlap` |
-| Onboarding fix commit | `a52d8bfa905ed038bba38c847fee4ae4264df5ad` |
-| Old `main` historical anchor | `95556fc2115ae7f9262efe2dc8d115c6d86e1b7b` |
+| Branch | `security/privacy-alpha-gate` |
+| Last code-bearing security commit | `af45d9eabc906a2e6be9087e9b5e8f7709dbfa13` |
+| Accepted gate / Learning Log checkpoint | `347a8d1f887adaf00bc82987c5186cfa4f188c3c` |
+| Prior UX / onboarding lineage | Included via ancestry (`a52d8bf` onboarding overlap fix; `ux-mobile-polish-v2` / `3c22fad` docs reset) |
+| Previous `main` historical anchor | `95556fc2115ae7f9262efe2dc8d115c6d86e1b7b` |
 
-`main` and production remain untouched by this documentation work.
+This is the integrated closed-alpha baseline: UX/auth product lineage + recognition-v3.0 Insight acceptance + security/privacy alpha gate.
+
+**Production promotion** of `security/privacy-alpha-gate` into `main` was **explicitly approved**.
 
 ---
 
@@ -28,8 +30,8 @@
 
 | Item | Value |
 |------|-------|
-| Branch | `docs/source-of-truth-reset` |
-| Base commit | `a52d8bfa905ed038bba38c847fee4ae4264df5ad` |
+| Branch | `security/privacy-alpha-gate` |
+| Gate checkpoint | `347a8d1f887adaf00bc82987c5186cfa4f188c3c` |
 
 Do not record this documentation commit’s own hash inside the commit that creates it. Report Git HEAD after committing.
 
@@ -37,7 +39,7 @@ Do not record this documentation commit’s own hash inside the commit that crea
 
 ## Accepted onboarding overlap fix
 
-The accepted onboarding desktop-overlap commit has already been built and visually verified across all five onboarding slides at:
+The accepted onboarding desktop-overlap commit (`a52d8bf`) remains in ancestry and was already built and visually verified across all five onboarding slides at:
 
 - 390×844
 - 768×1024
@@ -50,7 +52,7 @@ Do not rerun those checks for the unchanged commit.
 
 ## Current action
 
-Security/privacy alpha gate closed on branch `security/privacy-alpha-gate` (hardening through `af45d9e`; documentation closure on this commit).
+Closed-alpha baseline accepted on `security/privacy-alpha-gate`. Production promotion into `main` is explicitly approved and in progress / completed per Git ops on this promotion pass.
 
 **Verdict:** **READY** for a small, consenting-adult, operator-supported closed alpha. **Not ready** for a public or paid launch.
 
@@ -65,7 +67,8 @@ Do not begin constellations, Replay, audio, or another major redesign before the
 | Item | Status |
 |------|--------|
 | Working branch | `security/privacy-alpha-gate` |
-| Hardening base | `af45d9eabc906a2e6be9087e9b5e8f7709dbfa13` |
+| Last code-bearing security commit | `af45d9eabc906a2e6be9087e9b5e8f7709dbfa13` |
+| Accepted gate / Learning Log checkpoint | `347a8d1f887adaf00bc82987c5186cfa4f188c3c` |
 | Production RLS (`dreams`, `dream_insights`) | Enabled; policies restrict to `auth.uid() = user_id` |
 | Length constraints | Applied and verified (preflight: 0 oversized bodies, 0 oversized titles) |
 | Cascade FKs | Remotely verified (`ON DELETE CASCADE`) |
@@ -74,6 +77,7 @@ Do not begin constellations, Replay, audio, or another major redesign before the
 | Disclosure + deletion SOP | Fabrizzio accepted; exact wording in gate doc |
 | Closed adult alpha | **READY** |
 | Public / paid launch | **Not ready** |
+| Production promotion | **Explicitly approved** |
 
 Canonical detail: [SECURITY_PRIVACY_ALPHA_GATE.md](./SECURITY_PRIVACY_ALPHA_GATE.md).
 
