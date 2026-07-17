@@ -10,34 +10,34 @@
 
 ---
 
-## Doctrine versus runtime
+## Doctrine and runtime
 
-**Classification:** Implementation-versus-doctrine discrepancy requiring focused Insight re-evaluation.
+**Classification:** Resolved — accepted doctrine matches implemented runtime.
 
-### Accepted product/prompt doctrine
+### Accepted product/prompt doctrine and runtime
 
 | Item | Value |
 |------|-------|
 | Working model | GPT-5.6 Sol (`gpt-5.6-sol`) |
-| Accepted prompt direction | adaptive V2.2.1 (explicitly accepted) |
-| Schema | Preserve the V2 schema |
-| Principles to preserve | Accepted adaptive V2.2.1 principles (notice-only common; threads/questions default empty; questions when present normally limited to one; optionality without overcompression) |
+| Accepted prompt | **recognition-v3.0** (vocabulary-corrected; `lib/insight-recognition-v3.mjs`) |
+| Schema | V2 (unchanged storage shape) |
+| Default runtime prompt | **recognition-v3.0** |
+| Fallback | adaptive V2.2.1 (`SYSTEM_PROMPT_V2` in `lib/insight-v2.mjs`) — preserved, not default |
+| Principles preserved from adaptive V2.2.1 lineage | Notice-only common; threads/questions default empty; questions when present normally limited to one; optionality without overcompression; no forced-choice interpretations; raw first-save dream evidence primary |
 
-### Current implemented runtime
+### Acceptance evidence (2026-07-17)
 
-| Item | Value |
-|------|-------|
-| Default runtime prompt | `recognition-v3.0` (wired in code on the accepted baseline) |
-| Fallback | adaptive V2.2.1 remains available |
-| Acceptance status of `recognition-v3.0` | Experimentally evaluated; active in code; **not** established as final production doctrine by recovered explicit acceptance. Silence or continued presence in code is not acceptance |
+- **Paired blind human review:** recognition-v3.0 won **6/6** qualitative selections vs adaptive V2.2.1.
+- **Same model and schema for both variants:** GPT-5.6 Sol + V2 JSON — evaluation compared **prompt systems**, not different foundation models.
+- **Dreams:** Thursday Review, Room 714, Meeting, Hotel, Long bizarre, Long relationship.
+- **Vocabulary correction:** One narrow prompt edit removed prompt-seeded rehearsal/practice/trying-out habits; three-case confirmation (Thursday Review, Meeting, Long relationship) preserved depth and improved Meeting evidence discipline.
+- **Further Insight evaluation before alpha:** Not required unless user evidence reveals a repeated failure.
 
-Do not choose a winner by version name. Do not treat `recognition-v3.0` as accepted doctrine. Do not claim adaptive V2.2.1 is the current runtime when code selects `recognition-v3.0`. Do not change runtime prompt selection in documentation tasks.
+Volatile pointer: [CURRENT_STATE.md](./CURRENT_STATE.md). Decision: [DECISIONS.md](./DECISIONS.md) D-2026-07-17-01.
 
-**Next Insight action:** Evaluate `recognition-v3.0` against the accepted adaptive V2.2.1 principles and current human acceptance criteria before changing runtime prompt selection.
+Historical adaptive V2.2.1 acceptance and evaluation artifacts remain preserved as evidence; adaptive V2.2.1 is no longer active doctrine.
 
-Volatile pointer: [CURRENT_STATE.md](./CURRENT_STATE.md). Decision: [DECISIONS.md](./DECISIONS.md) D-2026-07-16-19.
-
-Do not claim Sheepy or either prompt version has already proven superiority. Marketing proof requirements: [MARKETING.md](./MARKETING.md).
+Do not claim marketing superiority without proof — see [MARKETING.md](./MARKETING.md).
 
 ---
 
@@ -166,3 +166,5 @@ Load only when the task needs that evidence:
 - `INSIGHT_V2_SOL_V2_1_VS_V2_2_REVIEW.md`
 - `INSIGHT_RECOGNITION_V3.md`
 - `scripts/insight-v2/README.md`
+- `eval-outputs/insight-recognition-v3-vs-v2-2-1/` (blind paired eval, 2026-07-17)
+- `eval-outputs/insight-recognition-v3-vocab-correction/` (vocabulary confirmation, 2026-07-17)

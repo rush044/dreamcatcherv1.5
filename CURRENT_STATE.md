@@ -50,28 +50,28 @@ Do not rerun those checks for the unchanged commit.
 
 ## Current action
 
-Source-of-Truth Reset correction round (documentation only). Changes remain uncommitted pending Fabrizzio’s review.
+Insight recognition-v3.0 acceptance checkpoint on branch `insight/recognition-v3-reevaluation`. Doctrine and runtime are aligned; discrepancy closed (see Insight section below).
 
-After acceptance of this documentation checkpoint:
+**Next product gate:** Focused security/privacy work before external adult alpha testing.
 
-1. Commit and push through a later delta prompt.
-2. Return to Insight polishing via the next Insight action below.
-3. Do not begin constellations, Replay, audio, or another major redesign before the core loop is proven.
+Do not begin constellations, Replay, audio, or another major redesign before the core loop and alpha gate are proven.
 
 ---
 
-## Insight doctrine versus runtime
+## Insight doctrine and runtime
 
-**Classification:** Implementation-versus-doctrine discrepancy requiring focused Insight re-evaluation.
+**Classification:** Resolved — doctrine and runtime aligned on `recognition-v3.0`.
 
 | Layer | Status |
 |-------|--------|
-| Accepted product/prompt doctrine | adaptive V2.2.1 is the explicitly accepted current direction; preserve the V2 schema and accepted adaptive V2.2.1 principles |
-| Current implemented runtime | `recognition-v3.0` is wired as the default runtime on the accepted baseline; adaptive V2.2.1 remains available as fallback |
-| Acceptance of `recognition-v3.0` | Experimentally evaluated and still active in code; **no recovered evidence** that Fabrizzio explicitly accepted it as final production doctrine. Silence or continued presence in code is not acceptance |
+| Accepted product/prompt doctrine | **recognition-v3.0** (vocabulary-corrected prompt in `lib/insight-recognition-v3.mjs`) |
+| Current implemented runtime | **recognition-v3.0** default; adaptive V2.2.1 preserved as fallback in `lib/insight-v2.mjs` |
+| Working model | GPT-5.6 Sol (`gpt-5.6-sol`) |
+| Schema | V2 (unchanged) |
+| Further Insight evaluation before alpha | **Not required** unless user evidence reveals a repeated failure |
 
-Do not choose a winner by version name. Do not call `recognition-v3.0` accepted doctrine. Do not call adaptive V2.2.1 the current runtime when code contradicts that. Do not change code or prompt routing in this documentation task.
+**Acceptance evidence:** Paired blind human review — recognition-v3.0 won **6/6** qualitative selections against adaptive V2.2.1 on six dreams (Thursday Review, Room 714, Meeting, Hotel, Long bizarre, Long relationship). Both variants used the same model and schema; the evaluation compared **prompt systems**, not different foundation models. One narrow vocabulary correction removed prompt-seeded rehearsal/practice/trying-out habits; a three-case confirmation preserved depth and improved BLIND-03 evidence discipline.
 
-**Next Insight action:** Evaluate `recognition-v3.0` against the accepted adaptive V2.2.1 principles and current human acceptance criteria before changing runtime prompt selection.
+Canonical detail: [INSIGHT_SYSTEM.md](./INSIGHT_SYSTEM.md). Decisions: [DECISIONS.md](./DECISIONS.md) D-2026-07-17-01 (supersedes D-2026-07-16-19).
 
-Canonical detail: [INSIGHT_SYSTEM.md](./INSIGHT_SYSTEM.md). Decision entry: [DECISIONS.md](./DECISIONS.md) D-2026-07-16-19.
+Evidence artifacts (preserved, not overwritten): `eval-outputs/insight-recognition-v3-vs-v2-2-1/`, `eval-outputs/insight-recognition-v3-vocab-correction/`.

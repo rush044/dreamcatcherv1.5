@@ -1,0 +1,59 @@
+{
+  "paid_calls_executed": 3,
+  "schema_validation": "all_pass",
+  "prompt_version": "recognition-v3.0",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "total_usage": {
+    "input_tokens": 10196,
+    "output_tokens": 1514,
+    "total_tokens": 11710,
+    "reasoning_tokens": 546
+  },
+  "cases": [
+    {
+      "case_id": "BLIND-01",
+      "vocab_flags": [],
+      "baseline_vocab_flags": [
+        "rehearsing",
+        "your mind is rehearsing"
+      ],
+      "usage": {
+        "input_tokens": 3334,
+        "cached_input_tokens": null,
+        "output_tokens": 432,
+        "total_tokens": 3766,
+        "reasoning_tokens": 159
+      }
+    },
+    {
+      "case_id": "BLIND-03",
+      "vocab_flags": [],
+      "baseline_vocab_flags": [
+        "anticipatory rehearsal",
+        "your mind is testing"
+      ],
+      "usage": {
+        "input_tokens": 3286,
+        "cached_input_tokens": null,
+        "output_tokens": 358,
+        "total_tokens": 3644,
+        "reasoning_tokens": 146
+      }
+    },
+    {
+      "case_id": "BLIND-06",
+      "vocab_flags": [],
+      "baseline_vocab_flags": [
+        "under rehearsal"
+      ],
+      "usage": {
+        "input_tokens": 3576,
+        "cached_input_tokens": null,
+        "output_tokens": 724,
+        "total_tokens": 4300,
+        "reasoning_tokens": 241
+      }
+    }
+  ]
+}

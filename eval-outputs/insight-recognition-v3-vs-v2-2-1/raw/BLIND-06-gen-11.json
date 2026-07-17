@@ -1,0 +1,66 @@
+{
+  "case_id": "BLIND-06",
+  "opaque_generation_id": "gen-11",
+  "fixture_id": "L04",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#L04",
+  "title": "Long relationship dream with contradictory emotions",
+  "dream_body": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+  "user_content_builder": "buildInsightRecognitionV3UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Long relationship dream with contradictory emotions\nDream:\nMy older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:04:39.846Z",
+  "usage": {
+    "input_tokens": 3414,
+    "cached_input_tokens": null,
+    "output_tokens": 795,
+    "total_tokens": 4209,
+    "reasoning_tokens": 320
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The important contradiction may not be whether you want your sister to leave. You seem clear that you can support her and grieve the change at the same time. What may be under rehearsal is whether your closeness can survive without either feeling becoming a burden: you do not ask her to stay, she does not require you to hide your sadness, and she understands what your true-but-incomplete sentence leaves unsaid.\\n\\nThe careful preparation before her news adds another layer. You are both arranging a gathering that may never happen, as if trying to hold a family shape steady while one important relationship is about to change its everyday form. Yet the table becomes fully set without your remembering how. That may offer a quiet reassurance: connection does not depend entirely on your careful adjustments or on keeping everyone in place.\\n\\nEven the small comic moment matters—the seagull steals nothing important. Something is leaving, but the dream does not treat departure as total loss. It may be making room for grief without turning your sister’s growth into abandonment, and for love that remains real even when access changes.\",\"threads\":[\"Being understood without making her responsible for fixing your sadness\",\"Trusting connection without arranging every condition that holds it together\"],\"reflection_questions\":[\"Is there a current or approaching change in this relationship—or elsewhere in your family—that has you trying to support someone while quietly preparing for a different kind of closeness, or does this feel more like an older pattern? \"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"relationship\",\"label\":\"Closeness facing separation\",\"evidence\":\"Warm companionship shifts into news of a long absence, while mutual understanding remains intact.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Pride and grief held separately\",\"evidence\":\"The congratulations are sincere, while sadness, protection, and abandonment are simultaneously present.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Preparing for uncertain family presence\",\"evidence\":\"Places are repeatedly adjusted for relatives who may not arrive, and the table later appears fully set.\",\"confidence\":\"suggested\"},{\"type\":\"action\",\"label\":\"Leaving the missing part unspoken\",\"evidence\":\"You say only that you are happy for her, and she appears to understand what was omitted.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The important contradiction may not be whether you want your sister to leave. You seem clear that you can support her and grieve the change at the same time. What may be under rehearsal is whether your closeness can survive without either feeling becoming a burden: you do not ask her to stay, she does not require you to hide your sadness, and she understands what your true-but-incomplete sentence leaves unsaid.\n\nThe careful preparation before her news adds another layer. You are both arranging a gathering that may never happen, as if trying to hold a family shape steady while one important relationship is about to change its everyday form. Yet the table becomes fully set without your remembering how. That may offer a quiet reassurance: connection does not depend entirely on your careful adjustments or on keeping everyone in place.\n\nEven the small comic moment matters—the seagull steals nothing important. Something is leaving, but the dream does not treat departure as total loss. It may be making room for grief without turning your sister’s growth into abandonment, and for love that remains real even when access changes.",
+    "threads": [
+      "Being understood without making her responsible for fixing your sadness",
+      "Trusting connection without arranging every condition that holds it together"
+    ],
+    "reflection_questions": [
+      "Is there a current or approaching change in this relationship—or elsewhere in your family—that has you trying to support someone while quietly preparing for a different kind of closeness, or does this feel more like an older pattern?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "relationship",
+        "label": "Closeness facing separation",
+        "evidence": "Warm companionship shifts into news of a long absence, while mutual understanding remains intact.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Pride and grief held separately",
+        "evidence": "The congratulations are sincere, while sadness, protection, and abandonment are simultaneously present.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Preparing for uncertain family presence",
+        "evidence": "Places are repeatedly adjusted for relatives who may not arrive, and the table later appears fully set.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "action",
+        "label": "Leaving the missing part unspoken",
+        "evidence": "You say only that you are happy for her, and she appears to understand what was omitted.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

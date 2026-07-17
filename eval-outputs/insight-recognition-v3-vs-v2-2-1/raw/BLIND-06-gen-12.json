@@ -1,0 +1,78 @@
+{
+  "case_id": "BLIND-06",
+  "opaque_generation_id": "gen-12",
+  "fixture_id": "L04",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#L04",
+  "title": "Long relationship dream with contradictory emotions",
+  "dream_body": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "context_mode": "dream_only",
+  "prompt_version": "adaptive-v2.2.1",
+  "system_prompt_binding": "SYSTEM_PROMPT_V2",
+  "user_content_builder": "buildInsightV2UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: Long relationship dream with contradictory emotions\nDream:\nMy older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:05:08.453Z",
+  "usage": {
+    "input_tokens": 1794,
+    "cached_input_tokens": null,
+    "output_tokens": 1059,
+    "total_tokens": 2853,
+    "reasoning_tokens": 675
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Your happiness for your sister and grief at her leaving remain equally true; neither cancels the other. Your spoken support is sincere but incomplete, while her final nod makes it feel as though she understands what you cannot say. You wake without resolving this, still holding pride and grief separately.\",\"threads\":[\"Early on, both of you keep making small adjustments to a shared space. Later, the central change cannot be adjusted; you can only sit beside each other with it.\",\"The relatives never arrive, yet the table becomes fully set. That quiet, unexplained completion gives the sense that things are moving forward even amid absence and uncertainty.\"],\"reflection_questions\":[\"Is there a current change in your sister’s life, or in another close relationship, that makes this pairing of pride and grief feel especially familiar?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Pride and grief held at once\",\"evidence\":\"You explicitly woke with both emotions still distinct.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Older sister\",\"evidence\":\"Your sister is the central companion and the person preparing to leave.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Closeness alongside separation\",\"evidence\":\"You feel warmly close, then protected and abandoned in the same second.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated arranging and adjustment\",\"evidence\":\"Your sister rearranges flowers while you repeatedly shift the chairs.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Borrowed lake house and dock\",\"evidence\":\"The shared house and quiet dock frame the preparation, disclosure, and silence.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Table set for absent relatives\",\"evidence\":\"The relatives never arrive, but the table is somehow fully set when you return.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Your happiness for your sister and grief at her leaving remain equally true; neither cancels the other. Your spoken support is sincere but incomplete, while her final nod makes it feel as though she understands what you cannot say. You wake without resolving this, still holding pride and grief separately.",
+    "threads": [
+      "Early on, both of you keep making small adjustments to a shared space. Later, the central change cannot be adjusted; you can only sit beside each other with it.",
+      "The relatives never arrive, yet the table becomes fully set. That quiet, unexplained completion gives the sense that things are moving forward even amid absence and uncertainty."
+    ],
+    "reflection_questions": [
+      "Is there a current change in your sister’s life, or in another close relationship, that makes this pairing of pride and grief feel especially familiar?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Pride and grief held at once",
+        "evidence": "You explicitly woke with both emotions still distinct.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Older sister",
+        "evidence": "Your sister is the central companion and the person preparing to leave.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Closeness alongside separation",
+        "evidence": "You feel warmly close, then protected and abandoned in the same second.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated arranging and adjustment",
+        "evidence": "Your sister rearranges flowers while you repeatedly shift the chairs.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Borrowed lake house and dock",
+        "evidence": "The shared house and quiet dock frame the preparation, disclosure, and silence.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Table set for absent relatives",
+        "evidence": "The relatives never arrive, but the table is somehow fully set when you return.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

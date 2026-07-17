@@ -1,0 +1,55 @@
+{
+  "case_id": "BLIND-03",
+  "opaque_generation_id": "gen-05",
+  "fixture_id": "C04",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#C04",
+  "title": "The Meeting",
+  "dream_body": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+  "user_content_builder": "buildInsightRecognitionV3UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: The Meeting\nDream:\nI have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:03:14.675Z",
+  "usage": {
+    "input_tokens": 3124,
+    "cached_input_tokens": null,
+    "output_tokens": 354,
+    "total_tokens": 3478,
+    "reasoning_tokens": 95
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The dream may be less about the meeting going badly than about not being able to secure the readiness you want beforehand. You are already packing and taking responsibility; the problem is a small but essential source of backup that refuses to cooperate. Trying outlet after outlet turns preparation into a search for reassurance, as though your mind is testing whether anything important has been overlooked. Because the meeting is tomorrow and remained on your mind after waking, this most likely looks like anticipatory rehearsal rather than a warning: your attention has fastened onto the possibility of being capable but insufficiently supported at the crucial moment.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Anticipatory meeting rehearsal\",\"evidence\":\"The meeting is tomorrow, and it remained on your mind after waking.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Repeated attempts to become fully prepared\",\"evidence\":\"You packed your bag and kept trying different outlets when the charger would not work.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Unavailable backup power\",\"evidence\":\"The phone charger was dead and no outlet restored it.\",\"confidence\":\"suggested\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The dream may be less about the meeting going badly than about not being able to secure the readiness you want beforehand. You are already packing and taking responsibility; the problem is a small but essential source of backup that refuses to cooperate. Trying outlet after outlet turns preparation into a search for reassurance, as though your mind is testing whether anything important has been overlooked. Because the meeting is tomorrow and remained on your mind after waking, this most likely looks like anticipatory rehearsal rather than a warning: your attention has fastened onto the possibility of being capable but insufficiently supported at the crucial moment.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Anticipatory meeting rehearsal",
+        "evidence": "The meeting is tomorrow, and it remained on your mind after waking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Repeated attempts to become fully prepared",
+        "evidence": "You packed your bag and kept trying different outlets when the charger would not work.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Unavailable backup power",
+        "evidence": "The phone charger was dead and no outlet restored it.",
+        "confidence": "suggested"
+      }
+    ]
+  }
+}

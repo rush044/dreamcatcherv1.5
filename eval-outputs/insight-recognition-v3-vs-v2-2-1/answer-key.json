@@ -1,0 +1,275 @@
+{
+  "cases": [
+    {
+      "case_id": "BLIND-01",
+      "display_title": "The Thursday Review",
+      "fixture_id": "R10",
+      "input_source": "scripts/insight-v3/recognition-fixtures.mjs#R10",
+      "title": "The Thursday Review",
+      "dream_body": "I was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: The Thursday Review\nDream:\nI was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: The Thursday Review\nDream:\nI was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-02",
+          "raw_file": "raw/BLIND-01-gen-02.json"
+        },
+        "B": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-01",
+          "raw_file": "raw/BLIND-01-gen-01.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-01",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-02",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    },
+    {
+      "case_id": "BLIND-02",
+      "display_title": "Room 714",
+      "fixture_id": "R11",
+      "input_source": "scripts/insight-v3/recognition-fixtures.mjs#R11",
+      "title": "Room 714",
+      "dream_body": "I was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Room 714\nDream:\nI was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: Room 714\nDream:\nI was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-03",
+          "raw_file": "raw/BLIND-02-gen-03.json"
+        },
+        "B": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-04",
+          "raw_file": "raw/BLIND-02-gen-04.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-03",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-04",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    },
+    {
+      "case_id": "BLIND-03",
+      "display_title": "The Meeting",
+      "fixture_id": "C04",
+      "input_source": "scripts/insight-v2/comparison-dreams.mjs#C04",
+      "title": "The Meeting",
+      "dream_body": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: The Meeting\nDream:\nI have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: The Meeting\nDream:\nI have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-06",
+          "raw_file": "raw/BLIND-03-gen-06.json"
+        },
+        "B": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-05",
+          "raw_file": "raw/BLIND-03-gen-05.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-05",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-06",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    },
+    {
+      "case_id": "BLIND-04",
+      "display_title": "The Hotel",
+      "fixture_id": "C09",
+      "input_source": "scripts/insight-v2/comparison-dreams.mjs#C09",
+      "title": "The Hotel",
+      "dream_body": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: The Hotel\nDream:\nI was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: The Hotel\nDream:\nI was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-08",
+          "raw_file": "raw/BLIND-04-gen-08.json"
+        },
+        "B": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-07",
+          "raw_file": "raw/BLIND-04-gen-07.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-07",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-08",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    },
+    {
+      "case_id": "BLIND-05",
+      "display_title": "Long bizarre dream",
+      "fixture_id": "L02",
+      "input_source": "scripts/insight-v2/comparison-dreams.mjs#L02",
+      "title": "Long bizarre dream",
+      "dream_body": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Long bizarre dream\nDream:\nA parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: Long bizarre dream\nDream:\nA parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-10",
+          "raw_file": "raw/BLIND-05-gen-10.json"
+        },
+        "B": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-09",
+          "raw_file": "raw/BLIND-05-gen-09.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-09",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-10",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    },
+    {
+      "case_id": "BLIND-06",
+      "display_title": "Long relationship dream with contradictory emotions",
+      "fixture_id": "L04",
+      "input_source": "scripts/insight-v2/comparison-dreams.mjs#L04",
+      "title": "Long relationship dream with contradictory emotions",
+      "dream_body": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+      "context_mode": "dream_only",
+      "input_integrity": {
+        "identical_title": true,
+        "identical_dream_body": true,
+        "identical_context_mode": true,
+        "recognition_v3_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Long relationship dream with contradictory emotions\nDream:\nMy older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+        "adaptive_v2_2_1_user_content": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: Long relationship dream with contradictory emotions\nDream:\nMy older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct."
+      },
+      "blind_labels": {
+        "A": {
+          "prompt_version": "recognition-v3.0",
+          "variant_key": "recognition_v3",
+          "opaque_generation_id": "gen-11",
+          "raw_file": "raw/BLIND-06-gen-11.json"
+        },
+        "B": {
+          "prompt_version": "adaptive-v2.2.1",
+          "variant_key": "adaptive_v2_2_1",
+          "opaque_generation_id": "gen-12",
+          "raw_file": "raw/BLIND-06-gen-12.json"
+        }
+      },
+      "generations": {
+        "recognition_v3": {
+          "opaque_generation_id": "gen-11",
+          "prompt_version": "recognition-v3.0",
+          "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+          "user_content_builder": "buildInsightRecognitionV3UserContent"
+        },
+        "adaptive_v2_2_1": {
+          "opaque_generation_id": "gen-12",
+          "prompt_version": "adaptive-v2.2.1",
+          "system_prompt_binding": "SYSTEM_PROMPT_V2",
+          "user_content_builder": "buildInsightV2UserContent"
+        }
+      }
+    }
+  ],
+  "total_usage": {
+    "input_tokens": 29160,
+    "cached_input_tokens": 0,
+    "output_tokens": 7042,
+    "total_tokens": 36202,
+    "reasoning_tokens": 3390
+  }
+}

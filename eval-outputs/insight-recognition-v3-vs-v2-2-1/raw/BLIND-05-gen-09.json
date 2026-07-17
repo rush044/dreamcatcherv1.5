@@ -1,0 +1,58 @@
+{
+  "case_id": "BLIND-05",
+  "opaque_generation_id": "gen-09",
+  "fixture_id": "L02",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#L02",
+  "title": "Long bizarre dream",
+  "dream_body": "A parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+  "user_content_builder": "buildInsightRecognitionV3UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Long bizarre dream\nDream:\nA parade of office chairs with tiny sails rolled through a subway tunnel singing soft hold-music. I was supposed to conduct them with a celery stalk, which somehow felt correct. Every time a chair hit a puddle, it blossomed into a briefcase full of soap bubbles. I laughed aloud, and the bubbles formed little arbitration panels that argued politely about which way was north.\n\nThen a fox in a borrowed tuxedo offered me a ticket stamped “//almost.” I accepted because refusing seemed ruder than whatever this already was. The ticket unfolded into a map of my kitchen drawers, except each drawer contained a weather system. One drawer held a thunderstorm the size of a teacup. Another held a sunny afternoon that smelled like orange peels and photocopy toner. I felt delighted and also slightly responsible, as if I had left the weather unsupervised.\n\nThe fox insisted we take the escalator going sideways into a library of misplaced buttons. Librarians who were also houseplants whispered catalog numbers. I found a red button labeled “pause the parade,” pressed it, and the chairs froze mid-sail for one perfect second before restarting with even sillier choreography. That second made me unexpectedly tender toward the nonsense, like I had finally caught the joke the dream was telling. Near the end, a button asked me to certify the fox’s tuxedo as “sufficiently formal for celery.” I signed with a rubber stamp shaped like a comma, felt warmly amused, and woke up still half-smiling.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:04:05.167Z",
+  "usage": {
+    "input_tokens": 3385,
+    "cached_input_tokens": null,
+    "output_tokens": 514,
+    "total_tokens": 3899,
+    "reasoning_tokens": 123
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The contradiction may be the point: everything is wildly unmanageable, yet you are repeatedly given small official roles inside it—conducting, supervising, pausing, certifying. Rather than fixing the nonsense, you learn how to participate in it. Even the weather in your drawers brings responsibility without becoming an emergency.\\n\\nThe one perfect pause seems especially important. Stopping the parade does not reveal an answer or restore order; it lets you see the whole ridiculous arrangement clearly enough to feel tender toward it. Then it starts again, sillier than before, and you remain amused. This may be your mind trying out a gentler relationship with things that are unfinished, illogical, or only “almost” settled. The comma-shaped stamp fits that movement: approval without a final period. You can acknowledge that something is sufficient for now without pretending it makes complete sense.\",\"threads\":[\"Provisional permission — The “//almost” ticket, “sufficiently formal” verdict, and comma stamp all favor workable acceptance over final certainty.\",\"Responsibility without alarm — You are entrusted with strange systems, but the dream lets competence look playful rather than burdensome.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Participating rather than fixing\",\"evidence\":\"You conduct, supervise, pause, and certify the strange events without trying to make them ordinary.\",\"confidence\":\"suggested\"},{\"type\":\"image\",\"label\":\"Provisional approval\",\"evidence\":\"The ticket says “//almost,” the tuxedo is judged “sufficiently formal,” and your stamp is shaped like a comma rather than a period.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Tender amusement toward disorder\",\"evidence\":\"The brief pause makes you unexpectedly tender toward the nonsense, and you wake still half-smiling.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The contradiction may be the point: everything is wildly unmanageable, yet you are repeatedly given small official roles inside it—conducting, supervising, pausing, certifying. Rather than fixing the nonsense, you learn how to participate in it. Even the weather in your drawers brings responsibility without becoming an emergency.\n\nThe one perfect pause seems especially important. Stopping the parade does not reveal an answer or restore order; it lets you see the whole ridiculous arrangement clearly enough to feel tender toward it. Then it starts again, sillier than before, and you remain amused. This may be your mind trying out a gentler relationship with things that are unfinished, illogical, or only “almost” settled. The comma-shaped stamp fits that movement: approval without a final period. You can acknowledge that something is sufficient for now without pretending it makes complete sense.",
+    "threads": [
+      "Provisional permission — The “//almost” ticket, “sufficiently formal” verdict, and comma stamp all favor workable acceptance over final certainty.",
+      "Responsibility without alarm — You are entrusted with strange systems, but the dream lets competence look playful rather than burdensome."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Participating rather than fixing",
+        "evidence": "You conduct, supervise, pause, and certify the strange events without trying to make them ordinary.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "image",
+        "label": "Provisional approval",
+        "evidence": "The ticket says “//almost,” the tuxedo is judged “sufficiently formal,” and your stamp is shaped like a comma rather than a period.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Tender amusement toward disorder",
+        "evidence": "The brief pause makes you unexpectedly tender toward the nonsense, and you wake still half-smiling.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

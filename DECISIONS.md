@@ -210,6 +210,20 @@ Mark replaced decisions `superseded` rather than deleting them.
 - **Classification:** Qualified Hard Save
 - **Rationale:** adaptive V2.2.1 was explicitly accepted as current direction; `recognition-v3.0` is experimentally evaluated and wired in code, but no recovered evidence establishes explicit acceptance as final production doctrine. Silence or code presence is not acceptance.
 - **Qualification:** Do not pick a winner by version name; do not change runtime prompt selection until `recognition-v3.0` is evaluated against accepted adaptive V2.2.1 principles and current human acceptance criteria.
-- **Status:** accepted (discrepancy recorded; runtime unchanged)
+- **Status:** superseded by D-2026-07-17-01
 - **Canonical owner:** [INSIGHT_SYSTEM.md](./INSIGHT_SYSTEM.md); volatile pointer [CURRENT_STATE.md](./CURRENT_STATE.md)
 - **Related evidence:** Accepted baseline commit `a52d8bf…` runtime wiring; Source-of-Truth Reset Canonical Override; correction-round clarification
+
+---
+
+## 2026-07-17 — Insight recognition-v3 acceptance
+
+### D-2026-07-17-01 — Accept recognition-v3.0 as Insight doctrine and runtime direction
+
+- **Decision:** Accept **recognition-v3.0** (vocabulary-corrected prompt in `lib/insight-recognition-v3.mjs`) as the current Insight product/prompt doctrine and runtime default. Close the implementation-versus-doctrine discrepancy recorded in D-2026-07-16-19.
+- **Classification:** Hard Save
+- **Rationale:** Paired blind human review on branch `insight/recognition-v3-reevaluation`: recognition-v3.0 won **6/6** qualitative selections against adaptive V2.2.1 on six calibration/regression dreams. Both variants used GPT-5.6 Sol and the V2 schema — the evaluation compared prompt systems, not different foundation models. Fabrizzio explicitly accepted the corrected prompt and confirmation outputs.
+- **Qualification:** adaptive V2.2.1 remains preserved as fallback code only (`SYSTEM_PROMPT_V2`). One narrow vocabulary correction removed prompt-seeded rehearsal/practice/trying-out habits; three-case confirmation preserved depth and improved Meeting evidence discipline. No further Insight evaluation is required before alpha unless user evidence reveals a repeated failure. Next product gate: focused security/privacy before external adult alpha testing.
+- **Status:** accepted
+- **Canonical owner:** [INSIGHT_SYSTEM.md](./INSIGHT_SYSTEM.md); volatile pointer [CURRENT_STATE.md](./CURRENT_STATE.md)
+- **Related evidence:** `eval-outputs/insight-recognition-v3-vs-v2-2-1/` (12 generations, blind review); `eval-outputs/insight-recognition-v3-vocab-correction/` (3 confirmation generations); `scripts/insight-v2/run-recognition-v3-vs-v2-2-1-blind.mjs`; `scripts/insight-v2/run-recognition-v3-vocab-confirmation.mjs`

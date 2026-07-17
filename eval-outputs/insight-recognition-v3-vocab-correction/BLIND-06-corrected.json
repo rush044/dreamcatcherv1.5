@@ -1,0 +1,68 @@
+{
+  "case_id": "BLIND-06",
+  "fixture_id": "L04",
+  "input_source": "comparison-dreams.mjs#L04",
+  "title": "Long relationship dream with contradictory emotions",
+  "dream_body": "My older sister and I were sharing a borrowed summer house near a lake. The rooms smelled like cedar and dish soap. We spent the morning setting places at a long table for relatives who might or might not arrive. She kept arranging flowers in a too-narrow vase; I kept moving the chairs an inch left, then an inch right. It felt companionable at first. We joked about a childhood argument over who got the top bunk, and I felt warmly close to her.\n\nLater she asked me to walk with her to the dock. The water was gray and still. She told me she had accepted a job in another city and would be gone for a long time. I congratulated her immediately, and I meant it, and at the same time a sharp sadness rose that I could not hide. My face did both things at once. She noticed and looked briefly guilty, then defensive, then soft again. We sat on the dock with our shoes off. Neither of us spoke for a while. A seagull landed nearby and stole nothing of importance.\n\nWhen we walked back, the relatives still had not arrived, but the table was somehow fully set with napkins I did not remember folding. She put her hand on my shoulder in the doorway, and I felt protected and abandoned in the same second. I wanted to ask her to stay another week and also wanted her to go cleanly without my needing to be brave about it. In the dream I said only, “I’m happy for you,” which was true and incomplete. She nodded as if she heard the missing part anyway. I woke with both pride and grief still distinct.",
+  "prompt_version": "recognition-v3.0",
+  "correction_note": "vocabulary correction round — same identifier, updated prompt text",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T10:42:53.346Z",
+  "usage": {
+    "input_tokens": 3576,
+    "cached_input_tokens": null,
+    "output_tokens": 724,
+    "total_tokens": 4300,
+    "reasoning_tokens": 241
+  },
+  "validation_error": null,
+  "vocab_flags": [],
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The contradiction may be the point: loving her well does not require making your loss disappear. Nearly every part of the dream tries to hold two truths in one space—the vase is too narrow, the chairs are repeatedly adjusted, and your face shows congratulations and sadness at once. The careful arranging may be less about preparing for relatives than about trying to make enough room for feelings that refuse to become tidy.\\n\\nWhat seems most important is that you never ask your sister to stay, yet she appears to understand what your sentence leaves out. This may be giving shape to a particular wish: to support her freedom without having to hide the cost of it, and to be known without making your sadness her responsibility. Her hand on your shoulder carries the same double meaning as the rest—she remains protective and loving, but cannot protect you from her absence.\\n\\nThe fully set table after nobody arrives adds a quieter possibility: you may be preparing yourself for a changed family arrangement before everyone else has caught up. The ending does not resolve pride into grief or grief into pride. It lets closeness be strong enough to contain both.\",\"threads\":[\"Being understood without asking her to choose\",\"Making room for a bond that is changing, not ending\"],\"reflection_questions\":[\"In waking life, do you often keep the costly part of your support unspoken and hope your sister will recognize it anyway, or does that feel specific to this dream?\"],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"relationship\",\"label\":\"Closeness holding pride and grief together\",\"evidence\":\"You sincerely congratulate your sister while visibly grieving her departure, and both feelings remain distinct after waking.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Leaving the need unspoken\",\"evidence\":\"You want to ask her to stay but say only that you are happy for her; she appears to hear the missing part.\",\"confidence\":\"explicit\"},{\"type\":\"image\",\"label\":\"Trying to fit too much into a narrow arrangement\",\"evidence\":\"The too-narrow vase, repeatedly shifted chairs, and carefully prepared table echo the effort to accommodate conflicting feelings.\",\"confidence\":\"suggested\"},{\"type\":\"relationship\",\"label\":\"Protection that cannot prevent separation\",\"evidence\":\"Her hand on your shoulder makes you feel protected and abandoned in the same second.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The contradiction may be the point: loving her well does not require making your loss disappear. Nearly every part of the dream tries to hold two truths in one space—the vase is too narrow, the chairs are repeatedly adjusted, and your face shows congratulations and sadness at once. The careful arranging may be less about preparing for relatives than about trying to make enough room for feelings that refuse to become tidy.\n\nWhat seems most important is that you never ask your sister to stay, yet she appears to understand what your sentence leaves out. This may be giving shape to a particular wish: to support her freedom without having to hide the cost of it, and to be known without making your sadness her responsibility. Her hand on your shoulder carries the same double meaning as the rest—she remains protective and loving, but cannot protect you from her absence.\n\nThe fully set table after nobody arrives adds a quieter possibility: you may be preparing yourself for a changed family arrangement before everyone else has caught up. The ending does not resolve pride into grief or grief into pride. It lets closeness be strong enough to contain both.",
+    "threads": [
+      "Being understood without asking her to choose",
+      "Making room for a bond that is changing, not ending"
+    ],
+    "reflection_questions": [
+      "In waking life, do you often keep the costly part of your support unspoken and hope your sister will recognize it anyway, or does that feel specific to this dream?"
+    ],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "relationship",
+        "label": "Closeness holding pride and grief together",
+        "evidence": "You sincerely congratulate your sister while visibly grieving her departure, and both feelings remain distinct after waking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Leaving the need unspoken",
+        "evidence": "You want to ask her to stay but say only that you are happy for her; she appears to hear the missing part.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "image",
+        "label": "Trying to fit too much into a narrow arrangement",
+        "evidence": "The too-narrow vase, repeatedly shifted chairs, and carefully prepared table echo the effort to accommodate conflicting feelings.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "relationship",
+        "label": "Protection that cannot prevent separation",
+        "evidence": "Her hand on your shoulder makes you feel protected and abandoned in the same second.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "baseline_winner_file": "BLIND-06-gen-11.json",
+  "baseline_notice": "The important contradiction may not be whether you want your sister to leave. You seem clear that you can support her and grieve the change at the same time. What may be under rehearsal is whether your closeness can survive without either feeling becoming a burden: you do not ask her to stay, she does not require you to hide your sadness, and she understands what your true-but-incomplete sentence leaves unsaid.\n\nThe careful preparation before her news adds another layer. You are both arranging a gathering that may never happen, as if trying to hold a family shape steady while one important relationship is about to change its everyday form. Yet the table becomes fully set without your remembering how. That may offer a quiet reassurance: connection does not depend entirely on your careful adjustments or on keeping everyone in place.\n\nEven the small comic moment matters—the seagull steals nothing important. Something is leaving, but the dream does not treat departure as total loss. It may be making room for grief without turning your sister’s growth into abandonment, and for love that remains real even when access changes.",
+  "baseline_vocab_flags": [
+    "under rehearsal"
+  ]
+}

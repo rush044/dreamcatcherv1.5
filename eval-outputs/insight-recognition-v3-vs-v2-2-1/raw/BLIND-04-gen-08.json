@@ -1,0 +1,57 @@
+{
+  "case_id": "BLIND-04",
+  "opaque_generation_id": "gen-08",
+  "fixture_id": "C09",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#C09",
+  "title": "The Hotel",
+  "dream_body": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "context_mode": "dream_only",
+  "prompt_version": "adaptive-v2.2.1",
+  "system_prompt_binding": "SYSTEM_PROMPT_V2",
+  "user_content_builder": "buildInsightV2UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: The Hotel\nDream:\nI was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:03:48.342Z",
+  "usage": {
+    "input_tokens": 1530,
+    "cached_input_tokens": null,
+    "output_tokens": 713,
+    "total_tokens": 2243,
+    "reasoning_tokens": 484
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The situation never changes: your family remains below, and every route back carries you farther upward. What changes is your feeling—frustration gives way to peace while the separation remains. The dream does not show whether you stopped wanting to return.\",\"threads\":[\"Your efforts repeatedly produce the opposite of what you intend: trying to get back leads you higher. The peace arrives only after this pattern has continued for a while, not because a route opens.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Frustration changing to peace\",\"evidence\":\"You first felt frustrated, then peaceful while the situation stayed the same.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Trying to return but moving higher\",\"evidence\":\"Every hallway or staircase you tried took you higher instead of back to your family.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Separated from family by floors\",\"evidence\":\"Your family stayed on the lower floors while you kept moving upward.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The situation never changes: your family remains below, and every route back carries you farther upward. What changes is your feeling—frustration gives way to peace while the separation remains. The dream does not show whether you stopped wanting to return.",
+    "threads": [
+      "Your efforts repeatedly produce the opposite of what you intend: trying to get back leads you higher. The peace arrives only after this pattern has continued for a while, not because a route opens."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Frustration changing to peace",
+        "evidence": "You first felt frustrated, then peaceful while the situation stayed the same.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Trying to return but moving higher",
+        "evidence": "Every hallway or staircase you tried took you higher instead of back to your family.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Separated from family by floors",
+        "evidence": "Your family stayed on the lower floors while you kept moving upward.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

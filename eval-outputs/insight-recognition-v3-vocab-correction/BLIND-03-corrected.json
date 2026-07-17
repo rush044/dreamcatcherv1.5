@@ -1,0 +1,52 @@
+{
+  "case_id": "BLIND-03",
+  "fixture_id": "C04",
+  "input_source": "comparison-dreams.mjs#C04",
+  "title": "The Meeting",
+  "dream_body": "I have an important meeting tomorrow. In the dream I was packing my bag for it and noticed my phone charger was dead. I kept trying different outlets, but nothing worked. I woke up still thinking about the meeting.",
+  "prompt_version": "recognition-v3.0",
+  "correction_note": "vocabulary correction round — same identifier, updated prompt text",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T10:42:37.598Z",
+  "usage": {
+    "input_tokens": 3286,
+    "cached_input_tokens": null,
+    "output_tokens": 358,
+    "total_tokens": 3644,
+    "reasoning_tokens": 146
+  },
+  "validation_error": null,
+  "vocab_flags": [],
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The meeting is the obvious waking-life source, but the worry lands on a small piece of support rather than on the meeting itself. You are already packing—doing what preparation allows—yet every outlet fails. One possible reading is that the harder part is not feeling unprepared, but knowing that preparation cannot guarantee you will have the energy, access, or backup you need when the moment arrives. The dead charger gives that uncertainty a practical shape: one minor failure could seem capable of weakening everything you have prepared for.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"waking_life_link\",\"label\":\"Tomorrow's important meeting\",\"evidence\":\"You explicitly have an important meeting tomorrow and woke still thinking about it.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Preparation blocked by failed support\",\"evidence\":\"You packed your bag but could not make the charger work in any outlet.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The meeting is the obvious waking-life source, but the worry lands on a small piece of support rather than on the meeting itself. You are already packing—doing what preparation allows—yet every outlet fails. One possible reading is that the harder part is not feeling unprepared, but knowing that preparation cannot guarantee you will have the energy, access, or backup you need when the moment arrives. The dead charger gives that uncertainty a practical shape: one minor failure could seem capable of weakening everything you have prepared for.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "waking_life_link",
+        "label": "Tomorrow's important meeting",
+        "evidence": "You explicitly have an important meeting tomorrow and woke still thinking about it.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Preparation blocked by failed support",
+        "evidence": "You packed your bag but could not make the charger work in any outlet.",
+        "confidence": "explicit"
+      }
+    ]
+  },
+  "baseline_winner_file": "BLIND-03-gen-05.json",
+  "baseline_notice": "The dream may be less about the meeting going badly than about not being able to secure the readiness you want beforehand. You are already packing and taking responsibility; the problem is a small but essential source of backup that refuses to cooperate. Trying outlet after outlet turns preparation into a search for reassurance, as though your mind is testing whether anything important has been overlooked. Because the meeting is tomorrow and remained on your mind after waking, this most likely looks like anticipatory rehearsal rather than a warning: your attention has fastened onto the possibility of being capable but insufficiently supported at the crucial moment.",
+  "baseline_vocab_flags": [
+    "anticipatory rehearsal",
+    "your mind is testing"
+  ]
+}

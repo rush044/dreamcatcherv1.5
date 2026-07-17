@@ -1,0 +1,58 @@
+{
+  "case_id": "BLIND-01",
+  "fixture_id": "R10",
+  "input_source": "recognition-fixtures.mjs#R10",
+  "title": "The Thursday Review",
+  "dream_body": "I was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken.",
+  "prompt_version": "recognition-v3.0",
+  "correction_note": "vocabulary correction round — same identifier, updated prompt text",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T10:42:30.426Z",
+  "usage": {
+    "input_tokens": 3334,
+    "cached_input_tokens": null,
+    "output_tokens": 432,
+    "total_tokens": 3766,
+    "reasoning_tokens": 159
+  },
+  "validation_error": null,
+  "vocab_flags": [],
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The important part may not be the wrong label, but how little power it gains. You catch the mistake, name it plainly, and keep going; the room accepts the correction, and your competence remains intact. Even the ending reinforces this: you can answer what is actually asked, finish on time, and return to ordinary life. One possible reading is that your mind is making room for a steadier standard of competence—one based on noticing, repairing, and continuing rather than never being visibly wrong. The brief alertness still matters, but it no longer turns a small error into humiliation or collapse.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Visible correction without derailment\",\"evidence\":\"You corrected the mislabeled month out loud and continued the presentation.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Brief alertness returning to steadiness\",\"evidence\":\"You did not panic and woke feeling ordinary rather than shaken.\",\"confidence\":\"explicit\"},{\"type\":\"waking_life_link\",\"label\":\"Competence becoming compatible with imperfection\",\"evidence\":\"The review remained practical and successful despite a visible mistake: the question was answered and the meeting ended on time.\",\"confidence\":\"suggested\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The important part may not be the wrong label, but how little power it gains. You catch the mistake, name it plainly, and keep going; the room accepts the correction, and your competence remains intact. Even the ending reinforces this: you can answer what is actually asked, finish on time, and return to ordinary life. One possible reading is that your mind is making room for a steadier standard of competence—one based on noticing, repairing, and continuing rather than never being visibly wrong. The brief alertness still matters, but it no longer turns a small error into humiliation or collapse.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Visible correction without derailment",
+        "evidence": "You corrected the mislabeled month out loud and continued the presentation.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Brief alertness returning to steadiness",
+        "evidence": "You did not panic and woke feeling ordinary rather than shaken.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "waking_life_link",
+        "label": "Competence becoming compatible with imperfection",
+        "evidence": "The review remained practical and successful despite a visible mistake: the question was answered and the meeting ended on time.",
+        "confidence": "suggested"
+      }
+    ]
+  },
+  "baseline_winner_file": "BLIND-01-gen-01.json",
+  "baseline_notice": "The important part may be that the mistake never becomes a crisis. You catch it, name it plainly, and keep going; the room accepts the correction, and your competence remains intact. Even the ending reinforces this: you can still answer what is asked, finish on time, and leave the review as an ordinary event. One possible reading is that your mind is rehearsing a steadier standard for being capable— not never making an error, but recovering without shame or loss of standing.",
+  "baseline_vocab_flags": [
+    "rehearsing",
+    "your mind is rehearsing"
+  ]
+}

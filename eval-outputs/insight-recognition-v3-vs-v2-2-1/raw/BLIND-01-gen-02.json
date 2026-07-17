@@ -1,0 +1,55 @@
+{
+  "case_id": "BLIND-01",
+  "opaque_generation_id": "gen-02",
+  "fixture_id": "R10",
+  "input_source": "scripts/insight-v3/recognition-fixtures.mjs#R10",
+  "title": "The Thursday Review",
+  "dream_body": "I was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken.",
+  "context_mode": "dream_only",
+  "prompt_version": "adaptive-v2.2.1",
+  "system_prompt_binding": "SYSTEM_PROMPT_V2",
+  "user_content_builder": "buildInsightV2UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: The Thursday Review\nDream:\nI was presenting my Thursday review to a small room of people I already knew. My slides were prepared. Midway through, one chart had the wrong month labeled on it. I noticed, corrected the label out loud, and continued. Nobody mocked me. I did not feel panicked — just briefly alert, then steady again. Afterward someone asked a practical question I could answer. The review ended on time. I woke feeling ordinary, not shaken.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:02:37.943Z",
+  "usage": {
+    "input_tokens": 1552,
+    "cached_input_tokens": null,
+    "output_tokens": 317,
+    "total_tokens": 1869,
+    "reasoning_tokens": 132
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"A small mistake briefly sharpened your attention, but it did not derail you. You corrected it openly, continued capably, and returned to feeling steady; the calm recovery matters more here than the error.\",\"threads\":[],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Calm correction\",\"evidence\":\"You noticed the wrong month label, corrected it out loud, and continued.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Brief alertness followed by steadiness\",\"evidence\":\"You felt briefly alert rather than panicked, then steady again.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Familiar, nonjudgmental audience\",\"evidence\":\"You knew the people in the room, and nobody mocked you after the mistake.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "A small mistake briefly sharpened your attention, but it did not derail you. You corrected it openly, continued capably, and returned to feeling steady; the calm recovery matters more here than the error.",
+    "threads": [],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Calm correction",
+        "evidence": "You noticed the wrong month label, corrected it out loud, and continued.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Brief alertness followed by steadiness",
+        "evidence": "You felt briefly alert rather than panicked, then steady again.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Familiar, nonjudgmental audience",
+        "evidence": "You knew the people in the room, and nobody mocked you after the mistake.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

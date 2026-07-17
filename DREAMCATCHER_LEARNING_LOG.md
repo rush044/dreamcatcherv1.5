@@ -194,6 +194,18 @@ The complete structured Source-of-Truth Reset prompt appeared to use approximate
 
 ---
 
+## P — Blind prompt comparison and vocabulary correction (2026-07-17)
+
+When doctrine and runtime disagree, a **paired blind human review** on the same model and schema isolates prompt quality from model quality.
+
+- DreamCatcher compared recognition-v3.0 vs adaptive V2.2.1 using GPT-5.6 Sol and the V2 schema — six dreams, twelve generations, randomized A/B labels.
+- Fabrizzio’s qualitative blind selections were unanimous for recognition-v3.0 (6/6).
+- A follow-up **narrow vocabulary correction** removed prompt-seeded “rehearsal / practice / trying out” habits without flattening depth; a three-case confirmation preserved recognition quality and tightened evidence discipline on Meeting.
+- Prompt examples and private function lists can seed repetitive user-facing phrasing even when the model’s interpretive depth is good — audit both mechanism quality and output vocabulary.
+- Historical evaluation artifacts should be preserved, not overwritten, when superseding prompt doctrine.
+
+---
+
 ## Future-entry topics (placeholders, not yet written)
 
 - initial Cursor and terminal setup

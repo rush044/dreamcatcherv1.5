@@ -1,0 +1,69 @@
+{
+  "case_id": "BLIND-02",
+  "opaque_generation_id": "gen-04",
+  "fixture_id": "R11",
+  "input_source": "scripts/insight-v3/recognition-fixtures.mjs#R11",
+  "title": "Room 714",
+  "dream_body": "I was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+  "context_mode": "dream_only",
+  "prompt_version": "adaptive-v2.2.1",
+  "system_prompt_binding": "SYSTEM_PROMPT_V2",
+  "user_content_builder": "buildInsightV2UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nDefault to empty threads and empty questions. Add optional sections only when they earn a distinct new contribution.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short.\nChoose depth by evidence, not length. Prefer restraint over invention.\n\nTitle: Room 714\nDream:\nI was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:03:05.704Z",
+  "usage": {
+    "input_tokens": 1575,
+    "cached_input_tokens": null,
+    "output_tokens": 482,
+    "total_tokens": 2057,
+    "reasoning_tokens": 181
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"Reaching the room changes the feeling, not the wanting. Your urgency settles into peace once you are with Mara, while the important thing you came for still matters. The dream makes that distinction unusually clear: calm here is not the same as giving up.\",\"threads\":[\"The difficult route is full of wrong turns and interchangeable doors, but the room itself offers no further obstacle. Mara’s calm welcome marks it as a place where you no longer have to hurry to remain connected to what matters.\"],\"reflection_questions\":[],\"confidence\":\"high\",\"pattern_candidates\":[{\"type\":\"emotion\",\"label\":\"Urgency becoming peace\",\"evidence\":\"You felt urgent and almost late, then peaceful after entering the room.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Persisting through a complicated route\",\"evidence\":\"You kept trying despite wrong elevators, long corridors, and identical doors.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Mara as a calm presence\",\"evidence\":\"Mara was already inside, calm, and did not rush you.\",\"confidence\":\"explicit\"},{\"type\":\"place\",\"label\":\"Room 714 as the destination\",\"evidence\":\"The important thing remained in the room, and you did not want to leave.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Quiet wanting remained\",\"evidence\":\"You woke still wanting, without feeling that you had given up.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "Reaching the room changes the feeling, not the wanting. Your urgency settles into peace once you are with Mara, while the important thing you came for still matters. The dream makes that distinction unusually clear: calm here is not the same as giving up.",
+    "threads": [
+      "The difficult route is full of wrong turns and interchangeable doors, but the room itself offers no further obstacle. Mara’s calm welcome marks it as a place where you no longer have to hurry to remain connected to what matters."
+    ],
+    "reflection_questions": [],
+    "confidence": "high",
+    "pattern_candidates": [
+      {
+        "type": "emotion",
+        "label": "Urgency becoming peace",
+        "evidence": "You felt urgent and almost late, then peaceful after entering the room.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Persisting through a complicated route",
+        "evidence": "You kept trying despite wrong elevators, long corridors, and identical doors.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Mara as a calm presence",
+        "evidence": "Mara was already inside, calm, and did not rush you.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "place",
+        "label": "Room 714 as the destination",
+        "evidence": "The important thing remained in the room, and you did not want to leave.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Quiet wanting remained",
+        "evidence": "You woke still wanting, without feeling that you had given up.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

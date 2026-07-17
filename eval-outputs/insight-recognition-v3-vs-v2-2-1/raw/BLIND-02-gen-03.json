@@ -1,0 +1,66 @@
+{
+  "case_id": "BLIND-02",
+  "opaque_generation_id": "gen-03",
+  "fixture_id": "R11",
+  "input_source": "scripts/insight-v3/recognition-fixtures.mjs#R11",
+  "title": "Room 714",
+  "dream_body": "I was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+  "user_content_builder": "buildInsightRecognitionV3UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: Room 714\nDream:\nI was trying to reach Room 714. The route kept getting complicated — wrong elevators, long corridors, doors that looked identical. I felt urgent at first, almost late for something important waiting there. Mara was already inside when I finally arrived. She was calm. She did not rush me. The urgency drained out of me once I was in the room, and I felt peaceful. The important thing still seemed to be in that room with her; I did not want to leave. I woke still holding that quieter wanting, not a sense that I had given up.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:02:55.853Z",
+  "usage": {
+    "input_tokens": 3195,
+    "cached_input_tokens": null,
+    "output_tokens": 756,
+    "total_tokens": 3951,
+    "reasoning_tokens": 362
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"rich\",\"notice\":\"The contradiction may be the point: reaching what matters does not end your wanting; it removes the panic from it. The complicated route makes arrival feel like something you could fail at or be too late for, yet Mara does not treat you as late. Nothing important has been withdrawn, and you are not asked to justify how long it took. This may be processing the possibility that a meaningful connection—or the state of being welcomed and allowed to stay—does not have to be earned through urgency. The peaceful ending is not resignation. It is desire after the fear of missing out has quieted: you still want what is there, but no longer need to chase it.\",\"threads\":[\"Arrival without penalty — the expected consequence of delay never comes; Mara’s calm replaces the imagined deadline with acceptance.\",\"Wanting without chasing — the dream separates genuine desire from the urgency that had attached itself to getting there.\"],\"reflection_questions\":[\"Does Mara’s calm feel specific to her, or does she represent a kind of welcome you have been hoping could remain available despite delays or detours—or something else?\"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"place\",\"label\":\"Room 714 as a desired destination\",\"evidence\":\"You persist through wrong elevators, long corridors, and identical doors to reach it.\",\"confidence\":\"explicit\"},{\"type\":\"person\",\"label\":\"Mara as a calm, waiting presence\",\"evidence\":\"She is already inside and does not rush you when you arrive.\",\"confidence\":\"explicit\"},{\"type\":\"emotion\",\"label\":\"Urgency becoming peaceful wanting\",\"evidence\":\"Your urgency drains away in the room, while your wish to remain continues after waking.\",\"confidence\":\"explicit\"},{\"type\":\"action\",\"label\":\"Arrival without punishment for delay\",\"evidence\":\"Despite feeling late, you find the important thing still present and no pressure from Mara.\",\"confidence\":\"suggested\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "rich",
+    "notice": "The contradiction may be the point: reaching what matters does not end your wanting; it removes the panic from it. The complicated route makes arrival feel like something you could fail at or be too late for, yet Mara does not treat you as late. Nothing important has been withdrawn, and you are not asked to justify how long it took. This may be processing the possibility that a meaningful connection—or the state of being welcomed and allowed to stay—does not have to be earned through urgency. The peaceful ending is not resignation. It is desire after the fear of missing out has quieted: you still want what is there, but no longer need to chase it.",
+    "threads": [
+      "Arrival without penalty — the expected consequence of delay never comes; Mara’s calm replaces the imagined deadline with acceptance.",
+      "Wanting without chasing — the dream separates genuine desire from the urgency that had attached itself to getting there."
+    ],
+    "reflection_questions": [
+      "Does Mara’s calm feel specific to her, or does she represent a kind of welcome you have been hoping could remain available despite delays or detours—or something else?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "place",
+        "label": "Room 714 as a desired destination",
+        "evidence": "You persist through wrong elevators, long corridors, and identical doors to reach it.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "person",
+        "label": "Mara as a calm, waiting presence",
+        "evidence": "She is already inside and does not rush you when you arrive.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "emotion",
+        "label": "Urgency becoming peaceful wanting",
+        "evidence": "Your urgency drains away in the room, while your wish to remain continues after waking.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "action",
+        "label": "Arrival without punishment for delay",
+        "evidence": "Despite feeling late, you find the important thing still present and no pressure from Mara.",
+        "confidence": "suggested"
+      }
+    ]
+  }
+}

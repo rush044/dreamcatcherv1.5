@@ -1,0 +1,59 @@
+{
+  "case_id": "BLIND-04",
+  "opaque_generation_id": "gen-07",
+  "fixture_id": "C09",
+  "input_source": "scripts/insight-v2/comparison-dreams.mjs#C09",
+  "title": "The Hotel",
+  "dream_body": "I was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "context_mode": "dream_only",
+  "prompt_version": "recognition-v3.0",
+  "system_prompt_binding": "SYSTEM_PROMPT_RECOGNITION_V3",
+  "user_content_builder": "buildInsightRecognitionV3UserContent",
+  "user_content_exact": "Respond with Adaptive Insight V2 JSON for this single dream only.\nPrimary goal: help the dreamer recognize something meaningful they had not already typed.\nDefault to empty threads and empty questions. Add optional sections only when they deepen the central recognition from a distinct angle.\nIf the dream is genuinely rich, do not strip earned Threads merely to stay short — and do not overcompress the notice.\nChoose depth by evidence, not length. Prefer earned recognition over summary. Prefer restraint over invention.\n\nTitle: The Hotel\nDream:\nI was in a hotel with my family. Every hallway or staircase I tried took me higher — never down, never sideways for long. My family stayed on the lower floors. I kept trying to get back to them and got frustrated. After a while the climbing stopped feeling like a fight and I felt peaceful instead, even though they were still below.",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "completion_model": "gpt-5.6-sol",
+  "timestamp": "2026-07-17T07:03:33.627Z",
+  "usage": {
+    "input_tokens": 3150,
+    "cached_input_tokens": null,
+    "output_tokens": 517,
+    "total_tokens": 3667,
+    "reasoning_tokens": 211
+  },
+  "validation_error": null,
+  "raw_content": "{\"version\":2,\"depth\":\"focused\",\"notice\":\"The important change is not that you finally find a route back to your family—you never do. Peace arrives while the distance remains. One possible reading is that some part of you is practicing how to keep moving into a different stage, role, or way of being without treating that movement as abandonment. At first, every step upward feels like another failure to return. Later, the same direction becomes bearable. That does not necessarily mean wanting less closeness with your family; it may mean beginning to accept that loving them and remaining on the same “floor” are not always the same thing.\",\"threads\":[\"Peace without reunion — the dream resolves the struggle internally rather than restoring the old closeness.\"],\"reflection_questions\":[\"Is anything in your life currently carrying you forward while another part of you worries that moving forward means leaving your family behind—or does the distance feel different? \"],\"confidence\":\"medium\",\"pattern_candidates\":[{\"type\":\"action\",\"label\":\"Repeated involuntary ascent\",\"evidence\":\"Every attempted route led higher despite efforts to return to the lower floors.\",\"confidence\":\"explicit\"},{\"type\":\"relationship\",\"label\":\"Separation from family without rejection\",\"evidence\":\"You kept trying to return to your family, then became peaceful even though the distance remained.\",\"confidence\":\"suggested\"},{\"type\":\"emotion\",\"label\":\"Peace before reunion\",\"evidence\":\"Frustration faded without the external problem being solved.\",\"confidence\":\"explicit\"}]}",
+  "insight": {
+    "version": 2,
+    "depth": "focused",
+    "notice": "The important change is not that you finally find a route back to your family—you never do. Peace arrives while the distance remains. One possible reading is that some part of you is practicing how to keep moving into a different stage, role, or way of being without treating that movement as abandonment. At first, every step upward feels like another failure to return. Later, the same direction becomes bearable. That does not necessarily mean wanting less closeness with your family; it may mean beginning to accept that loving them and remaining on the same “floor” are not always the same thing.",
+    "threads": [
+      "Peace without reunion — the dream resolves the struggle internally rather than restoring the old closeness."
+    ],
+    "reflection_questions": [
+      "Is anything in your life currently carrying you forward while another part of you worries that moving forward means leaving your family behind—or does the distance feel different?"
+    ],
+    "confidence": "medium",
+    "pattern_candidates": [
+      {
+        "type": "action",
+        "label": "Repeated involuntary ascent",
+        "evidence": "Every attempted route led higher despite efforts to return to the lower floors.",
+        "confidence": "explicit"
+      },
+      {
+        "type": "relationship",
+        "label": "Separation from family without rejection",
+        "evidence": "You kept trying to return to your family, then became peaceful even though the distance remained.",
+        "confidence": "suggested"
+      },
+      {
+        "type": "emotion",
+        "label": "Peace before reunion",
+        "evidence": "Frustration faded without the external problem being solved.",
+        "confidence": "explicit"
+      }
+    ]
+  }
+}

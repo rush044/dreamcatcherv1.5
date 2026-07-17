@@ -1,0 +1,171 @@
+{
+  "run_id": "2026-07-17T07:05:08.480Z",
+  "branch": "insight/recognition-v3-reevaluation",
+  "paid_calls_executed": 12,
+  "pairs_complete": 6,
+  "schema_validation": "all_pass",
+  "input_pair_integrity": "identical_title_body_context_within_each_pair",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": 2,
+  "prompt_versions_used": [
+    "recognition-v3.0",
+    "adaptive-v2.2.1"
+  ],
+  "blind_packet": "blind-review.md",
+  "answer_key": "answer-key.json",
+  "total_usage": {
+    "input_tokens": 29160,
+    "cached_input_tokens": 0,
+    "output_tokens": 7042,
+    "total_tokens": 36202,
+    "reasoning_tokens": 3390
+  },
+  "per_call_usage": [
+    {
+      "case_id": "BLIND-01",
+      "opaque_generation_id": "gen-01",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3172,
+        "cached_input_tokens": null,
+        "output_tokens": 388,
+        "total_tokens": 3560,
+        "reasoning_tokens": 151
+      }
+    },
+    {
+      "case_id": "BLIND-01",
+      "opaque_generation_id": "gen-02",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1552,
+        "cached_input_tokens": null,
+        "output_tokens": 317,
+        "total_tokens": 1869,
+        "reasoning_tokens": 132
+      }
+    },
+    {
+      "case_id": "BLIND-02",
+      "opaque_generation_id": "gen-03",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3195,
+        "cached_input_tokens": null,
+        "output_tokens": 756,
+        "total_tokens": 3951,
+        "reasoning_tokens": 362
+      }
+    },
+    {
+      "case_id": "BLIND-02",
+      "opaque_generation_id": "gen-04",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1575,
+        "cached_input_tokens": null,
+        "output_tokens": 482,
+        "total_tokens": 2057,
+        "reasoning_tokens": 181
+      }
+    },
+    {
+      "case_id": "BLIND-03",
+      "opaque_generation_id": "gen-05",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3124,
+        "cached_input_tokens": null,
+        "output_tokens": 354,
+        "total_tokens": 3478,
+        "reasoning_tokens": 95
+      }
+    },
+    {
+      "case_id": "BLIND-03",
+      "opaque_generation_id": "gen-06",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1504,
+        "cached_input_tokens": null,
+        "output_tokens": 350,
+        "total_tokens": 1854,
+        "reasoning_tokens": 202
+      }
+    },
+    {
+      "case_id": "BLIND-04",
+      "opaque_generation_id": "gen-07",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3150,
+        "cached_input_tokens": null,
+        "output_tokens": 517,
+        "total_tokens": 3667,
+        "reasoning_tokens": 211
+      }
+    },
+    {
+      "case_id": "BLIND-04",
+      "opaque_generation_id": "gen-08",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1530,
+        "cached_input_tokens": null,
+        "output_tokens": 713,
+        "total_tokens": 2243,
+        "reasoning_tokens": 484
+      }
+    },
+    {
+      "case_id": "BLIND-05",
+      "opaque_generation_id": "gen-09",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3385,
+        "cached_input_tokens": null,
+        "output_tokens": 514,
+        "total_tokens": 3899,
+        "reasoning_tokens": 123
+      }
+    },
+    {
+      "case_id": "BLIND-05",
+      "opaque_generation_id": "gen-10",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1765,
+        "cached_input_tokens": null,
+        "output_tokens": 797,
+        "total_tokens": 2562,
+        "reasoning_tokens": 454
+      }
+    },
+    {
+      "case_id": "BLIND-06",
+      "opaque_generation_id": "gen-11",
+      "prompt_version": "recognition-v3.0",
+      "usage": {
+        "input_tokens": 3414,
+        "cached_input_tokens": null,
+        "output_tokens": 795,
+        "total_tokens": 4209,
+        "reasoning_tokens": 320
+      }
+    },
+    {
+      "case_id": "BLIND-06",
+      "opaque_generation_id": "gen-12",
+      "prompt_version": "adaptive-v2.2.1",
+      "usage": {
+        "input_tokens": 1794,
+        "cached_input_tokens": null,
+        "output_tokens": 1059,
+        "total_tokens": 2853,
+        "reasoning_tokens": 675
+      }
+    }
+  ],
+  "note": "A/B mapping is stored only in answer-key.json"
+}
